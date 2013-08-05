@@ -1,19 +1,8 @@
-xoreos is an open source implementation of Bioware's Aurora engine and its derivatives.
+xoreos is an open source implementation of Bioware's Aurora engine and its derivatives, licensed under the terms of the GNU General Public License version 3 (or later).
 
-It aims to have fully playable (and improved!) versions of the following games:
+In order to accurately reimplement these games, we need to research how all of the mechanics work. If you feel like crawling deep into the bowels of the Aurora engine, or have already done so, please feel free to document your newly gained understandings here.
 
-*[[Neverwinter Nights]]
-*[[Neverwinter Nights 2]]
-*[[Knights of the Old Republic]]
-*[[Knights of the Old Republic II: The Sith Lords]]
-*[[Jade Empire]]
-*[[Sonic Chronicles: The Dark Brotherhood]]
-*[[The Witcher]]
-*[[Dragon Age]]
-*[[Dragon Age 2]]
+== Index ==
 
-For the status of each individual game, see their wiki page.
-
-In order to accurately reimplement these games, we need to research how all of the mechanics work. Please add any research under gamename/Research (for example, [[Knights of the Old Republic/Research]])
-
-xoreos is licensed under the GNU General Public License version 3.
+* [[Developer Central]], technical documentation and info for developers
+* [[Games]], a list of supported games
