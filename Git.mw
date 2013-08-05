@@ -1,0 +1,26 @@
+=Retrieving the code=
+
+The main repository is located at
+
+  git://github.com/xoreos/xoreos.git
+
+If you are using command line git, the command to get the repository is:
+
+  git clone git://github.com/xoreos/xoreos.git
+
+Refer to github help documentation on where to obtain git client for your OS.
+
+=Keeping updated=
+* You can [https://github.com/xoreos browse] the Git repositories through HTTP.
+* For every push:
+** A mail with the commit(s) diff(s) is sent to the [[Mailing lists#xoreos-git|xoreos-git mailing list]].
+** The GitHub bot notifies the [[IRC Channel]] with the summary of the commit(s).
+
+=Committing=
+* Before you write/submit code, you must read about our [[Code Formatting Conventions]]. Patches which do not follow them will be rejected or at least delayed until they are cleaned up to comply to them.
+* If you have write access to our repository, you are expected to have read and to comply to the [[Commit Guidelines]].
+* You may also find ScummVM's [http://wiki.scummvm.org/index.php/Git_tips Git tips] page useful.
+
+=Repository Statistics=
+Our commit logs are fed to these freely available statistics tools:
+* [https://www.ohloh.net/p/xoreos ohloh project analysis] nice graphs and devs activity
