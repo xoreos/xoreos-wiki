@@ -1,0 +1,8 @@
+This is the page for the KOTOR engine.
+
+Current status:
+*Initial model support
+*Initial module and area loading, with placeables and creatures
+*Moving about within the module using the keyboard
+*Evaluation of room-room visibility info
+*Stubby GUI
