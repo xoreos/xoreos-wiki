@@ -1,0 +1,17 @@
+The primary channel for important development-related discussion is the [[#xoreos-devel|xoreos-devel]] mailing list. All developers should subscribe to it.
+
+There is one note about [[#xoreos-git|xoreos-git]]. Consider it as a read-only list, i.e. if you have comments/questions on someone's commit, post your follow-up to [[#xoreos-devel|xoreos-devel]].
+
+The full set of public lists are:
+
+==xoreos-devel==
+[https://xoreos.org/mailman/listinfo/xoreos-devel ''Subscription settings'']
+[http://xoreos.org/pipermail/xoreos-devel/ ''Archives'']
+
+This is the official developer mailing lists, for planning releases, and general discussions concerning development and project management.
+
+==xoreos-git==
+[https://xoreos.org/mailman/listinfo/xoreos-git ''Subscription settings'']
+[http://xoreos.org/pipermail/xoreos-git/ ''Archives'']
+
+Commit logs, receiving an email for every Git commit.
