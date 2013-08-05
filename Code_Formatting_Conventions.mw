@@ -3,7 +3,7 @@
 
 == Use common sense ==
 
-These are conventions which we try to follow when writing code for ScummVM. Sticking to a common set of formatting / indention rules makes it easier to read through our source base (which now exceed half a million lines of code by far, making this quite important). If you want to submit patches, please try to adhere to these rules.
+These are conventions which we try to follow when writing code for xoreos. Sticking to a common set of formatting / indention rules makes it easier to read through our source base (which now exceed half a million lines of code by far, making this quite important). If you want to submit patches, please try to adhere to these rules.
 
 We don't always follow these rules slavishly, in certain cases it is OK (and in fact might be favorable) to stray from them. Applying common sense, as usual, is a good idea.
 
@@ -238,7 +238,7 @@ The following goes slightly beyond code formatting: We use certain keywords (tog
 
 === Doxygen documentation comments ===
 
-ScummVM uses the [http://www.doxygen.org/ Doxygen] software to generate HTML documentation for the codebase (available [http://doxygen.scummvm.org here]).
+xoreos uses the [http://www.doxygen.org/ Doxygen] software to generate HTML documentation for the codebase.
 
 Doxygen supports ''documentation blocks''. These are specially-formatted comments that doxygen prints out in the generated documentation. They are similar in purpose to Java's JavaDoc or Python's docstrings.
 
@@ -253,7 +253,6 @@ There are many ways to mark such comments, but developers are encouraged to use 
  */
 virtual void warpMouse(int x, int y) = 0;
 </syntaxhighlight>
-(See [http://doxygen.scummvm.org/d9/df4/classOSystem.html#ecab84670def917107d6c1b5ca3b82c3 here] for the docs generated from this.)
 
 As shown in the example, documentation blocks also support several special commands such as '''param'''. Those are prefixed with either '''@''' or '''\''', but developers should always use '''@'''.
 
@@ -262,7 +261,6 @@ If you want to add a brief explanation of a variable or function ''after'' its d
 int16 x;	///< The horizontal part of the point
 int16 y;	///< The vertical part of the point
 </syntaxhighlight>
-(See [http://doxygen.scummvm.org/d7/d66/structCommon_1_1Point.html#2d868735aeaaf391ce9b3df9232c031f here] for the docs generated from this.)
 
 For more information, visit the official documentation:
 * [http://www.stack.nl/~dimitri/doxygen/docblocks.html Documentation blocks].
