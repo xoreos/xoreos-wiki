@@ -1,0 +1,74 @@
+== KotOR/KotOR2 menus ==
+* Basic structure is already there, just missing most of the specific widgets stuff
+* Semi-hardcoded, with GFF files (hierachical data, similar to XML in spirit) describing the setup. The xoreos-tools repository has a tool for converting GFF files into XML for easy reading.
+
+== KotOR/KotOR2 ingame gui ==
+* Ties in with the menus, still missing
+
+== Jade Empire menus ==
+* Apparently very similar to KotOR's menus
+
+== KotOR scripts ==
+* The script system in NWN is, for the most part, working already. Missing are most of the engine functions and there's still a bit of wonkyness with the timing. KotOR uses the exact same script format, only with a mostly different set of engine functions. So that can probably be mirrored verbatim
+
+== KotOR2 scripts ==
+* Mostly like KotOR scripts, but has some extensions, like parameters to scripts that drive the dialog branch decisions
+
+== KotOR/KotOR2 dialogs ==
+* The origanisation of the DLG files is very similar to the one in NWN. With some extensions, like camera setup
+* How the dialogs are displayed is however very different
+* KotOR2 has some extensions, to pass the parameters to the aforementioned branch decision scripts. Also, can use several scripts and combine the results with AND and OR
+* DLG files can be converted into some crude XML with the gff2xml tool in the xoreos-tools repository
+
+== KotOR/KotOR2 world objects ==
+* Currently, KotOR/KotOR2 world objects (creatures, placeables, doors, ...) don't do anything when clicked on. This ties in a bit with the scripting system, which triggers when operating on the objects
+* Should be mostly similar to NWN
+* Again, ARE, GIT and object blueprint files can be converted to XML with gff2xml
+
+== MDL supermodels and animations ==
+* Mostly working in NWN thanks to jbowtie's work
+* Might need some cleanup
+* Animation scale is off in a lot of cases. Mostly visible in the talking and yawning animations in non-human characters
+* Models should smoothly change between different animations
+* The animation system probably needs to be a bit more complex, to allow for "overlaying" different animations onto each other. For example, for speaking while holding an object and keeping the head focused on the PC character.
+* Needs to be carried over to KotOR and the other games too
+
+== PC model ==
+* The PC models in NWN and KotOR/KotOR2 are not shown
+* Instead of moving the camera, "walking" should move the player character
+* Walkmaps are completely missing right now too
+
+== Triggers ==
+* In NWN, KotOR/KotOR2 and the other games too, a trigger is a polygon in an area (defined by its corner points) than, when a creature moves into or out of it, triggers a script. This is one of the primary sources of engine scripts and still completely missing
+
+== Lighting ==
+* We don't yet have a proper light system
+* I started working on it: [http://drmccoy.de/eos/nwn/20110610T230251.png], but my approach is seriously lacking. You can see the edges of the tiles that make up on NWN area in many cases
+
+== Materials ==
+* NWN and more excessively KotOR/KotOR2 use material properties in combination of semi-transparent textures to create metallic textures. My OpenGL knowledge is quite basic, I generally fudge through everything :P. Research there would be needed
+
+== Shaders ==
+* All the games, even NWN, use some form of shaders. Still totally missing from xoreos, since we have no idea how to use them in general yet. Moreover, this was before GLSL, so they're in the old assembly-like language. We probably need to rewrite them from scratch
+
+== OpenGL and performance ==
+* Someone with more OpenGL knowledge really should look over and probably completely rewrite the graphics code.
+
+== Gamepad binding ==
+* The Xbox versions of KotOR and KotOR2 don't use a mouse. We have basic support for joysticks/gamepads, but no real bindings to the engine or ideas how to handle that in general
+
+== Sonic's DS formats ==
+* Sonic Chronicles: The Dark Brotherhood, a Nintento DS game, uses video and sound formats apparently native to the Nintendo DS. We have docs for the basic sound format, but more research there is needed
+
+== Hashed ERFs ==
+* Sonic and Dragon Age II don't have file names in their ERF archives, only hashes of those names
+* No idea yet how to properly integrate that into xoreos
+* No idea yet which hashing algo it uses. That's probably important
+
+== GFF V4.0 ==
+* Sonic and the two Dragon Age games use a new version of GFF
+* Info about the format can be found in the Dragon Age wiki
+* It's quite different, probably needs a completely new class and can't be integrated into our GFF class
+
+== GDA ==
+* Sonic and the two Dragon Age games use a new 2DA format, GDA, which is essentially a 2DA encoded in a GFF. Support for that in xoreos is still missing
