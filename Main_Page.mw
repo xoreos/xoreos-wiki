@@ -1,9 +1,16 @@
-'''MediaWiki has been successfully installed.'''
+xoreos is an open source implementation of Bioware's Aurora engine and its derivatives.
 
-Consult the [//meta.wikimedia.org/wiki/Help:Contents User's Guide] for information on using the wiki software.
+It aims to have fully playable (and improved!) versions of the following games:
 
-== Getting started ==
-* [//www.mediawiki.org/wiki/Manual:Configuration_settings Configuration settings list]
-* [//www.mediawiki.org/wiki/Manual:FAQ MediaWiki FAQ]
-* [https://lists.wikimedia.org/mailman/listinfo/mediawiki-announce MediaWiki release mailing list]
-* [//www.mediawiki.org/wiki/Localisation#Translation_resources Localise MediaWiki for your language]
+*Neverwinter Nights
+*Neverwinter Nights 2
+*Knights of the Old Republic
+*Knights of the Old Republic II: The Sith Lords
+*Sonic Chronicles: The Dark Brotherhood
+*The Witcher
+*Dragon Age
+*Dragon Age 2
+
+For the status of each individual game, see their wiki page.
+
+xoreos is licensed under the GNU General Public License version 3.
