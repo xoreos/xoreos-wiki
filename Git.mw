@@ -14,7 +14,7 @@ Refer to github help documentation on where to obtain git client for your OS.
 * You can [https://github.com/xoreos browse] the Git repositories through HTTP.
 * For every push:
 ** A mail with the commit(s) diff(s) is sent to the [[Mailing lists#xoreos-git|xoreos-git mailing list]].
-** The GitHub bot notifies the [[IRC Channel]] with the summary of the commit(s).
+** The GitHub bot notifies the [[IRC channel]] with the summary of the commit(s).
 
 =Committing=
 * Before you write/submit code, you must read about our [[Code Formatting Conventions]]. Patches which do not follow them will be rejected or at least delayed until they are cleaned up to comply to them.
