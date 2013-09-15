@@ -278,3 +278,5 @@ unpad-paren
 indent-preprocessor
 convert-tabs
 </pre>
+
+Alternatively, [https://github.com/xoreos/xoreos/blob/master/.uncrustifyrc this config file] for [http://uncrustify.sourceforge.net/ uncrustify] should also work as a starting point for our conventions. Again, you may still clean things up manually.
