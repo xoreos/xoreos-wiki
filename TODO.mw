@@ -19,6 +19,10 @@
 * Event functions
 * Special values like PARENT_WIDTH
 
+== NWN2 animations ==
+* NWN uses Granny for body animations and FaceFX for facial animations
+* Both of these need to be reverse-engineered
+
 == KotOR scripts ==
 * The script system in NWN is, for the most part, working already. Missing are most of the engine functions and there's still a bit of wonkyness with the timing. KotOR uses the exact same script format, only with a mostly different set of engine functions. So that can probably be mirrored verbatim
 
