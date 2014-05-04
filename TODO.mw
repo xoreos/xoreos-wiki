@@ -8,6 +8,17 @@
 == Jade Empire menus ==
 * Apparently very similar to KotOR's menus
 
+== NWN2 menus ==
+* Implemented using XML
+* Not standard-conform XML. Need custom XML parser; stock XML parsing libraries will just throw errors.
+** <nowiki><?xml version="1.0" encoding="NWN2UI"></nowiki>
+** No single root element
+** Attribute values not enclosed in quotes most of the time
+** Special characters in attribute values not properly escaped
+** Unmatched quotes on several occasions
+* Event functions
+* Special values like PARENT_WIDTH
+
 == KotOR scripts ==
 * The script system in NWN is, for the most part, working already. Missing are most of the engine functions and there's still a bit of wonkyness with the timing. KotOR uses the exact same script format, only with a mostly different set of engine functions. So that can probably be mirrored verbatim
 
