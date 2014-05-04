@@ -72,3 +72,9 @@
 
 == GDA ==
 * Sonic and the two Dragon Age games use a new 2DA format, GDA, which is essentially a 2DA encoded in a GFF. Support for that in xoreos is still missing
+
+== FMOD ==
+* The two Dragon Age games use FMOD for sound and music
+* I have experimental FSB (FMOD sound bank) support working in a private branch
+* I have no clue yet how to properly add FSB into our ResourceManager, since FSB themselves can be in other resource files
+* FEV (FMOD events) format is still completely unknown to us
