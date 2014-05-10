@@ -9,6 +9,12 @@ We don't always follow these rules slavishly, in certain cases it is OK (and in 
 
 In the following examples tabs are replaced by spaces for visual consistency with the Code Formatting Conventions. But in actual code, use tabs for indentations (our tabs are assumed to be 4 spaces wide).
 
+== C++ Standard ==
+
+We mainly follow the C++98 standard, but we also use C99-style known-width integer type. See src/common/types.h for details.
+
+Apart from that, we like to keep the standard as low as possible, for compatibility reasons. If there's a compelling reason, you can of course use C++11 features. But please do so only if you absolutely have to; if the rest of the codebase does something the old-fashioned way, it's best to keep doing it that way. For example, don't introduce auto variables just for the sake of an iterator for-loop.
+
 == Hugging braces ==
 
 Braces in your code should look like the following example:
