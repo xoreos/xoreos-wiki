@@ -1,0 +1,77 @@
+This page gives a few tips and pointers on how to compile xoreos on various platforms.
+__TOC__
+
+==Compiler and build system==
+
+xoreos is written in C++, so a C++ compiler, like [https://gcc.gnu.org/ GCC] or [http://clang.llvm.org/ clang] is required. Its build system is based on [https://en.wikipedia.org/wiki/GNU_build_system Autotools], more specifically [https://www.gnu.org/software/autoconf/ Autoconf], [https://www.gnu.org/software/automake/ Automake] and [https://www.gnu.org/software/libtool/ Libtool].
+
+===GNU/Linux===
+
+On Debian-based distributions (including Ubuntu), you should be able to install the required compiler and build system packages with
+
+ <nowiki>apt-get install libc6-dev g++ make autoconf automake libtool</nowiki>
+
+On other distributions, it should work similarily. 
+
+===Mac OS X===
+
+Due to the dependency on SDL2 (see below), you need at least Mac OS X 10.5 if you use a precompiled SDL2 library, and at least Mac OS X 10.7 if you're compiling SDL2 yourself.
+
+===Windows===
+
+Our build system is autotools-based, so we unfortunately do not support Visual Studio. Windows users need to install [http://www.mingw.org/ MinGW]. For further information, please read [[#A note on build systems and Visual Studio|this note]].
+
+==Libraries==
+
+xoreos uses the following libraries to function:
+
+* [https://en.wikipedia.org/wiki/Iconv iconv]
+* [http://www.zlib.net/ zlib] (>= 1.2.3.4)
+* [http://tukaani.org/xz/ liblzma] (>= 5.0.5)
+* [http://www.boost.org/ Boost] (>= 1.42.0)
+** Boost.StringAlgo
+** Boost.System
+** Boost.Filesystem
+** Boost.Regex
+** Boost.Unordered
+** Boost.Hash
+** Boost.Date_Time
+** Boost.Function
+** Boost.Bind
+** Boost.Uuid
+** Boost.Smart_Ptr
+** Boost.Atomic
+* [https://en.wikipedia.org/wiki/OpenGL OpenGL] (>= 2.1)
+* [https://www.libsdl.org/ SDL2] (>= 2.0.0)
+* [http://www.freetype.org/ FreeType 2] (>= 2.4.0 (libtool number >= 11.0.5))
+* [https://en.wikipedia.org/wiki/OpenAL OpenAL] (>= 1.12)
+* [http://www.underbit.com/products/mad/ MAD] (>= 1.15.1b)
+* [https://www.xiph.org/downloads/ libogg] (>= 1.2.0)
+* [https://www.xiph.org/downloads/ libvorbis] (>= 1.3.1)
+* [http://www.audiocoding.com/faad2.html libfaad] (>= 2.7)
+* [https://www.xvid.org/ libxvidcore] (>= 1.2.2)
+
+On Debian-based GNU/Linux distribution (including Ubuntu), you should be able to install these libraries and their development packages with
+
+ apt-get install zlib1g-dev liblzma-dev libboost-all-dev libsdl2-dev libfreetype6-dev \
+     libopenal-dev libmad0-dev libogg-dev libvorbis-dev libfaad-dev libxvidcore-dev
+
+Other GNU/Linux distributions should work similarily. Windows users have to visit each website manually and download a precompiled version, or, if not available, download the source and compile the library themselves.
+
+==Compiling xoreos==
+
+Open a terminal, change into the directory of your sources and type
+
+ <nowiki>./autogen.sh && ./configure && make</nowiki>
+
+This ''should'' compile xoreos successfully if the compiler, build system and libraries have been installed correctly. The binary can be found in the src subdirectory, called "xoreos" or, on Windows, "xoreos.exe". Alternatively, you can install it system-wide with
+
+ <nowiki>make install</nowiki>
+
+Please also have a look at the [[Running xoreos]] page.
+
+==A note on build systems and Visual Studio==
+
+There are certain build systems that promise to generate both standard Makefiles and Visual Studio project files. I have tried CMake, SCons and qmake, and found them all lacking, so they're unfortunately not an option for xoreos.
+
+Another options would be to parse our Automake files, and generate Visual Studio project files out of them. ScummVM does something similar with its [https://github.com/scummvm/scummvm/tree/master/devtools/create_project create_project], but their Makefiles are a bit different than ours. Somebody™ "just" needs to adapt ScummVM's create_project. So far, no one has.
