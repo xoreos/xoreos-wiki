@@ -19,8 +19,8 @@ That was easy, right? Here are some more tips:
 For people starting out with reverse engineering, here are a few useful resources:
 
 * The [http://wiki.scummvm.org/index.php/HOWTO-Reverse_Engineering HOWTO-Reverse Engineering] page in ScummVM's wiki
-* [http://rewiki.regengedanken.de/wiki/Main_Page REWiki] contains a collection of game reverse-engineering knowledge. They have a [http://rewiki.regengedanken.de/wiki/Reverse_engineering_hints hints page] as well
-* [http://wiki.xentax.com/index.php?title=Game_File_Format_Central XentaxWiki] focues on game file formats. They too have a [http://wiki.xentax.com/index.php?title=DGTEFF guide page]
+* [http://rewiki.regengedanken.de/wiki/Main_Page REWiki] contains a collection of game reverse engineering knowledge. They have a [http://rewiki.regengedanken.de/wiki/Reverse_engineering_hints hints page] as well
+* [http://wiki.xentax.com/index.php?title=Game_File_Format_Central XentaxWiki] focuses on game file formats. They too have a [http://wiki.xentax.com/index.php?title=DGTEFF guide page]
 * For audio and video formats, there's [http://wiki.multimedia.cx/ MultimediaWiki], which is associated with the ffmpeg and libav projects
 
 
