@@ -1,0 +1,108 @@
+First, you need to fully install and/or copy the game you want to play with xoreos onto your hard disk. How you do this depends on the game, your operating system and where/how you have bought the game.
+
+xoreos does not yet have a launcher GUI or anything like this. You need to start it from the command line. Run xoreos with the command line option "--help" (without the quotes) to get a [[#Command line parameters|help text about further command line options]].
+
+The quickest way to start a game in path /path/to/game/ would be to call
+
+ <nowiki>xoreos -p/path/to/game/</nowiki>
+
+If you're on Windows and the path is, say, D:\Path\To\Game\, call
+
+ <nowiki>xoreos -pD:\Path\To\Game\</nowiki>
+
+
+==Config file==
+
+In general, xoreos can read the configuration which game to run from either the command line, a config file or both. Additionally, when you first specify a new game on the command line, xoreos will add a related entry in the config file (creating it first, if necessary).
+
+To accurately identify a specific instance of an installed game, xoreos uses the concept of a "target". Each target has a separate section in the config file, and each of their options apply only to that target. The special target "xoreos" is a global section applying to all games, although the same option in a game target overrides the global option.
+
+The format of the config file is also relatively simple: It's in essence [https://en.wikipedia.org/wiki/INI_file an INI file]. Targets are enclosed in [] and options are assigned values with a =. Comments can begin with either a ";" or a "#" and run to the end of the line. When changing the file, xoreos will try to preserve all comments it encounters, so you don't need to fear about losing them.
+
+For example:
+
+ <nowiki>[xoreos]
+# Global options
+width=1024
+height=768
+fullscreen=false # Windowed mode, please
+logfile=/home/drmccoy/xoreos.log # Log file for easy debugging
+showfps=true # I want to see an FPS counter
+
+[nwn]
+# Neverwinter Nights
+path=/home/drmccoy/games/nwn/
+description=Neverwinter Nights (English)
+texturepack=3 # High res texture pack
+volume_music=0.500000
+volume_sfx=0.850000
+volume_video=0.850000
+tooltipdelay=100
+largefonts=true
+fullscreen=false # Fullscreen for Neverwinter Nights
+fsaa=4 # 4x anti-aliasing
+
+[kotor]
+# Knights of the Old Republic
+path=/home/drmccoy/games/kotor/
+skipvideos=true # I don't want to see any videos in KotOR</nowiki>
+
+You can then start the game with the target "nwn" with
+
+ <nowiki>xoreos nwn</nowiki>
+
+and xoreos will do the rest. This will start the game in the path /home/drmccoy/games/nwn/, running it in fullscreen at 1024x768.
+
+As you can see with the volume options, xoreos also saves settings you made in the game' actual GUI into the target's section of the config file.
+
+The place where xoreos expects the config file depends on your operating system:
+
+* On GNU/Linux, the place is $XDG_CONFIG_HOME/.xoreosrc. $XDG_CONFIG_HOME defaults to $HOME/.config/
+* On Mac OS X, the place is $HOME/Library/Preferences/xoreos\ Preferences/.xoreosrc
+* On Windows, the file is called xoreos.ini and is in the subdirectory xoreos in either $APPDATA or $USERPROFILE, depending on your Windows version
+
+
+== Command line parameters ==
+
+ <nowiki>xoreos - A reimplementation of BioWare's Aurora engine
+Usage: xoreos [options] [target]
+
+          --help              Display this text and exit.
+          --version           Display version information and exit.
+  -cFILE  --config=FILE       Load the config from file FILE.
+  -pDIR   --path=DIR          Override the game path with DIR.
+  -wSIZE  --width=SIZE        Set the window's width to SIZE.
+  -hSIZE  --height=SIZE       Set the window's height to SIZE.
+  -fBOOL  --fullscreen=BOOL   Switch fullscreen on/off.
+  -kBOOL  --skipvideos=BOOL   Disable videos on/off.
+  -vVOL   --volume=VOL        Set global volume to VOL.
+  -mVOL   --volume_music=VOL  Set music volume to VOL.
+  -sVOL   --volume_sfx=VOL    Set SFX volume to VOL.
+  -oVOL   --volume_voice=VOL  Set voice volume to VOL.
+  -iVOL   --volume_video=VOL  Set video volume to VOL.
+  -dLVL   --debuglevel=LVL    Set the debug level to LVL.
+          --debugchannel=CHAN Set the enabled debug channel(s) to CHAN.
+          --listdebug         List all available debug channels.
+          --logfile=FILE      Write all debug output into this file too.
+
+FILE: Absolute or relative path to a file.
+DIR:  Absolute or relative path to a directory.
+SIZE: A positive integer.
+BOOL: "true", "yes", "y", "on" and "1" are true, everything else is false.
+VOL:  A double ranging from 0.0 (min) - 1.0 (max).
+LVL:  A positive integer.
+CHAN: A comma-separated list of debug channels.
+      Use "All" to enable all debug channels.
+
+Examples:
+xoreos -p/path/to/nwn/
+  xoreos will start the game in /path/to/nwn/. Should a target with this
+  path not yet exist in the config file, xoreos will create one named "nwn".
+xoreos -p/path/to/nwn/ foobar
+  xoreos will start the game in /path/to/nwn/. If a target "foobar"
+  does not yet exist in the config file, xoreos will create it.
+xoreos nwn
+  xoreos will start the game specified by target "nwn", which must exit
+  in the config file already.</nowiki>
+
+Long-form command line option, like --skipvideos, map directly to config options. Options given on the command line will override any options found in the config file for this session, but will not save back to that config file.
