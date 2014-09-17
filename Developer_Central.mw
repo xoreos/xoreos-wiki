@@ -1,5 +1,6 @@
 The purpose of this page is to give a link to all kinds of resources that contain information valuable to current and future developers of xoreos.
 
+
 == Getting started ==
 * The first thing you need to be able to do is [[Git#Retrieving_the_code|get the xoreos code]] from our [[Git]] repository.
 * Then you should [[Compiling xoreos|compile xoreos]].
@@ -11,4 +12,18 @@ That was easy, right? Here are some more tips:
 * If you do not have write (push) access to our repository, you should submit your contributions by the following method:
 ** Using a [https://help.github.com/articles/using-pull-requests Github Pull Request].<br> This requires you to have/register a github account, fork our repository, commit your changes to a branch and then issue a Pull Request.<br>This is the current preferred method as it is easier for the team to review, discuss and amend prior to merging.<br>You are expected to have read and to comply with our [[Commit Guidelines]].
 * For those starting out with reverse engineering, check out ScummVM's [http://wiki.scummvm.org/index.php/HOWTO-Reverse_Engineering Reverse Engineering HOWTO].
-* Our [[TODO|Main TODO list]] contains a rambly collection of things left to do.
+
+
+== Reverse engineering help ==
+
+For people starting out with reverse engineering, here are a few useful resources:
+
+* The [http://wiki.scummvm.org/index.php/HOWTO-Reverse_Engineering HOWTO-Reverse Engineering] page in ScummVM's wiki
+* [http://rewiki.regengedanken.de/wiki/Main_Page REWiki] contains a collection of game reverse-engineering knowledge. They have a [http://rewiki.regengedanken.de/wiki/Reverse_engineering_hints hints page] as well
+* [http://wiki.xentax.com/index.php?title=Game_File_Format_Central XentaxWiki] focues on game file formats. They too have a [http://wiki.xentax.com/index.php?title=DGTEFF guide page]
+* For audio and video formats, there's [http://wiki.multimedia.cx/ MultimediaWiki], which is associated with the ffmpeg and libav projects
+
+
+== To do list ==
+
+Our [[TODO|Main TODO list]] contains a rambly, non-exhaustive collection of things left to do.
