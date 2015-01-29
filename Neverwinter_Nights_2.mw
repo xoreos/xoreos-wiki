@@ -2,3 +2,8 @@ This is the page for the NWN2 engine.
 
 Current status:
 *Initial model support
+*Loading campaigns/modules works
+*Areas display their tiles, terrain, placeables and doors
+*Initial NPC models
+*Moving/Flying around the areas with the keyboard
+*Highlighting objects
