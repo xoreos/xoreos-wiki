@@ -57,10 +57,9 @@ As you can see with the volume options, xoreos also saves settings you made in t
 
 The place where xoreos expects the config file depends on your operating system:
 
-* On GNU/Linux, the place is $XDG_CONFIG_HOME/.xoreosrc. $XDG_CONFIG_HOME defaults to $HOME/.config/
-* On Mac OS X, the place is $HOME/Library/Preferences/xoreos\ Preferences/.xoreosrc
-* On Windows, the file is called xoreos.ini and is in the subdirectory xoreos in either $APPDATA or $USERPROFILE, depending on your Windows version
-
+* On GNU/Linux, the place is $XDG_CONFIG_HOME/xoreos/xoreos.conf. $XDG_CONFIG_HOME defaults to $HOME/.config/
+* On Mac OS X, the place is $HOME/Library/Preferences/xoreos/xoreos.conf
+* On Windows, xoreos.conf is in the subdirectory xoreos in either $APPDATA or $USERPROFILE, depending on your Windows version
 
 == Command line parameters ==
 
