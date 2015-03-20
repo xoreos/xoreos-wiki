@@ -22,3 +22,102 @@
 | style="text-align: center;" |[https://github.com/xoreos/xoreos-docs/raw/master/specs/bioware/KeyBIF_Format.pdf]
 | style="background-color: green;" |supported
 |}
+
+== Resource files ==
+
+{| class="wikitable"
+! Extension
+! Type description/Usage
+! Documentation
+! Status
+|-
+|tga || targa image || ||
+|-
+|ini || ini file || ||
+|-
+|txt || text file || ||
+|-
+|wma || wma file || ||
+|-
+|mdl || model file || ||
+|-
+|nss || script source file || ||
+|-
+|ncs || compiled script || ||
+|-
+|are || area definitions || ||
+|-
+|2da || static data tables || ||
+|-
+|tlk || string definitions || ||
+|-
+|txi || texture || ||
+|-
+|dlg || dialog definitions || ||
+|-
+|gff || gff file || ||
+|-
+|gui || gui file || ||
+|-
+|pwk || pwk file || ||
+|-
+|sav || sav file || ||
+|-
+|bik || prerendered movie || ||
+|-
+|ndb || ndb file || ||
+|-
+|mat || mat file || ||
+|-
+|ttc || ttc file || ||
+|-
+|ogg || ogg encoded audio || ||
+|-
+|qst || qst file || ||
+|-
+|lyt || lyt file || ||
+|-
+|vis || vis file || ||
+|-
+|txb || texture || ||
+|-
+|mdx || mdx file || ||
+|-
+|mab || material definition || ||
+|-
+|sto || store definition || ||
+|-
+|j01_town || type 3015 || ||
+|-
+|fsm || fsm file || ||
+|-
+|art || art file || ||
+|-
+|bip || bip file || ||
+|-
+|cre || creature definition || ||
+|-
+|pso || pixel shader object || ||
+|-
+|vso || vertex shader object || ||
+|-
+|abc || font || ||
+|-
+|sbm || font || ||
+|-
+|pvd || pvd file || ||
+|-
+|amp || amp file || ||
+|-
+|pla || placable || ||
+|-
+|trg || trg file || ||
+|-
+|pk || pk file || ||
+|}
+
+== 2DA files ==
+
+=== Generic ===
+
+=== Styles ===
