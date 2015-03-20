@@ -41,19 +41,19 @@
 |-
 |mdl || model file || ||
 |-
-|nss || script source file || ||
+|nss || source script || ||
 |-
 |ncs || compiled script || ||
 |-
-|are || area definitions || ||
+|are || static area information in gff format || [https://github.com/xoreos/xoreos-docs/raw/master/specs/bioware/AreaFile_Format.pdf AreaFile_Format.pdf] ||
 |-
-|2da || static data tables || ||
+|2da || static data tables || [https://github.com/xoreos/xoreos-docs/raw/master/specs/bioware/2DA_Format.pdf 2DA_Format.pdf] ||
 |-
 |tlk || string definitions || ||
 |-
 |txi || texture || ||
 |-
-|dlg || dialog definitions || ||
+|dlg || dialog definition in gff format || [https://github.com/xoreos/xoreos-docs/raw/master/specs/bioware/Conversation_Format.pdf Conversation_Format.pdf] ||
 |-
 |gff || gff file || ||
 |-
@@ -75,7 +75,7 @@
 |-
 |qst || qst file || ||
 |-
-|lyt || lyt file || ||
+|lyt || area layout || ||
 |-
 |vis || vis file || ||
 |-
@@ -85,7 +85,7 @@
 |-
 |mab || material definition || ||
 |-
-|sto || store definition || ||
+|sto || store definition || [https://github.com/xoreos/xoreos-docs/raw/master/specs/bioware/Store_Format.pdf Store_Format.pdf] ||
 |-
 |j01_town || type 3015 || ||
 |-
