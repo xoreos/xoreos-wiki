@@ -1,0 +1,24 @@
+
+== Archives ==
+
+{| class="wikitable"
+! Name
+! Type
+! Documentation
+! Status
+|-
+|chitin.key<br/>artcreatures.bif<br/>audio.bif<br/>designer.bif
+|indexed Key Biff
+| style="text-align: center;" |[https://github.com/xoreos/xoreos-docs/raw/master/specs/bioware/KeyBIF_Format.pdf KeyBIF_Format.pdf]
+| style="background-color: green;" |supported
+|-
+|*.rim
+|Rim file
+| style="text-align: center;" |[https://github.com/xoreos/xoreos-docs/raw/master/specs/bioware/KeyBIF_Format.pdf]
+| style="background-color: green;" |supported
+|-
+|*.mod
+|Mod file
+| style="text-align: center;" |[https://github.com/xoreos/xoreos-docs/raw/master/specs/bioware/KeyBIF_Format.pdf]
+| style="background-color: green;" |supported
+|}
