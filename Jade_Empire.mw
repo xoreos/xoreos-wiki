@@ -1,4 +1,5 @@
 This is the page for the Jade Empire engine.
 
 Current status:
-*Loads black main menu.
+*Loads the first area.
+*Debug menu can be accessed with Ctrl-d.
