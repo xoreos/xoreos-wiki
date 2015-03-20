@@ -57,7 +57,7 @@
 |-
 |gff || gff file || ||
 |-
-|gui || gui file || ||
+|gui || dialog definition in gff format || ||
 |-
 |pwk || pwk file || ||
 |-
@@ -95,7 +95,7 @@
 |-
 |bip || bip file || ||
 |-
-|cre || creature definition || ||
+|cre || creature definition in gff format || ||
 |-
 |pso || pixel shader object || ||
 |-
@@ -111,7 +111,7 @@
 |-
 |pla || placable || ||
 |-
-|trg || trg file || ||
+|trg || trigger definition in gff format || ||
 |-
 |pk || pk file || ||
 |}
