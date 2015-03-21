@@ -40,13 +40,15 @@
 |-
 |vis || 3001 || area rooms visibility in text format || ||
 |-
-|pwk || 2053 || placeable walk mesh definition in text format || ||
-|-
-|fsm || 3022 || placeable state data in gff format || ||
+| || 3015 || area hexgrid definition in text format ||  ||
 |-
 |art || 3023 || area environment properties in ini format || ||
 |-
 |pla || 24007 || placeable definition in gff format || ||
+|-
+|pwk || 2053 || placeable walk mesh definition in text format || ||
+|-
+|fsm || 3022 || placeable state data in gff format || ||
 |}
 
 === Models, Textures and Materials ===
@@ -179,8 +181,6 @@
 |wma || 11 || wma file || ||
 |-
 |ttc || 2073 || ttc file || ||
-|-
-|j01_town || 3015 || unknown ||  ||
 |-
 |pvd || 24005 || pvd file || ||
 |-
