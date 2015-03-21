@@ -27,93 +27,94 @@
 
 {| class="wikitable"
 ! Extension
+! Type ID
 ! Type description/Usage
 ! Documentation
 ! Status
 |-
-|tga || targa image || ||
+|tga || 3 || targa image || ||
 |-
-|ini || ini file || ||
+|ini || 7 || ini file || ||
 |-
-|txt || text file || ||
+|txt || 10 || text file || ||
 |-
-|wma || wma file || ||
+|wma || 11 || wma file || ||
 |-
-|mdl || model file || ||
+|mdl || 2002 || model file || ||
 |-
-|nss || source script || ||
+|nss || 2009 || source script || ||
 |-
-|ncs || compiled script || ||
+|ncs || 2010 || compiled script || ||
 |-
-|are || static area information in gff format || [https://github.com/xoreos/xoreos-docs/raw/master/specs/bioware/AreaFile_Format.pdf AreaFile_Format.pdf] ||
+|are || 2012 || static area information in gff format || [https://github.com/xoreos/xoreos-docs/raw/master/specs/bioware/AreaFile_Format.pdf AreaFile_Format.pdf] ||
 |-
-|2da || static data tables || [https://github.com/xoreos/xoreos-docs/raw/master/specs/bioware/2DA_Format.pdf 2DA_Format.pdf] ||
+|2da || 2017 || static data tables || [https://github.com/xoreos/xoreos-docs/raw/master/specs/bioware/2DA_Format.pdf 2DA_Format.pdf] ||
 |-
-|tlk || string definitions || ||
+|tlk || 2018 || string definitions || ||
 |-
-|txi || texture || ||
+|txi || 2022|| texture information || ||
 |-
-|dlg || dialog definition in gff format || [https://github.com/xoreos/xoreos-docs/raw/master/specs/bioware/Conversation_Format.pdf Conversation_Format.pdf] ||
+|dlg || 2029 || dialog definition in gff format || [https://github.com/xoreos/xoreos-docs/raw/master/specs/bioware/Conversation_Format.pdf Conversation_Format.pdf] ||
 |-
-|gff || gff file || ||
+|gff || 2037 || generic gff file || ||
 |-
-|gui || dialog definition in gff format || ||
+|gui || 2047 || dialog definition in gff format || ||
 |-
-|pwk || pwk file || ||
+|pwk || 2053 || pwk file || ||
 |-
-|sav || sav file || ||
+|sav || 2057 || sav file || ||
 |-
-|bik || prerendered movie || ||
+|bik || 2063 || prerendered bink movie || ||
 |-
-|ndb || ndb file || ||
+|ndb || 2064 || ndb file || ||
 |-
-|mat || mat file || ||
+|mat || 2069 || textual material definition || ||
 |-
-|ttc || ttc file || ||
+|ttc || 2073 || ttc file || ||
 |-
-|ogg || ogg encoded audio || ||
+|ogg || 2078 || ogg encoded audio || ||
 |-
-|qst || qst file || ||
+|qst || 2084 || qst file || ||
 |-
-|lyt || area layout || ||
+|lyt || 3000 || area layout || ||
 |-
-|vis || vis file || ||
+|vis || 3001 || vis file || ||
 |-
-|txb || texture || ||
+|txb || 3006 || texture data || ||
 |-
-|mdx || mdx file || ||
+|mdx || 3008 || mdx file || ||
 |-
-|mab || material definition || ||
+|mab || 3011 || binary material definition || ||
 |-
-|sto || store definition || [https://github.com/xoreos/xoreos-docs/raw/master/specs/bioware/Store_Format.pdf Store_Format.pdf] ||
+|sto || 3013 || store definition || [https://github.com/xoreos/xoreos-docs/raw/master/specs/bioware/Store_Format.pdf Store_Format.pdf] ||
 |-
-|j01_town || type 3015 || ||
+|j01_town || 3015 || unknown ||  ||
 |-
-|fsm || fsm file || ||
+|fsm || 3022 || fsm file || ||
 |-
-|art || art file || ||
+|art || 3023 || art file || ||
 |-
-|bip || bip file || ||
+|bip || 3028 || bip file || ||
 |-
-|cre || creature definition in gff format || ||
+|cre || 24000 || creature definition in gff format || ||
 |-
-|pso || pixel shader object || ||
+|pso || 24001 || pixel shader object || ||
 |-
-|vso || vertex shader object || ||
+|vso || 24002 || vertex shader object || ||
 |-
-|abc || font || ||
+|abc || 24003 || font definition || ||
 |-
-|sbm || font || ||
+|sbm || 24004 || font bitmap || ||
 |-
-|pvd || pvd file || ||
+|pvd || 24005 || pvd file || ||
 |-
-|amp || amp file || ||
+|amp || 24006 || amp file || ||
 |-
-|pla || placable || ||
+|pla || 24007 || placable || ||
 |-
-|trg || trigger definition in gff format || ||
+|trg || 24008 || trigger definition in gff format || ||
 |-
-|pk || pk file || ||
+|pk || 24009 || pk file || ||
 |}
 
 == 2DA files ==
