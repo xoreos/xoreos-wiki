@@ -25,6 +25,32 @@
 
 == Resource files ==
 
+=== Areas, Rooms and Placeables ===
+
+{| class="wikitable"
+! Extension
+! Type ID
+! Type description/Usage
+! Documentation
+! Status
+|-
+|are || 2012 || static area information in gff format || [https://github.com/xoreos/xoreos-docs/raw/master/specs/bioware/AreaFile_Format.pdf AreaFile_Format.pdf] ||
+|-
+|lyt || 3000 || area rooms layout in text format || ||
+|-
+|vis || 3001 || area rooms visibility in text format || ||
+|-
+|pwk || 2053 || placeable walk mesh definition in text format || ||
+|-
+|fsm || 3022 || placeable state data in gff format || ||
+|-
+|art || 3023 || area environment properties in ini format || ||
+|-
+|pla || 24007 || placeable definition in gff format || ||
+|}
+
+=== Models, Textures and Materials ===
+
 {| class="wikitable"
 ! Extension
 ! Type ID
@@ -34,85 +60,131 @@
 |-
 |tga || 3 || targa image || ||
 |-
-|ini || 7 || ini file || ||
-|-
-|txt || 10 || text file || ||
-|-
-|wma || 11 || wma file || ||
-|-
 |mdl || 2002 || model file || ||
+|-
+|mdx || 3008 || model definition || ||
+|-
+|txi || 2022|| texture information || ||
+|-
+|txb || 3006 || texture data || ||
+|-
+|mat || 2069 || textual material definition || ||
+|-
+|mab || 3011 || binary material definition || ||
+|}
+
+=== Scripting and Triggers ===
+
+{| class="wikitable"
+! Extension
+! Type ID
+! Type description/Usage
+! Documentation
+! Status
 |-
 |nss || 2009 || source script || ||
 |-
 |ncs || 2010 || compiled script || ||
 |-
-|are || 2012 || static area information in gff format || [https://github.com/xoreos/xoreos-docs/raw/master/specs/bioware/AreaFile_Format.pdf AreaFile_Format.pdf] ||
+|ndb || 2064 || script debug info || ||
 |-
-|2da || 2017 || static data tables || [https://github.com/xoreos/xoreos-docs/raw/master/specs/bioware/2DA_Format.pdf 2DA_Format.pdf] ||
+|trg || 24008 || trigger definition in gff format || ||
+|}
+
+=== Quests, Texts and Dialogues ===
+
+{| class="wikitable"
+! Extension
+! Type ID
+! Type description/Usage
+! Documentation
+! Status
 |-
 |tlk || 2018 || string definitions || ||
 |-
-|txi || 2022|| texture information || ||
-|-
 |dlg || 2029 || dialog definition in gff format || [https://github.com/xoreos/xoreos-docs/raw/master/specs/bioware/Conversation_Format.pdf Conversation_Format.pdf] ||
 |-
-|gff || 2037 || generic gff file || ||
+|qst || 2084 || quest definition in gff format || ||
+|-
+|bip || 3028 || binary lipsynch data || ||
+|}
+
+=== GUI ===
+
+{| class="wikitable"
+! Extension
+! Type ID
+! Type description/Usage
+! Documentation
+! Status
 |-
 |gui || 2047 || dialog definition in gff format || ||
 |-
-|pwk || 2053 || placeable walk mesh || ||
+|abc || 24003 || font definition || ||
+|-
+|sbm || 24004 || font bitmap || ||
+|}
+
+=== Static Properties ===
+
+{| class="wikitable"
+! Extension
+! Type ID
+! Type description/Usage
+! Documentation
+! Status
+|-
+|ini || 7 || ini file || ||
+|-
+|txt || 10 || text file || ||
+|-
+|2da || 2017 || static data tables || [https://github.com/xoreos/xoreos-docs/raw/master/specs/bioware/2DA_Format.pdf 2DA_Format.pdf] ||
+|-
+|gff || 2037 || generic gff file || ||
+|}
+
+=== Others ===
+
+{| class="wikitable"
+! Extension
+! Type ID
+! Type description/Usage
+! Documentation
+! Status
 |-
 |sav || 2057 || game save in erf format || ||
 |-
 |bik || 2063 || prerendered bink movie || ||
 |-
-|ndb || 2064 || script debug info || ||
-|-
-|mat || 2069 || textual material definition || ||
-|-
-|ttc || 2073 || ttc file || ||
-|-
 |ogg || 2078 || ogg encoded audio || ||
 |-
-|qst || 2084 || quest definition in gff format || ||
-|-
-|lyt || 3000 || area rooms layout || ||
-|-
-|vis || 3001 || area rooms visibility || ||
-|-
-|txb || 3006 || texture data || ||
-|-
-|mdx || 3008 || model definition || ||
-|-
-|mab || 3011 || binary material definition || ||
-|-
-|sto || 3013 || store definition || [https://github.com/xoreos/xoreos-docs/raw/master/specs/bioware/Store_Format.pdf Store_Format.pdf] ||
-|-
-|j01_town || 3015 || unknown ||  ||
-|-
-|fsm || 3022 || finite state machine data || ||
-|-
-|art || 3023 || area environment properties || ||
-|-
-|bip || 3028 || binary lipsynch data || ||
+|sto || 3013 || store definition in gff format || [https://github.com/xoreos/xoreos-docs/raw/master/specs/bioware/Store_Format.pdf Store_Format.pdf] ||
 |-
 |cre || 24000 || creature definition in gff format || ||
 |-
 |pso || 24001 || pixel shader object || ||
 |-
 |vso || 24002 || vertex shader object || ||
+|}
+
+=== Unknown ===
+
+{| class="wikitable"
+! Extension
+! Type ID
+! Type description/Usage
+! Documentation
+! Status
 |-
-|abc || 24003 || font definition || ||
+|wma || 11 || wma file || ||
 |-
-|sbm || 24004 || font bitmap || ||
+|ttc || 2073 || ttc file || ||
+|-
+|j01_town || 3015 || unknown ||  ||
 |-
 |pvd || 24005 || pvd file || ||
 |-
 |amp || 24006 || amp file || ||
-|-
-|pla || 24007 || placeable definition in gff format || ||
-|-
-|trg || 24008 || trigger definition in gff format || ||
 |-
 |pk || 24009 || pk file || ||
 |}
