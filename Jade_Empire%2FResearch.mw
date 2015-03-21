@@ -14,12 +14,12 @@
 |-
 |*.rim
 |Rim file
-| style="text-align: center;" |[https://github.com/xoreos/xoreos-docs/raw/master/specs/bioware/KeyBIF_Format.pdf]
+|
 | style="background-color: green;" |supported
 |-
 |*.mod
-|Mod file
-| style="text-align: center;" |[https://github.com/xoreos/xoreos-docs/raw/master/specs/bioware/KeyBIF_Format.pdf]
+|ERF file
+| style="text-align: center;" |[https://github.com/xoreos/xoreos-docs/raw/master/specs/bioware/ERF_Format.pdf ERF_Format.pdf]
 | style="background-color: green;" |supported
 |}
 
