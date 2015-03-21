@@ -60,13 +60,13 @@
 |-
 |gui || 2047 || dialog definition in gff format || ||
 |-
-|pwk || 2053 || pwk file || ||
+|pwk || 2053 || placeable walk mesh || ||
 |-
-|sav || 2057 || sav file || ||
+|sav || 2057 || game save in erf format || ||
 |-
 |bik || 2063 || prerendered bink movie || ||
 |-
-|ndb || 2064 || ndb file || ||
+|ndb || 2064 || script debug info || ||
 |-
 |mat || 2069 || textual material definition || ||
 |-
@@ -74,15 +74,15 @@
 |-
 |ogg || 2078 || ogg encoded audio || ||
 |-
-|qst || 2084 || qst file || ||
+|qst || 2084 || quest definition in gff format || ||
 |-
-|lyt || 3000 || area layout || ||
+|lyt || 3000 || area rooms layout || ||
 |-
-|vis || 3001 || vis file || ||
+|vis || 3001 || area rooms visibility || ||
 |-
 |txb || 3006 || texture data || ||
 |-
-|mdx || 3008 || mdx file || ||
+|mdx || 3008 || model definition || ||
 |-
 |mab || 3011 || binary material definition || ||
 |-
@@ -90,11 +90,11 @@
 |-
 |j01_town || 3015 || unknown ||  ||
 |-
-|fsm || 3022 || fsm file || ||
+|fsm || 3022 || finite state machine data || ||
 |-
-|art || 3023 || art file || ||
+|art || 3023 || area environment properties || ||
 |-
-|bip || 3028 || bip file || ||
+|bip || 3028 || binary lipsynch data || ||
 |-
 |cre || 24000 || creature definition in gff format || ||
 |-
@@ -110,7 +110,7 @@
 |-
 |amp || 24006 || amp file || ||
 |-
-|pla || 24007 || placable || ||
+|pla || 24007 || placeable definition in gff format || ||
 |-
 |trg || 24008 || trigger definition in gff format || ||
 |-
