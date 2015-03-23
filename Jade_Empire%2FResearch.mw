@@ -197,6 +197,894 @@
 ! Name
 ! Usage
 ! Status
+|-
+| 1000cutsas.2da || 1000cutsas.2da || style="background-color: red;" | unsupported
+|-
+| 1000cutscs.2da || 1000cutscs.2da || style="background-color: red;" | unsupported
+|-
+| 1000cutslv.2da || 1000cutslv.2da || style="background-color: red;" | unsupported
+|-
+| 1000cutsmv.2da || 1000cutsmv.2da || style="background-color: red;" | unsupported
+|-
+| 2das.2da || 2das.2da || style="background-color: red;" | unsupported
+|-
+| abbot.2da || abbot.2da || style="background-color: red;" | unsupported
+|-
+| ambientmusic.2da || ambientmusic.2da || style="background-color: red;" | unsupported
+|-
+| ambientoneshot.2da || ambientoneshot.2da || style="background-color: red;" | unsupported
+|-
+| ambientsound.2da || ambientsound.2da || style="background-color: red;" | unsupported
+|-
+| ampeffect.2da || ampeffect.2da || style="background-color: red;" | unsupported
+|-
+| animations.2da || animations.2da || style="background-color: red;" | unsupported
+|-
+| anim_explore.2da || anim_explore.2da || style="background-color: red;" | unsupported
+|-
+| animgroups.2da || animgroups.2da || style="background-color: red;" | unsupported
+|-
+| animmodvalues.2da || animmodvalues.2da || style="background-color: red;" | unsupported
+|-
+| animpriority.2da || animpriority.2da || style="background-color: red;" | unsupported
+|-
+| appearance.2da || appearance.2da || style="background-color: red;" | unsupported
+|-
+| appearancesndset.2da || appearancesndset.2da || style="background-color: red;" | unsupported
+|-
+| ar_cave.2da || ar_cave.2da || style="background-color: red;" | unsupported
+|-
+| ar_ch6_all.2da || ar_ch6_all.2da || style="background-color: red;" | unsupported
+|-
+| ar_city_core.2da || ar_city_core.2da || style="background-color: red;" | unsupported
+|-
+| ar_city_rich.2da || ar_city_rich.2da || style="background-color: red;" | unsupported
+|-
+| ar_crashsite.2da || ar_crashsite.2da || style="background-color: red;" | unsupported
+|-
+| ar_dockhouse.2da || ar_dockhouse.2da || style="background-color: red;" | unsupported
+|-
+| areamaps.2da || areamaps.2da || style="background-color: red;" | unsupported
+|-
+| areaofeffect.2da || areaofeffect.2da || style="background-color: red;" | unsupported
+|-
+| ar_forest.2da || ar_forest.2da || style="background-color: red;" | unsupported
+|-
+| ar_global.2da || ar_global.2da || style="background-color: red;" | unsupported
+|-
+| ar_heaven.2da || ar_heaven.2da || style="background-color: red;" | unsupported
+|-
+| ar_innercourt.2da || ar_innercourt.2da || style="background-color: red;" | unsupported
+|-
+| ar_jdk_01.2da || ar_jdk_01.2da || style="background-color: red;" | unsupported
+|-
+| ar_jdk_02.2da || ar_jdk_02.2da || style="background-color: red;" | unsupported
+|-
+| ar_jdk_03.2da || ar_jdk_03.2da || style="background-color: red;" | unsupported
+|-
+| ar_kfs.2da || ar_kfs.2da || style="background-color: red;" | unsupported
+|-
+| ar_lotus.2da || ar_lotus.2da || style="background-color: red;" | unsupported
+|-
+| ar_mind.2da || ar_mind.2da || style="background-color: red;" | unsupported
+|-
+| ar_necrop.2da || ar_necrop.2da || style="background-color: red;" | unsupported
+|-
+| ar_outercourt.2da || ar_outercourt.2da || style="background-color: red;" | unsupported
+|-
+| ar_palace4.2da || ar_palace4.2da || style="background-color: red;" | unsupported
+|-
+| ar_palace7.2da || ar_palace7.2da || style="background-color: red;" | unsupported
+|-
+| ar_pirates.2da || ar_pirates.2da || style="background-color: red;" | unsupported
+|-
+| ar_quarry.2da || ar_quarry.2da || style="background-color: red;" | unsupported
+|-
+| ar_ruins.2da || ar_ruins.2da || style="background-color: red;" | unsupported
+|-
+| ar_scholars.2da || ar_scholars.2da || style="background-color: red;" | unsupported
+|-
+| ar_spirit.2da || ar_spirit.2da || style="background-color: red;" | unsupported
+|-
+| ar_spiritcave.2da || ar_spiritcave.2da || style="background-color: red;" | unsupported
+|-
+| ar_swamp.2da || ar_swamp.2da || style="background-color: red;" | unsupported
+|-
+| ar_swampcave.2da || ar_swampcave.2da || style="background-color: red;" | unsupported
+|-
+| ar_tavern.2da || ar_tavern.2da || style="background-color: red;" | unsupported
+|-
+| ar_teahouse.2da || ar_teahouse.2da || style="background-color: red;" | unsupported
+|-
+| ar_temple7.2da || ar_temple7.2da || style="background-color: red;" | unsupported
+|-
+| ar_templecourt.2da || ar_templecourt.2da || style="background-color: red;" | unsupported
+|-
+| ar_throne4.2da || ar_throne4.2da || style="background-color: red;" | unsupported
+|-
+| ar_throne7.2da || ar_throne7.2da || style="background-color: red;" | unsupported
+|-
+| ar_tiens.2da || ar_tiens.2da || style="background-color: red;" | unsupported
+|-
+| ar_town.2da || ar_town.2da || style="background-color: red;" | unsupported
+|-
+| ar_town_c.2da || ar_town_c.2da || style="background-color: red;" | unsupported
+|-
+| attackpatterns.2da || attackpatterns.2da || style="background-color: red;" | unsupported
+|-
+| blocksounds.2da || blocksounds.2da || style="background-color: red;" | unsupported
+|-
+| bodyfallsounds.2da || bodyfallsounds.2da || style="background-color: red;" | unsupported
+|-
+| bodyovermats.2da || bodyovermats.2da || style="background-color: red;" | unsupported
+|-
+| books.2da || books.2da || style="background-color: red;" | unsupported
+|-
+| bwind.2da || bwind.2da || style="background-color: red;" | unsupported
+|-
+| camerastyle.2da || camerastyle.2da || style="background-color: red;" | unsupported
+|-
+| cammovebehavior.2da || cammovebehavior.2da || style="background-color: red;" | unsupported
+|-
+| cannibalas.2da || cannibalas.2da || style="background-color: red;" | unsupported
+|-
+| cannibalcs.2da || cannibalcs.2da || style="background-color: red;" | unsupported
+|-
+| canniballv.2da || canniballv.2da || style="background-color: red;" | unsupported
+|-
+| cannibalmv.2da || cannibalmv.2da || style="background-color: red;" | unsupported
+|-
+| centipede.2da || centipede.2da || style="background-color: red;" | unsupported
+|-
+| chaika.2da || chaika.2da || style="background-color: red;" | unsupported
+|-
+| chaikaas.2da || chaikaas.2da || style="background-color: red;" | unsupported
+|-
+| chaikacs.2da || chaikacs.2da || style="background-color: red;" | unsupported
+|-
+| chaikalv.2da || chaikalv.2da || style="background-color: red;" | unsupported
+|-
+| chaikamv.2da || chaikamv.2da || style="background-color: red;" | unsupported
+|-
+| chapterprice.2da || chapterprice.2da || style="background-color: red;" | unsupported
+|-
+| char_select_anim.2da || char_select_anim.2da || style="background-color: red;" | unsupported
+|-
+| clay_golemas.2da || clay_golemas.2da || style="background-color: red;" | unsupported
+|-
+| clay_golemcs.2da || clay_golemcs.2da || style="background-color: red;" | unsupported
+|-
+| clay_golemlv.2da || clay_golemlv.2da || style="background-color: red;" | unsupported
+|-
+| clay_golemmv.2da || clay_golemmv.2da || style="background-color: red;" | unsupported
+|-
+| collectionmaxes.2da || collectionmaxes.2da || style="background-color: red;" | unsupported
+|-
+| combataiattack.2da || combataiattack.2da || style="background-color: red;" | unsupported
+|-
+| combataiprob.2da || combataiprob.2da || style="background-color: red;" | unsupported
+|-
+| combataitemplate.2da || combataitemplate.2da || style="background-color: red;" | unsupported
+|-
+| combatlog.2da || combatlog.2da || style="background-color: red;" | unsupported
+|-
+| combatneutrals.2da || combatneutrals.2da || style="background-color: red;" | unsupported
+|-
+| confusioneffects.2da || confusioneffects.2da || style="background-color: red;" | unsupported
+|-
+| creaturehooks.2da || creaturehooks.2da || style="background-color: red;" | unsupported
+|-
+| creaturespeed.2da || creaturespeed.2da || style="background-color: red;" | unsupported
+|-
+| crowdlist.2da || crowdlist.2da || style="background-color: red;" | unsupported
+|-
+| cscreen.2da || cscreen.2da || style="background-color: red;" | unsupported
+|-
+| cutsceneflags.2da || cutsceneflags.2da || style="background-color: red;" | unsupported
+|-
+| damagearmor.2da || damagearmor.2da || style="background-color: red;" | unsupported
+|-
+| death.2da || death.2da || style="background-color: red;" | unsupported
+|-
+| deathcounts.2da || deathcounts.2da || style="background-color: red;" | unsupported
+|-
+| deathhints.2da || deathhints.2da || style="background-color: red;" | unsupported
+|-
+| deaths_handas.2da || deaths_handas.2da || style="background-color: red;" | unsupported
+|-
+| deaths_handcs.2da || deaths_handcs.2da || style="background-color: red;" | unsupported
+|-
+| deaths_handlv.2da || deaths_handlv.2da || style="background-color: red;" | unsupported
+|-
+| deaths_handmv.2da || deaths_handmv.2da || style="background-color: red;" | unsupported
+|-
+| debilitation.2da || debilitation.2da || style="background-color: red;" | unsupported
+|-
+| decapitation.2da || decapitation.2da || style="background-color: red;" | unsupported
+|-
+| defaultas.2da || defaultas.2da || style="background-color: red;" | unsupported
+|-
+| def_good_evil.2da || def_good_evil.2da || style="background-color: red;" | unsupported
+|-
+| delayedeffects.2da || delayedeffects.2da || style="background-color: red;" | unsupported
+|-
+| demon_bullas.2da || demon_bullas.2da || style="background-color: red;" | unsupported
+|-
+| demon_bullcs.2da || demon_bullcs.2da || style="background-color: red;" | unsupported
+|-
+| demon_bulllv.2da || demon_bulllv.2da || style="background-color: red;" | unsupported
+|-
+| demon_bullmv.2da || demon_bullmv.2da || style="background-color: red;" | unsupported
+|-
+| demon_elephantas.2da || demon_elephantas.2da || style="background-color: red;" | unsupported
+|-
+| demon_elephantcs.2da || demon_elephantcs.2da || style="background-color: red;" | unsupported
+|-
+| demon_elephantlv.2da || demon_elephantlv.2da || style="background-color: red;" | unsupported
+|-
+| demon_elephantmv.2da || demon_elephantmv.2da || style="background-color: red;" | unsupported
+|-
+| demon_foxas.2da || demon_foxas.2da || style="background-color: red;" | unsupported
+|-
+| demon_foxcs.2da || demon_foxcs.2da || style="background-color: red;" | unsupported
+|-
+| demon_foxlv.2da || demon_foxlv.2da || style="background-color: red;" | unsupported
+|-
+| demon_foxmv.2da || demon_foxmv.2da || style="background-color: red;" | unsupported
+|-
+| demon_horseas.2da || demon_horseas.2da || style="background-color: red;" | unsupported
+|-
+| demon_horsecs.2da || demon_horsecs.2da || style="background-color: red;" | unsupported
+|-
+| demon_horselv.2da || demon_horselv.2da || style="background-color: red;" | unsupported
+|-
+| demon_horsemv.2da || demon_horsemv.2da || style="background-color: red;" | unsupported
+|-
+| demon_ratas.2da || demon_ratas.2da || style="background-color: red;" | unsupported
+|-
+| demon_ratcs.2da || demon_ratcs.2da || style="background-color: red;" | unsupported
+|-
+| demon_ratlv.2da || demon_ratlv.2da || style="background-color: red;" | unsupported
+|-
+| demon_ratmv.2da || demon_ratmv.2da || style="background-color: red;" | unsupported
+|-
+| demon_toadas.2da || demon_toadas.2da || style="background-color: red;" | unsupported
+|-
+| demon_toadlv.2da || demon_toadlv.2da || style="background-color: red;" | unsupported
+|-
+| demon_toadmv.2da || demon_toadmv.2da || style="background-color: red;" | unsupported
+|-
+| des_autosaves.2da || des_autosaves.2da || style="background-color: red;" | unsupported
+|-
+| des_enchantment.2da || des_enchantment.2da || style="background-color: red;" | unsupported
+|-
+| des_hench.2da || des_hench.2da || style="background-color: red;" | unsupported
+|-
+| dhand.2da || dhand.2da || style="background-color: red;" | unsupported
+|-
+| diffmodify.2da || diffmodify.2da || style="background-color: red;" | unsupported
+|-
+| drunken.2da || drunken.2da || style="background-color: red;" | unsupported
+|-
+| drunkenmasteras.2da || drunkenmasteras.2da || style="background-color: red;" | unsupported
+|-
+| drunkenmastercs.2da || drunkenmastercs.2da || style="background-color: red;" | unsupported
+|-
+| drunkenmasterlv.2da || drunkenmasterlv.2da || style="background-color: red;" | unsupported
+|-
+| drunkenmastermv.2da || drunkenmastermv.2da || style="background-color: red;" | unsupported
+|-
+| dstar.2da || dstar.2da || style="background-color: red;" | unsupported
+|-
+| dyingtype.2da || dyingtype.2da || style="background-color: red;" | unsupported
+|-
+| effects.2da || effects.2da || style="background-color: red;" | unsupported
+|-
+| effectsmat.2da || effectsmat.2da || style="background-color: red;" | unsupported
+|-
+| effectsovertime.2da || effectsovertime.2da || style="background-color: red;" | unsupported
+|-
+| envaudio.2da || envaudio.2da || style="background-color: red;" | unsupported
+|-
+| evade.2da || evade.2da || style="background-color: red;" | unsupported
+|-
+| f_abbot.2da || f_abbot.2da || style="background-color: red;" | unsupported
+|-
+| f_bwind.2da || f_bwind.2da || style="background-color: red;" | unsupported
+|-
+| f_dhand.2da || f_dhand.2da || style="background-color: red;" | unsupported
+|-
+| f_dstar.2da || f_dstar.2da || style="background-color: red;" | unsupported
+|-
+| f_ho.2da || f_ho.2da || style="background-color: red;" | unsupported
+|-
+| f_kang.2da || f_kang.2da || style="background-color: red;" | unsupported
+|-
+| floaty.2da || floaty.2da || style="background-color: red;" | unsupported
+|-
+| focuseffects.2da || focuseffects.2da || style="background-color: red;" | unsupported
+|-
+| focusrules.2da || focusrules.2da || style="background-color: red;" | unsupported
+|-
+| followerrooms.2da || followerrooms.2da || style="background-color: red;" | unsupported
+|-
+| footstepsounds.2da || footstepsounds.2da || style="background-color: red;" | unsupported
+|-
+| f_sfox.2da || f_sfox.2da || style="background-color: red;" | unsupported
+|-
+| f_sky.2da || f_sky.2da || style="background-color: red;" | unsupported
+|-
+| f_wflower.2da || f_wflower.2da || style="background-color: red;" | unsupported
+|-
+| f_zu.2da || f_zu.2da || style="background-color: red;" | unsupported
+|-
+| gems.2da || gems.2da || style="background-color: red;" | unsupported
+|-
+| gencon.2da || gencon.2da || style="background-color: red;" | unsupported
+|-
+| genericdoors.2da || genericdoors.2da || style="background-color: red;" | unsupported
+|-
+| Ghost_KingAS.2da || Ghost_KingAS.2da || style="background-color: red;" | unsupported
+|-
+| Ghost_KingCS.2da || Ghost_KingCS.2da || style="background-color: red;" | unsupported
+|-
+| Ghost_KingLV.2da || Ghost_KingLV.2da || style="background-color: red;" | unsupported
+|-
+| Ghost_KingMV.2da || Ghost_KingMV.2da || style="background-color: red;" | unsupported
+|-
+| gimp_martialas.2da || gimp_martialas.2da || style="background-color: red;" | unsupported
+|-
+| gimp_martialcs.2da || gimp_martialcs.2da || style="background-color: red;" | unsupported
+|-
+| gimp_martiallv.2da || gimp_martiallv.2da || style="background-color: red;" | unsupported
+|-
+| gimp_martialmv.2da || gimp_martialmv.2da || style="background-color: red;" | unsupported
+|-
+| gimp_spearas.2da || gimp_spearas.2da || style="background-color: red;" | unsupported
+|-
+| gimp_spearcs.2da || gimp_spearcs.2da || style="background-color: red;" | unsupported
+|-
+| gimp_spearlv.2da || gimp_spearlv.2da || style="background-color: red;" | unsupported
+|-
+| gimp_spearmv.2da || gimp_spearmv.2da || style="background-color: red;" | unsupported
+|-
+| globals.2da || globals.2da || style="background-color: red;" | unsupported
+|-
+| good_evil.2da || good_evil.2da || style="background-color: red;" | unsupported
+|-
+| gui_amulet2_anim.2da || gui_amulet2_anim.2da || style="background-color: red;" | unsupported
+|-
+| gui_amulet.2da || gui_amulet.2da || style="background-color: red;" | unsupported
+|-
+| gui_char_model.2da || gui_char_model.2da || style="background-color: red;" | unsupported
+|-
+| guisounds.2da || guisounds.2da || style="background-color: red;" | unsupported
+|-
+| gui_weapons.2da || gui_weapons.2da || style="background-color: red;" | unsupported
+|-
+| headovermats.2da || headovermats.2da || style="background-color: red;" | unsupported
+|-
+| heads.2da || heads.2da || style="background-color: red;" | unsupported
+|-
+| heavenlywaveas.2da || heavenlywaveas.2da || style="background-color: red;" | unsupported
+|-
+| heavenlywavecs.2da || heavenlywavecs.2da || style="background-color: red;" | unsupported
+|-
+| heavenlywavelv.2da || heavenlywavelv.2da || style="background-color: red;" | unsupported
+|-
+| heavenlywavemv.2da || heavenlywavemv.2da || style="background-color: red;" | unsupported
+|-
+| henchcombattype.2da || henchcombattype.2da || style="background-color: red;" | unsupported
+|-
+| henchdefaultdata.2da || henchdefaultdata.2da || style="background-color: red;" | unsupported
+|-
+| henchmenaidata.2da || henchmenaidata.2da || style="background-color: red;" | unsupported
+|-
+| henchpage.2da || henchpage.2da || style="background-color: red;" | unsupported
+|-
+| henchstates.2da || henchstates.2da || style="background-color: red;" | unsupported
+|-
+| henchstyles.2da || henchstyles.2da || style="background-color: red;" | unsupported
+|-
+| hiddenfistas.2da || hiddenfistas.2da || style="background-color: red;" | unsupported
+|-
+| hiddenfistcs.2da || hiddenfistcs.2da || style="background-color: red;" | unsupported
+|-
+| hiddenfistlv.2da || hiddenfistlv.2da || style="background-color: red;" | unsupported
+|-
+| hiddenfistmv.2da || hiddenfistmv.2da || style="background-color: red;" | unsupported
+|-
+| hintsarea.2da || hintsarea.2da || style="background-color: red;" | unsupported
+|-
+| hintsgeneral.2da || hintsgeneral.2da || style="background-color: red;" | unsupported
+|-
+| hintstech.2da || hintstech.2da || style="background-color: red;" | unsupported
+|-
+| hitsounds.2da || hitsounds.2da || style="background-color: red;" | unsupported
+|-
+| ho.2da || ho.2da || style="background-color: red;" | unsupported
+|-
+| imp_hamas.2da || imp_hamas.2da || style="background-color: red;" | unsupported
+|-
+| imp_hamcs.2da || imp_hamcs.2da || style="background-color: red;" | unsupported
+|-
+| imp_hamlv.2da || imp_hamlv.2da || style="background-color: red;" | unsupported
+|-
+| imp_hammv.2da || imp_hammv.2da || style="background-color: red;" | unsupported
+|-
+| imp_legsas.2da || imp_legsas.2da || style="background-color: red;" | unsupported
+|-
+| imp_legscs.2da || imp_legscs.2da || style="background-color: red;" | unsupported
+|-
+| imp_legslv.2da || imp_legslv.2da || style="background-color: red;" | unsupported
+|-
+| imp_legsmv.2da || imp_legsmv.2da || style="background-color: red;" | unsupported
+|-
+| improvements.2da || improvements.2da || style="background-color: red;" | unsupported
+|-
+| ironpalmas.2da || ironpalmas.2da || style="background-color: red;" | unsupported
+|-
+| ironpalmcs.2da || ironpalmcs.2da || style="background-color: red;" | unsupported
+|-
+| ironpalmlv.2da || ironpalmlv.2da || style="background-color: red;" | unsupported
+|-
+| ironpalmmv.2da || ironpalmmv.2da || style="background-color: red;" | unsupported
+|-
+| isflat_combat.2da || isflat_combat.2da || style="background-color: red;" | unsupported
+|-
+| isflat_crowd.2da || isflat_crowd.2da || style="background-color: red;" | unsupported
+|-
+| items.2da || items.2da || style="background-color: red;" | unsupported
+|-
+| jades.2da || jades.2da || style="background-color: red;" | unsupported
+|-
+| jade_warrioras.2da || jade_warrioras.2da || style="background-color: red;" | unsupported
+|-
+| jade_warriorcs.2da || jade_warriorcs.2da || style="background-color: red;" | unsupported
+|-
+| jade_warriorlv.2da || jade_warriorlv.2da || style="background-color: red;" | unsupported
+|-
+| jade_warriormv.2da || jade_warriormv.2da || style="background-color: red;" | unsupported
+|-
+| jdk_players.2da || jdk_players.2da || style="background-color: red;" | unsupported
+|-
+| kang.2da || kang.2da || style="background-color: red;" | unsupported
+|-
+| knockbackinfo.2da || knockbackinfo.2da || style="background-color: red;" | unsupported
+|-
+| leapingtigeras.2da || leapingtigeras.2da || style="background-color: red;" | unsupported
+|-
+| leapingtigercs.2da || leapingtigercs.2da || style="background-color: red;" | unsupported
+|-
+| leapingtigerlv.2da || leapingtigerlv.2da || style="background-color: red;" | unsupported
+|-
+| leapingtigermv.2da || leapingtigermv.2da || style="background-color: red;" | unsupported
+|-
+| legendaryfistas.2da || legendaryfistas.2da || style="background-color: red;" | unsupported
+|-
+| legendaryfistcs.2da || legendaryfistcs.2da || style="background-color: red;" | unsupported
+|-
+| legendaryfistlv.2da || legendaryfistlv.2da || style="background-color: red;" | unsupported
+|-
+| legendaryfistmv.2da || legendaryfistmv.2da || style="background-color: red;" | unsupported
+|-
+| levels.2da || levels.2da || style="background-color: red;" | unsupported
+|-
+| levelxp.2da || levelxp.2da || style="background-color: red;" | unsupported
+|-
+| loadmovie.2da || loadmovie.2da || style="background-color: red;" | unsupported
+|-
+| loadscreen.2da || loadscreen.2da || style="background-color: red;" | unsupported
+|-
+| loadtimes.2da || loadtimes.2da || style="background-color: red;" | unsupported
+|-
+| localsettings.2da || localsettings.2da || style="background-color: red;" | unsupported
+|-
+| magic_airas.2da || magic_airas.2da || style="background-color: red;" | unsupported
+|-
+| magic_aircs.2da || magic_aircs.2da || style="background-color: red;" | unsupported
+|-
+| magic_airlv.2da || magic_airlv.2da || style="background-color: red;" | unsupported
+|-
+| magic_airmv.2da || magic_airmv.2da || style="background-color: red;" | unsupported
+|-
+| magic_earthas.2da || magic_earthas.2da || style="background-color: red;" | unsupported
+|-
+| magic_earthcs.2da || magic_earthcs.2da || style="background-color: red;" | unsupported
+|-
+| magic_earthlv.2da || magic_earthlv.2da || style="background-color: red;" | unsupported
+|-
+| magic_earthmv.2da || magic_earthmv.2da || style="background-color: red;" | unsupported
+|-
+| magic_fireas.2da || magic_fireas.2da || style="background-color: red;" | unsupported
+|-
+| magic_firecs.2da || magic_firecs.2da || style="background-color: red;" | unsupported
+|-
+| magic_firelv.2da || magic_firelv.2da || style="background-color: red;" | unsupported
+|-
+| magic_firemv.2da || magic_firemv.2da || style="background-color: red;" | unsupported
+|-
+| magicstance0.2da || magicstance0.2da || style="background-color: red;" | unsupported
+|-
+| magic_wateras.2da || magic_wateras.2da || style="background-color: red;" | unsupported
+|-
+| magic_watercs.2da || magic_watercs.2da || style="background-color: red;" | unsupported
+|-
+| magic_waterlv.2da || magic_waterlv.2da || style="background-color: red;" | unsupported
+|-
+| magic_watermv.2da || magic_watermv.2da || style="background-color: red;" | unsupported
+|-
+| mappins.2da || mappins.2da || style="background-color: red;" | unsupported
+|-
+| mask_spiritas.2da || mask_spiritas.2da || style="background-color: red;" | unsupported
+|-
+| mask_spiritcs.2da || mask_spiritcs.2da || style="background-color: red;" | unsupported
+|-
+| mask_spiritlv.2da || mask_spiritlv.2da || style="background-color: red;" | unsupported
+|-
+| mask_spiritmv.2da || mask_spiritmv.2da || style="background-color: red;" | unsupported
+|-
+| masterlias.2da || masterlias.2da || style="background-color: red;" | unsupported
+|-
+| masterlics.2da || masterlics.2da || style="background-color: red;" | unsupported
+|-
+| masterlilv.2da || masterlilv.2da || style="background-color: red;" | unsupported
+|-
+| masterlimv.2da || masterlimv.2da || style="background-color: red;" | unsupported
+|-
+| mg_beestyle.2da || mg_beestyle.2da || style="background-color: red;" | unsupported
+|-
+| mg_design.2da || mg_design.2da || style="background-color: red;" | unsupported
+|-
+| mgenemies.2da || mgenemies.2da || style="background-color: red;" | unsupported
+|-
+| mggroupdata.2da || mggroupdata.2da || style="background-color: red;" | unsupported
+|-
+| mggroups.2da || mggroups.2da || style="background-color: red;" | unsupported
+|-
+| mgmachinegun.2da || mgmachinegun.2da || style="background-color: red;" | unsupported
+|-
+| mgmodels.2da || mgmodels.2da || style="background-color: red;" | unsupported
+|-
+| mg_mossie.2da || mg_mossie.2da || style="background-color: red;" | unsupported
+|-
+| mgrandom.2da || mgrandom.2da || style="background-color: red;" | unsupported
+|-
+| mgspiritfocus.2da || mgspiritfocus.2da || style="background-color: red;" | unsupported
+|-
+| mgweapons.2da || mgweapons.2da || style="background-color: red;" | unsupported
+|-
+| modelview.2da || modelview.2da || style="background-color: red;" | unsupported
+|-
+| modstatovertime.2da || modstatovertime.2da || style="background-color: red;" | unsupported
+|-
+| modstyletypedam.2da || modstyletypedam.2da || style="background-color: red;" | unsupported
+|-
+| monkeypawas.2da || monkeypawas.2da || style="background-color: red;" | unsupported
+|-
+| monkeypawcs.2da || monkeypawcs.2da || style="background-color: red;" | unsupported
+|-
+| monkeypawlv.2da || monkeypawlv.2da || style="background-color: red;" | unsupported
+|-
+| monkeypawmv.2da || monkeypawmv.2da || style="background-color: red;" | unsupported
+|-
+| motheras.2da || motheras.2da || style="background-color: red;" | unsupported
+|-
+| mothercs.2da || mothercs.2da || style="background-color: red;" | unsupported
+|-
+| motherlv.2da || motherlv.2da || style="background-color: red;" | unsupported
+|-
+| mothermv.2da || mothermv.2da || style="background-color: red;" | unsupported
+|-
+| movie.2da || movie.2da || style="background-color: red;" | unsupported
+|-
+| movierumble.2da || movierumble.2da || style="background-color: red;" | unsupported
+|-
+| multipleeffects.2da || multipleeffects.2da || style="background-color: red;" | unsupported
+|-
+| mummyas.2da || mummyas.2da || style="background-color: red;" | unsupported
+|-
+| mummycs.2da || mummycs.2da || style="background-color: red;" | unsupported
+|-
+| mummylv.2da || mummylv.2da || style="background-color: red;" | unsupported
+|-
+| mummymv.2da || mummymv.2da || style="background-color: red;" | unsupported
+|-
+| music.2da || music.2da || style="background-color: red;" | unsupported
+|-
+| namelist.2da || namelist.2da || style="background-color: red;" | unsupported
+|-
+| ogreas.2da || ogreas.2da || style="background-color: red;" | unsupported
+|-
+| ogrecs.2da || ogrecs.2da || style="background-color: red;" | unsupported
+|-
+| ogrelv.2da || ogrelv.2da || style="background-color: red;" | unsupported
+|-
+| ogremv.2da || ogremv.2da || style="background-color: red;" | unsupported
+|-
+| other.2da || other.2da || style="background-color: red;" | unsupported
+|-
+| overmaterials.2da || overmaterials.2da || style="background-color: red;" | unsupported
+|-
+| paralyzepalmas.2da || paralyzepalmas.2da || style="background-color: red;" | unsupported
+|-
+| paralyzepalmlv.2da || paralyzepalmlv.2da || style="background-color: red;" | unsupported
+|-
+| paralyzepalmmv.2da || paralyzepalmmv.2da || style="background-color: red;" | unsupported
+|-
+| paralyzingpalmcs.2da || paralyzingpalmcs.2da || style="background-color: red;" | unsupported
+|-
+| pausetypes.2da || pausetypes.2da || style="background-color: red;" | unsupported
+|-
+| pixelflare.2da || pixelflare.2da || style="background-color: red;" | unsupported
+|-
+| placeables.2da || placeables.2da || style="background-color: red;" | unsupported
+|-
+| players.2da || players.2da || style="background-color: red;" | unsupported
+|-
+| plot_items.2da || plot_items.2da || style="background-color: red;" | unsupported
+|-
+| poison.2da || poison.2da || style="background-color: red;" | unsupported
+|-
+| polymorph.2da || polymorph.2da || style="background-color: red;" | unsupported
+|-
+| powerupclasses.2da || powerupclasses.2da || style="background-color: red;" | unsupported
+|-
+| powerups.2da || powerups.2da || style="background-color: red;" | unsupported
+|-
+| prioritygroups.2da || prioritygroups.2da || style="background-color: red;" | unsupported
+|-
+| projectiles.2da || projectiles.2da || style="background-color: red;" | unsupported
+|-
+| questgold.2da || questgold.2da || style="background-color: red;" | unsupported
+|-
+| questxp.2da || questxp.2da || style="background-color: red;" | unsupported
+|-
+| rackingbonus.2da || rackingbonus.2da || style="background-color: red;" | unsupported
+|-
+| rank.2da || rank.2da || style="background-color: red;" | unsupported
+|-
+| readyanimations.2da || readyanimations.2da || style="background-color: red;" | unsupported
+|-
+| recipes.2da || recipes.2da || style="background-color: red;" | unsupported
+|-
+| red_ministeras.2da || red_ministeras.2da || style="background-color: red;" | unsupported
+|-
+| red_ministercs.2da || red_ministercs.2da || style="background-color: red;" | unsupported
+|-
+| red_ministerlv.2da || red_ministerlv.2da || style="background-color: red;" | unsupported
+|-
+| red_ministermv.2da || red_ministermv.2da || style="background-color: red;" | unsupported
+|-
+| releasepowerups.2da || releasepowerups.2da || style="background-color: red;" | unsupported
+|-
+| repute.2da || repute.2da || style="background-color: red;" | unsupported
+|-
+| resistances.2da || resistances.2da || style="background-color: red;" | unsupported
+|-
+| reward.2da || reward.2da || style="background-color: red;" | unsupported
+|-
+| rewardtemplates.2da || rewardtemplates.2da || style="background-color: red;" | unsupported
+|-
+| ringout.2da || ringout.2da || style="background-color: red;" | unsupported
+|-
+| romanceindex.2da || romanceindex.2da || style="background-color: red;" | unsupported
+|-
+| rt_ch1.2da || rt_ch1.2da || style="background-color: red;" | unsupported
+|-
+| rt_ch3.2da || rt_ch3.2da || style="background-color: red;" | unsupported
+|-
+| rt_ch4.2da || rt_ch4.2da || style="background-color: red;" | unsupported
+|-
+| rt_ch5.2da || rt_ch5.2da || style="background-color: red;" | unsupported
+|-
+| rt_ch6.2da || rt_ch6.2da || style="background-color: red;" | unsupported
+|-
+| rumble.2da || rumble.2da || style="background-color: red;" | unsupported
+|-
+| scoreboard.2da || scoreboard.2da || style="background-color: red;" | unsupported
+|-
+| scriptedprogress.2da || scriptedprogress.2da || style="background-color: red;" | unsupported
+|-
+| scriptlist.2da || scriptlist.2da || style="background-color: red;" | unsupported
+|-
+| sfox.2da || sfox.2da || style="background-color: red;" | unsupported
+|-
+| shadowsetfull.2da || shadowsetfull.2da || style="background-color: red;" | unsupported
+|-
+| shadowsethalf.2da || shadowsethalf.2da || style="background-color: red;" | unsupported
+|-
+| skeleton.2da || skeleton.2da || style="background-color: red;" | unsupported
+|-
+| skillchecks.2da || skillchecks.2da || style="background-color: red;" | unsupported
+|-
+| skilldef.2da || skilldef.2da || style="background-color: red;" | unsupported
+|-
+| sky.2da || sky.2da || style="background-color: red;" | unsupported
+|-
+| soundset.2da || soundset.2da || style="background-color: red;" | unsupported
+|-
+| spells.2da || spells.2da || style="background-color: red;" | unsupported
+|-
+| spiritelements.2da || spiritelements.2da || style="background-color: red;" | unsupported
+|-
+| spiritmoves.2da || spiritmoves.2da || style="background-color: red;" | unsupported
+|-
+| spirits.2da || spirits.2da || style="background-color: red;" | unsupported
+|-
+| spiritwellas.2da || spiritwellas.2da || style="background-color: red;" | unsupported
+|-
+| spiritwellcs.2da || spiritwellcs.2da || style="background-color: red;" | unsupported
+|-
+| spiritwelllv.2da || spiritwelllv.2da || style="background-color: red;" | unsupported
+|-
+| spiritwellmv.2da || spiritwellmv.2da || style="background-color: red;" | unsupported
+|-
+| splash.2da || splash.2da || style="background-color: red;" | unsupported
+|-
+| startrooms.2da || startrooms.2da || style="background-color: red;" | unsupported
+|-
+| statbattery.2da || statbattery.2da || style="background-color: red;" | unsupported
+|-
+| statmodify.2da || statmodify.2da || style="background-color: red;" | unsupported
+|-
+| statmodifybase.2da || statmodifybase.2da || style="background-color: red;" | unsupported
+|-
+| statshield.2da || statshield.2da || style="background-color: red;" | unsupported
+|-
+| stattransfer.2da || stattransfer.2da || style="background-color: red;" | unsupported
+|-
+| stealth.2da || stealth.2da || style="background-color: red;" | unsupported
+|-
+| stormdragonas.2da || stormdragonas.2da || style="background-color: red;" | unsupported
+|-
+| stormdragoncs.2da || stormdragoncs.2da || style="background-color: red;" | unsupported
+|-
+| stormdragonlv.2da || stormdragonlv.2da || style="background-color: red;" | unsupported
+|-
+| stormdragonmv.2da || stormdragonmv.2da || style="background-color: red;" | unsupported
+|-
+| stringtokens.2da || stringtokens.2da || style="background-color: red;" | unsupported
+|-
+| styleadvance.2da || styleadvance.2da || style="background-color: red;" | unsupported
+|-
+| stylecost.2da || stylecost.2da || style="background-color: red;" | unsupported
+|-
+| styledata.2da || styledata.2da || style="background-color: red;" | unsupported
+|-
+| stylepoints.2da || stylepoints.2da || style="background-color: red;" | unsupported
+|-
+| stylesuperlist.2da || stylesuperlist.2da || style="background-color: red;" | unsupported
+|-
+| styletypes.2da || styletypes.2da || style="background-color: red;" | unsupported
+|-
+| surfacemat.2da || surfacemat.2da || style="background-color: red;" | unsupported
+|-
+| synergy.2da || synergy.2da || style="background-color: red;" | unsupported
+|-
+| texturereplace.2da || texturereplace.2da || style="background-color: red;" | unsupported
+|-
+| toolsetwaypoint.2da || toolsetwaypoint.2da || style="background-color: red;" | unsupported
+|-
+| transformation.2da || transformation.2da || style="background-color: red;" | unsupported
+|-
+| trans_golemas.2da || trans_golemas.2da || style="background-color: red;" | unsupported
+|-
+| trans_golemcs.2da || trans_golemcs.2da || style="background-color: red;" | unsupported
+|-
+| trans_golemlv.2da || trans_golemlv.2da || style="background-color: red;" | unsupported
+|-
+| trans_golemmv.2da || trans_golemmv.2da || style="background-color: red;" | unsupported
+|-
+| trans_horseas.2da || trans_horseas.2da || style="background-color: red;" | unsupported
+|-
+| trans_horsecs.2da || trans_horsecs.2da || style="background-color: red;" | unsupported
+|-
+| trans_horselv.2da || trans_horselv.2da || style="background-color: red;" | unsupported
+|-
+| trans_horsemv.2da || trans_horsemv.2da || style="background-color: red;" | unsupported
+|-
+| transitions.2da || transitions.2da || style="background-color: red;" | unsupported
+|-
+| trans_ministeras.2da || trans_ministeras.2da || style="background-color: red;" | unsupported
+|-
+| trans_ministercs.2da || trans_ministercs.2da || style="background-color: red;" | unsupported
+|-
+| trans_ministerlv.2da || trans_ministerlv.2da || style="background-color: red;" | unsupported
+|-
+| trans_ministermv.2da || trans_ministermv.2da || style="background-color: red;" | unsupported
+|-
+| trans_toadcs.2da || trans_toadcs.2da || style="background-color: red;" | unsupported
+|-
+| ts_faction.2da || ts_faction.2da || style="background-color: red;" | unsupported
+|-
+| unique.2da || unique.2da || style="background-color: red;" | unsupported
+|-
+| videoscroll.2da || videoscroll.2da || style="background-color: red;" | unsupported
+|-
+| viperas.2da || viperas.2da || style="background-color: red;" | unsupported
+|-
+| vipercs.2da || vipercs.2da || style="background-color: red;" | unsupported
+|-
+| viperlv.2da || viperlv.2da || style="background-color: red;" | unsupported
+|-
+| vipermv.2da || vipermv.2da || style="background-color: red;" | unsupported
+|-
+| viral.2da || viral.2da || style="background-color: red;" | unsupported
+|-
+| visualcrusts.2da || visualcrusts.2da || style="background-color: red;" | unsupported
+|-
+| visualeffects.2da || visualeffects.2da || style="background-color: red;" | unsupported
+|-
+| weapon_1swordas.2da || weapon_1swordas.2da || style="background-color: red;" | unsupported
+|-
+| weapon_1swordcs.2da || weapon_1swordcs.2da || style="background-color: red;" | unsupported
+|-
+| weapon_1swordlv.2da || weapon_1swordlv.2da || style="background-color: red;" | unsupported
+|-
+| weapon_1swordmv.2da || weapon_1swordmv.2da || style="background-color: red;" | unsupported
+|-
+| weapon_bigaxeas.2da || weapon_bigaxeas.2da || style="background-color: red;" | unsupported
+|-
+| weapon_bigaxecs.2da || weapon_bigaxecs.2da || style="background-color: red;" | unsupported
+|-
+| weapon_bigaxelv.2da || weapon_bigaxelv.2da || style="background-color: red;" | unsupported
+|-
+| weapon_bigaxemv.2da || weapon_bigaxemv.2da || style="background-color: red;" | unsupported
+|-
+| weapon_gunas.2da || weapon_gunas.2da || style="background-color: red;" | unsupported
+|-
+| weapon_guncs.2da || weapon_guncs.2da || style="background-color: red;" | unsupported
+|-
+| weapon_gunlv.2da || weapon_gunlv.2da || style="background-color: red;" | unsupported
+|-
+| weapon_gunmv.2da || weapon_gunmv.2da || style="background-color: red;" | unsupported
+|-
+| weapons.2da || weapons.2da || style="background-color: red;" | unsupported
+|-
+| weapon_staffas.2da || weapon_staffas.2da || style="background-color: red;" | unsupported
+|-
+| weapon_staffcs.2da || weapon_staffcs.2da || style="background-color: red;" | unsupported
+|-
+| weapon_stafflv.2da || weapon_stafflv.2da || style="background-color: red;" | unsupported
+|-
+| weapon_staffmv.2da || weapon_staffmv.2da || style="background-color: red;" | unsupported
+|-
+| weapon_swordsas.2da || weapon_swordsas.2da || style="background-color: red;" | unsupported
+|-
+| weapon_swordscs.2da || weapon_swordscs.2da || style="background-color: red;" | unsupported
+|-
+| weapon_swordslv.2da || weapon_swordslv.2da || style="background-color: red;" | unsupported
+|-
+| weapon_swordsmv.2da || weapon_swordsmv.2da || style="background-color: red;" | unsupported
+|-
+| wflower.2da || wflower.2da || style="background-color: red;" | unsupported
+|-
+| whitedemonas.2da || whitedemonas.2da || style="background-color: red;" | unsupported
+|-
+| whitedemoncs.2da || whitedemoncs.2da || style="background-color: red;" | unsupported
+|-
+| whitedemonlv.2da || whitedemonlv.2da || style="background-color: red;" | unsupported
+|-
+| whitedemonmv.2da || whitedemonmv.2da || style="background-color: red;" | unsupported
+|-
+| worldmapinfo.2da || worldmapinfo.2da || style="background-color: red;" | unsupported
+|-
+| yazhen.2da || yazhen.2da || style="background-color: red;" | unsupported
+|-
+| zdc_area.2da || zdc_area.2da || style="background-color: red;" | unsupported
+|-
+| zdc_impoffset.2da || zdc_impoffset.2da || style="background-color: red;" | unsupported
+|-
+| zdc_setpc.2da || zdc_setpc.2da || style="background-color: red;" | unsupported
+|-
+| zdc_vfxoffset.2da || zdc_vfxoffset.2da || style="background-color: red;" | unsupported
+|-
+| zmf_ca_humans.2da || zmf_ca_humans.2da || style="background-color: red;" | unsupported
+|-
+| zu.2da || zu.2da || style="background-color: red;" | unsupported
+|-
+| zz_scoreboard.2da || zz_scoreboard.2da || style="background-color: red;" | unsupported
 |}
 
 === Styles ===
