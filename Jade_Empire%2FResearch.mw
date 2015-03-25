@@ -814,3 +814,25 @@
 |-
 | whitedemon{as,cs,lv,mv}.2da || whitedemonas.2da || style="background-color: red;" | unsupported
 |}
+
+== Models ==
+
+=== Vertex layout ===
+
+{| class="wikitable"
+! Use
+! Type
+! Size
+|-
+| Position || Float3 || 12
+|-
+| Normal || Float3 || 12
+|-
+| TexCoord || Float2 || 8
+|-
+| Color || D3DColor || 4
+|-
+| Tangent || Short4N || 8
+|}
+
+(Order?)
