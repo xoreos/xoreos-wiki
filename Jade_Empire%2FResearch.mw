@@ -83,16 +83,17 @@
 ! Extension
 ! Type ID
 ! Type description/Usage
+! Format
 ! Documentation
 ! Status
 |-
-|nss || 2009 || source script || ||
+|nss || 2009 || nwscript source script || text || || not used
 |-
-|ncs || 2010 || compiled script || ||
+|ncs || 2010 || compiled script || binary || ||
 |-
-|ndb || 2064 || script debug info || ||
+|ndb || 2064 || script debug info || binary || || not used
 |-
-|trg || 24008 || trigger definition in gff format || ||
+|trg || 24008 || trigger definition || gff || ||
 |}
 
 === Quests, Texts and Dialogues ===
