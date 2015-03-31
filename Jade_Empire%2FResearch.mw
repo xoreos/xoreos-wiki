@@ -31,24 +31,25 @@
 ! Extension
 ! Type ID
 ! Type description/Usage
+!Format
 ! Documentation
 ! Status
 |-
-|are || 2012 || static area information in gff format || [https://github.com/xoreos/xoreos-docs/raw/master/specs/bioware/AreaFile_Format.pdf AreaFile_Format.pdf] ||
+|are || 2012 || static area information || gff || [https://github.com/xoreos/xoreos-docs/raw/master/specs/bioware/AreaFile_Format.pdf AreaFile_Format.pdf] || mostly supported
 |-
-|lyt || 3000 || area rooms layout in text format || ||
+|lyt || 3000 || area rooms layout || text || ||
 |-
-|vis || 3001 || area rooms visibility in text format || ||
+|vis || 3001 || area rooms visibility graph || text || ||
 |-
-| || 3015 || area hexgrid definition in text format ||  ||
+|hex || 3015 || area hexgrid definition || text ||  ||
 |-
-|art || 3023 || area environment properties in ini format || ||
+|art || 3023 || area environment properties || ini file || ||
 |-
-|pla || 24007 || placeable definition in gff format || ||
+|pla || 24007 || placeable definition || gff || ||
 |-
-|pwk || 2053 || placeable walk mesh definition in text format || ||
+|pwk || 2053 || placeable walk mesh definition || text || ||
 |-
-|fsm || 3022 || placeable state data in gff format || ||
+|fsm || 3022 || placeable state data || gff || ||
 |}
 
 === Models, Textures and Materials ===
