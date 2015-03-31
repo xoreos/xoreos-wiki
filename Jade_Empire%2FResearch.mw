@@ -58,22 +58,23 @@
 ! Extension
 ! Type ID
 ! Type description/Usage
+! Format
 ! Documentation
 ! Status
 |-
-|tga || 3 || targa image || ||
+|tga || 3 || targa image || binary || ||
 |-
-|mdl || 2002 || model file || ||
+|mdl || 2002 || model file || binary || ||
 |-
-|mdx || 3008 || model definition || ||
+|mdx || 3008 || model definition || binary || ||
 |-
-|txi || 2022|| texture information || ||
+|txi || 2022|| texture information || text || || not used
 |-
-|txb || 3006 || texture data || ||
+|txb || 3006 || texture data || binary || ||
 |-
-|mat || 2069 || textual material definition || ||
+|mat || 2069 || material definition || text || ||
 |-
-|mab || 3011 || binary material definition || ||
+|mab || 3011 || material definition || binary || ||
 |}
 
 === Scripting and Triggers ===
