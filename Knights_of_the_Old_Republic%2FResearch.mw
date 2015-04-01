@@ -1,0 +1,33 @@
+==Resource Files==
+
+===Mainmenu.GUI===
+Element 2 is KotOR logo
+{| class="wikitable"
+|-
+! Element Number
+! Element
+! Control type
+! Effect
+|-
+| rowspan="10" | 2
+|-
+| rowspan ="9" | KOTOR Logo
+| 0 || Invalid
+|-
+| 1 || Invalid
+|-
+| 2 || No noticeable change
+|-
+| 3 || Invalid
+|-
+| 4 || Default value
+|-
+| 5 || Element does not appear
+|-
+| 6 || Pluses when hovering with mouse 
+(this is used for menu items)
+|-
+| 7-11 || Element does not appear
+|-
+| 12-31 || Invalid
+|}
