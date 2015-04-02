@@ -102,16 +102,17 @@
 ! Extension
 ! Type ID
 ! Type description/Usage
+! Format
 ! Documentation
 ! Status
 |-
-|tlk || 2018 || string definitions || ||
+|tlk || 2018 || string definitions || talk table || [https://github.com/xoreos/xoreos-docs/raw/master/specs/bioware/TalkTable_Format.pdf TalkTable_Format.pdf] ||
 |-
-|dlg || 2029 || dialog definition in gff format || [https://github.com/xoreos/xoreos-docs/raw/master/specs/bioware/Conversation_Format.pdf Conversation_Format.pdf] ||
+|dlg || 2029 || dialog definition || gff || [https://github.com/xoreos/xoreos-docs/raw/master/specs/bioware/Conversation_Format.pdf Conversation_Format.pdf] ||
 |-
-|qst || 2084 || quest definition in gff format || ||
+|qst || 2084 || quest definition || gff ||
 |-
-|bip || 3028 || binary lipsynch data || ||
+|bip || 3028 || lipsynch data || binary || ||
 |}
 
 === GUI ===
