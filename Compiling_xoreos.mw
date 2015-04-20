@@ -3,7 +3,7 @@ __TOC__
 
 ==Compiler and build system==
 
-xoreos is written in C++, so a C++ compiler, like [https://gcc.gnu.org/ GCC] or [http://clang.llvm.org/ clang] is required. Its build system is based on [https://en.wikipedia.org/wiki/GNU_build_system Autotools], more specifically [https://www.gnu.org/software/autoconf/ Autoconf], [https://www.gnu.org/software/automake/ Automake] and [https://www.gnu.org/software/libtool/ Libtool].
+xoreos is written in C++, so a C++ compiler, like [https://gcc.gnu.org/ GCC] or [http://clang.llvm.org/ clang] is required. It has two build systems: [https://en.wikipedia.org/wiki/GNU_build_system Autotools] ([https://www.gnu.org/software/autoconf/ Autoconf], [https://www.gnu.org/software/automake/ Automake] and [https://www.gnu.org/software/libtool/ Libtool]) and [https://en.wikipedia.org/wiki/CMake CMake]. Use whichever you feel more comfortable with.
 
 ===GNU/Linux===
 
@@ -19,7 +19,7 @@ Due to the dependency on SDL2 (see below), you need at least Mac OS X 10.5 if yo
 
 ===Windows===
 
-Our build system is autotools-based, so we unfortunately do not support Visual Studio. Windows users need to install [http://www.mingw.org/ MinGW]. For further information, please read [[#A note on build systems and Visual Studio|this note]].
+Since Visual Studio does not work with autotools, you have to use the CMake build system if you want to compile xoreos with Visual Studio. If you're using [http://www.mingw.org/ MinGW], however, you're free to choose either build system.
 
 ==Libraries==
 
@@ -60,18 +60,26 @@ Other GNU/Linux distributions should work similarily. Windows users have to visi
 
 ==Compiling xoreos==
 
-Open a terminal, change into the directory of your sources and type
+Make you have your compiler, build system and libraries installed correctly. Then open a terminal and change into the directory of your sources.
+
+===autotools===
+
+Type
 
  <nowiki>./autogen.sh && ./configure && make</nowiki>
 
-This ''should'' compile xoreos successfully if the compiler, build system and libraries have been installed correctly. The binary can be found in the src subdirectory, called "xoreos" or, on Windows, "xoreos.exe". Alternatively, you can install it system-wide with
+The binary can be found in the src subdirectory, called "xoreos" or, on Windows, "xoreos.exe".
 
- <nowiki>make install</nowiki>
+===CMake ===
 
-Please also have a look at the [[Running xoreos]] page.
+Type
 
-==A note on build systems and Visual Studio==
+ <nowiki>cmake . && make</nowiki>
 
-There are certain build systems that promise to generate both standard Makefiles and Visual Studio project files. I have tried CMake, SCons and qmake, and found them all lacking, so they're unfortunately not an option for xoreos.
+The binary can be found in the bin subdirectory, called "xoreos" or, on Windows, "xoreos.exe".
 
-Another options would be to parse our Automake files, and generate Visual Studio project files out of them. ScummVM does something similar with its [https://github.com/scummvm/scummvm/tree/master/devtools/create_project create_project], but their Makefiles are a bit different than ours. Somebody™ "just" needs to adapt ScummVM's create_project. So far, no one has.
+Please read [http://www.cmake.org/runningcmake/ Running CMake] on the CMake website for in-depth information on invoking CMake.
+
+==Running xoreos==
+
+Please have a look at the [[Running xoreos]] page.
