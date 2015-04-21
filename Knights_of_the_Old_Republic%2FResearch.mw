@@ -29,16 +29,16 @@ Type
 
 
 
-{| class="wikitable"
+{| class="wikitable" style="text-align:center;"
 |+Mainmenu.GUI
 ! Element
 Number
 ! Element
 ! Default
 |-
-| 0 || Unknown || 11
+| 0 || Unknown ||  11
 |-
-| 1 || Background || 4
+| 1 || Background ||  4
 |-
-| 2 || KOTOR Logo || 4
+| 2 || KOTOR Logo ||  4
 |}
