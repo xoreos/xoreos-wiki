@@ -20,7 +20,7 @@ Type
 | 5 || Element does not appear
 |-
 | 6 || Pulses when hovering with mouse
-and makes clickable 
+and makes clickable <br>
 (this is used for menu items)
 |-
 | 7-11 || Element does not appear
