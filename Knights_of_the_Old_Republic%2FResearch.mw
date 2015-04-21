@@ -15,7 +15,7 @@ Type
 |-
 | 3 || Invalid
 |-
-| 4 || Default value
+| 4 || No effects
 |-
 | 5 || Element does not appear
 |-
@@ -41,4 +41,10 @@ Number
 | 1 || Background ||  4
 |-
 | 2 || KOTOR Logo ||  4
+|-
+| 3 || Unknown || 4
+|-
+| 4 || Unknown || 4
+|-
+| 5 || Menu Background || 4
 |}
