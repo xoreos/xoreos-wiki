@@ -1,17 +1,12 @@
 ==Resource Files==
 
-===Mainmenu.GUI===
+
 {| class="wikitable"
+|+ Widgets
+!Control
+Type
+!Effect
 |-
-! Element
-Number
-! Element
-! Control type
-! Effect
-|-
-| rowspan="10" | <div class="center" style="width: auto; margin-left: auto; margin-right: auto;">2</div>  
-|-
-| rowspan ="9" |<div class="center" style="width: auto; margin-left: auto; margin-right: auto;">KOTOR <br> Logo</div>  
 | 0 || Invalid
 |-
 | 1 || Invalid
@@ -30,4 +25,20 @@ Number
 | 7-11 || Element does not appear
 |-
 | 12-31 || Invalid
+|}
+
+
+
+{| class="wikitable"
+|+Mainmenu.GUI
+! Element
+Number
+! Element
+! Default
+|-
+| 0 || Unknown || 11
+|-
+| 1 || Background || 4
+|-
+| 2 || KOTOR Logo || 4
 |}
