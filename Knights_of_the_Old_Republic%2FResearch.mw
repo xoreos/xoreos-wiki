@@ -38,7 +38,7 @@ Number
 ! Default
 Control Types
 |-
-| 0 || Unknown <br> (probably scrollbar) ||  11
+| 0 || Unknown <br> (Probably scrollbar) ||  11
 |-
 | 1 || Outer Background ||  4
 |-
@@ -58,7 +58,7 @@ Control Types
 |-
 |9 || Options || 6
 |-
-|10 || Unknown <br> Probably New DLC Available || 4
+|10 || Unknown <br> (Probably New DLC Available) || 4
 |-
 |11 || Unknown || 6
 |-
