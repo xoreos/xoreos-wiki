@@ -38,7 +38,7 @@ Number
 ! Default
 Control Types
 |-
-| 0 || Unknown ||  11
+| 0 || Unknown <br> (probably scrollbar) ||  11
 |-
 | 1 || Outer Background ||  4
 |-
