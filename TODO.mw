@@ -1,3 +1,7 @@
+== NWN menu ==
+* Basics are there, but needs fleshing out
+* Supermanu is working on the character generator
+
 == KotOR/KotOR2 menus ==
 * Basic structure is already there, just missing most of the specific widgets stuff
 * Semi-hardcoded, with GFF files (hierachical data, similar to XML in spirit) describing the setup. The xoreos-tools repository has a tool for converting GFF files into XML for easy reading.
@@ -23,11 +27,15 @@
 * NWN uses Granny for body animations and FaceFX for facial animations
 * Both of these need to be reverse-engineered
 
+== SpeedTree ==
+* Both NWN2 and The Witcher use SpeedTree for complex trees
+
 == KotOR scripts ==
 * The script system in NWN is, for the most part, working already. Missing are most of the engine functions and there's still a bit of wonkyness with the timing. KotOR uses the exact same script format, only with a mostly different set of engine functions. So that can probably be mirrored verbatim
 
 == KotOR2 scripts ==
 * Mostly like KotOR scripts, but has some extensions, like parameters to scripts that drive the dialog branch decisions
+* ImperatorPrime is currently working on rewriting the script system
 
 == KotOR/KotOR2 dialogs ==
 * The origanisation of the DLG files is very similar to the one in NWN. With some extensions, like camera setup
@@ -49,7 +57,7 @@
 * Needs to be carried over to KotOR and the other games too
 
 == PC model ==
-* The PC models in NWN and KotOR/KotOR2 are not shown
+* The PC models in KotOR/KotOR2 are not shown
 * Instead of moving the camera, "walking" should move the player character
 * Walkmaps are completely missing right now too
 
@@ -62,31 +70,40 @@
 
 == Materials ==
 * NWN and more excessively KotOR/KotOR2 use material properties in combination of semi-transparent textures to create metallic textures. My OpenGL knowledge is quite basic, I generally fudge through everything :P. Research there would be needed
+* Materials in The Witcher are closely tied to shaders
 
-== Shaders ==
+== OpenGL and Shaders ==
+* mirv_ is currently working on a graphics system overhaul, complete with shader support
+* All Aurora games use shaders in some form
+* NWN uses ARB shaders. We probably need to rewrite them from scratch
+* DirectX shaders might be automatically convertible with Cg?
+* Otherwise, look at what Wine does with the shaders, and use that as a basis?
 * All the games, even NWN, use some form of shaders. Still totally missing from xoreos, since we have no idea how to use them in general yet. Moreover, this was before GLSL, so they're in the old assembly-like language. We probably need to rewrite them from scratch
-
-== OpenGL and performance ==
-* Someone with more OpenGL knowledge really should look over and probably completely rewrite the graphics code.
+* We need shaders for tinting in NWN2 (objects and area geometry) and TexturePaint nodes in Witcher
 
 == Gamepad binding ==
 * The Xbox versions of KotOR and KotOR2 don't use a mouse. We have basic support for joysticks/gamepads, but no real bindings to the engine or ideas how to handle that in general
 
 == Sonic's DS formats ==
 * Sonic Chronicles: The Dark Brotherhood, a Nintento DS game, uses video and sound formats apparently native to the Nintendo DS. We have docs for the basic sound format, but more research there is needed
+* Videos use the Actimagine VX codec
+* Need to research non-EFIGS versions of Sonic, especially Asian language ones, for the encoding of TLK strings
 
-== Hashed ERFs ==
-* Sonic and Dragon Age II don't have file names in their ERF archives, only hashes of those names
-* No idea yet how to properly integrate that into xoreos
-* No idea yet which hashing algo it uses. That's probably important
+== Witcher areas ==
+* Object models are wrongly rotated.
+** They provide four floats: X, Y, Z, W. Quaternions, I guess.
+** NWN2 does the same, but there I managed to get the orientation correct
+** Possibly related to our world rotation + OpenGL handedness?
 
-== GFF V4.0 ==
-* Sonic and the two Dragon Age games use a new version of GFF
-* Info about the format can be found in the Dragon Age wiki
-* It's quite different, probably needs a completely new class and can't be integrated into our GFF class
+== NWN fonts and encoding ==
+* We need support for the multi-page fonts for Asian languages
+* For NWN, languageID 0 is not necessarily "English", but "The language of the game install"
+** This is okay for languages with Latin characters
+** Messes up strings in community modules with Asian languages that stuff strings in to languageID 0
+** The original fails there too, though
 
-== GDA ==
-* Sonic and the two Dragon Age games use a new 2DA format, GDA, which is essentially a 2DA encoded in a GFF. Support for that in xoreos is still missing
+== XMV/WMV ==
+* Our WMV decoder (for XMV videos used in Xbox versions) is missing P-frames and J-frame
 
 == FMOD ==
 * The two Dragon Age games use FMOD for sound and music
