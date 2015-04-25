@@ -110,3 +110,11 @@
 * I have experimental FSB (FMOD sound bank) support working in a private branch
 * I have no clue yet how to properly add FSB into our ResourceManager, since FSB themselves can be in other resource files
 * FEV (FMOD events) format is still completely unknown to us
+
+== CJK glyphs in the console ==
+* The "system font" we use for our debug console, DejaVu Sans Mono Bold, does not feature any CJK (Chinese, Japanese, Korean) glyphs
+* Not strictly necessary, but nice to have for printing, say, Witcher area names in Asian languages
+* We could maybe integrate CJK glyphs from the [http://fonts.jp/hanazono/ Hanazono fonts] or other suitable libre fonts
+* We need to match the height with DejaVu Sans Mono Bold
+* CJK glyphs tend to be more complex and therefore wider. They're usually rendered twice as wide as Latin glyphs
+* Our console code needs to take that into account
