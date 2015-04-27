@@ -105,3 +105,47 @@ xoreos nwn
   in the config file already.</nowiki>
 
 Long-form command line option, like --skipvideos, map directly to config options. Options given on the command line will override any options found in the config file for this session, but will not save back to that config file.
+
+==Common hotkeys==
+
+{| class="wikitable" style="text-align:center;"
+!Hotkey !! Effect
+|-
+| Ctrl+Q<br/>Apple+Q || Quit
+|-
+| Alt+Enter || Toggle fullscreen
+|-
+| Alt+S || Take a screenshot
+|-
+| Ctrl+D || Open a debug console
+|}
+
+In games that show an area in xoreos, you can fly through the areas in spectator-mode:
+
+{| class="wikitable" style="text-align:center;"
+!Hotkey !! Effect
+|-
+| W<br/>Up || Forward
+|-
+| S<br/>Down || Backward
+|-
+| A<br/>Left || Turn left
+|-
+| D<br/>Right || Turn right
+|-
+| Q || Strafe left
+|-
+| E || Strafe right
+|-
+| Page Up || Look up
+|-
+| Page Down || Look down
+|-
+| End || Look straight ahead
+|-
+| Insert || Fly up
+|-
+| Delete || Fly down
+|}
+
+You can also hold the middle mouse button down to look around.
