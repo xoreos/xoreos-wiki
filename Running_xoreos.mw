@@ -39,7 +39,7 @@ volume_sfx=0.850000
 volume_video=0.850000
 tooltipdelay=100
 largefonts=true
-fullscreen=false # Fullscreen for Neverwinter Nights
+fullscreen=true # Fullscreen for Neverwinter Nights
 fsaa=4 # 4x anti-aliasing
 
 [kotor]
