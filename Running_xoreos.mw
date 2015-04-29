@@ -79,16 +79,26 @@ Usage: xoreos [options] [target]
   -sVOL   --volume_sfx=VOL    Set SFX volume to VOL.
   -oVOL   --volume_voice=VOL  Set voice volume to VOL.
   -iVOL   --volume_video=VOL  Set video volume to VOL.
+  -qLANG  --lang=LANG         Set the game's language.
+          --langtext=LANG     Set the game's text language.
+          --langvoice=LANG    Set the game's voice language.
   -dLVL   --debuglevel=LVL    Set the debug level to LVL.
           --debugchannel=CHAN Set the enabled debug channel(s) to CHAN.
           --listdebug         List all available debug channels.
+          --listlangs         List all available languages for this target.
           --logfile=FILE      Write all debug output into this file too.
+          --nologfile=BOOL    Don't write a log file.
+          --consolelog=FILE   Write all debug console output into this file too.
+          --noconsolelog=BOOL Don't write a debug console log file.
 
 FILE: Absolute or relative path to a file.
 DIR:  Absolute or relative path to a directory.
 SIZE: A positive integer.
 BOOL: "true", "yes", "y", "on" and "1" are true, everything else is false.
 VOL:  A double ranging from 0.0 (min) - 1.0 (max).
+LANG: A language identifier. Full name, ISO 639-1 or ISO 639-2 language code;
+      or IETF language tag with ISO 639-1 and ISO 3166-1 country code.
+      Examples: en, de_de, hun, Czech, zh-tw, zh_cn, zh-cht, zh-chs.
 LVL:  A positive integer.
 CHAN: A comma-separated list of debug channels.
       Use "All" to enable all debug channels.
