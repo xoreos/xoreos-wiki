@@ -1,4 +1,7 @@
-This is the page for the Dragon Age engine.
+This is the page for the Dragon Age: Origins engine.
 
 Current status:
-*No model support, but textures work.
+* Initial model support
+* Loading of campaigns works
+* Areas display their rooms, placeables and creatures
+* Moving/Flying around the areas with the keyboard
