@@ -1,4 +1,7 @@
-This is the page for the Witcher engine.
+This is the page for the The Witcher engine.
 
 Current status:
-*Initial model support
+* Initial model support
+* Loading campaigns/modules works
+* Areas display their terrain, placeables and doors
+* Moving/Flying around the areas with the keyboard
