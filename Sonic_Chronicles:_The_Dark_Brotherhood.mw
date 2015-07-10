@@ -1,4 +1,8 @@
-This is the page for the SC: TDB engine.
+This is the page for the Sonic Chronicles: The Dark Brotherhood engine.
 
 Current status:
-*No model support, but raw TGA textures work
+* Reading of basic Nintendo graphics formats
+* Initial model support
+* Hacky fake main menu
+* Loading of areas, with placeables
+* Moving around within the areas using the keyboard
