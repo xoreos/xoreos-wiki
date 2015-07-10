@@ -1,0 +1,7 @@
+This is the page for the Dragon Age II engine.
+
+Current status:
+* Initial model support
+* Loading of campaigns works
+* Areas display their rooms, placeables and creatures
+* Moving/Flying around the areas with the keyboard
