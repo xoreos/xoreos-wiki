@@ -73,6 +73,23 @@ Type
 
 The binary can be found in the src subdirectory, called "xoreos" or, on Windows, "xoreos.exe".
 
+Optional, non-conventional ./configure flags:
+
+{|
+|
+* --with-werror &nbsp;
+|| Compile with -Werror
+|-
+|
+* --without-warnings &nbsp;
+|| Compile without the extra warnings enabled
+|-
+|
+* --with-lto &nbsp;
+|| Compile with link-time optimization
+|}
+
+
 ===CMake ===
 
 Type
