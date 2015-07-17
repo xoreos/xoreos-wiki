@@ -9,7 +9,7 @@ xoreos is written in C++, so a C++ compiler, like [https://gcc.gnu.org/ GCC] or 
 
 On Debian-based distributions (including Ubuntu), you should be able to install the required compiler and build system packages with
 
- <nowiki>apt-get install libc6-dev g++ make autoconf automake libtool</nowiki>
+ <nowiki>apt-get install libc6-dev g++ make autoconf automake libtool gettext</nowiki>
 
 On other distributions, it should work similarily. 
 
