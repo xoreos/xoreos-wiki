@@ -42,6 +42,7 @@ xoreos uses the following libraries to function:
 ** Boost.Uuid
 ** Boost.Smart_Ptr
 ** Boost.Atomic
+** Boost.Locale
 * [https://en.wikipedia.org/wiki/OpenGL OpenGL] (>= 2.1)
 * [https://www.libsdl.org/ SDL2] (>= 2.0.0)
 * [http://www.freetype.org/ FreeType 2] (>= 2.4.0 (libtool number >= 11.0.5))
