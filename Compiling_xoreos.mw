@@ -28,7 +28,7 @@ xoreos uses the following libraries to function:
 * [https://en.wikipedia.org/wiki/Iconv iconv]
 * [http://www.zlib.net/ zlib] (>= 1.2.3.4)
 * [http://tukaani.org/xz/ liblzma] (>= 5.0.5)
-* [http://www.xmlsoft.org/ libxml2] (>= 2.9.1)
+* [http://www.xmlsoft.org/ libxml2] (>= 2.8.0)
 * [http://www.boost.org/ Boost] (>= 1.53.0)
 ** Boost.StringAlgo
 ** Boost.System
