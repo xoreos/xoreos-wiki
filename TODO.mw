@@ -1,19 +1,6 @@
-== NWN menu ==
-* Basics are there, but needs fleshing out
-* Supermanu is working on the character generator
+== Standalone(ish) fixes/improvements ==
 
-== KotOR/KotOR2 menus ==
-* Basic structure is already there, just missing most of the specific widgets stuff
-* Semi-hardcoded, with GFF files (hierachical data, similar to XML in spirit) describing the setup. The xoreos-tools repository has a tool for converting GFF files into XML for easy reading.
-
-== KotOR/KotOR2 ingame gui ==
-* Ties in with the menus, still missing
-
-== Jade Empire menus ==
-* Apparently very similar to KotOR's menus
-
-== NWN2 menus ==
-* Implemented using XML
+=== Broken NWN2 XML ===
 * Not standard-conform XML. Need custom XML parser; stock XML parsing libraries will just throw errors.
 ** <nowiki><?xml version="1.0" encoding="NWN2UI"></nowiki>
 ** No single root element
@@ -22,57 +9,34 @@
 ** Unmatched quotes on several occasions
 * Event functions
 * Special values like PARENT_WIDTH
+* [https://github.com/xoreos/xoreos-tools/pull/1 Altrite is working on a broken-XML fixer]
 
-== NWN2 animations ==
-* NWN uses Granny for body animations and FaceFX for facial animations
-* Both of these need to be reverse-engineered
+=== CJK glyphs in the console ===
+* The "system font" we use for our debug console, DejaVu Sans Mono Bold, does not feature any CJK (Chinese, Japanese, Korean) glyphs
+* Not strictly necessary, but nice to have for printing, say, Witcher area names in Asian languages
+* We could maybe integrate CJK glyphs from the [http://fonts.jp/hanazono/ Hanazono fonts] or other suitable libre fonts
+* We need to match the height with DejaVu Sans Mono Bold
+* CJK glyphs tend to be more complex and therefore wider. They're usually rendered twice as wide as Latin glyphs
+* Our console code needs to take that into account
 
-== SpeedTree ==
-* Both NWN2 and The Witcher use SpeedTree for complex trees
+== Graphics ==
 
-== KotOR scripts ==
-* The script system in NWN is, for the most part, working already. Missing are most of the engine functions and there's still a bit of wonkyness with the timing. KotOR uses the exact same script format, only with a mostly different set of engine functions. So that can probably be mirrored verbatim
-
-== KotOR2 scripts ==
-* Mostly like KotOR scripts, but has some extensions, like parameters to scripts that drive the dialog branch decisions
-* ImperatorPrime is currently working on rewriting the script system
-
-== KotOR/KotOR2 dialogs ==
-* The origanisation of the DLG files is very similar to the one in NWN. With some extensions, like camera setup
-* How the dialogs are displayed is however very different
-* KotOR2 has some extensions, to pass the parameters to the aforementioned branch decision scripts. Also, can use several scripts and combine the results with AND and OR
-* DLG files can be converted into some crude XML with the gff2xml tool in the xoreos-tools repository
-
-== KotOR/KotOR2 world objects ==
-* Currently, KotOR/KotOR2 world objects (creatures, placeables, doors, ...) don't do anything when clicked on. This ties in a bit with the scripting system, which triggers when operating on the objects
-* Should be mostly similar to NWN
-* Again, ARE, GIT and object blueprint files can be converted to XML with gff2xml
-
-== MDL supermodels and animations ==
+=== MDL supermodels and animations ===
 * Mostly working in NWN thanks to jbowtie's work
 * Might need some cleanup
 * Animation scale is off in a lot of cases. Mostly visible in the talking and yawning animations in non-human characters
 * Models should smoothly change between different animations
 * The animation system probably needs to be a bit more complex, to allow for "overlaying" different animations onto each other. For example, for speaking while holding an object and keeping the head focused on the PC character.
-* Needs to be carried over to KotOR and the other games too
 
-== PC model ==
-* The PC models in KotOR/KotOR2 are not shown
-* Instead of moving the camera, "walking" should move the player character
-* Walkmaps are completely missing right now too
-
-== Triggers ==
-* In NWN, KotOR/KotOR2 and the other games too, a trigger is a polygon in an area (defined by its corner points) than, when a creature moves into or out of it, triggers a script. This is one of the primary sources of engine scripts and still completely missing
-
-== Lighting ==
+=== Lighting ===
 * We don't yet have a proper light system
 * I started working on it: [http://drmccoy.de/eos/nwn/20110610T230251.png], but my approach is seriously lacking. You can see the edges of the tiles that make up on NWN area in many cases
 
-== Materials ==
+=== Materials ===
 * NWN and more excessively KotOR/KotOR2 use material properties in combination of semi-transparent textures to create metallic textures. My OpenGL knowledge is quite basic, I generally fudge through everything :P. Research there would be needed
 * Materials in The Witcher are closely tied to shaders
 
-== OpenGL and Shaders ==
+=== OpenGL and Shaders ===
 * mirv_ is currently working on a graphics system overhaul, complete with shader support
 * All Aurora games use shaders in some form
 * NWN uses ARB shaders. We probably need to rewrite them from scratch
@@ -81,40 +45,90 @@
 * All the games, even NWN, use some form of shaders. Still totally missing from xoreos, since we have no idea how to use them in general yet. Moreover, this was before GLSL, so they're in the old assembly-like language. We probably need to rewrite them from scratch
 * We need shaders for tinting in NWN2 (objects and area geometry) and TexturePaint nodes in Witcher
 
-== Gamepad binding ==
-* The Xbox versions of KotOR and KotOR2 don't use a mouse. We have basic support for joysticks/gamepads, but no real bindings to the engine or ideas how to handle that in general
+== Videos ==
 
-== Sonic's DS formats ==
-* Sonic Chronicles: The Dark Brotherhood, a Nintento DS game, uses video and sound formats apparently native to the Nintendo DS. We have docs for the basic sound format, but more research there is needed
-* Videos use the Actimagine VX codec
-* Need to research non-EFIGS versions of Sonic, especially Asian language ones, for the encoding of TLK strings
-
-== Witcher areas ==
-* Object models are wrongly rotated.
-** They provide four floats: X, Y, Z, W. Quaternions, I guess.
-** NWN2 does the same, but there I managed to get the orientation correct
-** Possibly related to our world rotation + OpenGL handedness?
-
-== NWN fonts and encoding ==
-* We need support for the multi-page fonts for Asian languages
-* For NWN, languageID 0 is not necessarily "English", but "The language of the game install"
-** This is okay for languages with Latin characters
-** Messes up strings in community modules with Asian languages that stuff strings in to languageID 0
-** The original fails there too, though
-
-== XMV/WMV ==
+=== XMV/WMV ===
+* Used in Xbox versions of KotOR/KotOR2
 * Our WMV decoder (for XMV videos used in Xbox versions) is missing P-frames and J-frame
 
-== FMOD ==
+=== Actimagine VX ===
+* Used in the Nintendo DS game Sonic Chronicles
+
+== Sound ==
+
+=== FMOD ===
 * The two Dragon Age games use FMOD for sound and music
 * I have experimental FSB (FMOD sound bank) support working in a private branch
 * I have no clue yet how to properly add FSB into our ResourceManager, since FSB themselves can be in other resource files
 * FEV (FMOD events) format is still completely unknown to us
 
-== CJK glyphs in the console ==
-* The "system font" we use for our debug console, DejaVu Sans Mono Bold, does not feature any CJK (Chinese, Japanese, Korean) glyphs
-* Not strictly necessary, but nice to have for printing, say, Witcher area names in Asian languages
-* We could maybe integrate CJK glyphs from the [http://fonts.jp/hanazono/ Hanazono fonts] or other suitable libre fonts
-* We need to match the height with DejaVu Sans Mono Bold
-* CJK glyphs tend to be more complex and therefore wider. They're usually rendered twice as wide as Latin glyphs
-* Our console code needs to take that into account
+== Events ==
+
+=== Gamepad binding ===
+* The Xbox versions of KotOR and KotOR2 don't use a mouse. We have basic support for joysticks/gamepads, but no real bindings to the engine or ideas how to handle that in general
+
+== Engines ==
+
+=== Script system ===
+* Needs rewrite, badly
+** ImperatorPrime has started with that
+* Afterwards, can mostly copied to other engines
+** They need new engine function tables, though
+** The names and signatures of which we have
+* KotOR2 and NWN2 have some extensions
+** Might need extending the script bytecode parser, might not
+* Witcher uses Lua scripts together with NWScript
+* Sonic has no scripts at all, it seems
+
+=== NWN ===
+* Menus
+** Basics are there, but needs fleshing out
+** Supermanu is working on the character generator
+** Pathfinding, walkmesh
+*** "Moving" should move the PC, not the camera
+*** NPC walking
+*** Triggers, areas on the floor that calls scripts on enter/leave
+* Multi-page asian fonts
+* LanguageID 0 is not necessarily "English", but "The language of the game install"
+** This is okay for languages with Latin characters
+** Messes up strings in community modules with Asian languages that stuff strings in to languageID 0
+** The original fails there too, though
+
+=== KotOR/KotOR2 ===
+* Menus
+** Basic structure is already there, just missing most of the specific widgets stuff
+** Semi-hardcoded, with GFF files (hierachical data, similar to XML in spirit) describing the setup. The xoreos-tools repository has a tool for converting GFF files into XML for easy reading.
+* Dialogues
+** DLG files, similar to NWN
+** Some extensions, like camera setup
+** Dialogues are displayed very different than NWN
+** KotOR2 has script extensions
+*** Passing parameters to scripts
+*** Call several scripts, combine with AND/OR for branching
+* Animations
+** Should be similar to NWN
+** No PC shown
+*** Needs character creator menus
+*** Loading of character files in class Creature
+* Minigames
+** Swoop racing
+** Pazaak
+** Hardcoded, mostly removed from usual game logic
+
+=== Jade Empire ===
+* Menus
+** Apparently very similar to KotOR's menus
+* Minigames
+** Flyer, top-down shoot-em-up thing
+** Hardcoded, mostly removed from usual game logic
+
+=== NWN2 ===
+* Menus
+** Implemented using XML
+** See [[#Broken NWN2 XML|Broken NWN2 XML]]
+* Animations (Granny)
+** [https://github.com/SkywingvL/nwn2dev-public nwn2-dev] contains some code working with Granny data
+*** Call into the original Granny DLL to convert between binary and ASCII Granny data, though
+** [https://github.com/berenm/xoreos-tools/tree/granny berenm started some Granny RE]
+* Facial animations (FaceFX)
+* Trees (SpeedTree)
