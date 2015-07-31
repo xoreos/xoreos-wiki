@@ -19,6 +19,40 @@
 * CJK glyphs tend to be more complex and therefore wider. They're usually rendered twice as wide as Latin glyphs
 * Our console code needs to take that into account
 
+=== Script decompiler ===
+* It might be quite useful to have a NWScript decompiler in xoreos-tools
+** Script disassembler is probably easier, as a first step
+* A script compiler might be useful as well
+
+=== Config file ===
+* Should be more preserving of the layout
+** Especially empty lines
+** UTF-8 Byte-Order-Mark when using native Windows editors
+** \r is currently always stripped. Maybe preserve that too
+*** Autodetect when \r is already used, and add it to new config lines too
+** This basically needs a complete rewrite of the config parser
+*** Don't just look for comments, just throw everything after "foo=bar" into the "comment" variable, including whitespace
+*** And all whitespace before "foo=bar" into a "prefix" variable
+** Maybe even always add BOM and \r when writing a new config file on Windows?
+
+=== Windows-specific / Wine-specific ===
+* When running my mingw32 cross-compiled xoreos EXE in Wine, the menu button texts are partially cut off
+** Z-fighting issue?
+** Does that also occur on a real Windows?
+
+== Build system ==
+
+=== CMake ===
+* Current doesn't set the git version to "+unk" when git isn't found
+* make install?
+* make doxygen?
+
+=== Autotools ===
+* Debian's lintian complains about statically linking to glew
+** Maybe check for system glew in configure, and use the included glew only as a fallback
+** And a configure flag to force on or the other
+* Suppress the "fatal: not a git repository" when building gitstamp without a git directory
+
 == Graphics ==
 
 === MDL supermodels and animations ===
