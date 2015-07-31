@@ -134,6 +134,10 @@
 *** "Moving" should move the PC, not the camera
 *** NPC walking
 *** Triggers, areas on the floor that calls scripts on enter/leave
+* NWN objects need an inventory concept
+** Player characters' might be different
+*** Inventory tetris
+*** Inventory item icons
 * Multi-page asian fonts
 * LanguageID 0 is not necessarily "English", but "The language of the game install"
 ** This is okay for languages with Latin characters
@@ -153,7 +157,7 @@
 *** Call several scripts, combine with AND/OR for branching
 * Animations
 ** Should be similar to NWN
-** No PC shown
+** No player character shown
 *** Needs character creator menus
 *** Loading of character files in class Creature
 * Minigames
@@ -167,6 +171,8 @@
 * Minigames
 ** Flyer, top-down shoot-em-up thing
 ** Hardcoded, mostly removed from usual game logic
+* Player character
+** Needs research
 
 === NWN2 ===
 * Menus
@@ -178,3 +184,32 @@
 ** [https://github.com/berenm/xoreos-tools/tree/granny berenm started some Granny RE]
 * Facial animations (FaceFX)
 * Trees (SpeedTree)
+* Proper evaluation of creature model parts (equipped items)
+* Player character
+** Reading of PC files in creature
+
+=== Sonic Chronicles
+* Menus
+** GUI files that are GFF
+** Actions in a state machine in GDA files?
+* Music/Sound
+** Music is apparently similar to MIDI, or to a tracker format?
+** Sounds and instruments for music are in a sound_data.sadl archive
+* Animations
+** Bone animations, best implemented with shaders, blocked by the graphics subsystem rewrite
+* Player character(s)
+** Needs research
+
+=== The Witcher ===
+* Menus
+** Needs research
+* Animations
+** Needs research
+* Player character, Geralt
+** Needs research
+
+=== Dragon Age: Origins / Dragon Age 2 ===
+* Menus
+** Needs research
+* Animations
+** Bone animations, best implemented with shaders, blocked by the graphics subsystem rewrite
