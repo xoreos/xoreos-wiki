@@ -57,10 +57,17 @@
 == Sound ==
 
 === FMOD ===
-* The two Dragon Age games use FMOD for sound and music
+* Dragon Age: Origins uses FMOD for sound and music
 * I have experimental FSB (FMOD sound bank) support working in a private branch
-* I have no clue yet how to properly add FSB into our ResourceManager, since FSB themselves can be in other resource files
-* FEV (FMOD events) format is still completely unknown to us
+* FEV (FMOD events) format is still unknown to us
+** Apparently, groups of event lists with events
+** Event is everything from "play sound", over "set volume" to "apply echo"
+** Game areas specify the group to use for the area
+** Scripts then probably tell FMOD to play event lists out of that group
+
+=== Wwave ===
+* Dragon Age 2 uses Wwave for sound and music
+* Should be similar in concept to FMD
 
 == Events ==
 
