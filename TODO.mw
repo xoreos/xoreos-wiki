@@ -84,9 +84,14 @@
 === XMV/WMV ===
 * Used in Xbox versions of KotOR/KotOR2
 * Our WMV decoder (for XMV videos used in Xbox versions) is missing P-frames and J-frame
+** Code exists in ffmpeg, but is connected to the MPEG-4 family mess
 
 === Actimagine VX ===
 * Used in the Nintendo DS game Sonic Chronicles
+
+=== Sorenson 3 ===
+* One single video in the Mac port of KotOR2, the Aspyr logo, uses the Sorenson 3 codec
+** ffmpeg has a decoder, but it's connected to the MPEG-4 family mess (SVQ3 is similar to H.264)
 
 == Sound ==
 
