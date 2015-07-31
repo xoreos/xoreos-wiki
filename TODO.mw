@@ -188,7 +188,7 @@
 * Player character
 ** Reading of PC files in creature
 
-=== Sonic Chronicles
+=== Sonic Chronicles ===
 * Menus
 ** GUI files that are GFF
 ** Actions in a state machine in GDA files?
