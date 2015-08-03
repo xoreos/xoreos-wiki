@@ -80,7 +80,9 @@ This is a long rambly list of things left to do in xoreos and xoreos-tools. Anyb
 ** Shortening those strings when they don't fit in their fields is also potentially difficult
 
 === Localization ===
-* Text in exceptions? They are potentially user-visible
+* Text in exceptions?
+** At least the user-visible ones, like "Failed to detect game"
+** Or maybe we should clean that up and split them into "program logic failure" and "user failure", with only the latter translated
 * Strings for the engine loader progress bar
 * Debug console string
 * GUI (see above) strings
