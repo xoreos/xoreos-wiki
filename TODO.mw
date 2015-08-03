@@ -101,6 +101,17 @@
 ** We might want to change that to compile everything as C++ instead
 ** We might want to only use the C++ compiler in the configure script too
 ** clone2727 really wants to do that
+* Increased modularity
+** Disabling engines
+*** Dropping library dependencies when the still enabled engine don't need them
+** Making library dependencies optional (and disabling certain features, then)
+*** liblzma is only needed for the iOS version of KotOR
+*** libxml2 is only needed for the two Dragon Age games
+*** libxvidcore is only needed for the Mac version of KotOR
+*** libvorbis/libogg are probably only needed for The Witcher
+** When something is disabled, skip if, it possible
+*** Like the videos in KotOR Mac
+** If skipping is not possible, error out
 
 == Graphics ==
 
