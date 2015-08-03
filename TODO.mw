@@ -96,6 +96,11 @@
 ** Maybe check for system glew in configure, and use the included glew only as a fallback
 ** And a configure flag to force on or the other
 * Suppress the "fatal: not a git repository" when building gitstamp without a git directory
+* Build everything as C++
+** Currently, we build glew and Lua as C, the rest as C++, and then link them together
+** We might want to change that to compile everything as C++ instead
+** We might want to only use the C++ compiler in the configure script too
+** clone2727 really wants to do that
 
 == Graphics ==
 
