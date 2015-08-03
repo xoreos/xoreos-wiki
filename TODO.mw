@@ -136,6 +136,10 @@
 === Sorenson 3 ===
 * One single video in the Mac port of KotOR2, the Aspyr logo, uses the Sorenson 3 codec
 ** ffmpeg has a decoder, but it's connected to the MPEG-4 family mess (SVQ3 is similar to H.264)
+* ScummVM needs that too
+** While xoreos is GPLv3+, ScummVM is GPLv2+
+** Somebody implementing Sorenson 3 for xoreos should ideally give explicit permission to relicense it GPLv2+ for ScummVM
+*** Of course, if the decoder is based on prior work by other people, it has to be compatible with both GPLv2+ and GPLv3+
 
 == Sound ==
 
