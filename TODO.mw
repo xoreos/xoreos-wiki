@@ -49,6 +49,32 @@
 ** Z-fighting issue?
 ** Does that also occur on a real Windows?
 
+=== GUI ===
+* xoreos could use a global GUI to start games from
+* Should probably be similar to ScummVM's GUI, at least in effect
+* Should read the config file, list all targets
+** Press a "Play" button to play the game
+** Press an "Edit" button to edit the entry
+*** Dialog options to edit common settings
+*** An additional free-form editor?
+*** Game-specific options?
+** A button to edit global settings ("xoreos" config domain)
+** For the future, a way to immediately load a saved game?
+** An "Add" button to add a game
+*** File browser
+**** Select directories for most game
+**** Select file for Sonic Chronicles
+*** View current saved games of a target?
+* Probably implemented using OpenGL, just like, say, the console
+* Theme-able/Skinable?
+* Some potential stumbling blocks
+** Displaying "uncommon" text in both game descriptions and file paths
+*** "Decomposed" letters, i.e. base letter + combining glyphs
+*** CJK
+*** Arabic and other scripts where letters change depending on their place in the word
+*** Right-to-left
+** Shortening those strings when they don't fit in their fields is also potentially difficult
+
 == Build system ==
 
 === CMake ===
