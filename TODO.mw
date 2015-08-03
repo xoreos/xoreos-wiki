@@ -123,6 +123,12 @@
 * All the games, even NWN, use some form of shaders. Still totally missing from xoreos, since we have no idea how to use them in general yet. Moreover, this was before GLSL, so they're in the old assembly-like language. We probably need to rewrite them from scratch
 * We need shaders for tinting in NWN2 (objects and area geometry) and TexturePaint nodes in Witcher
 
+=== SDL 1.2 ===
+* Optionally link against SDL 1.2 instead of SDL 2
+* Should ideally use a configure flag to select between the two
+** Maybe a CMake flag as well, if possible
+* Assigned to clone2727, so anybody interested in this should coordinate with him
+
 == Videos ==
 
 === XMV/WMV ===
