@@ -29,6 +29,8 @@
 ** Both necessary to create save games compatible with the original games
 ** Also useful for a xml2gff tool
 * TLKWriter
+** Or extend TalkTable_TLK with a method to save into a TLK file?
+*** Same with TalkTable_GFF?
 ** xml2tlk tool
 * Extend TwoDAFile to write binary 2DA?
 * Archive (ERF, RIM, KEY/BIF) packers?
