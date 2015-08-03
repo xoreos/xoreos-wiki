@@ -166,6 +166,12 @@
 
 === Gamepad binding ===
 * The Xbox versions of KotOR and KotOR2 don't use a mouse. We have basic support for joysticks/gamepads, but no real bindings to the engine or ideas how to handle that in general
+* We might want to handle the controller support the new KotOR2 Steam update brought
+** override folder constains a gamepad.txt then
+* Also hack in controller support for a non-Steam KotOR2? And for KotOR?
+* Controller support in Jade Empire
+* Controller support for Sonic? It is a Nintendo DS game after all
+* Controller support for the non-console versions of the Dragon Age games?
 
 == Engines ==
 
