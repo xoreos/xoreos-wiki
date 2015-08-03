@@ -112,6 +112,7 @@
 ** When something is disabled, skip it, if possible
 *** Like the videos in KotOR Mac
 ** If skipping is not possible, error out
+** We should then show a summary of what is enabled/disabled at the end of the configure script
 
 == Graphics ==
 
