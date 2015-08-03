@@ -95,6 +95,13 @@ This is a long rambly list of things left to do in xoreos and xoreos-tools. Anyb
 ** It uses [https://www.wxwidgets.org/ wxWidgets] to do the GUI
 ** Or possibly rewriting it to use [https://www.qt.io/ Qt] is better?
 
+=== Full-fledged modding toolset ===
+* Similar to the NWN, NWN2 or Witcher toolset, but portable and FLOSS
+** Might also support other games?
+* Out of scope for xoreos
+** Still, such a thing would be welcome under the xoreos banner
+* [http://sourceforge.net/projects/neveredit/ Neveredit] might still be worth a look
+
 == Build system ==
 
 === CMake ===
