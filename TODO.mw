@@ -109,7 +109,7 @@
 *** libxml2 is only needed for the two Dragon Age games
 *** libxvidcore is only needed for the Mac version of KotOR
 *** libvorbis/libogg are probably only needed for The Witcher
-** When something is disabled, skip if, it possible
+** When something is disabled, skip it, if possible
 *** Like the videos in KotOR Mac
 ** If skipping is not possible, error out
 
