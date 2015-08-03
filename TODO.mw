@@ -24,6 +24,15 @@
 ** Script disassembler is probably easier, as a first step
 * A script compiler might be useful as well
 
+=== File format writers ===
+* GFF3Writer, GFF4Writer
+** Both necessary to create save games compatible with the original games
+** Also useful for a xml2gff tool
+* TLKWriter
+** xml2tlk tool
+* Extend TwoDAFile to write binary 2DA?
+* Archive (ERF, RIM, KEY/BIF) packers?
+
 === Config file ===
 * Should be more preserving of the layout
 ** Especially empty lines
