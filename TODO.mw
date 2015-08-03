@@ -75,6 +75,13 @@
 *** Right-to-left
 ** Shortening those strings when they don't fit in their fields is also potentially difficult
 
+=== Localization ===
+* Text in exceptions? They are potentially user-visible
+* Strings for the engine loader progress bar
+* Debug console string
+* GUI (see above) strings
+* [http://www.gnu.org/software/gettext/ GNU gettext] would be one solution
+
 == Build system ==
 
 === CMake ===
