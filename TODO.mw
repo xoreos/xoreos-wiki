@@ -88,6 +88,13 @@ This is a long rambly list of things left to do in xoreos and xoreos-tools. Anyb
 * GUI (see above) strings
 * [http://www.gnu.org/software/gettext/ GNU gettext] would be one solution
 
+=== Resource Explorer ===
+* A portable, user-friendly graphical resource explorer could be useful
+* [https://github.com/xoreos/phaethon Phaethon] is a start
+** It can look into game archives, show textures and play sounds
+** It uses [https://www.wxwidgets.org/ wxWidgets] to do the GUI
+** Or possibly rewriting it to use [https://www.qt.io/ Qt] is better?
+
 == Build system ==
 
 === CMake ===
