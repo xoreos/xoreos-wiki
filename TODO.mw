@@ -231,6 +231,7 @@
 ** Reading of PC files in creature
 
 === Sonic Chronicles ===
+* Allow using the contents from an extracted NDS file?
 * Menus
 ** GUI files that are GFF
 ** Actions in a state machine in GDA files?
