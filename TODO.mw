@@ -208,6 +208,15 @@ This is a long rambly list of things left to do in xoreos and xoreos-tools. Anyb
 * Controller support for Sonic? It is a Nintendo DS game after all
 * Controller support for the non-console versions of the Dragon Age games?
 
+== Network ==
+* We need a network subsystem
+** [https://www.libsdl.org/projects/SDL_net/ SDL_net]?
+** [http://www.boost.org/doc/libs/release/libs/asio/ Boost.Asio]?
+** More options here: http://stackoverflow.com/questions/118945/best-c-c-network-library
+* Engines need to be split into client and server classes
+** The original engines all still do that, even when not exposing anything to users
+** NWN and NWN2 allow user multiplayer
+
 == Engines ==
 
 === Script system ===
