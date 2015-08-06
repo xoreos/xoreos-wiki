@@ -94,6 +94,11 @@ This is a long rambly list of things left to do in xoreos and xoreos-tools. Anyb
 ** It can look into game archives, show textures and play sounds
 ** It uses [https://www.wxwidgets.org/ wxWidgets] to do the GUI
 ** Or possibly rewriting it to use [https://www.qt.io/ Qt] is better?
+** '''Beware:''' Phaethon's codebase currently seriously lacks behind xoreos'
+*** Need to apply a lot of changes to classes of the Common and Aurora namespaces to Phaethon
+*** Need to apply all the Boost.Filesystem portability issue fixes, especially for Windows
+**** Phaethon is '''broken''' on Windows at the moment
+*** Talk to us before working on Phaethon!
 
 === Full-fledged modding toolset ===
 * Similar to the NWN, NWN2 or Witcher toolset, but portable and FLOSS
