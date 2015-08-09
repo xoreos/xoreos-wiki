@@ -143,7 +143,8 @@ This is a long rambly list of things left to do in xoreos and xoreos-tools. Anyb
 
 === Lighting ===
 * We don't yet have a proper light system
-* I started working on it: [http://drmccoy.de/eos/nwn/20110610T230251.png], but my approach is seriously lacking. You can see the edges of the tiles that make up on NWN area in many cases
+* I started working on it: [https://drmccoy.de/xoreos/20150809T223407.png], but my approach is seriously lacking. You can see the edges of the tiles that make up on NWN area in many cases ([https://drmccoy.de/xoreos/20150809T223507.png], [https://drmccoy.de/xoreos/20150809T223548.png])
+** See the [https://github.com/xoreos/xoreos/tree/light light branch] in the git repository
 
 === Materials ===
 * NWN and more excessively KotOR/KotOR2 use material properties in combination of semi-transparent textures to create metallic textures. My OpenGL knowledge is quite basic, I generally fudge through everything :P. Research there would be needed
