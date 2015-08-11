@@ -726,99 +726,35 @@
 ! Usage
 ! Status
 |-
-| 1000cuts{as,cs,lv,mv}.2da || 1000cutsas.2da || style="background-color: red;" | unsupported
+| areaofeffect.2da || area effects || style="background-color: red;" | unsupported
 |-
-| cannibal{as,cs,lv,mv}.2da || cannibalas.2da || style="background-color: red;" | unsupported
+| spells.2da || spell effects || style="background-color: red;" | unsupported
 |-
-| chaika{as,cs,lv,mv}.2da || chaikaas.2da || style="background-color: red;" | unsupported
+| styleadvance.2da || level up data || style="background-color: red;" | unsupported
 |-
-| clay_golem{as,cs,lv,mv}.2da || clay_golemas.2da || style="background-color: red;" | unsupported
+| stylecost.2da || transformation style costs || style="background-color: red;" | unsupported
 |-
-| deaths_hand{as,cs,lv,mv}.2da || deaths_handas.2da || style="background-color: red;" | unsupported
+| styledata.2da || style 2da table references || style="background-color: red;" | unsupported
 |-
-| demon_bull{as,cs,lv,mv}.2da || demon_bullas.2da || style="background-color: red;" | unsupported
+| stylepoints.2da || style points per level || style="background-color: red;" | unsupported
 |-
-| demon_elephant{as,cs,lv,mv}.2da || demon_elephantas.2da || style="background-color: red;" | unsupported
+| stylesuperlist.2da || style numbers and models || style="background-color: red;" | unsupported
 |-
-| demon_fox{as,cs,lv,mv}.2da || demon_foxas.2da || style="background-color: red;" | unsupported
+| styletypes.2da || gui icons || style="background-color: red;" | unsupported
 |-
-| demon_horse{as,cs,lv,mv}.2da || demon_horseas.2da || style="background-color: red;" | unsupported
+| transformation.2da || tranformation style numbers || style="background-color: red;" | unsupported
 |-
-| demon_rat{as,cs,lv,mv}.2da || demon_ratas.2da || style="background-color: red;" | unsupported
+| *as.2da || style animation and sound table || style="background-color: red;" | unsupported
 |-
-| demon_toad{as,cs,lv,mv}.2da || demon_toadas.2da || style="background-color: red;" | unsupported
+| *cs.2da || style cutscene movement table || style="background-color: red;" | unsupported
 |-
-| drunkenmaster{as,cs,lv,mv}.2da || drunkenmasteras.2da || style="background-color: red;" | unsupported
+| *lv.2da || style level up table || style="background-color: red;" | unsupported
 |-
-| Ghost_King{as,cs,lv,mv}.2da || Ghost_KingAS.2da || style="background-color: red;" | unsupported
+| *mv.2da || style movement table || style="background-color: red;" | unsupported
 |-
-| gimp_martial{as,cs,lv,mv}.2da || gimp_martialas.2da || style="background-color: red;" | unsupported
+| centipede.2da || special centipede style data || style="background-color: red;" | unsupported
 |-
-| gimp_spear{as,cs,lv,mv}.2da || gimp_spearas.2da || style="background-color: red;" | unsupported
-|-
-| heavenlywave{as,cs,lv,mv}.2da || heavenlywaveas.2da || style="background-color: red;" | unsupported
-|-
-| hiddenfist{as,cs,lv,mv}.2da || hiddenfistas.2da || style="background-color: red;" | unsupported
-|-
-| imp_ham{as,cs,lv,mv}.2da || imp_hamas.2da || style="background-color: red;" | unsupported
-|-
-| imp_legs{as,cs,lv,mv}.2da || imp_legsas.2da || style="background-color: red;" | unsupported
-|-
-| ironpalm{as,cs,lv,mv}.2da || ironpalmas.2da || style="background-color: red;" | unsupported
-|-
-| jade_warrior{as,cs,lv,mv}.2da || jade_warrioras.2da || style="background-color: red;" | unsupported
-|-
-| leapingtiger{as,cs,lv,mv}.2da || leapingtigeras.2da || style="background-color: red;" | unsupported
-|-
-| legendaryfist{as,cs,lv,mv}.2da || legendaryfistas.2da || style="background-color: red;" | unsupported
-|-
-| magic_air{as,cs,lv,mv}.2da || magic_airas.2da || style="background-color: red;" | unsupported
-|-
-| magic_earth{as,cs,lv,mv}.2da || magic_earthas.2da || style="background-color: red;" | unsupported
-|-
-| magic_fire{as,cs,lv,mv}.2da || magic_fireas.2da || style="background-color: red;" | unsupported
-|-
-| magic_water{as,cs,lv,mv}.2da || magic_wateras.2da || style="background-color: red;" | unsupported
-|-
-| mask_spirit{as,cs,lv,mv}.2da || mask_spiritas.2da || style="background-color: red;" | unsupported
-|-
-| masterli{as,cs,lv,mv}.2da || masterlias.2da || style="background-color: red;" | unsupported
-|-
-| monkeypaw{as,cs,lv,mv}.2da || monkeypawas.2da || style="background-color: red;" | unsupported
-|-
-| mother{as,cs,lv,mv}.2da || motheras.2da || style="background-color: red;" | unsupported
-|-
-| mummy{as,cs,lv,mv}.2da || mummyas.2da || style="background-color: red;" | unsupported
-|-
-| ogre{as,cs,lv,mv}.2da || ogreas.2da || style="background-color: red;" | unsupported
-|-
-| paralyzepalm{as,cs,lv,mv}.2da || paralyzepalmas.2da || style="background-color: red;" | unsupported
-|-
-| red_minister{as,cs,lv,mv}.2da || red_ministeras.2da || style="background-color: red;" | unsupported
-|-
-| spiritwellas.2da || spiritwellas.2da || style="background-color: red;" | unsupported
-|-
-| stormdragon{as,cs,lv,mv}.2da || stormdragonas.2da || style="background-color: red;" | unsupported
-|-
-| trans_golem{as,cs,lv,mv}.2da || trans_golemas.2da || style="background-color: red;" | unsupported
-|-
-| trans_horse{as,cs,lv,mv}.2da || trans_horseas.2da || style="background-color: red;" | unsupported
-|-
-| trans_minister{as,cs,lv,mv}.2da || trans_ministeras.2da || style="background-color: red;" | unsupported
-|-
-| viper{as,cs,lv,mv}.2da || viperas.2da || style="background-color: red;" | unsupported
-|-
-| weapon_1sword{as,cs,lv,mv}.2da || weapon_1swordas.2da || style="background-color: red;" | unsupported
-|-
-| weapon_bigaxe{as,cs,lv,mv}.2da || weapon_bigaxeas.2da || style="background-color: red;" | unsupported
-|-
-| weapon_gun{as,cs,lv,mv}.2da || weapon_gunas.2da || style="background-color: red;" | unsupported
-|-
-| weapon_staff{as,cs,lv,mv}.2da || weapon_staffas.2da || style="background-color: red;" | unsupported
-|-
-| weapon_swords{as,cs,lv,mv}.2da || weapon_swordsas.2da || style="background-color: red;" | unsupported
-|-
-| whitedemon{as,cs,lv,mv}.2da || whitedemonas.2da || style="background-color: red;" | unsupported
+| drunken.2da || special drunken style data || style="background-color: red;" | unsupported
 |}
 
 == Models ==
