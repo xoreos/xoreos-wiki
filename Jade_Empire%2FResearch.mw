@@ -62,13 +62,15 @@
 ! Documentation
 ! Status
 |-
+|bmp || 1 || bitmap image || binary || ||
+|-
 |tga || 3 || targa image || binary || ||
 |-
-|mdl || 2002 || model file || binary || ||
+|mdl || 2002 || model definition || binary || ||
 |-
-|mdx || 3008 || model definition || binary || ||
+|mdx || 3008 || model raw data || binary || ||
 |-
-|txi || 2022|| texture information || text || || not used
+|txi || 2022|| texture information || text || ||
 |-
 |txb || 3006 || texture data || binary || ||
 |-
