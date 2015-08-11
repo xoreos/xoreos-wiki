@@ -123,14 +123,15 @@
 ! Extension
 ! Type ID
 ! Type description/Usage
+! Format
 ! Documentation
 ! Status
 |-
-|gui || 2047 || dialog definition in gff format || ||
+|gui || 2047 || dialog definition || gff || ||
 |-
-|abc || 24003 || font definition || ||
+|abc || 24003 || font definition || binary || ||
 |-
-|sbm || 24004 || font bitmap || ||
+|sbm || 24004 || font bitmap || binary || ||
 |}
 
 === Static Properties ===
@@ -139,16 +140,17 @@
 ! Extension
 ! Type ID
 ! Type description/Usage
+! Format
 ! Documentation
 ! Status
 |-
-|ini || 7 || ini file || ||
+|ini || 7 || ini file || text || ||
 |-
-|txt || 10 || text file || ||
+|txt || 10 || sound info(*_xwb.txt und *_xsb.txt) und mini game data (mg*.txt) || text || ||
 |-
-|2da || 2017 || static data tables || [https://github.com/xoreos/xoreos-docs/raw/master/specs/bioware/2DA_Format.pdf 2DA_Format.pdf] ||
+|2da || 2017 || static data tables || 2da || [https://github.com/xoreos/xoreos-docs/raw/master/specs/bioware/2DA_Format.pdf 2DA_Format.pdf] ||
 |-
-|gff || 2037 || generic gff file || ||
+|gff || 2037 || generic gff file || gff || ||
 |}
 
 === Others ===
@@ -157,22 +159,25 @@
 ! Extension
 ! Type ID
 ! Type description/Usage
+! Format
 ! Documentation
 ! Status
 |-
-|sav || 2057 || game save in erf format || ||
+|ttc || 2073 || minigame resources || binary || ||
 |-
-|bik || 2063 || prerendered bink movie || ||
+|sav || 2057 || game save || erf? || ||
 |-
-|ogg || 2078 || ogg encoded audio || ||
+|bik || 2063 || prerendered video || bink || ||
 |-
-|sto || 3013 || store definition in gff format || [https://github.com/xoreos/xoreos-docs/raw/master/specs/bioware/Store_Format.pdf Store_Format.pdf] ||
+|ogg || 2078 || prerendered audio || ogg/vorbis || ||
 |-
-|cre || 24000 || creature definition in gff format || ||
+|sto || 3013 || store definition || gff || [https://github.com/xoreos/xoreos-docs/raw/master/specs/bioware/Store_Format.pdf Store_Format.pdf] ||
 |-
-|pso || 24001 || pixel shader object || ||
+|cre || 24000 || creature definition || gff || ||
 |-
-|vso || 24002 || vertex shader object || ||
+|pso || 24001 || pixel shader object || binary || ||
+|-
+|vso || 24002 || vertex shader object|| binary || ||
 |}
 
 === Unknown ===
@@ -185,8 +190,6 @@
 ! Status
 |-
 |wma || 11 || wma file || ||
-|-
-|ttc || 2073 || ttc file || ||
 |-
 |pvd || 24005 || pvd file || ||
 |-
