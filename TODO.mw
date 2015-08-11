@@ -131,6 +131,8 @@ This is a long rambly list of things left to do in xoreos and xoreos-tools. Anyb
 *** Like the videos in KotOR Mac
 ** If skipping is not possible, error out
 ** We should then show a summary of what is enabled/disabled at the end of the configure script
+* Switch to a non-recursive make setup?
+** We still want a Makefile.am for each directory, so with include
 
 == Graphics ==
 
