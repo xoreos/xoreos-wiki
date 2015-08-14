@@ -212,6 +212,12 @@ This is a long rambly list of things left to do in xoreos and xoreos-tools. Anyb
 * Controller support for Sonic? It is a Nintendo DS game after all
 * Controller support for the non-console versions of the Dragon Age games?
 
+=== Keyboard states ===
+* Events::enableKeyRepeat() and Events::enableTextInput() currently switch these features on/off
+* They should be re-entrant, with an integer counting the current level of enabled-ness
+* If the level is 0, disable the feature
+* This way, the features can properly stack
+
 == Network ==
 * We need a network subsystem
 ** [https://www.libsdl.org/projects/SDL_net/ SDL_net]?
