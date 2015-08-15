@@ -35,15 +35,20 @@
 ! Documentation
 ! Status
 |-
-|are || 2012 || static area information || gff || [https://github.com/xoreos/xoreos-docs/raw/master/specs/bioware/AreaFile_Format.pdf AreaFile_Format.pdf] || only layout value used
+|are || 2012 || static area information || gff || [https://github.com/xoreos/xoreos-docs/raw/master/specs/bioware/AreaFile_Format.pdf AreaFile_Format.pdf]
+| style="background-color: yellow;" | only layout value used
 |-
-|lyt || 3000 || area rooms layout || text || ||
+|lyt || 3000 || area rooms layout || text || 
+| style="background-color: yellow;" |
 |-
-|vis || 3001 || area rooms visibility graph || text || ||
+|vis || 3001 || area rooms visibility graph || text || 
+| style="background-color: yellow;" |
 |-
-|hex || 3015 || area hexgrid definition || text ||  ||
+|hex || 3015 || area hexgrid definition || text ||  
+| style="background-color: red;" | unsupported
 |-
-|art || 3023 || area environment properties || ini file || ||
+|art || 3023 || area environment properties || ini file || 
+| style="background-color: red;" | unsupported
 |-
 |pla || 24007 || placeable definition || gff || ||
 |-
