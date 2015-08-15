@@ -35,7 +35,7 @@
 ! Documentation
 ! Status
 |-
-|are || 2012 || static area information || gff || [https://github.com/xoreos/xoreos-docs/raw/master/specs/bioware/AreaFile_Format.pdf AreaFile_Format.pdf] || mostly supported
+|are || 2012 || static area information || gff || [https://github.com/xoreos/xoreos-docs/raw/master/specs/bioware/AreaFile_Format.pdf AreaFile_Format.pdf] || only layout value used
 |-
 |lyt || 3000 || area rooms layout || text || ||
 |-
