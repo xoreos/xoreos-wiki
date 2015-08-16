@@ -241,6 +241,8 @@ This is a long rambly list of things left to do in xoreos and xoreos-tools. Anyb
 ** Might need extending the script bytecode parser, might not
 * Witcher uses Lua scripts together with NWScript
 * Sonic has no scripts at all, it seems
+* Currently a script in an infinite loop locks the game thread
+** Timeout? Asynchronous script execution?
 
 === NWN ===
 * Menus
