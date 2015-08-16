@@ -230,9 +230,11 @@ This is a long rambly list of things left to do in xoreos and xoreos-tools. Anyb
 == Engines ==
 
 === Script system ===
-* Needs rewrite, badly
-** ImperatorPrime has started with that
-* Afterwards, can mostly copied to other engines
+* ImperatorPrime had started on a script system rewrite
+** Includes functions with real signatures
+** Maybe switch to that, if it works
+* Rounds, object heartbeat scripts
+* Script system needs to be copied to the other engines
 ** They need new engine function tables, though
 ** The names and signatures of which we have
 * KotOR2 and NWN2 have some extensions
