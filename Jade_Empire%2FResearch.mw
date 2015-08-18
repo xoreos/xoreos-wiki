@@ -82,6 +82,8 @@
 |-
 |txb || 3006 || texture data || binary || ||
 |-
+|tpc || 3007 || texture data || binary || ||
+|-
 |mat || 2069 || material definition || text || ||
 |-
 |mab || 3011 || material definition || binary || ||
