@@ -235,8 +235,9 @@ This is a long rambly list of things left to do in xoreos and xoreos-tools. Anyb
 ** Maybe switch to that, if it works
 * Rounds, object heartbeat scripts
 * Script system needs to be copied to the other engines
-** They need new engine function tables, though
-** The names and signatures of which we have
+** Script system already hooked up to: NWN, KotOR, KotOR2
+** Script system missing in: Jade, NWN2, Witcher, DA:O, DA2
+** Farmboy0 is working on Jade Empire
 * KotOR2 and NWN2 have some extensions
 ** Might need extending the script bytecode parser, might not
 * Witcher uses Lua scripts together with NWScript
