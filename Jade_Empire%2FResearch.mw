@@ -38,6 +38,9 @@
 |are || 2012 || static area information || gff || [https://github.com/xoreos/xoreos-docs/raw/master/specs/bioware/AreaFile_Format.pdf AreaFile_Format.pdf]
 | style="background-color: yellow;" | only layout value used
 |-
+|sav || 2057 || objects descriptions in area || gff ||
+| style="background-color: red;" | unsupported
+|-
 |lyt || 3000 || area rooms layout || text || 
 | style="background-color: yellow;" |
 |-
