@@ -149,7 +149,6 @@ This is a long rambly list of things left to do in xoreos and xoreos-tools. Anyb
 ** Of course, the actual glLight* stuff won't be relevant anymore as soon as shaders are there
 
 === Materials ===
-* NWN and more excessively KotOR/KotOR2 use material properties in combination of semi-transparent textures to create metallic textures. My OpenGL knowledge is quite basic, I generally fudge through everything :P. Research there would be needed
 * Materials in The Witcher are closely tied to shaders
 
 === OpenGL and Shaders ===
