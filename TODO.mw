@@ -34,7 +34,6 @@ This is a long rambly list of things left to do in xoreos and xoreos-tools. Anyb
 ** Or extend TalkTable_TLK with a method to save into a TLK file?
 *** Same with TalkTable_GFF?
 ** xml2tlk tool
-* Extend TwoDAFile to write binary 2DA?
 * Archive (ERF, RIM, KEY/BIF) packers?
 
 === Config file ===
