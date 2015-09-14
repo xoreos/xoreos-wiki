@@ -147,6 +147,10 @@ This is a long rambly list of things left to do in xoreos and xoreos-tools. Anyb
 * I started working on it: [https://drmccoy.de/xoreos/20150809T223407.png], but my approach is seriously lacking. You can see the edges of the tiles that make up on NWN area in many cases ([https://drmccoy.de/xoreos/20150809T223507.png], [https://drmccoy.de/xoreos/20150809T223548.png])
 ** See the [https://github.com/xoreos/xoreos/tree/light light branch] in the git repository
 ** Of course, the actual glLight* stuff won't be relevant anymore as soon as shaders are there
+** Lighting in several (ASCII?) area tiles is broken
+*** The door in Prelude.nwm's "m0q1a" area
+*** A water tile in Chapter2.nwm's "map_m2q1a" area
+*** A sloped snow tile in XP2_Chapter3.nwm's "thecityoflostsou"
 
 === Materials ===
 * Materials in The Witcher are closely tied to shaders
