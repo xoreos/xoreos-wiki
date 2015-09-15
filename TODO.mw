@@ -30,10 +30,9 @@ This is a long rambly list of things left to do in xoreos and xoreos-tools. Anyb
 * GFF3Writer, GFF4Writer
 ** Both necessary to create save games compatible with the original games
 ** Also useful for a xml2gff tool
-* TLKWriter
-** Or extend TalkTable_TLK with a method to save into a TLK file?
-*** Same with TalkTable_GFF?
-** xml2tlk tool
+* xml2tlk
+** TalkTable_GFF::write02() and ::write05()
+** Needs GFF4Writer
 * Archive (ERF, RIM, KEY/BIF) packers?
 
 === Config file ===
