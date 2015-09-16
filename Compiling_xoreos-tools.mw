@@ -1,0 +1,71 @@
+This page gives a few tips and pointers on how to compile xoreos-tools on various platforms.
+__TOC__
+
+==Compiler and build system==
+
+xoreos-tools is written in C++, so a C++ compiler, like [https://gcc.gnu.org/ GCC] or [http://clang.llvm.org/ clang] is required. It has two build systems: [https://en.wikipedia.org/wiki/GNU_build_system Autotools] ([https://www.gnu.org/software/autoconf/ Autoconf], [https://www.gnu.org/software/automake/ Automake] and [https://www.gnu.org/software/libtool/ Libtool]) and [https://en.wikipedia.org/wiki/CMake CMake]. Use whichever you feel more comfortable with.
+
+===GNU/Linux===
+
+On Debian-based distributions (including Ubuntu), you should be able to install the required compiler and build system packages with
+
+ <nowiki>apt-get install libc6-dev g++ make autoconf automake libtool gettext</nowiki>
+
+On other distributions, it should work similarily. 
+
+===Windows===
+
+Since Visual Studio does not work with autotools, you have to use the CMake build system if you want to compile xoreos with Visual Studio. If you're using [http://www.mingw.org/ MinGW], however, you're free to choose either build system.
+
+==Libraries==
+
+xoreos-tools uses the following libraries to function:
+
+* [https://en.wikipedia.org/wiki/Iconv iconv]
+* [http://www.zlib.net/ zlib] (>= 1.2.3.4)
+* [http://www.xmlsoft.org/ libxml2] (>= 2.8.0)
+
+On Debian-based GNU/Linux distribution (including Ubuntu), you should be able to install these libraries and their development packages with
+
+ apt-get install zlib1g-dev libxml2-dev
+
+Other GNU/Linux distributions should work similarily. Windows users have to visit each website manually and download a precompiled version, or, if not available, download the source and compile the library themselves.
+
+==Compiling xoreos==
+
+Make you have your compiler, build system and libraries installed correctly. Then open a terminal and change into the directory of your sources.
+
+===autotools===
+
+Type
+
+ <nowiki>./autogen.sh && ./configure && make</nowiki>
+
+The binaries can then be found in the src subdirectory.
+
+Optional, non-conventional ./configure flags:
+
+{|
+|
+* --with-werror &nbsp;
+|| Compile with -Werror
+|-
+|
+* --without-warnings &nbsp;
+|| Compile without the extra warnings enabled
+|-
+|
+* --with-lto &nbsp;
+|| Compile with link-time optimization
+|}
+
+
+===CMake ===
+
+Type
+
+ <nowiki>cmake . && make</nowiki>
+
+The binaries can then be found in the bin subdirectory.
+
+Please read [http://www.cmake.org/runningcmake/ Running CMake] on the CMake website for in-depth information on invoking CMake.
