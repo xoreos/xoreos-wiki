@@ -305,7 +305,7 @@ This is a long rambly list of things left to do in xoreos and xoreos-tools. Anyb
 *** Cues probably not as complex as FMOD/Wwave
 *** Effects need extension of the Sound system, maybe
 ** Xbox version might use the binary format?
-*** Sound banks could be handles as archived and indexed in the ResourceManager?
+*** Sound banks could be handles as archives and indexed in the ResourceManager?
 
 === NWN2 ===
 * Menus
