@@ -300,6 +300,12 @@ This is a long rambly list of things left to do in xoreos and xoreos-tools. Anyb
 ** Hardcoded, mostly removed from usual game logic
 * Player character
 ** Needs research
+* Sound
+** Uses an ASCII variant of the [http://wiki.multimedia.cx/index.php?title=XACT XACT formats]
+*** Sound banks could be handled as archived and indexed in the ResourceManager?
+*** Cues probably not as complex as FMOD/Wwave
+*** Effects need extension of the Sound system
+** Xbox version might use the binary format?
 
 === NWN2 ===
 * Menus
