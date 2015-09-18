@@ -86,6 +86,12 @@ This is a long rambly list of things left to do in xoreos and xoreos-tools. Anyb
 * GUI (see above) strings
 * [http://www.gnu.org/software/gettext/ GNU gettext] would be one solution
 
+=== Unit tests ===
+* A lot of the common code would really profit from unit tests
+* Automake has [https://www.gnu.org/software/automake/manual/html_node/Tests.html built-in support for test scripts], if that's the way we want to go
+* Alternatively, there's [https://en.wikipedia.org/wiki/CppUnit CppUnit]
+* And loads of other alternatives
+
 === Resource Explorer ===
 * A portable, user-friendly graphical resource explorer could be useful
 * [https://github.com/xoreos/phaethon Phaethon] is a start
