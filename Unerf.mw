@@ -1,0 +1,85 @@
+BioWare ERF (.erf, .mod, .nwm, .sav) archive extractor.
+
+= Synopsis =
+
+ unerf [<options>] <command> <archive> [<file> [...]]
+
+= Description =
+
+'''unerf''' extract BioWare ERF archives, found in many BioWare games as files with the extension .erf, .mod, .nwm or .sav. Moreover, in some games, a .rim file might be an ERF instead of a RIM.
+
+There's several different versions of ERFs. This tool supports the version [https://github.com/xoreos/xoreos-docs/blob/master/specs/bioware/ERF_Format.pdf V1.0] (Neverwinter Nights), V1.1 (Neverwinter Nights 2), [http://social.bioware.com/wiki/datoolset/index.php/ERF#Version_2.0 V2.0] (Dragon Age: Origins), [http://social.bioware.com/wiki/datoolset/index.php/ERF#Version_2.2 V2.2] (Dragon Age: Origins) and [http://social.bioware.com/wiki/datoolset/index.php/ERF#Version_3.0 V3.0] (Dragon Age II).
+
+'''Supported features:'''
+* Archives with stripped filenames. The name hash is searched for in a big lookup table. If it is not found, the file is listed and extracted as a hexadecimal representation of the hash
+* zlib-compressed files are supported and transparently decompressed
+* Blowfish-encrypted archives are supported and are, provided you know the password, transparently decrypted
+* Archives that contain full paths are supported. You can either strip the directory and extract the plain filenames, or substitute the directory separator with a '='
+* Archives with numerical extension IDs belonging to different games can be aliased accordingly.
+
+'''Unsupported features:'''
+* XOR-encrypted archives
+* Creating directories when extracting archives with full paths. Please also note that by stripped the directories of files in these archives, you might overwrite already extracted files
+
+= Options =
+
+'''-h''' <br />
+'''--help'''
+: Show a help text and exit.
+
+'''--version'''
+: Show version information and exit.
+
+'''--nwn2'''
+: Alias file types according to Neverwinter Nights 2 rules. Neverwinter Nights 2 reuses a few file extension IDs differently than other BioWare games.
+
+'''--jade'''
+: Alias file types according to Jade Empire rules. Jade Empire reuses a few file extension IDs differently than other BioWare games.
+
+'''--pass''' <hex>
+: Password  to  decrypt this archive. This password needs to be specified in hexadecimal notation, even if it's an ASCII string. For example, "4CF223AB" would be a valid password string. "Foobar" would not.
+
+<command>
+: '''i''' &nbsp; Display meta-information about the archive
+: '''l''' &nbsp; List archive contents
+: '''v''' &nbsp; List archive contents with full paths
+: '''e''' &nbsp; Extract files to current directory
+: '''s''' &nbsp; Extract files to current directory with full name
+
+<archive>
+: The ERF archive to read.
+
+[<file>]
+: One or more files to extract. If none are given, the whole archive is extracted.
+
+= Examples =
+
+View meta-information of the archive Shadowlords1.mod:
+ unerf i Shadowlords1.mod
+
+List all files contained in the archive Chapter1.nwm:
+ unerf l Chapter1.nwm
+
+List all files, with full path, in the archive areas.erf:
+ unerf v areas.erf
+
+Extract all files from the archive foo.mod:
+ unerf e foo.mod
+
+Extract the file area1.are from the archive foo.mod:
+ unerf e foo.mod area1.are
+
+Extract all files, with full path, in the archive areas.erf:
+ unerf s areas.erf
+
+Extract the file areas\area1.are from the archive areas.erf:
+ unerf s areas.erf areas\\area1.are
+
+= See also =
+
+[[unherf]], [[unrim]]
+
+= References =
+
+* https://github.com/xoreos/xoreos-docs/blob/master/specs/bioware/ERF_Format.pdf
+* http://social.bioware.com/wiki/datoolset/index.php/ERF
