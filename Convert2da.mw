@@ -1,0 +1,65 @@
+BioWare 2DA/GDA to 2DA/CSV converter
+
+= Synopsis =
+
+ convert2da [<options>] <file> [<file> [...]]
+
+= Description =
+
+'''convert2da''' converts BioWare's 2DA and GDA files into (cleanly formatted) ASCII 2DA or CSV files. 2DA files are two-dimensional arrays, or tables, holding various information and used throughout many of the BioWare games. They can come in two flavors: binary and plain-text ASCII. GDA files are conceptually the same, but they store their data inside a GFF, a binary hierarchical format. Unlike 2DA files, a GDA does not store its column header name directory. Instead, only a [https://en.wikipedia.org/wiki/Cyclic_redundancy_check CRC] hash of the name encoded in little-endian UTF-16 is stored.
+
+This tool can read all of those formats and produces an easily readable, cleanly formatted ASCII 2DA. Alternatively, it can create a CSV file for further processing. It also contains a lookup table to convert GDA column header hashes back to readable names. Not all column header names are known, though.
+
+= Options =
+
+'''-h''' <br />
+'''--help'''
+: Show a help text and exit.
+
+'''--version'''
+: Show version information and exit.
+
+'''-o''' <file> <br />
+'''--output''' <file>
+: Write the output to this file. If this option is not used, the output is written to stdout.
+
+'''-a''' <br />
+'''--2da'''
+: Convert the 2DA or GDA file into an ASCII 2DA file. This is the default mode of operation.
+
+'''-b''' <br />
+'''--2dab''' 
+: Convert the 2DA or GDA file into a binary 2DA file.
+
+'''-c''' <br />
+'''--csv'''
+: Convert the 2DA or GDA file into an CSV file.
+
+<file>
+: The name of the 2DA or GDA file to read.
+
+If more than one input file is given, they must all be GDA files and use the same column layout. They will be pasted together and converted as one GDA. This mimics how the M2DA (multiple 2DA/GDA) work in [[Dragon Age: Origins]] and [[Dragon Age II]].
+
+= Examples =
+
+Convert the 2DA file1.2da into an ASCII 2DA file2.2da:
+ convert2da -a file1.2da file2.2da
+
+Convert the 2DA file1.2da into an ASCII 2DA on stdout:
+ convert2da -a file1.2da
+
+Convert the 2DA file1.2da into a binary 2DA file2.2da:
+ convert2da -b file1.2da file2.2da
+
+Convert the 2DA file1.2da into a CSV file:
+ convert2da -c file1.2da file2.csv
+
+= See also =
+
+[[gff2xml]]
+
+= References =
+
+* https://github.com/xoreos/xoreos-docs/blob/master/specs/bioware/2DA_Format.pdf
+* http://social.bioware.com/wiki/datoolset/index.php/2DA
+* http://social.bioware.com/wiki/datoolset/index.php/GDA
