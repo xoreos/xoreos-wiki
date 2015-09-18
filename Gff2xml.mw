@@ -1,0 +1,51 @@
+gff2xml - BioWare GFF to XML converter
+
+= Synopsis =
+
+ gff2xml [<options>] <input file> [<output file>]
+
+= Description =
+
+'''gff2xml''' converts BioWare's GFF files (versions V3.2/V3.3 and V4.0/V4.1) into human-readable XML. GFF are hierarchical data files, similar to XML in concept, but stored in binary. As such, these files are used as a basis for many of the file formats found in the BioWare games. For example, an UTC file is a GFF holding a template for a creature, while a GUI file is a GFF describing an in-game menu.
+
+Both version 3 of the format (V3.2/V3.3) and version 4 (V4.0/V4.1) are supported. While they are similar, the 4th version carries several changes to make the files more efficient to read in-game. This includes replacing the string field names (which map to XML tags) with numerical identifiers, resulting in converted XML files that are stripped of their meaning. To compensate, this tool adds readable aliases to many of these numerical identifiers, giving them back their meaning. Unfortunately, not all of them are known. Most notably, the identifiers introduced in Sonic Chronicles: The Dark Brotherhood and Dragon Age 2 are still missing.
+
+The changes in the minor versions (V3.2 vs. V3.3 and V4.0 vs. V4.1) are less significant. V3.3 simply changes which languages are supported, and V4.1 adds a common string table at the start of the file. Both of these additions are handled transparently.
+
+= Options =
+
+'''-h''' <br />
+'''--help'''
+: Show a help text and exit.
+
+'''--version'''
+: Show version information and exit.
+       
+'''--cp1252'''
+: Read GFF4 strings as Windows CP-1252. Usually, strings in version 4 of the GFF format are encoded in little-endian UTF-16. But some files store them as Windows CP-1252 instead. Since there's no clean way to autodetect the different encoding, this switch manually selects Windows CP-1252.
+
+<input file>
+: The GFF file to convert.
+
+[<output file>]
+: The XML file will be written there. If no output file is specified, the XML data is written to stdout. The encoding of the XML stream is always UTF-8.
+           
+= Examples =
+
+Convert the GFF file1.utc into an XML file:
+ gff2xml file1.utc file2.xml
+
+Convert the GFF file1.utc into an XML file on stdout:
+ gff2xml file1.utc
+
+Convert the GFF file1.utc, which uses Windows CP-1252 strings:
+ gff2xml --cp1252 file1.utc file2.xml
+
+= See also =
+
+[[convert2da]], [[tlk2xml]]
+
+= References =
+
+* https://github.com/xoreos/xoreos-docs/blob/master/specs/bioware/GFF_Format.pdf
+* http://social.bioware.com/wiki/datoolset/index.php/GFF
