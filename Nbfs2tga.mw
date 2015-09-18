@@ -1,0 +1,44 @@
+Nintendo raw NBFS image to TGA converter
+
+= Synopsis =
+
+ nbfs2tga [<options>] <nbfs> <nbfp> <tga> [<width>] [<height>]
+
+= Description =
+
+'''nbfs2tga''' converts Nintendo's raw NBFS images into common TGA images. Both an NBFS file, containing the pixel data, and an NBFP file with the palette data are needed. If no height is specified, it is calculated using the width value and the size of the NBFS file. If no width is specified either, this tool tries to guess the dimensions. It might guess the wrong dimensions.
+
+= Options =
+
+'''-h''' <br />
+'''--help'''
+: Show a help text and exit.
+
+'''--version'''
+: Show version information and exit.
+
+<nbfs>
+: The name of the NBFS file to read. The NBFS contains the pixel graphics part of the image.
+
+<nbfp>
+: The name of the NBFP file to use. The NBFP file contains the palette part of the image.
+
+<tga>
+: The resulting TGA file will be written there.
+
+[<width>]
+: The width of the NBFS image.
+
+[<height>]
+: The height of the NBFS image.
+
+= Examples =
+
+Convert an NBFS+NBFP into a TGA and specifiy dimensions:
+ nbfs2tga a.nbfs a.nbfp a.tga 64 64
+
+Convert an NBFS+NBFP into a TGA and only specify width:
+ nbfs2tga a.nbfs a.nbfp a.tga 64
+
+Convert an NBFS+NBFP into a TGA and guess image dimensions:
+ nbfs2tga a.nbfs a.nbfp a.tga
