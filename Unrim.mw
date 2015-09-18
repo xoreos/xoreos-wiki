@@ -1,0 +1,45 @@
+unrim - BioWare RIM archive extractor
+
+= Synopsis =
+ 
+ unrim [<options>] <command> <file>
+
+= Description =
+
+'''unrim''' extract BioWare RIM archives, found in many BioWare games.
+    
+RIM archives are simplified ERF archives, stripped of everything not related to holding files (like the description string).
+
+= Options =
+    
+'''-h''' <br />
+'''--help'''
+: Show a help text and exit.
+    
+'''--version'''
+: Show version information and exit.
+    
+'''--nwn2'''
+: Alias file types according to Neverwinter Nights 2 rules.  Neverwinter Nights 2 reuses a few file extension IDs differently than other BioWare games.
+    
+'''--jade'''
+: Alias file types according to Jade Empire rules.  Jade Empire reuses a few file extension IDs differently than other BioWare games.
+    
+<command>
+: '''l''' &nbsp; List archive contents
+: '''e''' &nbsp; Extract files to current directory
+
+<file>
+: The RIM archive to read.
+
+= Examples =
+
+List all files contained in the archive archive.rim:
+ unrim l archive.rim
+
+Extract all files from the archive archive.rim:
+ unrim e archive.rim
+
+= See also =
+
+[[unerf]]
