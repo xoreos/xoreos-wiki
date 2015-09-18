@@ -1,0 +1,41 @@
+Nintendo DS archive extractor
+
+= Synopsis =
+
+ unnds [<options>] <command> <file>
+
+= Description =
+
+'''unnds''' extract Nintendo DS ROMs. Only the resource files are extracted, not the executable binaries.
+
+= Options =
+
+'''-h''' <br />
+'''--help'''
+: Show a help text and exit.
+
+'''--version'''
+: Show version information and exit.
+
+<command> 
+: '''i''' &nbsp; Display meta-information about the archive
+: '''l''' &nbsp; List archive contents
+: '''e''' &nbsp; Extract files to current directory
+
+<file>
+: The NDS archive to read.
+
+= Examples =
+
+View meta-information of the archive archive.nds:
+ unnds i archive.nds
+
+List all files contained in the archive archive.nds:
+ unnds l archive.nds
+
+Extract all files from the archive archive.nds:
+ unnds e archive.nds
+
+= References =
+
+* http://dsibrew.org/wiki/NDS_Format
