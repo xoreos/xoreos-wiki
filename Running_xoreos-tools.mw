@@ -8,25 +8,25 @@ Currently, the following tools are included:
 
 == Tools for handling resource archives ==
 
-* unerf: Extract BioWare ERF archives
-* unherf: Extract BioWare HERF archives
-* unrim: Extract BioWare RIM archives
-* unnds: Extract Nintendo DS roms
-* unnsbtx: Extract Nintendo NSBTX textures into TGA images
-* unkeybif: Extract BioWare KEY/BIF archives
-* desmall: Decompress "small" (Nintendo DS LZSS, types 0x00 and 0x10) files
+* [[unerf]]: Extract BioWare ERF archives
+* [[unherf]]: Extract BioWare HERF archives
+* [[unrim]]: Extract BioWare RIM archives
+* [[unnds]]: Extract Nintendo DS roms
+* [[unnsbtx]]: Extract Nintendo NSBTX textures into TGA images
+* [[unkeybif]]: Extract BioWare KEY/BIF archives
+* [[desmall]]: Decompress "small" (Nintendo DS LZSS, types 0x00 and 0x10) files
 
 == Tools converting basic resource formats into human-readable form (and back) ==
 
-* gff2xml: Convert BioWare GFF to XML
-* tlk2xml: Convert BioWare TLK to XML
-* xml2tlk: Convert XML back to BioWare TLK
-* convert2da: Convert BioWare 2DA/GDA to 2DA/CSV
+* [[gff2xml]]: Convert BioWare GFF to XML
+* [[tlk2xml]]: Convert BioWare TLK to XML
+* [[xml2tlk]]: Convert XML back to BioWare TLK
+* [[convert2da]]: Convert BioWare 2DA/GDA to 2DA/CSV
 
 == Tools converting graphics formats into TGA ==
 
-* xoreostex2tga: Convert BioWare's texture formats into TGA
-* nbfs2tga: Convert Nintendo's raw NBFS images into TGA
-* ncgr2tga: Convert Nintendo's NCGR images into TGA
-* cbgt2tga: Convert CBGT images into TGA
-* cdpth2tga: Convert CDPTH depth images into TGA
+* [[xoreostex2tga]]: Convert BioWare's texture formats into TGA
+* [[nbfs2tga]]: Convert Nintendo's raw NBFS images into TGA
+* [[ncgr2tga]]: Convert Nintendo's NCGR images into TGA
+* [[cbgt2tga]]: Convert CBGT images into TGA
+* [[cdpth2tga]]: Convert CDPTH depth images into TGA
