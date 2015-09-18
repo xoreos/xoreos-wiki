@@ -1,0 +1,47 @@
+Nintendo NSBTX texture extractor
+
+= Synopsis =
+
+ unnsbtx [<options>] <command> <file>
+
+= Description =
+
+'''unnsbtx''' treats Nintendo NSBTX texture as archives and converts the multiple images stored within
+into TGA files. The image pixel data and the palettes are automatically combined, provided they are
+named similarly.
+
+= Options =
+
+'''-h''' <br />
+'''--help'''
+: Show a help text and exit.
+
+'''--version'''
+: Show version information and exit.
+
+<command>
+: '''l''' &nbsp; List images inside this NSBTX texture
+: '''e''' &nbsp; Extract images as TGA files
+
+<file>
+: The NSBTX texture to read.
+
+= Limitations =
+
+The palette of an image has to be named similarly to the pixel data. Specifically, the palette has
+to be either named the same, or suffixed by "_pl", "_p" or "_". Is this not the case, and a palette
+for an image can't be found, unnsbtx throws an error.
+
+= Examples =
+
+List all images contained in the texture texture.nsbtx:
+ unnsbtx l texture.nsbtx
+
+Extract all images contained in the texture texture.nsbtx:
+ unnsbtx e texture.nsbtx
+
+= References =
+
+* https://github.com/pleonex/tinke/blob/30e91bfff13555279e6fd69dd0de82961936a1dd/Plugins/3DModels/3DModels/BTX0.cs
+* http://llref.emutalk.net/docs/?file=xml/btx0.xml
+* http://problemkaputt.de/gbatek.htm
