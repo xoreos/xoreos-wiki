@@ -1,0 +1,42 @@
+CDPTH depth image to TGA converter
+
+= Synopsis =
+
+ cdpth2tga [<options>] <cdpth> <2da> <tga>
+
+= Description =
+
+'''cdpth2tga''' converts CDPTH depth information files into common TGA images. CDPTH, Compressed DePTH, are used as depth information for area background images in BioWare's Nintendo DS game [[Sonic Chronicles: The Dark Brotherhood]].
+
+Layout-wise, a CDPTH is stored similar to CBGT: cells of 64x64 pixels, compressed using Nintendo's 0x10 LZSS algorithm. Unlike CBGT, though, the cells themselves are not swizzled into 8x8 tiles, and the pixel value in CDPTH is a 16bit integer specifying a depth.
+
+The width and height of the final image is not stored within the CDPTH file, and has to be provided from the outside, like from the dimensions of the CBGT image, the dimensions of the 2DA file for the CBGT image.
+
+The depth information is stored as 16-bit values, but only the lower 15 bits are used. For conversion into a grayscale image, those 15 bits of grayscale information are further compressed to 8-bit.
+
+= Options =
+
+'''-h''' <br />
+'''--help'''
+: Show a help text and exit.
+
+'''--version'''
+: Show version information and exit.
+
+<cdpth>
+: The name of the CDPTH file to read. The CDPTH contains the depth information part of the image.
+
+<2da>
+: The name of the 2DA file to use. The 2DA is necessary to know how many cells are in the CDPTH file.
+
+<tga>
+: The resulting TGA file will be written there.
+
+= Examples =
+
+Convert a CDPTH+2DA into a TGA:
+ cdpth2tga a.cdpth a.2da result.tga
+
+= See also =
+
+[[cbgt2tga]]
