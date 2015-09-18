@@ -1,0 +1,107 @@
+BioWare TLK to XML converter
+
+= Synopsis =
+
+ tlk2xml [<options>] <input file> [<output file>]
+
+= Description =
+
+'''tlk2xml''' converts BioWare's TLK files into human-readable XML. TLK are "talk tables", a list of strings indexed by an ID, used for all user-visible text in a BioWare game. All strings for a campaign or module are usually collected in one file for each supported language, and languages with sentences that vary wildly depending on whether the player character is male or female use a second TLK with strings for the female version.
+
+There's two distinct TLK formats. One is a whole separate file format (which uses version IDs V3.0 and V4.0), the other is a GFF (and uses version IDs V0.2 and V0.5). Within those two major versions, the differences are smaller: V4.0 removed fields for each string not needed anymore, and V0.5 compresses strings using a [https://en.wikipedia.org/wiki/Huffman_coding Huffman tree]. This tool can read all of these variants and produces a human-read XML file.
+
+Because these files contain localized string data, it is important to know the encoding of those strings. Unfortunately, the TLK files do not contain information about the encoding. Version 3.0 and 4.0 contain a language identifier, but the meaning of that varies between games. V0.2 and V0.5 even lack those completely. However, due to the Huffman-nature of V0.5 strings, the encoding there is fixed to little-endian UTF-16, and strings in V0.2 files are also usually in little-endian UTF-16 (with the exceptions of files found in the Nintendo DS game [[Sonic Chronicles: The Dark Brotherhood]]). To manually select the encoding, this tool provides a wide range command line options for various encodings.
+
+Alternatively, the game this TLK is from can be specified and '''tlk2xml''' will read the strings in an appropriate encoding for that game and the language ID found in the TLK. Please note that this does not work for the game [[Sonic Chronicles: The Dark Brotherhood]], since its TLK files do not provide a language ID.
+
+= Options =
+
+'''-h''' <br />
+'''--help'''
+: Show a help text and exit.
+
+'''--version'''
+: Show version information and exit.
+
+'''--cp1250'''
+: Read strings as [https://en.wikipedia.org/wiki/Windows-1250 Windows CP-1250]. Eastern European, Latin alphabet.
+
+'''--cp1251'''
+: Read strings as [https://en.wikipedia.org/wiki/Windows-1251 Windows CP-1251]. Eastern European, Cyrillic alphabet.
+
+'''--cp1252'''
+: Read strings as [https://en.wikipedia.org/wiki/Windows-1252 Windows CP-1252]. Western European, Latin alphabet.
+
+'''--cp932'''
+: Read strings as [https://en.wikipedia.org/wiki/Code_page_932 Windows CP-932]. Japanese, extended Shift-JIS.
+
+'''--cp936'''
+: Read strings as [https://en.wikipedia.org/wiki/Code_page_936 Windows CP-936]. Simplified Chinese, extended GB2312 with GBK codepoints.
+
+'''--cp949'''
+: Read strings as [https://en.wikipedia.org/wiki/Code_page_949 Windows CP-949]. Korean, similar to EUC-KR.
+
+'''--cp950'''
+: Read strings as [https://en.wikipedia.org/wiki/Code_page_950 Windows CP-950]. Traditional Chinese, similar to Big5.
+
+'''--utf8'''
+: Read strings as [https://en.wikipedia.org/wiki/UTF-8 UTF-8].
+
+'''--utf16le'''
+: Read strings as [https://en.wikipedia.org/wiki/Endianness#Little-endian little-endian] [https://en.wikipedia.org/wiki/UTF-16 UTF-16].
+
+'''--utf16be'''
+: Read strings as [https://en.wikipedia.org/wiki/Endianness#Big-endian big-endian] [https://en.wikipedia.org/wiki/UTF-16 UTF-16].
+
+'''--nwn'''
+: Read strings in an encoding appropriate for [[Neverwinter Nights]].
+
+'''--nwn2'''
+: Read strings in an encoding appropriate for [[Neverwinter Nights 2]].
+
+'''--kotor'''
+: Read strings in an encoding appropriate for [[Knights of the Old Republic]].
+
+'''--kotor2'''
+: Read strings in an encoding appropriate for [[Knights of the Old Republic II: The Sith Lords]].
+
+'''--jade'''
+: Read strings in an encoding appropriate for [[Jade Empire]].
+
+'''--witcher'''
+: Read strings in an encoding appropriate for [[The Witcher]].
+
+'''--dragonage'''
+: Read strings in an encoding appropriate for [[Dragon Age: Origins]].
+
+'''--dragonage2'''
+: Read strings in an encoding appropriate for [[Dragon Age II]].
+
+<input file>
+: The TLK file to convert.
+
+[<output file>]
+: The XML file will be written there. If no output file is specified, the XML data is written to stdout. The encoding of the XML stream is always UTF-8.
+
+= Examples =
+
+Convert the CP-1252 TLK file1.tlk into an XML file:
+ tlk2xml --cp1252 file1.tlk file2.xml
+
+Convert the UTF-16LE TLK file1.tlk into an XML file on stdout:
+ tlk2xml --utf16le file1.tlk
+
+Convert the TLK file1.tlk from Neverwinter Nights into an XML file:
+ tlk2xml --nwn file1.tlk file2.xml
+
+Convert the UTF-8 TLK file1.tlk into an XML file on stdout, modify it using sed(1) and use xml2tlk(1) to write it back into a TLK:
+ tlk2xml --utf8 file1.tlk | sed -e 's/gold/candy/g' | xml2tlk --utf8 --version30 file2.tlk
+
+= See also =
+
+[[xml2tlk]], [[gff2xml]]
+
+= References =
+
+* https://github.com/xoreos/xoreos-docs/blob/master/specs/bioware/TalkTable_Format.pdf
+* http://social.bioware.com/wiki/datoolset/index.php/TLK
