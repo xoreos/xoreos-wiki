@@ -1,0 +1,59 @@
+BioWare KEY/BIF archive extractor
+
+= Synopsis =
+
+ unkeybif [<options>] <command> <file> [...]
+
+= Description =
+
+'''unkeybif''' extract BioWare KEY/BIF archives, found in many BioWare games.
+
+KEY and BIF files are fundamentally linked: a KEY file contains file names and types, while the BIF file contains the file data itself. At the same time, a KEY file can control several BIF files.
+
+'''For example:'''
+
+"foo.key" controls:
+* "foo1.bif"
+* "foo2.bif"
+* "foo3.bif"
+
+"foo.key" indexes:
+* "bar.are" and "bar.git" from "foo1.bif"
+* "qux.utc" from "foo2.bif"
+* "baz.txt" from "foo3.bif"
+
+If you want to extract all files indexed by "foo.key", you need to also specify "foo1.bif", "foo2.bif" and "foo3.bif" on the command.  If "foo3.bif" is missing, "baz.txt" will not be extracted. However, listing file only requires the KEY.
+
+= Options =
+
+'''-h''' <br />
+'''--help'''
+: Show a help text and exit.
+
+'''--version'''
+: Show version information and exit.
+       
+'''--nwn2'''
+: Alias file types according to Neverwinter Nights 2 rules.  Neverwinter Nights 2 reuses a few file extension IDs differently than other BioWare games.
+       
+'''--jade'''
+: Alias file types according to Jade Empire rules.  Jade Empire reuses a few file extension IDs differently than other BioWare games.
+
+<command>
+: '''l''' &nbsp; List archive contents
+: '''e''' &nbsp; Extract files to current directory
+
+<file>
+: A KEY or a BIF file to read. Multiple KEY and BIF files can be specified; they'll be considered a unit.
+
+= Examples =
+
+List all files indexed by the KEY file chitin.key:
+ unkeybif l chitin.key
+
+Extract all files contained in data1.bif and data2.bif, that are indexed by chitin.key
+ unkeybif e chitin.key data1.bif data2.bif
+
+= References =
+
+* https://github.com/xoreos/xoreos-docs/blob/master/specs/bioware/KeyBIF_Format.pdf
