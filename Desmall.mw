@@ -10,7 +10,7 @@ Nintendo DS LZSS (types 0x00 and 0x10) decompressor
 
 = Options =
 
-'''-h'''
+'''-h''' <br />
 '''--help'''
 : Show a help text and exit.
 
