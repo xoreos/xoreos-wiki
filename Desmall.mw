@@ -1,0 +1,33 @@
+Nintendo DS LZSS (types 0x00 and 0x10) decompressor
+
+= Synopsis =
+
+ desmall [<options>] <input file> <output file>
+
+= Description =
+
+'''desmall''' decompresses the SMALL files found in BioWare's Nintendo DS game [[Sonic Chronicles: The Dark Brotherhood]]. Only the types 0x00 (uncompressed) and 0x10 (Nintendo DS LZSS 0x10) are supported.
+
+= Options =
+
+'''-h'''
+'''--help'''
+: Show a help text and exit.
+
+'''--version'''
+: Show version information and exit.
+
+<input file>
+: The SMALL file to decompress.
+
+<output file>
+: The decompressed data is written to this file.
+
+= Example =
+
+Decompress the file a.cbgt.small:
+ desmall a.cbgt.small a.cbgt
+
+= References =
+
+* https://github.com/barubary/dsdecmp/blob/master/CSharp/DSDecmp/Formats/Nitro/LZ10.cs#L121
