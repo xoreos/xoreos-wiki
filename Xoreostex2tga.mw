@@ -1,0 +1,71 @@
+BioWare textures to TGA converter
+
+= Synopsis =
+
+ xoreostex2tga [<options>] <input file> <output file>
+
+= Description =
+
+'''xoreostex2tga''' converts textures of various formats found in BioWare games into plain TGA images.
+
+Supported formats:
+* DDS: Both the common DirectDraw Surface format and BioWare's own, completely different DDS format are supported, each with a variety of pixel formats
+* SBM: Found in Jade Empire, holding font glyphs
+* TXB: Textures in Jade Empire and the Xbox version of Knights of the Old Republic
+* TPC: Textures in other versions of Knights of the Old Republic.
+* TGA: Textures in various games, in many different pixels formats
+
+The output format is always either 24-bit or 32-bit BGR(A) TGA, depending on whether the input file has an alpha channel or not. Only the highest resolution mip map will be used.
+
+= Options =
+
+'''-h''' <br />
+'''--help'''
+: Show a help text and exit.
+
+'''--version'''
+: Show version information and exit.
+
+'''-f''' <br />
+'''--flip'''
+: Flip the image vertically while converting.
+
+'''--auto'''
+: Try to autodetect the format of the input file. This is the default mode of operation.
+
+'''--dds'''
+: Explicitly mark the input file as DDS.
+
+'''--sbm'''
+: Explicitly mark the input file as SBM.
+
+'''--tpc'''
+: Explicitly mark the input file as TPC.
+
+'''--txb'''
+: Explicitly mark the input file as TXB.
+
+'''--tga'''
+: Explicitly mark the input file as TGA.
+
+<input file>
+: The name of the texture file to read.
+
+<output file>
+: The resulting TGA file will be written there.
+
+= Examples =
+
+Convert texture.dds into image.tga:
+ xoreostex2tga texture.dds image.tga
+
+Convert texture.dds into image.tga and flip the image:
+ xoreostex2tga --flip texture.dds image.tga
+
+Convert the TPC texture.txb into image.tga and flip the image:
+ xoreostex2tga --flip --tpc texture.txb image.tga
+
+= References =
+
+* https://en.wikipedia.org/wiki/DirectDraw_Surface
+* https://en.wikipedia.org/wiki/Truevision_TGA
