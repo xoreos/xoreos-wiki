@@ -1,0 +1,36 @@
+BioWare HERF archive extractor
+
+= Synopsis =
+ unherf [<options>] <command> <file>
+
+= Description =
+'''unherf''' extract BioWare HERF archives, found in the Nintendo DS game [[Sonic Chronicles: The Dark Brotherhood]].
+
+A HERF, Hashed ERF, is a very simple archive, similar to BioWare's ERF and RIM files. Unlike those, HERF usually only store [http://www.cse.yorku.ca/~oz/hash.html djb2 hashes] of the contained filenames. This tool has a lookup table to convert the hashes back into readable filenames. Not all names are known yet.
+
+= Options =
+'''-h''' <br />
+'''--help'''
+: Show a help text and exit.
+
+'''--version'''
+: Show version information and exit.
+
+<command>
+: '''l''' &nbsp; List archive contents
+: '''e''' &nbsp; Extract files to current directory
+
+<file>
+: The HERF archive to read.
+
+= Examples =
+
+List all files contained in the archive archive.herf:
+ unherf l archive.herf
+
+Extract all files from the archive archive.herf:
+ unherf e archive.herf
+
+= See also =
+
+[[unerf]], [[unrim]]
