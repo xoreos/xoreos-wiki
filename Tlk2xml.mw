@@ -99,7 +99,8 @@ Convert the UTF-8 TLK file1.tlk into an XML file on stdout, modify it using sed(
 
 = See also =
 
-[[xml2tlk]], [[gff2xml]]
+[[xml2tlk]], [[gff2xml]] <br />
+[[TLK language IDs and encodings]]
 
 = References =
 
