@@ -129,7 +129,8 @@ Convert the UTF-8 TLK file1.tlk into an XML file on stdout with tlk2xml(1), modi
 
 = See also =
 
-[[tlk2xml]]
+[[tlk2xml]] <br />
+[[TLK language IDs and encodings]]
 
 = References =
 
