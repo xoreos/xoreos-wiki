@@ -34,7 +34,7 @@ Nintendo raw NBFS image to TGA converter
 
 = Examples =
 
-Convert an NBFS+NBFP into a TGA and specifiy dimensions:
+Convert an NBFS+NBFP into a TGA and specify dimensions:
  nbfs2tga a.nbfs a.nbfp a.tga 64 64
 
 Convert an NBFS+NBFP into a TGA and only specify width:
