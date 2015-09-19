@@ -1,0 +1,107 @@
+Aurora games use numerical language IDs to identify which language a TLK file holds. Unfortunately, those language IDs vary between games, and so does the encoding used for strings in those TLK files. There is no way to autodetect this information, so it has to be provided to tools handling those files, in one way or another.
+
+For the tools [[tlk2xml]] and [[xml2tlk]], you can specify this encoding either directly, or by giving the game the TLK is from. Please note that this does not work for Sonic Chronicles: The Dark Brotherhood, because its TLK files do not provide a language ID.
+
+[[Neverwinter Nights]], [[Neverwinter Nights 2]], [[Knights of the Old Republic]],
+[[Knights of the Old Republic II: The Sith Lords]], [[Jade Empire]]
+
+{| class="wikitable sortable"
+! Language ID !! Language              !! Encoding
+|-
+|           0 || English               || [https://en.wikipedia.org/wiki/Windows-1252 CP-1252]
+|-
+|           1 || French                || [https://en.wikipedia.org/wiki/Windows-1252 CP-1252]
+|-
+|           2 || German                || [https://en.wikipedia.org/wiki/Windows-1252 CP-1252]
+|-
+|           3 || Italian               || [https://en.wikipedia.org/wiki/Windows-1252 CP-1252]
+|-
+|           4 || Spanish               || [https://en.wikipedia.org/wiki/Windows-1252 CP-1252]
+|-
+|           5 || Polish                || [https://en.wikipedia.org/wiki/Windows-1250 CP-1250]
+|-
+|         128 || Korean                || [https://en.wikipedia.org/wiki/Code_page_949 CP-949]
+|-
+|         129 || Chinese (Traditional) || [https://en.wikipedia.org/wiki/Code_page_950 CP-950]
+|-
+|         130 || Chinese (Simplified)  || [https://en.wikipedia.org/wiki/Code_page_936 CP-936]
+|-
+|         131 || Japanese              || [https://en.wikipedia.org/wiki/Code_page_932 CP-932]
+|}
+
+[[The Witcher]]:
+{| class="wikitable sortable"
+! Language ID !! Language              !! Encoding
+|-
+|           0 || "Debug"               || [https://en.wikipedia.org/wiki/UTF-8 UTF-8]
+|-
+|           3 || English               || [https://en.wikipedia.org/wiki/UTF-8 UTF-8]
+|-
+|           5 || Polish                || [https://en.wikipedia.org/wiki/UTF-8 UTF-8]
+|-
+|          10 || German                || [https://en.wikipedia.org/wiki/UTF-8 UTF-8]
+|-
+|          11 || French                || [https://en.wikipedia.org/wiki/UTF-8 UTF-8]
+|-
+|          12 || Spanish               || [https://en.wikipedia.org/wiki/UTF-8 UTF-8]
+|-
+|          13 || Italian               || [https://en.wikipedia.org/wiki/UTF-8 UTF-8]
+|-
+|          14 || Russian               || [https://en.wikipedia.org/wiki/UTF-8 UTF-8]
+|-
+|          15 || Czech                 || [https://en.wikipedia.org/wiki/UTF-8 UTF-8]
+|-
+|          16 || Hungarian             || [https://en.wikipedia.org/wiki/UTF-8 UTF-8]
+|-
+|          20 || Korean                || [https://en.wikipedia.org/wiki/UTF-8 UTF-8]
+|-
+|          21 || Chinese (Traditional) || [https://en.wikipedia.org/wiki/UTF-8 UTF-8]
+|-
+|          22 || Chinese (Simplified)  || [https://en.wikipedia.org/wiki/UTF-8 UTF-8]
+|}
+
+[[Sonic Chronicles: The Dark Brotherhood]]:
+
+{| class="wikitable sortable"
+! Language ID !! Language              !! Encoding
+|-
+|           - || English               || [https://en.wikipedia.org/wiki/Windows-1252 CP-1252]
+|-
+|           - || French                || [https://en.wikipedia.org/wiki/Windows-1252 CP-1252]
+|-
+|           - || German                || [https://en.wikipedia.org/wiki/Windows-1252 CP-1252]
+|-
+|           - || Italian               || [https://en.wikipedia.org/wiki/Windows-1252 CP-1252]
+|-
+|           - || Spanish               || [https://en.wikipedia.org/wiki/Windows-1252 CP-1252]
+|-
+|           - || Japanese              || [https://en.wikipedia.org/wiki/UTF-8 UTF-8]
+|}
+
+[[Dragon Age: Origins]], [[Dragon Age II]]:
+
+{| class="wikitable sortable"
+! Language ID !! Language              !! Encoding
+|-
+|           0 || English               || [https://en.wikipedia.org/wiki/UTF-16 UTF-16LE]
+|-
+|           1 || French                || [https://en.wikipedia.org/wiki/UTF-16 UTF-16LE]
+|-
+|           2 || Russian               || [https://en.wikipedia.org/wiki/UTF-16 UTF-16LE]
+|-
+|           3 || Italian               || [https://en.wikipedia.org/wiki/UTF-16 UTF-16LE]
+|-
+|           4 || German                || [https://en.wikipedia.org/wiki/UTF-16 UTF-16LE]
+|-
+|           5 || Polish                || [https://en.wikipedia.org/wiki/UTF-16 UTF-16LE]
+|-
+|           6 || Spanish               || [https://en.wikipedia.org/wiki/UTF-16 UTF-16LE]
+|-
+|           7 || Czech                 || [https://en.wikipedia.org/wiki/UTF-16 UTF-16LE]
+|-
+|           8 || Hungarian             || [https://en.wikipedia.org/wiki/UTF-16 UTF-16LE]
+|-
+|           9 || Korean                || [https://en.wikipedia.org/wiki/UTF-16 UTF-16LE]
+|-
+|          10 || Japanese              || [https://en.wikipedia.org/wiki/UTF-16 UTF-16LE]
+|}
