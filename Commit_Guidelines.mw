@@ -76,6 +76,8 @@ Don't be too verbose in your message either. You don't have to tell people what 
 
 http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html
 
+http://chris.beams.io/posts/git-commit/
+
 http://kernel.org/pub/software/scm/git/docs/user-manual.html#creating-good-commit-messages
 
 The following is an excerpt from the FreeBSD Committer's Guide <http://www.freebsd.org/doc/en_US.ISO8859-1/articles/committers-guide/article.html> and sums up quite nicely what I think:
