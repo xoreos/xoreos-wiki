@@ -48,7 +48,7 @@ The subsystem names which were used so far:
 * '''JANITORIAL''': Cleanup, style fixes, etc.
 * '''ALL''': A change that covers multiple, or all, subsystems
 
-After first line, an empty line is required which is used as separator. This first line has to be short and less than 50 characters so the log will fit on a standard 80-column terminal.
+After first line, an empty line is required which is used as separator. This first line has to be short: the hard limit is 70 characters (including the subsystem), but try to keep it shorter.
 
 == Commit messages ==
 Commit messages like the following aren't very helpful:
