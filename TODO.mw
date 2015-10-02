@@ -241,11 +241,8 @@ This is a long rambly list of things left to do in xoreos and xoreos-tools. Anyb
 ** Includes functions with real signatures
 ** Maybe switch to that, if it works
 * Rounds, object heartbeat scripts
-* Script system needs to be copied to the other engines
-** Script system already hooked up to: NWN, KotOR, KotOR2, Jade, NWN2, Witcher
-** Script system missing in: DA:O, DA2
 * KotOR2 and NWN2 have some extensions
-** Might need extending the script bytecode parser, might not
+** It seems like they don't need any extensions to the low-level bytecode stuff
 * Witcher uses Lua scripts together with NWScript
 * Sonic has no scripts at all, it seems
 * Currently a script in an infinite loop locks the game thread
