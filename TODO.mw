@@ -101,6 +101,13 @@ This is a long rambly list of things left to do in xoreos and xoreos-tools. Anyb
 ** It uses [https://www.wxwidgets.org/ wxWidgets] to do the GUI
 ** Or possibly rewriting it to use [https://www.qt.io/ Qt] is better?
 
+=== Model converters ===
+* Document the model formats
+* Convert between the binary model formats and their ASCII equivalents
+* Convert between the binary model formats and ones that can be opened by modelling tools
+** 3D Studio Max
+** Blender
+
 === Full-fledged modding toolset ===
 * Similar to the NWN, NWN2 or Witcher toolset, but portable and FLOSS
 ** Might also support other games?
