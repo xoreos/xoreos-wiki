@@ -13,6 +13,25 @@ This is a long rambly list of things left to do in xoreos and xoreos-tools. Anyb
 ** How to install the games on various platforms
 ** [http://wiki.arx-libertatis.org/Main_Page Arx Libertatis] does that pretty well
 
+== Website ==
+
+=== Design ===
+* Better website design?
+** It still should be static in the end
+*** No PHP or Rails
+*** Very light on JavaScript
+*** No Flash!
+** Maybe a bit more unique, graphical
+** For legal reasons, we shouldn't directly use art or designs from the original games
+*** Something inspired by the art of the orginal games would fit
+
+=== Octopress ===
+* Move away from Octopress?
+** Alternative should still produce static HTML somehow
+** Octopress works rather well. It reads Markdown, which is a plus
+* Octopress 3.0?
+** Not finished yet, it seems
+
 == Standalone(ish) fixes/improvements ==
 
 === Broken NWN2 XML ===
