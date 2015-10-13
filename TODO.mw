@@ -1,5 +1,18 @@
 This is a long rambly list of things left to do in xoreos and xoreos-tools. Anybody is welcome to tackle any of these tasks, but please also read our [[Developer_Central|general contributor overview]], including our [[Code_Formatting_Conventions|Code Formatting Conventions]], [[Commit_Guidelines|Commit Guidelines]] and [https://github.com/xoreos/xoreos/blob/master/CODE_OF_CONDUCT.md Code of Conduct]. If you plan to do any of these tasks, please also [[Contact_us|contact us]] beforehand, so we can better coordinate multiple people interested in doing the same task, and discuss how to best solve the problem. Thanks. :)
 
+== Documentation ==
+
+=== Developer information ===
+* Extend the developer information on the wiki
+** Explain how to get the xoreos sources on various platforms
+** [http://wiki.arx-libertatis.org/Developer_Information Arx Libertatis] has an extensive dev page
+
+=== User information ===
+* More user information on the wiki
+** How to download xoreos
+** How to install the games on various platforms
+** [http://wiki.arx-libertatis.org/Main_Page Arx Libertatis] does that pretty well
+
 == Standalone(ish) fixes/improvements ==
 
 === Broken NWN2 XML ===
