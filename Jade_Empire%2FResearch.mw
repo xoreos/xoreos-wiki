@@ -208,14 +208,24 @@
 
 == 2DA files ==
 
-=== Generic ===
+=== 2DA lists ===
 
 {| class="wikitable"
 ! Name
 ! Usage
 ! Status
 |-
-| 2das.2da || 2das.2da || style="background-color: red;" | unsupported
+| 2das.2da || indexed list of all 2da files including excel generation info || style="background-color: green;" | supported
+|-
+| scriptlist.2da || foreign key reference to 2das.2da whose index is used by scripts || style="background-color: green;" | supported
+|}
+
+=== Generic ===
+
+{| class="wikitable"
+! Name
+! Usage
+! Status
 |-
 | abbot.2da || abbot.2da || style="background-color: red;" | unsupported
 |-
@@ -624,8 +634,6 @@
 | scoreboard.2da || scoreboard.2da || style="background-color: red;" | unsupported
 |-
 | scriptedprogress.2da || scriptedprogress.2da || style="background-color: red;" | unsupported
-|-
-| scriptlist.2da || scriptlist.2da || style="background-color: red;" | unsupported
 |-
 | sfox.2da || sfox.2da || style="background-color: red;" | unsupported
 |-
