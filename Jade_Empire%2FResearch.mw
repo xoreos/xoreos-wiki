@@ -227,7 +227,7 @@
 ! Usage
 ! Status
 |-
-| books.2da || contains info to all the bookstands you can read in the game || style="background-color: green;" | supported
+| books.2da || contains info to all the bookstands you can read in the game || style="background-color: red;" | unsupported
 |-
 | jdk_players.2da || stats of all player characters (demo content) || style="background-color: red;" | unsupported
 |-
