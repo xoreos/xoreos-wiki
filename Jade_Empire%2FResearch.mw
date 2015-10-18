@@ -53,11 +53,14 @@
 |art || 3023 || area environment properties || ini file || 
 | style="background-color: red;" | unsupported
 |-
-|pla || 24007 || placeable definition || gff || ||
+|pla || 24007 || placeable definition || gff ||
+| style="background-color: yellow;" |
 |-
-|pwk || 2053 || placeable walk mesh definition || text || ||
+|pwk || 2053 || placeable walk mesh definition || text ||
+| style="background-color: red;" | unsupported
 |-
-|fsm || 3022 || placeable state data || gff || ||
+|fsm || 3022 || placeable state data || gff ||
+| style="background-color: yellow;" |
 |}
 
 === Models, Textures and Materials ===
