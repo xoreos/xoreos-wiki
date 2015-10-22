@@ -184,6 +184,8 @@
 |-
 |sto || 3013 || store definition || gff || [https://github.com/xoreos/xoreos-docs/raw/master/specs/bioware/Store_Format.pdf Store_Format.pdf] ||
 |-
+|amp || 3024 || brightening control || binary || ||
+|-
 |cre || 24000 || creature definition || gff || ||
 |-
 |pso || 24001 || pixel shader object || binary || ||
