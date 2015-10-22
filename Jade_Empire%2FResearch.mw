@@ -39,7 +39,7 @@
 | style="background-color: yellow;" | only layout value used
 |-
 |sav || 2057 || objects descriptions in area || gff ||
-| style="background-color: red;" | unsupported
+| style="background-color: red;" | partially loaded
 |-
 |lyt || 3000 || area rooms layout || text || 
 | style="background-color: yellow;" |
@@ -51,6 +51,9 @@
 | style="background-color: red;" | unsupported
 |-
 |art || 3023 || area environment properties || ini file || 
+| style="background-color: red;" | unsupported
+|-
+|cwa || 3025 || crowd attributes || gff || 
 | style="background-color: red;" | unsupported
 |-
 |pla || 24007 || placeable definition || gff ||
