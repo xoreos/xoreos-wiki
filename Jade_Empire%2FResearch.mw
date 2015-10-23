@@ -111,7 +111,7 @@
 |-
 |ndb || 2064 || script debug info || binary || || not used
 |-
-|trg || 24008 || trigger definition || gff || [https://github.com/xoreos/xoreos-docs/raw/master/specs/bioware/Trigger_Format.pdf Trigger_Format.pdf] ||
+|trg || 2031 || trigger definition || gff || [https://github.com/xoreos/xoreos-docs/raw/master/specs/bioware/Trigger_Format.pdf Trigger_Format.pdf] ||
 |}
 
 === Quests, Texts and Dialogues ===
