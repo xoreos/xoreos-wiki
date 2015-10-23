@@ -189,7 +189,7 @@
 |-
 |amp || 3024 || brightening control || binary || ||
 |-
-|cre || 24000 || creature definition || gff || ||
+|cre || 2026 || creature definition || gff || ||
 |-
 |pso || 24001 || pixel shader object || binary || ||
 |-
