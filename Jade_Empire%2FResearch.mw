@@ -56,7 +56,7 @@
 |cwa || 3025 || crowd attributes || gff || 
 | style="background-color: red;" | unsupported
 |-
-|pla || 24007 || placeable definition || gff ||
+|pla || 2043 || placeable definition || gff ||
 | style="background-color: yellow;" |
 |-
 |pwk || 2053 || placeable walk mesh definition || text ||
