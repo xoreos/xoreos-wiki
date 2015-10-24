@@ -15,4 +15,157 @@
 |Hashed ERF file
 |
 | style="background-color: green;" |supported
+|-
+|*.dict
+|Dictionary for the hashed ERF files
+|
+| style="background-color: green;" |supported
+|}
+
+== Resource files ==
+
+=== Areas, Rooms and Placeables ===
+
+{| class="wikitable"
+! Extension
+! Type ID
+! Type description/Usage
+! Format
+! Documentation
+! Status
+|-
+|are || 2012 || static area information || gff || [https://github.com/xoreos/xoreos-docs/raw/master/specs/bioware/AreaFile_Format.pdf AreaFile_Format.pdf]
+| style="background-color: yellow;" | 
+|}
+
+=== Models, Textures and Materials ===
+
+{| class="wikitable"
+! Extension
+! Type ID
+! Type description/Usage
+! Format
+! Documentation
+! Status
+|-
+|tga || 3 || targa image || binary || ||
+|-
+|raw || 21021 || raw image || binary || ||
+|-
+|pal || 21020 || palette || binary || ||
+|-
+|nanr || 21008 || nitro animation resource || binary || ||
+|-
+|nbfp || 21009 || nitro basic file palette || binary || ||
+|-
+|nbfs || 21010 || nitro basic file screen || binary || ||
+|-
+|ncer || 21011 || nitro cell resource || binary || ||
+|-
+|ncgr || 21012 || nitro character graphics resource || binary || ||
+|-
+|nclr || 21013 || palette definition || binary || ||
+|-
+|nsbca || 21015 || character animation || binary || ||
+|-
+|nsbmd || 21016 || model definition || binary || ||
+|-
+|nsbta || 21017 || texture animation || binary || ||
+|-
+|nsbtp || 21018 || texture part || binary || ||
+|-
+|nsbtx ||  || texture data || binary || ||
+|}
+
+=== Scripting and Triggers ===
+
+{| class="wikitable"
+! Extension
+! Type ID
+! Type description/Usage
+! Format
+! Documentation
+! Status
+|}
+
+=== Quests, Texts and Dialogues ===
+
+{| class="wikitable"
+! Extension
+! Type ID
+! Type description/Usage
+! Format
+! Documentation
+! Status
+|-
+|tlk || 2018 || string definitions || talk table || [https://github.com/xoreos/xoreos-docs/raw/master/specs/bioware/TalkTable_Format.pdf TalkTable_Format.pdf] ||
+|-
+|dlg || 2029 || dialog definition || gff || [https://github.com/xoreos/xoreos-docs/raw/master/specs/bioware/Conversation_Format.pdf Conversation_Format.pdf] ||
+|-
+|itm || 21007 || item definition || gff || ||
+|}
+
+=== GUI ===
+
+{| class="wikitable"
+! Extension
+! Type ID
+! Type description/Usage
+! Format
+! Documentation
+! Status
+|-
+|gui || 2047 || dialog definition || gff || ||
+|-
+|nftr ||  || font definition || binary || ||
+|}
+
+=== Static Properties ===
+
+{| class="wikitable"
+! Extension
+! Type ID
+! Type description/Usage
+! Format
+! Documentation
+! Status
+|-
+|txt || 10 ||  || text || ||
+|-
+|2da || 2017 || static data tables || 2da || [https://github.com/xoreos/xoreos-docs/raw/master/specs/bioware/2DA_Format.pdf 2DA_Format.pdf] ||
+|-
+|gff || 2037 || generic gff file || gff || ||
+|-
+|gda || 22008 || static table data || gff || ||
+|}
+
+=== Others ===
+
+{| class="wikitable"
+! Extension
+! Type ID
+! Type description/Usage
+! Format
+! Documentation
+! Status
+|-
+|cbgt || 21004 ||  ||  || ||
+|-
+|cdpth || 21005 ||  ||  || ||
+|-
+|emit || 21006 || ||  || ||
+|-
+|plo || 22021 || plot information || binary || ||
+|-
+|smp || 21024 || ||  || ||
+|-
+|spl || 21025 || spell definition || 2da || ||
+|-
+|sadl || 21022 ||  ||  ||  ||
+|-
+|vx || 21026 || prerendered video || actimagine || ||
+|-
+|walk.tga ||  || ||  || ||
+|-
+|0x[0-9ABCDEF]{8} || unknown hash? || ||  || ||
 |}
