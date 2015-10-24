@@ -161,7 +161,9 @@
 |-
 |spl || 21025 || spell definition || 2da || ||
 |-
-|sadl || 21022 ||  ||  ||  ||
+|sadl || 21022 || sound list ||  ||  ||
+|-
+|sdat || 21023 || sound data ||  ||  ||
 |-
 |vx || 21026 || prerendered video || actimagine || ||
 |-
