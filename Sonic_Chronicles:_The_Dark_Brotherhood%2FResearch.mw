@@ -1,0 +1,18 @@
+== Archives ==
+
+{| class="wikitable"
+! Name
+! Type
+! Documentation
+! Status
+|-
+|*.nds
+|Nintendo DS image
+|
+| style="background-color: green;" |supported
+|-
+|*.herf
+|Hashed ERF file
+|
+| style="background-color: green;" |supported
+|}
