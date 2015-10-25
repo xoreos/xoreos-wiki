@@ -281,7 +281,8 @@
 == GUI ==
 
 * Layout defined in the .gui resources in Gff3 format
-* Fullscreen dialogs are 640x480
+* lti_<dialogname> layouts have been created for the PC version for mouse control
+* Fullscreen dialogs are of size 640x480
 * coordinate system is 2D, (0,0) is the upper left corner
 * GUI is stretched to screen size
 
