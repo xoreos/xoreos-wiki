@@ -389,7 +389,8 @@ This is a long rambly list of things left to do in xoreos and xoreos-tools. Anyb
 
 === The Witcher ===
 * Menus
-** Needs research
+** Apparently build using Lua
+** System/Scripts/ has gui*.luc files
 * Animations
 ** Needs research
 * Player character, Geralt
