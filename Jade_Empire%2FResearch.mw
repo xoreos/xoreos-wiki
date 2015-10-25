@@ -278,6 +278,13 @@
 | drunken.2da || special drunken style data || style="background-color: red;" | unsupported
 |}
 
+== GUI ==
+
+* Layout defined in the .gui resources in Gff3 format
+* Fullscreen dialogs are 640x480
+* coordinate system is 2D, (0,0) is the upper left corner
+* GUI is stretched to screen size
+
 == Models ==
 
 === Vertex layout ===
