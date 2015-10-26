@@ -255,7 +255,7 @@
 |uint8, always 0
 |-
 |60025
-|
+|uint8, LIST attribute, always 17
 |-
 |60026
 |
