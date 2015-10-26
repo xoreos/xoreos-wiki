@@ -171,3 +171,127 @@
 |-
 |0x[0-9ABCDEF]{8} || unknown hash? || ||  || ||
 |}
+
+== GUI ==
+* Layout defined in the .gui resources in Gff4 format
+* Both screens are of size 256x192
+* Coordinate system is 2D, (0,0) is in the upper left corner
+* Both screens define their own coordinate system from (0,0) to (256,192)
+* The following values for the labels are used:
+{| class="wikitable"
+! integer value
+! usage
+|-
+|60000
+|X coordinate of the widget in the upper screen
+|-
+|60001
+|Y coordinate of the widget in the upper screen
+|-
+|60002
+|width of the widget in the upper screen
+|-
+|60003
+|height of the widget in the upper screen
+|-
+|60004
+|background texture
+|-
+|60005
+|
+|-
+|60006
+|
+|-
+|60007
+|
+|-
+|60008
+|
+|-
+|60009
+|
+|-
+|60010
+|
+|-
+|60011
+|
+|-
+|60012
+|
+|-
+|60013
+|
+|-
+|60014
+|
+|-
+|60015
+|palette
+|-
+|60016
+|
+|-
+|60017
+|
+|-
+|60018
+|X coordinate of the widget in the lower screen
+|-
+|60019
+|Y coordinate of the widget in the lower screen
+|-
+|60020
+|width of the widget in the lower screen
+|-
+|60021
+|height of the widget in the lower screen
+|-
+|60022
+|
+|-
+|60023
+|
+|-
+|60024
+|
+|-
+|60025
+|
+|-
+|60026
+|
+|-
+|60027
+|
+|-
+|60028
+|
+|-
+|60029
+|
+|-
+|60030
+|
+|-
+|62000
+|widget name
+|-
+|62002
+|list of cildren widgets
+|-
+|62003
+|list of some textures (active state?)
+|-
+|62004
+|list of some textures (inactive state?)
+|-
+|62005
+|list of some textures
+|-
+|62006
+|list of some textures
+|-
+|62007
+|list of some textures
