@@ -102,7 +102,7 @@
 |-
 |dlg || 2029 || dialog definition || gff || [https://github.com/xoreos/xoreos-docs/raw/master/specs/bioware/Conversation_Format.pdf Conversation_Format.pdf] ||
 |-
-|itm || 21007 || item definition || gff || ||
+|itm || 21007 || item definition || 2da || ||
 |}
 
 === GUI ===
