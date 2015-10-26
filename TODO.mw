@@ -70,7 +70,7 @@ This is a long rambly list of things left to do in xoreos and xoreos-tools. Anyb
 ** Should be small and easily integratable though
 ** Needs to be expanded to handle our Common::UString
 * --nwn/--nwn2/... could be changed to --game nwn
-* --utf8/--cp1252/... could be change to --encoding utf8
+* --utf8/--cp1252/... could be changed to --encoding utf8
 
 === Script decompiler ===
 * It might be quite useful to have a NWScript decompiler in xoreos-tools
