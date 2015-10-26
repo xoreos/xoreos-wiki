@@ -130,8 +130,6 @@
 ! Documentation
 ! Status
 |-
-|txt || 10 ||  || text || ||
-|-
 |2da || 2017 || static data tables || 2da || [https://github.com/xoreos/xoreos-docs/raw/master/specs/bioware/2DA_Format.pdf 2DA_Format.pdf] ||
 |-
 |gff || 2037 || generic gff file || gff || ||
