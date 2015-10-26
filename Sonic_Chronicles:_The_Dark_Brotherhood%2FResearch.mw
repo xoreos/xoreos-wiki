@@ -198,16 +198,16 @@
 |background texture
 |-
 |60005
-|
+|Default text?
 |-
 |60006
-|
+|only used in test.gui
 |-
 |60007
 |
 |-
 |60008
-|
+|only used in test.gui
 |-
 |60009
 |
@@ -218,11 +218,8 @@
 |60011
 |
 |-
-|60012
-|
-|-
 |60013
-|
+|uint8, PANE attribute, possible values 0,1,255
 |-
 |60014
 |
@@ -231,7 +228,7 @@
 |palette
 |-
 |60016
-|
+|vector3f, text color?
 |-
 |60017
 |
@@ -252,10 +249,10 @@
 |
 |-
 |60023
-|
+|strref in the tlk file
 |-
 |60024
-|
+|uint8, always 0
 |-
 |60025
 |
@@ -267,7 +264,7 @@
 |
 |-
 |60028
-|
+|uint8, always 0
 |-
 |60029
 |
