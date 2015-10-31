@@ -147,10 +147,6 @@
 ! Documentation
 ! Status
 |-
-|cbgt || 21004 ||  ||  || ||
-|-
-|cdpth || 21005 ||  ||  || ||
-|-
 |emit || 21006 || ||  || ||
 |-
 |plo || 22021 || plot information || gff || ||
