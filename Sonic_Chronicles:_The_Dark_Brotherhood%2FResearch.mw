@@ -36,6 +36,12 @@
 |-
 |are || 2012 || static area information || gff || [https://github.com/xoreos/xoreos-docs/raw/master/specs/bioware/AreaFile_Format.pdf AreaFile_Format.pdf]
 | style="background-color: yellow;" | 
+|-
+|cbgt || 21004 || compressed area background ||  ||
+| style="background-color: green;" |
+|-
+|cdpth || 21005 || compressed area depth ||  ||
+| style="background-color: green;" |
 |}
 
 === Models, Textures and Materials ===
