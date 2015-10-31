@@ -177,6 +177,7 @@
 * Both screens are of size 256x192
 * Coordinate system is 2D, (0,0) is in the upper left corner
 * Both screens define their own coordinate system from (0,0) to (256,192)
+* To implement both screens easily, use a GUI size 256x384 and add 192 to the Y coordinate for the lower screen
 * The following values for the labels are used:
 {| class="wikitable"
 ! integer value
