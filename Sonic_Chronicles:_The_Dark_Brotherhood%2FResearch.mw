@@ -157,13 +157,13 @@
 |-
 |plo || 22021 || plot information || gff || ||
 |-
-|smp || 21024 || || binary || ||
-|-
-|spl || 21025 || spell definition || 2da || ||
-|-
 |sadl || 21022 || sound list || text ||  ||
 |-
 |sdat || 21023 || sound data || binary ||  ||
+|-
+|smp || 21024 || sound map || binary || ||
+|-
+|spl || 21025 || spell definition || 2da || ||
 |-
 |vx || 21026 || prerendered video || actimagine || ||
 |-
