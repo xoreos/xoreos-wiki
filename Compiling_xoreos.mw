@@ -47,7 +47,7 @@ xoreos uses the following libraries to function:
 * [https://www.libsdl.org/ SDL2] (>= 2.0.0)
 * [http://www.freetype.org/ FreeType 2] (>= 2.4.0 (libtool number >= 11.0.5))
 * [https://en.wikipedia.org/wiki/OpenAL OpenAL] (>= 1.12)
-* [http://www.underbit.com/products/mad/ MAD] (>= 1.15.1b)
+* [http://www.underbit.com/products/mad/ MAD] (>= 0.15.1b)
 * [https://www.xiph.org/downloads/ libogg] (>= 1.2.0)
 * [https://www.xiph.org/downloads/ libvorbis] (>= 1.3.1)
 * [http://www.audiocoding.com/faad2.html libfaad] (>= 2.7)
