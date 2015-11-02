@@ -39,7 +39,7 @@
 | style="background-color: yellow;" | only layout value used
 |-
 |sav || 2057 || objects descriptions in area || gff ||
-| style="background-color: red;" | partially loaded
+| style="background-color: yellow;" | partially loaded
 |-
 |lyt || 3000 || area rooms layout || text || 
 | style="background-color: yellow;" |
