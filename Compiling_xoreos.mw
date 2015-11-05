@@ -55,7 +55,7 @@ xoreos uses the following libraries to function:
 
 On Debian-based GNU/Linux distribution (including Ubuntu), you should be able to install these libraries and their development packages with
 
- apt-get install zlib1g-dev liblzma-dev libxml2-dev libboost-all-dev libsdl2-dev \
+ sudo apt-get install zlib1g-dev liblzma-dev libxml2-dev libboost-all-dev libsdl2-dev \
      libfreetype6-dev libopenal-dev libmad0-dev libogg-dev libvorbis-dev libfaad-dev \
      libxvidcore-dev
 
