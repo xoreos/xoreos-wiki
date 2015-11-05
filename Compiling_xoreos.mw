@@ -11,6 +11,10 @@ On Debian-based distributions (including Ubuntu), you should be able to install 
 
  <nowiki>sudo apt-get install libc6-dev g++ make autoconf automake libtool gettext</nowiki>
 
+On Arch Linux, you can install the package group base-devel with
+
+ <nowiki>sudo pacman -S base-devel</nowiki>
+
 On other distributions, it should work similarily.
 
 ===Mac OS X===
