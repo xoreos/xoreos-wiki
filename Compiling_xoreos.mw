@@ -63,6 +63,11 @@ On Debian-based GNU/Linux distribution (including Ubuntu), you should be able to
      libfreetype6-dev libopenal-dev libmad0-dev libogg-dev libvorbis-dev libfaad-dev \
      libxvidcore-dev
 
+On Arch Linux, you can install these dependencies with
+
+ sudo pacman -S zlib xz libxml2 boost boost-libs sdl2 freetype2 openal libmad libogg \
+     libvorbis faad2 xvidcore
+
 Other GNU/Linux distributions should work similarily. Windows users have to visit each website manually and download a precompiled version, or, if not available, download the source and compile the library themselves.
 
 (*) On Mac OS X, we're using Apple's OpenAL implementation, so OpenAL does not need to be installed separately there. On both GNU/Linux and Microsoft Windows, we require [http://kcat.strangesoft.net/openal.html OpenAL Soft]. There is a propriety OpenAL implementation by Creative Labs, Inc. for Microsoft Windows, which can be found at [http://openal.org/ http://openal.org/], but it's unfortunately old, outdated and abandoned. We do not recommend its use.
