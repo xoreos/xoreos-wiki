@@ -290,22 +290,8 @@
 
 === Vertex layout ===
 
-{| class="wikitable"
-! Use
-! Type
-! Size
-|-
-| Position || Float3 || 12
-|-
-| Normal || Float3 || 12
-|-
-| TexCoord || Float2 || 8
-|-
-| Color || D3DColor || 4
-|-
-| Tangent || Short4N || 8
-|}
+[https://github.com/xoreos/xoreos/issues/81 See discussion here]
 
-(Order?)
+The vertex layout is described in a mesh node's mesh header.
 
-[https://github.com/xoreos/xoreos/issues/81 more information in this xoreos issue]
+[https://gist.github.com/farmboy0/87d9d6b88613ccd899b8 model description (WIP)]
