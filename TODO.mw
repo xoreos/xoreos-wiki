@@ -179,9 +179,6 @@ This is a long rambly list of things left to do in xoreos and xoreos-tools. Anyb
 * make doxygen?
 
 === Autotools ===
-* Debian's lintian complains about statically linking to glew
-** Maybe check for system glew in configure, and use the included glew only as a fallback
-** And a configure flag to force on or the other
 * Suppress the "fatal: not a git repository" when building gitstamp without a git directory
 * Build everything as C++
 ** Currently, we build glew and Lua as C, the rest as C++, and then link them together
