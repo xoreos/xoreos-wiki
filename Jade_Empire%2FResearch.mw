@@ -291,7 +291,9 @@
 === Vertex layout ===
 
 The vertex layout is described in a mesh node's mesh header and if included the skin header.
+
 The mesh header contains information to draw the model or part of it.
+
 The skin header contains bone information to animate the model.
 
 [https://gist.github.com/farmboy0/87d9d6b88613ccd899b8 model description (WIP)]
