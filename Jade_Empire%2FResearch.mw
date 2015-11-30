@@ -295,3 +295,46 @@
 The vertex layout is described in a mesh node's mesh header.
 
 [https://gist.github.com/farmboy0/87d9d6b88613ccd899b8 model description (WIP)]
+
+== Audio ==
+Audio files and properties are described via text files that describe
+XACT wave banks and sound banks.
+
+Wave bank are simple lists of sound files that are referenced by their position in the list.
+
+Sound banks describe sounds and sound cues. Sounds contain references to wave bank entries as well as their play properties, while sound cues
+are used to group different sounds together with information about how to choose between them when playing a sound cue.
+
+'''Sound bank files are organized like this:'''
+
+ <Sound bank name>
+ <Number of Categories>
+ <Categories, one per line>
+ <Number of sounds>
+ <Sounds, variable amount of lines per sound>
+ <Number of sound cues>
+ <Sound cues, variable amount of lines per sound cue>
+
+'''Each sound looks like this:'''
+
+ <Sound description line>
+ <Play properties, at most one of each of the following lines: 3D AEG LOOP LPF MARKER MFLFO PEQ PITCH PLAY VOLUME>
+ <Number of wave bank entries>
+ <One line per Wave bank entry>
+
+'''Each sound cue looks like this:'''
+
+ <Sound cue description>
+ <Number of sound entries>
+ <One line per sound entry>
+
+'''for music sound cues also these lines:'''
+
+ <Number of transition lines = number sound entries * (number sound entries + 1)>
+ <transition lines describe the transition between 2 sounds in the same cue since only one sound will play (except for some overlap between sounds)>
+
+=== Sounds ===
+
+
+
+=== Sound cues ===
