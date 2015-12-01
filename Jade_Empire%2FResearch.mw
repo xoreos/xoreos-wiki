@@ -337,6 +337,26 @@ are used to group different sounds together with information about how to choose
 
 === Sounds ===
 
+==== sound description line ====
 
+
+{| class="wikitable"
+! Line Token
+! 1
+! 2
+! 3
+! 4
+! 5
+! 6
+! 7
+! 8
+! 9
+! 10
+! 11
+|-
+| Example || "al_nat_pool" || "1" || 1 || 1 || -2425 || -1 || -770 || 0 || 1 || 0 || 0
+|-
+| Description || sound name || note probably describing category || 0 or 1, boolean || 0 or 1, boolean || -6400 - 0 || -4975 - 450 || -1898 - 2400 || 0 or 127 || 0 or 1, boolean || -1500 - 0 || -6400 - 0
+|}
 
 === Sound cues ===
