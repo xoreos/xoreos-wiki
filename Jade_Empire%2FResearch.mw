@@ -359,4 +359,26 @@ are used to group different sounds together with information about how to choose
 | Description || sound name || note probably describing category || 0 or 1, boolean || 0 or 1, boolean || -6400 - 0 || -4975 - 450 || -1898 - 2400 || 0 or 127 || 0 or 1, boolean || -1500 - 0 || -6400 - 0
 |}
 
+==== 3D properties ====
+
+
+{| class="wikitable"
+! Line Token
+! 1
+! 2
+! 3
+! 4
+! 5
+! 6
+! 7
+! 8
+! 9
+! 10
+! 11
+|-
+| Example || 3D || 0 || 360 || 360 || 0 || 6.000000 || 27.000000 || 1.000000 || 7.000000 || 1.000000 || 0
+|-
+| Description || prop id || always 0 || always 360 || always 360 || always 0 || 1.000000 - 500.000000 || 10.000000 - 1000000000.000000 || always 1.000000 || 0.000000 - 363.000000 || 1.000000, 5.000000 or 10.000000 || 0, 0.750000, 0.782780, 0.803270 or 1.000000
+|}
+
 === Sound cues ===
