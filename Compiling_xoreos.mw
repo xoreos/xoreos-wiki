@@ -111,6 +111,18 @@ The binary can be found in the bin subdirectory, called "xoreos" or, on Windows,
 
 Please read [http://www.cmake.org/runningcmake/ Running CMake] on the CMake website for in-depth information on invoking CMake.
 
+Optional, non-conventional cmake flags:
+
+{|
+|
+* -DBoost_USE_STATIC_LIBS=off &nbsp;
+|| Link Boost dynamically instead of statically
+|-
+|
+* -DGLEW_INTERNAL=on &nbsp;
+|| Always use internal GLEW library
+|}
+
 ==Running xoreos==
 
 Please have a look at the [[Running xoreos]] page.
