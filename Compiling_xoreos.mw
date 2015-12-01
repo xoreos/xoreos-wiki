@@ -98,8 +98,11 @@ Optional, non-conventional ./configure flags:
 |
 * --with-lto &nbsp;
 || Compile with link-time optimization
+|-
+|
+* --disable-external-glew &nbsp;
+|| Always compile against the internal GLEW libraries
 |}
-
 
 ===CMake ===
 
