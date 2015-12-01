@@ -382,3 +382,34 @@ are used to group different sounds together with information about how to choose
 |}
 
 === Sound cues ===
+
+==== sound cue line ====
+
+
+{| class="wikitable"
+! Line Token
+! 1
+! 2
+! 3
+! 4
+! 5
+|-
+| Example || "j08_cut_drag_e" || 0 || 0 || 0 || 0
+|-
+| Description || sound cue name || 0, 1, 2, 3 or 4 play variation type || 0 or 1, boolean || always 0 || 0 or 1, boolean
+|}
+
+==== sound entry line ====
+
+
+{| class="wikitable"
+! Line Token
+! 1
+! 2
+! 3
+! 4
+|-
+| Example || "j08_cut_drag_e" || 37 || 0 || 0
+|-
+| Description || sound name || sound list index || value depends on variation type || value depends on variation type
+|}
