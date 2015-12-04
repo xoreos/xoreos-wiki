@@ -45,6 +45,7 @@ The subsystem names which were used so far:
 * '''MAIN''': Main function
 * '''DOCS''': Documentation/Doxygen
 * '''GLEW''', '''UTF8''', '''LUA''': 3rd-party code
+* '''DIST''': Distribution-specific files and .gitignore
 * '''JANITORIAL''': Cleanup, style fixes, etc.
 * '''ALL''': A change that covers multiple, or all, subsystems
 
