@@ -1,17 +1,52 @@
 The purpose of this page is to give a link to all kinds of resources that contain information valuable to current and future developers of xoreos.
 
+== The source repository ==
 
-== Getting started ==
-* The first thing you need to be able to do is [[Git#Retrieving_the_code|get the xoreos code]] from our [[Git]] repository.
-* Then you should [[Compiling xoreos|compile xoreos]] and/or [[Compiling xoreos-tools|compile xoreos-tools]].
+The main xoreos source repositories are hosted on [https://github.com/xoreos/ GitHub]. Please see the [[Git]] page on details on how the repositories are structured and how to retrieve the code.
 
-That was easy, right? Here are some more tips:
+== Compilation ==
 
-* Please read our [https://github.com/xoreos/xoreos/blob/master/CODE_OF_CONDUCT.md Code of Conduct]. By participating in this project you agree to abide by its terms.
-* Before you write/submit code, '''you must read''' our [[Code Formatting Conventions]].<br>Patches which do not follow them will be rejected or at least delayed until they are cleaned up to comply to them.
-* If you have write (push) access to our repository, you are expected to have read and to comply with our [[Commit Guidelines]].<br>Also, please read the tips for using Git here: [http://wiki.scummvm.org/index.php/Git_tips Git tips].<br>In particular, note the use of feature branches, when working on refactoring or other large connected changes, rather than committing directly to xoreos/master.
-* If you do not have write (push) access to our repository, you should submit your contributions by the following method:
-** Using a [https://help.github.com/articles/using-pull-requests Github Pull Request].<br> This requires you to have/register a github account, fork our repository, commit your changes to a branch and then issue a Pull Request.<br>This is the current preferred method as it is easier for the team to review, discuss and amend prior to merging.<br>You are expected to have read and to comply with our [[Commit Guidelines]].
+See the [[Compiling xoreos]] and [[Compiling xoreos-tools]] pages for information on how to compile our source code on various operating systems.
+
+== Community ==
+
+We strive to be a friendly and open development community. Therefore, we have adopted a [https://github.com/xoreos/xoreos/blob/master/CODE_OF_CONDUCT.md Code of Conduct] guiding us. By participating in this project you agree to abide by its terms.
+
+Our main place for organizing and socializing is the [[IRC channel|#xoreos channel on Freenode IRC]]. You will find most of the developers idling there, happy to answer any questions you might have. If you plan to become a frequent contributor, please consider regularly joining this channel as well.
+
+However, there is not public log bot in #xoreos, so there is no public, permanent record. Therefore, discussions about far reaching changes in the codebase are best held on [[Mailing lists|our mailing list]]. Contributors are encouraged to subscribe to this list.
+
+If you intend to work on a feature, or otherwise contribute to xoreos, please notify us before-hand, so that unnecessary, accidentally doubling of work can be avoided.
+
+== Reporting bugs ==
+
+Bugs should be reported on the GitHub issue tracker. If the bug concerns xoreos itself, use the [https://github.com/xoreos/xoreos/issues one for xoreos], if the bug concerns the xoreos-tools, use the [https://github.com/xoreos/xoreos-tools/issues one for xoreos-tools]. Likewise, all the other [https://github.com/xoreos repositories] have issue tracking enabled.
+
+== Code style ==
+
+We have [[Code Formatting Conventions]] you are expected to follow. Patches and pull requests that do not follow these conventions will be rejected or at least delayed until they are cleaned up to comply.
+
+== Commit guidelines ==
+
+Please read the [[Commit Guidelines]]. We want to keep our project history clean and readable.
+
+== Branches ==
+
+Do not work directly on the master branch. Instead, use [https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow feature branches], one for each new feature you are working on. This ensures that each feature has its own, clean history that can be reviewed more easily. Once the feature has been merged into the main development tree, you are of course free to delete your feature branch again.
+
+== Pull Requests ==
+
+If you do not have push permissions to the official xoreos repositories, and especially if you're a first-time contributor, we prefer to receive your changes as a [https://help.github.com/articles/using-pull-requests pull request on GitHub]. This requires you to have/register a GitHub account, fork our repository, commit your changes to a branch and then issue a Pull Request.
+
+Please only add commits belonging to this one feature to the pull requests; do not intersperse them with unrelated changes. Also try to [https://git-scm.com/book/en/v2/Git-Tools-Rewriting-History actively tidy your history]: combine related commits with interactive rebasing, separate monolithic commits, etc. Feel free to force-push to your feature branch to tidy your history.
+
+Before and during the review process, please keep up to date with the xoreos master branch by [https://git-scm.com/book/en/v2/Git-Branching-Rebasing rebasing] your changes onto the current master.
+
+== Pushing to the official repositories ==
+
+Once we've made sure that you understood and can follow the style and commit guidelines and you expressed interest in further contributing to xoreos, we will be happy to have you join the xoreos development team, and grant you push permissions to the official repositories. You are then expected to continue to follow these guidelines out of your own accord, without the need for intervention by other developers. If you are unsure about how a specific case interact with the guidelines, please feel free to ask.
+
+To avoid people accidentally working on the same feature, or otherwise stepping on each others' toes, consider announcement what you are working on in the [[IRC channel]] or the [[Mailing lists|mailing list]].
 
 == Reverse engineering help ==
 
@@ -21,7 +56,6 @@ For people starting out with reverse engineering, here are a few useful resource
 * [http://rewiki.regengedanken.de/wiki/Main_Page REWiki] contains a collection of game reverse engineering knowledge. They have a [http://rewiki.regengedanken.de/wiki/Reverse_engineering_hints hints page] as well
 * [http://wiki.xentax.com/index.php?title=Game_File_Format_Central XentaxWiki] focuses on game file formats. They too have a [http://wiki.xentax.com/index.php?title=DGTEFF guide page]
 * For audio and video formats, there's [http://wiki.multimedia.cx/ MultimediaWiki], which is associated with the ffmpeg and libav projects
-
 
 == To do list ==
 
