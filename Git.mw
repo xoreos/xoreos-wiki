@@ -1,3 +1,15 @@
+=Organization=
+
+The official xoreos repositories can be found [https://github.com/xoreos/ here on GitHub]. They are:
+
+* [https://github.com/xoreos/xoreos xoreos], the main xoreos repository
+* [https://github.com/xoreos/xoreos-tools xoreos-tools], various tools to help development and modding
+* [https://github.com/xoreos/phaethon Phaethon], a WIP graphical resource explorer
+* [https://github.com/xoreos/xoreos-web xoreos-web], which contains the website at [https://xoreos.org xoreos.org]
+* [https://github.com/xoreos/xoreos-docs xoreos-docs], miscellaneous file format specifications
+* [https://github.com/xoreos/xoreos-media xoreos-media], containing xoreos icons and logos
+* [https://github.com/xoreos/xoreos-wiki xoreos-wiki], a public mirror of this wiki
+
 =Retrieving the code=
 
 The main repository is located at
@@ -10,17 +22,22 @@ If you are using command line git, the command to get the repository is:
 
 Refer to github help documentation on where to obtain git client for your OS.
 
+The other repositories can be cloned similarity.
+
 =Keeping updated=
+
 * You can [https://github.com/xoreos browse] the Git repositories through HTTP.
 * For every push:
 ** A mail with the commit(s) diff(s) is sent to the [[Mailing lists#xoreos-git|xoreos-git mailing list]].
 ** The GitHub bot notifies the [[IRC channel]] with the summary of the commit(s).
 
 =Committing=
+
 * Before you write/submit code, you must read about our [[Code Formatting Conventions]]. Patches which do not follow them will be rejected or at least delayed until they are cleaned up to comply to them.
 * If you have write access to our repository, you are expected to have read and to comply to the [[Commit Guidelines]].
 * You may also find ScummVM's [http://wiki.scummvm.org/index.php/Git_tips Git tips] page useful.
 
 =Repository Statistics=
+
 Our commit logs are fed to these freely available statistics tools:
 * [https://www.ohloh.net/p/xoreos ohloh project analysis] nice graphs and devs activity
