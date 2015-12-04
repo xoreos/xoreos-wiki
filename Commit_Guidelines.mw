@@ -13,7 +13,7 @@ We won't start beating people up, but everyone should at least all be aware of t
 
 The rules on commit messages are the following (they're standard to git, except our SUBSYSTEM requirement):
 <pre>
-SUBSYSTEM: Short (50 chars or less) summary of changes
+SUBSYSTEM: Short (70 chars or less) summary of changes
 
 More detailed explanatory text, if necessary.  Wrap it to about 72
 characters or so.  In some contexts, the first line is treated as the
