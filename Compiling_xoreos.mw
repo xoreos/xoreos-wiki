@@ -118,15 +118,17 @@ Optional, non-conventional cmake flags:
 
 {|
 |
-* -DBoost_USE_STATIC_LIBS=off &nbsp;
-|| Link Boost dynamically instead of statically
+* -DBoost_USE_STATIC_LIBS=on &nbsp;
+|| Link Boost statically instead of dynamically
 |-
 |
 * -DGLEW_INTERNAL=on &nbsp;
 || Always use internal GLEW library
 |}
 
-'''Note''': If you're running GNU/Linux and have wrapper scripts installed that force the building of "hardened" binaries (often called "hardening-wrapper", but differs between Linux distributions), compiling xoreos might fail during the linking stage. This is due to the static Boost libraries being incompatible with the compiler option "-fPIE", which is often added by hardening wrapper scripts. You need to either dynamically link Boost (by added DBoost_USE_STATIC_LIBS=off to the cmake call) or disable -fPIE for this compilation (which is distribution-specific).
+'''Note''': The CMake's stock FindBoost.cmake doesn't correctly detect dependencies when linking statically. In this case, xoreos might fail to link, missing symbols for ICU, when linking Boost statically.
+
+Moreover, if you're running GNU/Linux and have wrapper scripts installed that force the building of "hardened" binaries (often called "hardening-wrapper", but differs between Linux distributions), compiling xoreos might fail during the linking stage, when using statically linking Boost libraries. This is due to those static Boost libraries being incompatible with the compiler option "-fPIE", which is often added by hardening wrapper scripts. A workaround is to disable -fPIE for this compilation (which is distribution-specific).
 
 ==Running xoreos==
 
