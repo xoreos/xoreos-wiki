@@ -251,11 +251,11 @@ Doxygen supports ''documentation blocks''. These are specially-formatted comment
 There are many ways to mark such comments, but developers are encouraged to use the JavaDoc style:
 
 <syntaxhighlight lang="cpp">
-/**
- * Move ("warp") the mouse cursor to the specified position in virtual
- * screen coordinates.
- * @param x             the new x position of the mouse
- * @param y             the new y position of the mouse
+/** Move ("warp") the mouse cursor to the specified position in virtual
+ *  screen coordinates.
+ *
+ *  @param x   the new x position of the mouse.
+ *  @param y   the new y position of the mouse.
  */
 virtual void warpMouse(int x, int y) = 0;
 </syntaxhighlight>
@@ -264,8 +264,8 @@ As shown in the example, documentation blocks also support several special comma
 
 If you want to add a brief explanation of a variable or function ''after'' its declaration, this is the correct syntax:
 <syntaxhighlight lang="cpp">
-int16 x;	///< The horizontal part of the point
-int16 y;	///< The vertical part of the point
+int16 x;	///< The horizontal part of the point.
+int16 y;	///< The vertical part of the point.
 </syntaxhighlight>
 
 For more information, visit the official documentation:
