@@ -169,6 +169,48 @@ int &ref = i;
 
 No trailing whitespace, at all. This means that lines should never end with spaces or tabs. Remove them. Empty lines should be completely empty; not even indenting tabs should be there.
 
+== Include order ==
+
+Include directives should be grouped by subsystem, roughly ordered by specificity, from general to specific.
+
+The group order is as follows:
+
+* C++ versions of standard C headers
+* Standard C++ headers
+* Standard C headers
+* Library includes
+* src/common
+* src/aurora
+* src/graphics
+* src/sound
+* src/video
+* src/events
+* src/engines
+
+Each group is separated by an empty line. The includes within each group are again ordered roughly by specificity, with includes used by other includes first. But in a .cpp file implementing an interface specified in a .h file, the .h file sits ontop of its group.
+
+For example, these could be the include directives in src/engines/nwn/game.cpp:
+
+<syntaxhighlight lang="cpp">
+#include <cassert>
+
+#include <list>
+#include <map>
+
+#include "src/common/util.h"
+#include "src/common/ustring.h"
+#include "src/common/filelist.h"
+
+#include "src/aurora/types.h"
+#include "src/aurora/talkman.h"
+
+#include "src/engines/aurora/util.h"
+
+#include "src/engines/nwn/game.h"
+#include "src/engines/nwn/util.h"
+#include "src/engines/nwn/nwn.h"
+</syntaxhighlight>
+
 == Switch/Case constructs ==
 
 <syntaxhighlight lang="cpp">
