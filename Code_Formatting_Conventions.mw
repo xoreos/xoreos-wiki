@@ -110,6 +110,16 @@ void Actor::initActorClass(ScummEngine *scumm) {
 } // End of namespace Scumm
 </syntaxhighlight>
 
+'''However, namespaces used solely for forward-declarations should indent'''
+
+<syntaxhighlight lang="cpp">
+namespace Aurora {
+    namespace NWScript {
+        class Object;
+    }
+} 
+</syntaxhighlight>
+
 '''Array delete operator has no whitespace before []'''
 <syntaxhighlight lang="cpp">
 delete[] foo;
