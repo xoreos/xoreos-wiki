@@ -314,10 +314,10 @@ This is a long rambly list of things left to do in xoreos and xoreos-tools. Anyb
 * Menus
 ** Basics are there, but needs fleshing out
 ** Supermanu is working on the character generator
-** Pathfinding, walkmesh
-*** "Moving" should move the PC, not the camera
-*** NPC walking
-*** Triggers, areas on the floor that calls scripts on enter/leave
+* Pathfinding, walkmesh
+** "Moving" should move the PC, not the camera
+** NPC walking
+** Triggers, areas on the floor that calls scripts on enter/leave
 * Models
 ** ASCII models need averaging of smooth group normals
 * NWN objects need an inventory concept
