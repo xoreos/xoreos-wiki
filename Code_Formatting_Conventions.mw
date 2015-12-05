@@ -155,6 +155,10 @@ int i = 0;
 int &ref = i;
 </syntaxhighlight>
 
+'''Trailing whitespace'''
+
+No trailing whitespace, at all. This means that lines should never end with spaces or tabs. Remove them. Empty lines should be completely empty; not even indenting tabs should be there.
+
 == Switch/Case constructs ==
 
 <syntaxhighlight lang="cpp">
