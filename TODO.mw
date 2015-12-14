@@ -82,7 +82,7 @@ This is a long rambly list of things left to do in xoreos and xoreos-tools. Anyb
 ** We have a script disassembler, ncsdis
 ** Maybe the [http://wiki.scummvm.org/index.php/Summer_of_Code/GSoC2010#Game_script_.28bytecode.29_decompiler GSoC 2010 ScummVM decompiler task] can be plundered for control flow analysis, etc?
 
-=== Script compiler
+=== Script compiler ===
 * An NWScript compiler might be useful as well
 ** A script assembler might be an easy first step
 
