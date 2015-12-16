@@ -321,11 +321,6 @@ This is a long rambly list of things left to do in xoreos and xoreos-tools. Anyb
 *** Inventory tetris
 *** Inventory item icons
 * Multi-page asian fonts
-* In fact, the Graphics::Aurora::TextureFont class needs to be made codepage-aware
-** The multi-page fonts carry a "codepage" setting in their TXI
-** Single-page fonts do not. Detect from the current language?
-** Since CP-1252 is quite similar to Latin1, and the Latin1 characters map cleanly to UTF-32, it currently just works for games using CP-1252
-** It's probably very broken in a Russian NWN
 * LanguageID 0 is not necessarily "English", but "The language of the game install"
 ** This is okay for languages with Latin characters
 ** Messes up strings in community modules with Asian languages that stuff strings in to languageID 0
