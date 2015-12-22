@@ -85,8 +85,13 @@ This is a long rambly list of things left to do in xoreos and xoreos-tools. Anyb
 
 === Script decompiler ===
 * It might be quite useful to have a NWScript decompiler in xoreos-tools
-** We have a script disassembler, ncsdis
-** Maybe the [http://wiki.scummvm.org/index.php/Summer_of_Code/GSoC2010#Game_script_.28bytecode.29_decompiler GSoC 2010 ScummVM decompiler task] can be plundered for control flow analysis, etc?
+* We have a script disassembler, ncsdis
+** Which already does code flow analysis
+* Missing:
+** Code generation
+** Collapsing of instruction chains into single-line NWScript code
+*** For example, "int var = foo * bar + quux" compiles to a long chain with multiple temporaries
+** Proper handling of structs and vectors
 
 === Script compiler ===
 * An NWScript compiler might be useful as well
