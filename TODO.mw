@@ -68,6 +68,12 @@ This is a long rambly list of things left to do in xoreos and xoreos-tools. Anyb
 * CJK glyphs tend to be more complex and therefore wider. They're usually rendered twice as wide as Latin glyphs
 * Our console code needs to take that into account
 
+=== Fuzzing ===
+* Run our file readers, image decoders, etc. through a fuzzer, like [http://lcamtuf.coredump.cx/afl/ afl] (american fuzzy lop)
+* Fix any cases where it crashes
+* The xoreos-tools might be a good starting point for singular, standalone testing
+** For image decoders, a slightly modified xoreostex2tga tool might work
+
 === Command line parsing in the tools ===
 * Each tool currently does its own command line parsing => lots of code duplication
 * Could be abstracted away to make it less verbose
