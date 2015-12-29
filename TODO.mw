@@ -73,6 +73,9 @@ This is a long rambly list of things left to do in xoreos and xoreos-tools. Anyb
 * Fix any cases where it crashes
 * The xoreos-tools might be a good starting point for singular, standalone testing
 ** For image decoders, a slightly modified xoreostex2tga tool might work
+* File formats already fuzzed:
+** CBGT, CDPTH, DDS, NBFS, NCGR, NCLR, SBM, TGA, TPC, TXB
+** 2DA, KEY/BIF, ERF, GFF3, GFF4, GDA, TLK, NSBTX, RIM, SMALL, SSF
 
 === Command line parsing in the tools ===
 * Each tool currently does its own command line parsing => lots of code duplication
