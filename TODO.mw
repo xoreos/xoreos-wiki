@@ -216,6 +216,18 @@ This is a long rambly list of things left to do in xoreos and xoreos-tools. Anyb
 * Switch to a non-recursive make setup?
 ** We still want a Makefile.am for each directory, so with include
 
+== Nitro ==
+
+* The Nintendo DS (Nitro) specific file formats should probably be moved out of src/aurora/ and into src/nitro
+* nitrofile, cdpth, nsbtx, smallfile
+** nsbtx needs to be split into a class accessing the textures in src/nitro/ and an archive class on top in src/aurora/
+** This means src/aurora/ accesses src/nitro/, so libnitro.la needs to come after libaurora.la in the linking order
+* ndsrom as well?
+* What about nftrfont and model_sonic in src/graphics/aurora/?
+** src/graphics/nitro/?
+** This would have src/graphics/nitro/ access src/graphics/aurora/, so graphics/libnitro.la needs to come before graphics/libaurora.la in the linking order
+** That would be the other way round than for src/nitro/. Too confusing?
+
 == Graphics ==
 
 === MDL supermodels and animations ===
