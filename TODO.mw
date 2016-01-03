@@ -283,6 +283,14 @@ This is a long rambly list of things left to do in xoreos and xoreos-tools. Anyb
 ** Somebody implementing Sorenson 3 for xoreos should ideally give explicit permission to relicense it GPLv2+ for ScummVM
 *** Of course, if the decoder is based on prior work by other people, it has to be compatible with both GPLv2+ and GPLv3+
 
+=== Optimizations ===
+* Optimize our simple BitStream interface
+** See [https://fgiesen.wordpress.com/2016/01/02/end-of-buffer-checks-in-decompressors/ this blog post]
+** Specifically, we don't do any peeking at all
+** It still needs to handle different memory layouts, though
+* Likewise, our Huffman class could probably be tuned a lot
+* Pull in fft/rdft/dct/mdct optimizations from FFmpeg?
+
 == Sound ==
 
 === FMOD ===
