@@ -1,0 +1,66 @@
+== Lighting ==
+
+original NWN for linux uses: 
+
+<pre>
+glLightModelfv(pname = GL_LIGHT_MODEL_AMBIENT, params = {0, 0, 0, 1})
+glLightfv(light = GL_LIGHT1, pname = GL_AMBIENT, params = {0.160784, 0.160784, 0.160784, 1})
+glLightfv(light = GL_LIGHT1, pname = GL_DIFFUSE, params = {0, 0, 0, 1})
+glLightfv(light = GL_LIGHT1, pname = GL_SPECULAR, params = {0, 0, 0, 1})
+glLightfv(light = GL_LIGHT1, pname = GL_POSITION, params = {4000, 4500, 7000, 1})
+glLightfv(light = GL_LIGHT1, pname = GL_QUADRATIC_ATTENUATION, params = &4.5e-10)
+glLightfv(light = GL_LIGHT2, pname = GL_AMBIENT, params = {0, 0, 0, 1})
+glLightfv(light = GL_LIGHT2, pname = GL_DIFFUSE, params = {1.75, 1.5, 1, 1})
+glLightfv(light = GL_LIGHT2, pname = GL_SPECULAR, params = {1.75, 1.5, 1, 1})
+glLightfv(light = GL_LIGHT2, pname = GL_POSITION, params = {16.43526, 8.189793, 2.922178, 1})
+glLightfv(light = GL_LIGHT2, pname = GL_QUADRATIC_ATTENUATION, params = &0.02543954)
+</pre>
+
+or
+
+<pre>
+glLightfv(light = GL_LIGHT1, pname = GL_AMBIENT, params = {0.160784, 0.160784, 0.160784, 1})
+glLightfv(light = GL_LIGHT1, pname = GL_DIFFUSE, params = {0, 0, 0, 1})
+glLightfv(light = GL_LIGHT1, pname = GL_SPECULAR, params = {0, 0, 0, 1})
+glLightfv(light = GL_LIGHT1, pname = GL_POSITION, params = {4000, 4500, 7000, 1})
+glLightfv(light = GL_LIGHT1, pname = GL_QUADRATIC_ATTENUATION, params = &4.5e-10)
+glLightfv(light = GL_LIGHT2, pname = GL_AMBIENT, params = {0, 0, 0, 1})
+glLightfv(light = GL_LIGHT2, pname = GL_DIFFUSE, params = {1.75, 1.5, 1, 1})
+glLightfv(light = GL_LIGHT2, pname = GL_SPECULAR, params = {1.75, 1.5, 1, 1})
+glLightfv(light = GL_LIGHT2, pname = GL_POSITION, params = {16.43526, 8.189793, 2.922178, 1})
+glLightfv(light = GL_LIGHT2, pname = GL_QUADRATIC_ATTENUATION, params = &0.02543954)
+glLightfv(light = GL_LIGHT3, pname = GL_AMBIENT, params = {0, 0, 0, 1})
+glLightfv(light = GL_LIGHT3, pname = GL_DIFFUSE, params = {1.3, 1.92, 1.82, 1})
+glLightfv(light = GL_LIGHT3, pname = GL_SPECULAR, params = {1.3, 1.92, 1.82, 1})
+glLightfv(light = GL_LIGHT3, pname = GL_POSITION, params = {14.99999, 4.999998, 5, 1})
+glLightfv(light = GL_LIGHT3, pname = GL_QUADRATIC_ATTENUATION, params = &0.045)
+glLightfv(light = GL_LIGHT4, pname = GL_AMBIENT, params = {0, 0, 0, 1})
+glLightfv(light = GL_LIGHT4, pname = GL_DIFFUSE, params = {2, 0.5, 0.2, 1})
+glLightfv(light = GL_LIGHT4, pname = GL_SPECULAR, params = {2, 0.5, 0.2, 1})
+glLightfv(light = GL_LIGHT4, pname = GL_POSITION, params = {14.02705, 2.55035, 4, 1})
+glLightfv(light = GL_LIGHT4, pname = GL_QUADRATIC_ATTENUATION, params = &0.18)
+glLightfv(light = GL_LIGHT5, pname = GL_AMBIENT, params = {0, 0, 0, 1})
+glLightfv(light = GL_LIGHT5, pname = GL_DIFFUSE, params = {0.1847787, 0.1847787, 0.09828652, 1})
+glLightfv(light = GL_LIGHT5, pname = GL_SPECULAR, params = {0.1847787, 0.1847787, 0.09828652, 1})
+glLightfv(light = GL_LIGHT5, pname = GL_POSITION, params = {14.9855, 1.83074, 1.62787, 1})
+glLightfv(light = GL_LIGHT5, pname = GL_QUADRATIC_ATTENUATION, params = &0.09183674)
+glLightfv(light = GL_LIGHT6, pname = GL_AMBIENT, params = {0, 0, 0, 1})
+glLightfv(light = GL_LIGHT6, pname = GL_DIFFUSE, params = {0.1847787, 0.1847787, 0.09828652, 1})
+glLightfv(light = GL_LIGHT6, pname = GL_SPECULAR, params = {0.1847787, 0.1847787, 0.09828652, 1})
+glLightfv(light = GL_LIGHT6, pname = GL_POSITION, params = {5, 15, 5, 1})
+glLightfv(light = GL_LIGHT6, pname = GL_QUADRATIC_ATTENUATION, params = &0.045)
+glLightfv(light = GL_LIGHT7, pname = GL_AMBIENT, params = {0, 0, 0, 1})
+glLightfv(light = GL_LIGHT7, pname = GL_DIFFUSE, params = {0.196573, 0.1474298, 0.05897192, 1})
+glLightfv(light = GL_LIGHT7, pname = GL_SPECULAR, params = {0.196573, 0.1474298, 0.05897192, 1})
+glLightfv(light = GL_LIGHT7, pname = GL_POSITION, params = {5, 5, 5, 1})
+glLightfv(light = GL_LIGHT7, pname = GL_QUADRATIC_ATTENUATION, params = &0.045)
+</pre>
+
+for light0 the following is used:
+
+<pre>
+glLightModelfv(pname = GL_LIGHT_MODEL_AMBIENT, params = {1, 1, 1, 1})
+glLightfv(light = GL_LIGHT0, pname = GL_AMBIENT, params = {0, 0, 0, 1})
+glLightfv(light = GL_LIGHT0, pname = GL_DIFFUSE, params = {1, 1, 1, 1})
+glLightfv(light = GL_LIGHT0, pname = GL_POSITION, params = {0, 0, 742.4, 1})
+</pre>
