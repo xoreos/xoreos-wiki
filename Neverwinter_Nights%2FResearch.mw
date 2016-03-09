@@ -64,3 +64,21 @@ glLightfv(light = GL_LIGHT0, pname = GL_AMBIENT, params = {0, 0, 0, 1})
 glLightfv(light = GL_LIGHT0, pname = GL_DIFFUSE, params = {1, 1, 1, 1})
 glLightfv(light = GL_LIGHT0, pname = GL_POSITION, params = {0, 0, 742.4, 1})
 </pre>
+
+== Walkmesh ==
+
+The way nwn determines where a character/creature can or cannot walk seems to involve two different parts: a mesh and AABB[https://en.wikipedia.org/wiki/Bounding_volume] for collision detection. Those two parts can be found in a tile model ".mdl" and is associated ".wok" file (an ASCII file). The data in the model and in the wok seems to be almost redundant: slightly different at the mesh level.
+
+=== Mesh ===
+
+The mesh can be found in both the mdl and the wok. In the mdl, it can be found as a normal mesh in the node that contains both AABB and mesh flags. Each face of the mesh have a smooth property that can be related to a specific material. The material properties is in the "surfacemat.2da" file where the index is the smooth value. The 2da file contains two columns with boolean values, "Walk" and "WalkCheck", that should surely indicates where one can walk or not.
+
+=== AABB ===
+
+Similarly to the mesh, AABB can be found in the model in the same node and directly in the wok file.
+
+=== Difference between mdl and wok ===
+
+The shape of the mesh in the mdl and the wok are the same though the number of vertices differs. In deed, in the mdl one can find more or less three times the number of vertices regarding the wok. In fact, almost each face in the mdl has its own vertices, only a few share some vertices.
+
+About AABB, it seems they are the same in both files.
