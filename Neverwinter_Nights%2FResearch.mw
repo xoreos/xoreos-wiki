@@ -75,7 +75,7 @@ The mesh can be found in both the mdl and the wok. In the mdl, it can be found a
 
 === AABB ===
 
-Similarly to the mesh, AABB can be found in the model in the same node and directly in the wok file.
+Similarly to the mesh, AABBs can be found in the model in the same node and directly in the wok file. AABBs come as a binary tree, each leaf from that tree is related to a specific face from the walkmesh and surrounds it. It is the ''part_number_leaf_face''[https://github.com/xoreos/xoreos-docs/blob/master/templates/NWN1MDL.bt#L601] property that relates to the face.
 
 === Difference between mdl and wok ===
 
