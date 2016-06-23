@@ -82,3 +82,7 @@ Similarly to the mesh, AABBs can be found in the model in the same node and dire
 The shape of the mesh in the mdl and the wok are the same though the number of vertices differs. In deed, in the mdl one can find more or less three times the number of vertices regarding the wok. In fact, almost each face in the mdl has its own vertices, only a few share some vertices.
 
 About AABB, it seems they are the same in both files.
+
+=== How it could work ===
+
+There are two cases. First, when the user want to know where he can/cannot go by moving the cursor. In this case, the intersection between the ray coming from the camera and the AABB tree will give a AABB leaf node, its related face and thus if it is walkable or not. Second, when a creature want to move, it needs to know if it can, what sound should be played and the vertical position of the creature. The intersection in the XY plan of the creature's bounding box and the AABB tree should give similarly as the former case if the creature can be moved. For the vertical position, one hypothesis would be that it is given from the intersection between the XY position of the creature and the related face from the AABB leaf node.
