@@ -302,8 +302,8 @@ This is a long rambly list of things left to do in xoreos and xoreos-tools. Anyb
 ** Game areas specify the group to use for the area
 ** Scripts then probably tell FMOD to play event lists out of that group
 
-=== Wwave ===
-* Dragon Age 2 uses Wwave for sound and music
+=== Wwise ===
+* Dragon Age 2 uses Wwise for sound and music
 * Should be similar in concept to FMD
 
 == Events ==
@@ -391,7 +391,7 @@ This is a long rambly list of things left to do in xoreos and xoreos-tools. Anyb
 ** Needs research
 * Sound
 ** Uses an ASCII variant of the [http://wiki.multimedia.cx/index.php?title=XACT XACT formats]
-*** Cues probably not as complex as FMOD/Wwave
+*** Cues probably not as complex as FMOD/Wwise
 *** Effects need extension of the Sound system, maybe
 ** Xbox version might use the binary format?
 *** Sound banks could be handles as archives and indexed in the ResourceManager?
