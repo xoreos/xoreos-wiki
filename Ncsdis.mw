@@ -1,0 +1,105 @@
+BioWare NWScript bytecode disassembler
+
+= Synopsis =
+
+ncsdis [<options>] <input_file> [<output_file>]
+
+= Description =
+
+'''ncsdis''' disassembles NCS files, compiled bytecode of the NWScript scripting language used by every single Aurora engine game, except for the Nintendo DS game Sonic Chronicles: The Dark Brotherhood. The output, while not as clear as the C-like source code that produced the bytecode, is human-readable.
+
+'''ncsdis''' is meant as a better maintainable and more complete replacement of the disassembly mode found in the OpenKnights nwnnsscomp tool. As such, it fixes provides these enhancements:
+* Compilable in 64-bit mode
+* Out of the box support for all Aurora engine games
+* Support for array opcodes added in Dragon Age: Origins
+* Support for reference opcodes added in Dragon Age II
+* Knowledge of additional variable types
+* No need to provide an external nwscript.nss file
+
+Additionally, '''ncsdis''' can create a [https://en.wikipedia.org/wiki/DOT_(graph_description_language) dot file] specifying a control flow graph of the disassembly. It can be plotted into a graph by the dot(1) tool of the [http://www.graphviz.org/ GraphViz suite].
+
+'''WARNING''': these graphs can get very large very quickly. To keep the resulting image small, set a small font and font size when calling [http://www.graphviz.org/ GraphViz], and decrease the nodesep and ranksep values.
+
+Since there is no way to automatically detect for which game this script is, this information must be provided on the command. If no game is specified, the ACTION opcode that call an engine function, such as "GetModule" or trigonometry functions, will only display a number instead of a function name.
+
+= Options =
+
+'''-h''' <br />
+'''--help'''
+: Show a help text and exit.
+
+'''--version'''
+: Show version information and exit.
+
+'''--list'''
+: Create a full disassembly listing, including byte addresses and the raw bytecode, similar to the disassembly mode of nwnnsscomp. This is the default mode.
+
+'''--assembly'''
+: Only create the human-readable mnemonics part of the disassembly listing. Useful for modifying and extending the script.
+
+'''--dot'''
+: Create a flow control graph in the [https://en.wikipedia.org/wiki/DOT_(graph_description_language) dot language], to be plotted by the [http://www.graphviz.org/ GraphViz suite].
+
+'''--stack'''
+: Print the stack frame for each instruction. Only available in list or assembly mode, not in dot mode.
+
+'''--control'''
+: Print detected control structures inside block nodes. Only available in dot mode.
+
+'''--nwn'''
+: Use engine function tables of the game Neverwinter Nights.
+
+'''--nwn2'''
+: Use engine function tables of the game Neverwinter Nights 2.
+
+'''--kotor'''
+: Use engine function tables of the game Star Wars: Knights of the Old Republic.
+
+'''--kotor2'''
+: Use engine function tables of the game Star Wars: Knights of the Old Republic II - The Sith Lords.
+
+'''--jade'''
+: Use engine function tables of the game Jade Empire.
+
+'''--witcher'''
+: Use engine function tables of the game The Witcher.
+
+'''--dragonage'''
+: Use engine function tables of the game Dragon Age: Origins.
+
+'''--dragonage2'''
+: Use engine function tables of the game Dragon Age II.
+
+<input_file>
+: The NCS file to disassemble.
+
+[<output_file>]
+: The disassembly will be written there. If no output file is specified, the disassembly will be written to stdout.
+
+= Examples =
+
+Disassemble the script file.ncs:
+ ncsdis file.ncs file.lst
+
+Disassemble the script file.ncs and write the listing to stdout:
+ ncsdis file.ncs
+
+Disassemble the Jade Empire script file.ncs:
+ ncsdis --jade file.ncs file.list
+
+Disassemble the Jade Empire script file.ncs in pure disassembly mode:
+ ncsdis --assembly --jade file.ncs file.asm
+
+Create a dot graph file of the Neverwinter Nights script file.ncs:
+ ncsdis --dot --nwn file.ncs file.dot
+
+Create a dot graph file of the Neverwinter Nights script file.ncs and plot it:
+ ncsdis --dot --nwn file.ncs | dot -Gnodesep=0.1 -Granksep=0.1 \
+ -Gfontname="Courier New" -Nfontname="Courier New" -Gfontsize=10 \
+ -Nfontsize=8 -Earrowsize=0.5 -Tpng > file.png
+
+= References =
+
+* http://www.graphviz.org/
+* https://en.wikipedia.org/wiki/DOT_(graph_description_language)
+* https://sourceforge.net/projects/openknights/files/NWNTools/
