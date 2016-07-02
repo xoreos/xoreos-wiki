@@ -46,7 +46,7 @@ Convert the GFF file1.utc, which uses Windows CP-1252 strings:
 
 = See also =
 
-[[convert2da]], [[tlk2xml]]
+[[convert2da]], [[tlk2xml]], [[fixpremiumgff]]
 
 = References =
 
