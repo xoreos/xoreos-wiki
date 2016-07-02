@@ -1,0 +1,42 @@
+Repair BioWare GFF files from encrypted NWN premium module HAKs.
+
+= Synopsis =
+
+ fixpremiumgff [<options>] <input_file> <output_file>
+
+= Description =
+
+In addition to being encrypted, the main HAK (ERF archive) of Neverwinter Nights premium modules also contains GFF files that have been deliberately broken. '''fixpremiumgff''' repairs those GFF files, turning them back into standard BioWare GFF files that can be read and manipulated by the usual GFF tools.
+
+= Options =
+
+'''-h''' <br />
+'''--help'''
+: Show a help text and exit.
+
+'''--version'''
+: Show version information and exit.
+
+'''--id''' <id>
+: Write the string id into the ID fields of the repaired GFF. By default, the ID is auto-detected from the file name of the broken file. For example, a broken module.ifo will by default turned into a standard GFF with an ID of "IFO", while an aribeth.dlg will get the "DLG" ID.
+
+<input_file>
+: The GFF file to repair.
+
+<output_file>
+: The repaired GFF file be be written there. This can be the same as the input file, to repair a broken GFF file in-place.
+
+= Examples =
+
+Repair the file module.ifo:
+ fixpremiumgff module.ifo module_fixed.ifo
+
+Repair the file module.ifo, but overwrite the ID:
+ fixpremiumgff --id DLG module.ifo module_fixed.ifo
+
+Repair the file module.ifo in-place:
+ fixpremiumgff module.ifo module.ifo
+
+= See also =
+
+[[gff2xml]], [[unerf]]
