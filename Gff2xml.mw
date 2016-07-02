@@ -24,6 +24,9 @@ The changes in the minor versions (V3.2 vs. V3.3 and V4.0 vs. V4.1) are less sig
 '''--cp1252'''
 : Read GFF4 strings as Windows CP-1252. Usually, strings in version 4 of the GFF format are encoded in little-endian UTF-16. But some files store them as Windows CP-1252 instead. Since there's no clean way to autodetect the different encoding, this switch manually selects Windows CP-1252.
 
+'''--nwnpremium'''
+: The GFF files found in the encrypted HAK files of Neverwinter Nights premium modules are deliberately broken. This options tells '''gff2xml''' to work around the brokenness.
+
 <input file>
 : The GFF file to convert.
 
