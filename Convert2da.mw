@@ -43,16 +43,16 @@ If more than one input file is given, they must all be GDA files and use the sam
 = Examples =
 
 Convert the 2DA file1.2da into an ASCII 2DA file2.2da:
- convert2da -a file1.2da file2.2da
+ convert2da -a file1.2da -o file2.2da
 
 Convert the 2DA file1.2da into an ASCII 2DA on stdout:
  convert2da -a file1.2da
 
 Convert the 2DA file1.2da into a binary 2DA file2.2da:
- convert2da -b file1.2da file2.2da
+ convert2da -b file1.2da -o file2.2da
 
 Convert the 2DA file1.2da into a CSV file:
- convert2da -c file1.2da file2.csv
+ convert2da -c file1.2da -o file2.csv
 
 = See also =
 
