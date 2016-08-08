@@ -396,6 +396,7 @@ This is a long rambly list of things left to do in xoreos and xoreos-tools. Anyb
 *** Effects need extension of the Sound system, maybe
 ** Xbox version might use the binary format?
 *** Sound banks could be handles as archives and indexed in the ResourceManager?
+** [https://github.com/FNA-XNA/FNA/tree/master/src/Audio FNA] has an implementation of XACT. Probably quite useful to look at that
 
 === NWN2 ===
 * Menus
