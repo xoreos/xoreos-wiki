@@ -215,6 +215,9 @@ This is a long rambly list of things left to do in xoreos and xoreos-tools. Anyb
 ** We should then show a summary of what is enabled/disabled at the end of the configure script
 * Switch to a non-recursive make setup?
 ** We still want a Makefile.am for each directory, so with include
+* Remove the need to list all subdirectories with AC_CONFIG_FILES() in the configure.ac
+** Parse Makefile.am for SUBDIRS, recursively?
+*** Needs to pick up conditionally added entries, like for glew
 
 == Nitro ==
 
