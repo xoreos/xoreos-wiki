@@ -218,6 +218,9 @@ This is a long rambly list of things left to do in xoreos and xoreos-tools. Anyb
 * Remove the need to list all subdirectories with AC_CONFIG_FILES() in the configure.ac
 ** Parse Makefile.am for SUBDIRS, recursively?
 *** Needs to pick up conditionally added entries, like for glew
+** Substitution needs to happen before automake is called!
+*** https://stackoverflow.com/questions/18200733/use-shell-commands-to-find-makefile-am-in-configure-ac
+*** <nowiki>AC_CONFIG_FILES(m4_esyscmd([find . -name Makefile.am | sed -e 's/^\.\///;s/\.am$//']))</nowiki>
 
 == Nitro ==
 
