@@ -80,7 +80,7 @@ Likewise, on NetBSD and other systems using pkgsrc, you should use [http://pkgsr
 
 ==Compiling xoreos==
 
-Make you have your compiler, build system and libraries installed correctly. Then open a terminal and change into the directory of your sources.
+Make sure you have your compiler, build system and libraries installed correctly. Then open a terminal and change into the directory of your sources.
 
 ===autotools===
 
