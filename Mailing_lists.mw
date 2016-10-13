@@ -2,6 +2,8 @@ The primary channel for important development-related discussion is the [[#xoreo
 
 There is one note about [[#xoreos-git|xoreos-git]]. Consider it as a read-only list, i.e. if you have comments/questions on someone's commit, post your follow-up to [[#xoreos-devel|xoreos-devel]].
 
+If you use gmail, be advised that gmail sometimes puts emails coming from smaller servers, like xoreos.org, into the spam folder. There is unfortunately nothing that we can do about this. 
+
 The full set of public lists are:
 
 ==xoreos-devel==
