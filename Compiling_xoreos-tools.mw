@@ -24,6 +24,20 @@ xoreos-tools uses the following libraries to function:
 * [https://en.wikipedia.org/wiki/Iconv iconv]
 * [http://www.zlib.net/ zlib] (>= 1.2.3.4)
 * [http://www.xmlsoft.org/ libxml2] (>= 2.8.0)
+* [http://www.boost.org/ Boost] (>= 1.53.0)
+** Boost.Utility
+** Boost.StringAlgo
+** Boost.System
+** Boost.Filesystem
+** Boost.Regex
+** Boost.Hash
+** Boost.Function
+** Boost.Bind
+** Boost.Uuid
+** Boost.Smart_Ptr
+** Boost.ScopeExit
+** Boost.Atomic
+** Boost.Locale
 
 On Debian-based GNU/Linux distribution (including Ubuntu), you should be able to install these libraries and their development packages with
 
