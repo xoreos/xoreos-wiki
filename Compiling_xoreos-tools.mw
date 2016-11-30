@@ -43,6 +43,10 @@ On Debian-based GNU/Linux distribution (including Ubuntu), you should be able to
 
  apt-get install zlib1g-dev libxml2-dev libboost-all-dev
 
+On Arch Linux, you can install these dependencies with
+
+ sudo pacman -S zlib libxml2 boost boost-libs
+
 Other GNU/Linux distributions should work similarily. Windows users have to visit each website manually and download a precompiled version, or, if not available, download the source and compile the library themselves.
 
 ==Compiling xoreos==
