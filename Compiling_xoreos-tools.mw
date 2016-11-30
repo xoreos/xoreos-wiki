@@ -41,7 +41,7 @@ xoreos-tools uses the following libraries to function:
 
 On Debian-based GNU/Linux distribution (including Ubuntu), you should be able to install these libraries and their development packages with
 
- apt-get install zlib1g-dev libxml2-dev
+ apt-get install zlib1g-dev libxml2-dev libboost-all-dev
 
 Other GNU/Linux distributions should work similarily. Windows users have to visit each website manually and download a precompiled version, or, if not available, download the source and compile the library themselves.
 
