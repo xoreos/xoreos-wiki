@@ -34,6 +34,7 @@ xoreos uses the following libraries to function:
 * [http://tukaani.org/xz/ liblzma] (>= 5.0.5)
 * [http://www.xmlsoft.org/ libxml2] (>= 2.8.0)
 * [http://www.boost.org/ Boost] (>= 1.53.0)
+** Boost.Utility
 ** Boost.StringAlgo
 ** Boost.System
 ** Boost.Filesystem
@@ -45,6 +46,7 @@ xoreos uses the following libraries to function:
 ** Boost.Bind
 ** Boost.Uuid
 ** Boost.Smart_Ptr
+** Boost.ScopeExit
 ** Boost.Atomic
 ** Boost.Locale
 * [https://en.wikipedia.org/wiki/OpenGL OpenGL] (>= 2.1)
