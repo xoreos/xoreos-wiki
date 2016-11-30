@@ -67,7 +67,7 @@ On Windows, if you're using MSYS2, you can install these dependencies for 32-bit
 
   pacman -S mingw-w64-i686-zlib mingw-w64-i686-libxml2 mingw-w64-i686-boost
 
-On Windows, if you're using MSYS2, you can install these dependencies for 32-bit with
+On Windows, if you're using MSYS2, you can install these dependencies for 64-bit with
 
   pacman -S mingw-w64-x86_64-zlib mingw-w64-x86_64-libxml2 mingw-w64-x86_64-boost
 
