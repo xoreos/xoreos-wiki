@@ -25,6 +25,16 @@ Due to the dependency on SDL2 (see below), you need at least Mac OS X 10.5 if yo
 
 Since Visual Studio does not work with autotools, you have to use the CMake build system if you want to compile xoreos with Visual Studio. If you're using [http://www.mingw.org/ MinGW], however, you're free to choose either build system.
 
+On Windows, it is recommended that instead of Visual Studio, you use [https://msys2.github.io/ MSYS2] together with [https://mingw-w64.org/ Mingw-w64] (which can produce both 32-bit and 64-bit binaries). MSYS2 provides a package manager, with which you can install xoreos' library dependencies very easily.
+
+You can install the 32-bit toolchain in MSYS2 with
+
+ <nowiki>pacman -S base-devel git mingw-w64-i686-toolchain mingw-w64-i686-cmake</nowiki>
+
+You can install the 64-bit toolchain in MSYS2 with
+
+ <nowiki>pacman -S base-devel git mingw-w64-x86_64-toolchain mingw-w64-x86_64-cmake</nowiki>
+
 ==Libraries==
 
 xoreos uses the following libraries to function:
@@ -70,7 +80,23 @@ On Arch Linux, you can install these dependencies with
  sudo pacman -S zlib xz libxml2 boost boost-libs sdl2 freetype2 openal libmad libogg \
      libvorbis faad2 xvidcore
 
-Other GNU/Linux distributions should work similarily. Windows users have to visit each website manually and download a precompiled version, or, if not available, download the source and compile the library themselves.
+Other GNU/Linux distributions should work similarily.
+
+On Windows, if you're using MSYS2, you can install these dependencies for 32-bit with
+
+  pacman -S mingw-w64-i686-zlib mingw-w64-i686-xz mingw-w64-i686-libxml2 \
+     mingw-w64-i686-boost mingw-w64-i686-SDL2 mingw-w64-i686-freetype \
+     mingw-w64-i686-openal mingw-w64-i686-libmad mingw-w64-i686-libogg \
+     mingw-w64-i686-libvorbis  mingw-w64-i686-faad2 mingw-w64-i686-xvidcore
+
+On Windows, if you're using MSYS2, you can install these dependencies for 32-bit with
+
+  pacman -S mingw-w64-x86_64-zlib mingw-w64-x86_64-xz mingw-w64-x86_64-libxml2 \
+     mingw-w64-x86_64-boost mingw-w64-x86_64-SDL2 mingw-w64-x86_64-freetype \
+     mingw-w64-x86_64-openal mingw-w64-x86_64-libmad mingw-w64-x86_64-libogg \
+     mingw-w64-x86_64-libvorbis  mingw-w64-x86_64-faad2 mingw-w64-x86_64-xvidcore
+
+Windows users not using MSYS2 will have to visit each website manually and download a precompiled version, or, if not available, download the source and compile the library themselves.
 
 === A note on OpenAL ===
 
