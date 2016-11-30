@@ -11,7 +11,11 @@ On Debian-based distributions (including Ubuntu), you should be able to install 
 
  <nowiki>apt-get install libc6-dev g++ make autoconf automake libtool gettext</nowiki>
 
-On other distributions, it should work similarily. 
+On Arch Linux, you can install the necessary packages with
+
+ <nowiki>sudo pacman -S base-devel cmake</nowiki>
+
+On other distributions, it should work similarily.
 
 ===Windows===
 
