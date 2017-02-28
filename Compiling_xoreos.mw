@@ -164,6 +164,14 @@ Optional, non-conventional cmake flags:
 
 Moreover, if you're running GNU/Linux and have wrapper scripts installed that force the building of "hardened" binaries (often called "hardening-wrapper", but differs between Linux distributions), compiling xoreos might fail during the linking stage, when using statically linking Boost libraries. This is due to those static Boost libraries being incompatible with the compiler option "-fPIE", which is often added by hardening wrapper scripts. A workaround is to disable -fPIE for this compilation (which is distribution-specific).
 
+==Unit tests==
+
+On both build systems,
+
+ <nowiki>make check</nowiki>
+
+compiles and runs our unit tests.
+
 ==Running xoreos==
 
 Please have a look at the [[Running xoreos]] page.
