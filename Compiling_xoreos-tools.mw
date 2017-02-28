@@ -111,3 +111,11 @@ Type
 The binaries can then be found in the bin subdirectory.
 
 Please read [http://www.cmake.org/runningcmake/ Running CMake] on the CMake website for in-depth information on invoking CMake.
+
+==Unit tests==
+
+On both build systems,
+
+ <nowiki>make check</nowiki>
+
+compiles and runs our unit tests.
