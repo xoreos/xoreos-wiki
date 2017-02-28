@@ -48,6 +48,10 @@ Once we've made sure that you understood and can follow the style and commit gui
 
 To avoid people accidentally working on the same feature, or otherwise stepping on each others' toes, consider announcement what you are working on in the [[IRC channel]] or the [[Mailing lists|mailing list]].
 
+== Continuous Integration ==
+
+The public xoreos repositories are build by two [https://en.wikipedia.org/wiki/Continuous_integration Continuous Integration] services on every push: [https://travis-ci.org/ Travis CI] (for GNU/Linux, using both the autotools and the CMake build systems and also using both gcc and clang) and [https://www.appveyor.com/ AppVeyor] (for Windows, using Microsoft Visual Studio). If a compilation error occurs, the build failure announced is on our [https://wiki.xoreos.org/index.php?title=IRC_channel IRC channel], so that it may be fixed quickly. Pull Requests are also run through these CI services and we like to have all failures fixed before merging.
+
 == Reverse engineering help ==
 
 For people starting out with reverse engineering, here are a few useful resources:
