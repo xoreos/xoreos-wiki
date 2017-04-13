@@ -79,15 +79,6 @@ This is a long rambly list of things left to do in xoreos and xoreos-tools. Anyb
 ** CBGT, CDPTH, DDS, NBFS, NCGR, NCLR, SBM, TGA, TPC, TXB
 ** 2DA, KEY/BIF, ERF, GFF3, GFF4, GDA, TLK, NSBTX, RIM, SMALL, SSF
 
-=== Command line parsing in the tools ===
-* Each tool currently does its own command line parsing => lots of code duplication
-* Could be abstracted away to make it less verbose
-* Maybe use an existing library
-** Should be small and easily integratable though
-** Needs to be expanded to handle our Common::UString
-* --nwn/--nwn2/... could be changed to --game nwn
-* --utf8/--cp1252/... could be changed to --encoding utf8
-
 === Script decompiler ===
 * It might be quite useful to have a NWScript decompiler in xoreos-tools
 * We have a script disassembler, ncsdis
