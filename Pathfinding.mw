@@ -1,0 +1,60 @@
+= Pathfinding =
+
+This is a collection of thoughts, documentations, mumbling, and explanation of the work done about pathfinding. Any ideas or comments are more than welcome.
+
+Up to now, only KotOR and nwn have been investigated. Any &quot;findings&quot; might not apply to other games.
+
+== How pathfinding works? ==
+
+The engine seems to use a [https://en.wikipedia.org/wiki/Navigation_mesh navigation mesh] or ''walkmesh'' as the underlying data structure. It is simply a polygon mesh where each face has a ''walk property'' to state if an agent/creature can walk on this particular face and what kind of material the face is (metal, carpet, grass,…).
+
+=== A* algorithm ===
+
+[[File:walkmesh_path_search.png|center|thumb|none|550x344px|Walkmesh in KotOR. The green faces are unwalkable. The pink adjacent faces represent a path between two points.]]
+
+The first step in pathfinding, is to find a series of adjacent faces among the navigation mesh that constitutes a path between two points. Ideally, the path is the shortest one but it highly depends on the quality of the ''walkmesh'' and the kind of algorithm used. As we want to reuse what is already there – the ''walkmesh'' – our only leverage will be the algorithm part though some pre-processing steps on the ''walkmesh'' might be needed as explained later.
+
+There are several algorithms that tries to achieve that goal. [https://en.wikipedia.org/wiki/A*_search_algorithm ''A*''] and all its variants is a widely used algorithm in games and real-time applications, it is both accurate and fast though it won’t necessarily give the best path but one of the bests. Basically, it will start from an endpoint of the path and try to go around, on another face, and estimates if it is closer to the other side of the path. The main area one can improve about the algorithm’s performance is on the way it thinks how closer it moves to the end. The function that gives this estimation is called the ''heuristic'' and will be discussed later.
+
+=== Simple Stupid Funnel Algorithm ===
+
+[[File:SSFA.png|center|thumb|none|525x328px|Another pathfinding search in KotOR using A* and the Simple Stupid Funnel Algorithm.]]
+
+Once we have a series of adjacent faces, comes the second step: to have a nice line our creature can follow. Again, there are several algorithms able to address that kind of issue, though I will focus on the [http://digestingduck.blogspot.be/2010/03/simple-stupid-funnel-algorithm.html Simple Stupid Funnel Algorithm](''SSFA'') taken from Mikko Mononen blogpost and author of the Recast and Detour toolset. The idea behind ''SSFA'', is like pulling two strings from the start to each border of the faces path. The algorithm goes from vertex to vertex that belongs to the border and must make the funnel formed by the two strings narrower at each iteration and lie inside the faces path. Otherwise, it has to pull the strings from a previous vertex. As an image is worth a thousand words:
+
+[[File:SSFA_explained.png|center|thumb|297x327px]]
+
+On the above image, A-B-C-D steps narrow the funnel. In the E step, the red string cannot move since it would be outside the path. In the F step, the two strings are crossing so it has to restart from a previous vertex in the next iteration ''i.e.'' the G step.
+
+One thing that ''SSFA'' doesn’t directly take into account is creature’s size. In deed, it gives us a path that sticks to the border. To deal with it, one trick[1] is to consider a circle around each vertex that cannot be crossed by the funnel.
+
+[[File:SSFA_size.png|center|277x261px]]
+[[File:pathfinding_smooth.png|center|503x320px]]
+
+=== Other steps ===
+
+While we can have <s>a beautiful</s> an acceptable path with ''A*'' and ''SSFA'' algorithms, the job is far from being done. First, the ''walkmesh'' doesn’t take into account all static objects like crates or seats. Somehow, some of those static objects are included in the walkmesh and some don’t (screw you bioware!). An idea to deal with that, would be to add those static objects to the walkmesh directly as a pre-processing step or simply consider them as dynamic objects.
+
+Anyway, pathfinding also have to handle dynamic objects ''i.e.'' the ones that can move, be destroyed or spontaneously appear. Contrary to the previous steps, this needs to be done along the path a creature is taking. I guess it should be independent from ''A*'' and ''SSFA'' and done by scanning with rays or something else what’s in front of the creature in real-time.
+
+== Show me the code! ==
+
+A first proof of concept has been made in this [https://github.com/Supermanu/xoreos/tree/pathfinding branch]. It is an awful code with lot of dead code and stuff nobody should ever see. It only works (''A*'' and ''SSFA'') with KotOr but has some code for nwn. Also, it needs [http://www.boost.org/doc/libs/1_63_0/libs/geometry/doc/html/index.html Boost.Geometry] to run. Let’s try to explain the code in details and the choices made.
+
+=== Walkmesh data format ===
+
+==== KotOR ====
+
+==== Nwn ====
+
+
+
+=== A* Algorithm ===
+
+
+
+
+
+== References ==
+
+[1] '''Efficient Triangulation-Based Pathfinding''', ''Douglas Demyen and Michael Buro''.
