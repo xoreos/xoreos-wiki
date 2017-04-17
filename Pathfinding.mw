@@ -50,10 +50,18 @@ A first proof of concept has been made in this [https://github.com/Supermanu/xor
 
 
 === A* Algorithm ===
+Though each game comes with it's own walkmesh dataformat, at the end we need an underlying structure that will store the walkmesh. In the ''POC'', the walkmesh is stored in 5 <code>std::vector</code>:
+* A vector of float which contains the vertices,
+* A vector of <code>UINT32</code> for each face of the walkmesh. It stores the related vertices and thus is three times the total number of faces (which are triangles).
+* A vector of <code>UINT32</code> for adjacent faces. It stores for each side of a face, the adjacent face. <code>UINT32_MAX</code> is used when there is no adjacent face.
+* A vector of <code>UINT32</code> for face property. It stores the kind of material the face is.
+* A vector of [https://en.wikipedia.org/wiki/Bounding_volume AABB] trees. Each leaf of an AABB tree embeds a face. This allows to make fast face search based on coordinate.
 
+==== Graph structure ====
+''A*'' is graph based algorithm with nodes and edges. Different choices can be made on what nodes and edges are. Vertices and faces can be taken as nodes as well as a side of a face, the edges being what connects them. For simplicity sake, in the ''POC'', face has been taken as node and face adjacency as edge. Other choices could lead to better or worst performances as regards of the length of the path and time spent.
 
-
-
+==== Open list ====
+''A* uses a priority queue to perform the repeated selection of minimum (estimated) cost nodes to expand'' [[https://en.wikipedia.org/wiki/A*_search_algorithm#Description Wikipedia]].
 
 == References ==
 
