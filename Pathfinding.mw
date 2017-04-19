@@ -1,14 +1,12 @@
-= Pathfinding =
-
 This is a collection of thoughts, documentations, mumbling, and explanation of the work done about pathfinding. Any ideas or comments are more than welcome.
 
 Up to now, only KotOR and nwn have been investigated. Any &quot;findings&quot; might not apply to other games.
 
-== How pathfinding works? ==
+= How pathfinding works? =
 
 The engine seems to use a [https://en.wikipedia.org/wiki/Navigation_mesh navigation mesh] or ''walkmesh'' as the underlying data structure. It is simply a polygon mesh where each face has a ''walk property'' to state if an agent/creature can walk on this particular face and what kind of material the face is (metal, carpet, grass,…).
 
-=== A* algorithm ===
+== A* algorithm ==
 
 [[File:walkmesh_path_search.png|center|thumb|none|550x344px|Walkmesh in KotOR. The green faces are unwalkable. The pink adjacent faces represent a path between two points.]]
 
@@ -16,7 +14,7 @@ The first step in pathfinding, is to find a series of adjacent faces among the n
 
 There are several algorithms that tries to achieve that goal. [https://en.wikipedia.org/wiki/A*_search_algorithm ''A*''] and all its variants is a widely used algorithm in games and real-time applications, it is both accurate and fast though it won’t necessarily give the best path but one of the bests. Basically, it will start from an endpoint of the path and try to go around, on another face, and estimates if it is closer to the other side of the path. The main area one can improve about the algorithm’s performance is on the way it thinks how closer it moves to the end. The function that gives this estimation is called the ''heuristic'' and will be discussed later.
 
-=== Simple Stupid Funnel Algorithm ===
+== Simple Stupid Funnel Algorithm ==
 
 [[File:SSFA.png|center|thumb|none|525x328px|Another pathfinding search in KotOR using A* and the Simple Stupid Funnel Algorithm.]]
 
@@ -31,25 +29,24 @@ One thing that ''SSFA'' doesn’t directly take into account is creature’s siz
 [[File:SSFA_size.png|center|277x261px]]
 [[File:pathfinding_smooth.png|center|503x320px]]
 
-=== Other steps ===
+== Other steps ==
 
 While we can have <s>a beautiful</s> an acceptable path with ''A*'' and ''SSFA'' algorithms, the job is far from being done. First, the ''walkmesh'' doesn’t take into account all static objects like crates or seats. Somehow, some of those static objects are included in the walkmesh and some don’t (screw you bioware!). An idea to deal with that, would be to add those static objects to the walkmesh directly as a pre-processing step or simply consider them as dynamic objects.
 
 Anyway, pathfinding also have to handle dynamic objects ''i.e.'' the ones that can move, be destroyed or spontaneously appear. Contrary to the previous steps, this needs to be done along the path a creature is taking. I guess it should be independent from ''A*'' and ''SSFA'' and done by scanning with rays or something else what’s in front of the creature in real-time.
 
-== Show me the code! ==
+= Show me the code! =
 
 A first proof of concept has been made in this [https://github.com/Supermanu/xoreos/tree/pathfinding branch]. It is an awful code with lot of dead code and stuff nobody should ever see. It only works (''A*'' and ''SSFA'') with KotOr but has some code for nwn. Also, it needs [http://www.boost.org/doc/libs/1_63_0/libs/geometry/doc/html/index.html Boost.Geometry] to run. Let’s try to explain the code in details and the choices made.
 
-=== Walkmesh data format ===
+== Walkmesh data format ==
 
-==== KotOR ====
+=== KotOR ===
 
-==== Nwn ====
+=== Nwn ===
 
+== A* Algorithm ==
 
-
-=== A* Algorithm ===
 Though each game comes with it's own walkmesh dataformat, at the end we need an underlying structure that will store the walkmesh. In the ''POC'', the walkmesh is stored in 5 <code>std::vector</code>:
 * A vector of float which contains the vertices,
 * A vector of <code>UINT32</code> for each face of the walkmesh. It stores the related vertices and thus is three times the total number of faces (which are triangles).
@@ -57,15 +54,15 @@ Though each game comes with it's own walkmesh dataformat, at the end we need an 
 * A vector of <code>UINT32</code> for face property. It stores the kind of material the face is.
 * A vector of [https://en.wikipedia.org/wiki/Bounding_volume AABB] trees. Each leaf of an AABB tree embeds a face. This allows to make fast face search based on coordinate.
 
-==== Graph structure ====
+=== Graph structure ===
 ''A*'' is graph based algorithm with nodes and edges. Different choices can be made on what nodes and edges are. Vertices and faces can be taken as nodes as well as a side of a face, the edges being what connects them. For simplicity sake, in the ''POC'', face has been taken as node and face adjacency as edge. Other choices could lead to better or worst performances as regards of the length of the path and time spent.
 
-==== Open list ====
+=== Open list ===
 ''A* uses a priority queue to perform the repeated selection of minimum (estimated) cost nodes to expand'' [[https://en.wikipedia.org/wiki/A*_search_algorithm#Description Wikipedia]]. The ''POC'' uses a <code>std::vector</code> which is sorted whenever a node is added. This is obviously not the fastest way to do it. <code>std::priority_queue</code> could be used as well as [http://www.boost.org/doc/libs/1_63_0/doc/html/heap.html boost.heap] which is, imho, more complete. Though performance drops might only appear with big/complex walkmesh.
 
-==== Estimation and heuristic function ====
+=== Estimation and heuristic function ===
 The total estimation when ''A*'' tries to find the best next node, is given by the sum of two functions. The current cost function that gives the current length of the path. and the heuristic function that estimates the length to the end. In the ''POC'', the former is measured by the path going through the middle of each edge it crosses (as seen in the [#A.2A_algorithm first image]). This could obviously changed, one can take the center of a face/triangle (incenter, centroid, …) for instance. The more naive heuristic function is simply the direct length to the endpoint. Again this could be improved in some specific cases, as the ''walkmesh'' is built from several parts (tiles, rooms,…), one can directly run ''A*'' on those by considering them as one big face. It could be a real improvement in maze like areas.
 
-== References ==
+= References =
 
 [1] '''Efficient Triangulation-Based Pathfinding''', ''Douglas Demyen and Michael Buro''.
