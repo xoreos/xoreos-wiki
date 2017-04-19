@@ -63,6 +63,9 @@ Though each game comes with it's own walkmesh dataformat, at the end we need an 
 ==== Open list ====
 ''A* uses a priority queue to perform the repeated selection of minimum (estimated) cost nodes to expand'' [[https://en.wikipedia.org/wiki/A*_search_algorithm#Description Wikipedia]]. The ''POC'' uses a <code>std::vector</code> which is sorted whenever a node is added. This is obviously not the fastest way to do it. <code>std::priority_queue</code> could be used as well as [http://www.boost.org/doc/libs/1_63_0/doc/html/heap.html boost.heap] which is, imho, more complete. Though performance drops might only appear with big/complex walkmesh.
 
+==== Estimation and heuristic function ====
+The total estimation when ''A*'' tries to find the best next node, is given by the sum of two functions. The current cost function that gives the current length of the path. and the heuristic function that estimates the length to the end. In the ''POC'', the former is measured by the path going through the middle of each edge it crosses (as seen in the [#A.2A_algorithm first image]). This could obviously changed, one can take the center of a face/triangle (incenter, centroid, …) for instance. The more naive heuristic function is simply the direct length to the endpoint. Again this could be improved in some specific cases, as the ''walkmesh'' is built from several parts (tiles, rooms,…), one can directly run ''A*'' on those by considering them as one big face. It could be a real improvement in maze like areas.
+
 == References ==
 
 [1] '''Efficient Triangulation-Based Pathfinding''', ''Douglas Demyen and Michael Buro''.
