@@ -66,6 +66,9 @@ The total estimation when ''A*'' tries to find the best next node, is given by t
 === External libraries ===
 Several geometric functions are needed to make everything work (intersections between different polygons, distances,…) though most of them in the 'POC' are home-made/based on google results, some use Boost.geometry (at least one) for simplicity sake. I guess, we should use this library as most as possible from a maintenance, efficiency and performance perspective. There is also [http://www.cgal.org/ CGAL] that seems complete though it didn't convince me at first sight.
 
+== Simple Stupid Funnel Algorithm ==
+The 'SSFA' is relatively straighforward technicaly. The main difficulty is about creature's size. In order to take it into account, the 'POC' computes tangents between the circles around vertices. 
+
 = References =
 
 [1] '''Efficient Triangulation-Based Pathfinding''', ''Douglas Demyen and Michael Buro''.
