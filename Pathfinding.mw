@@ -63,6 +63,9 @@ Though each game comes with it's own walkmesh dataformat, at the end we need an 
 === Estimation and heuristic function ===
 The total estimation when ''A*'' tries to find the best next node, is given by the sum of two functions. The current cost function that gives the current length of the path. and the heuristic function that estimates the length to the end. In the ''POC'', the former is measured by the path going through the middle of each edge it crosses (as seen in the [#A.2A_algorithm first image]). This could obviously changed, one can take the center of a face/triangle (incenter, centroid, …) for instance. The more naive heuristic function is simply the direct length to the endpoint. Again this could be improved in some specific cases, as the ''walkmesh'' is built from several parts (tiles, rooms,…), one can directly run ''A*'' on those by considering them as one big face. It could be a real improvement in maze like areas.
 
+=== External libraries ===
+Several geometric functions are needed to make everything work (intersections between different polygons, distances,…) though most of them in the 'POC' are home-made/based on google results, some use Boost.geometry (at least one) for simplicity sake. I guess, we should use this library as most as possible from a maintenance, efficiency and performance perspective. There is also [http://www.cgal.org/ CGAL] that seems complete though it didn't convinced me at first sight.
+
 = References =
 
 [1] '''Efficient Triangulation-Based Pathfinding''', ''Douglas Demyen and Michael Buro''.
