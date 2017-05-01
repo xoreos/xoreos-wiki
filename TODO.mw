@@ -339,7 +339,7 @@ This is a long rambly list of things left to do in xoreos and xoreos-tools. Anyb
 * Menus
 ** Basics are there, but needs fleshing out
 ** Supermanu is working on the character generator
-* Pathfinding, walkmesh
+* [[Pathfinding]], walkmesh
 ** "Moving" should move the PC, not the camera
 ** NPC walking
 ** Triggers, areas on the floor that calls scripts on enter/leave
