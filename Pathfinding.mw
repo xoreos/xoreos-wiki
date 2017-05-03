@@ -39,6 +39,11 @@ Anyway, pathfinding also have to handle dynamic objects ''i.e.'' the ones that c
 
 A first proof of concept has been made in this [https://github.com/Supermanu/xoreos/tree/pathfinding branch]. It is an awful code with lot of dead code and stuff nobody should ever see. It only works (''A*'' and ''SSFA'') with KotOr but has some code for nwn. Also, it needs [http://www.boost.org/doc/libs/1_63_0/libs/geometry/doc/html/index.html Boost.Geometry] to run. Let’s try to explain the code in details and the choices made.
 
+== General considerations ==
+=== 3D vectors ===
+Both algorithms extensively use 3D vectors and related operations. Should we use <code>Common::Vector3</code> generally or only when it is really needed and uses arrays for all the other cases?
+
+
 == Walkmesh data format ==
 
 === KotOR ===
