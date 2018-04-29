@@ -427,6 +427,9 @@ This is a long rambly list of things left to do in xoreos and xoreos-tools. Anyb
 ** Flash-based!
 ** A good starting point for a reimplementation might be [https://en.wikipedia.org/wiki/Gameswf Gameswf].
 ** [https://en.wikipedia.org/wiki/Gnash Gnash], [https://en.wikipedia.org/wiki/Lightspark Lightspark], [https://en.wikipedia.org/wiki/Swfdec Swfdec]
-** [http://www.nowrap.de/flasm.html Flasm] can disassemble/assemble ActionScript, [http://www.nowrap.de/flare.html Flare] can decompile it
+** [http://www.nowrap.de/flasm.html Flasm] can disassemble/assemble ActionScript, 
+[http://www.nowrap.de/flare.html Flare] can decompile it
+** [https://wwwimages2.adobe.com/content/dam/acom/en/devnet/pdf/swf-file-format-spec.pdf swf-file-format-spec.pdf] is a great reference which covers mostly every aspect of the gfx files.
+** [https://github.com/jindrapetrik/jpexs-decompiler jpexs-decompiler] can decompile and handles scaleform specific tags.
 * Animations
 ** Bone animations, best implemented with shaders, blocked by the graphics subsystem rewrite
