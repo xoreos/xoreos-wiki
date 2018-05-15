@@ -359,7 +359,7 @@ This is a long rambly list of things left to do in xoreos and xoreos-tools. Anyb
 
 === Jade Empire ===
 * Menus
-** Apparently very similar to KotOR's menus
+** Main menu with options submenu is there
 * Minigames
 ** Flyer, top-down shoot-em-up thing
 ** Hardcoded, mostly removed from usual game logic
@@ -371,7 +371,7 @@ This is a long rambly list of things left to do in xoreos and xoreos-tools. Anyb
 *** Effects need extension of the Sound system, maybe
 ** Xbox version might use the binary format?
 *** Sound banks could be handles as archives and indexed in the ResourceManager?
-** [https://github.com/FNA-XNA/FNA/tree/master/src/Audio FNA] has an implementation of XACT. Probably quite useful to look at that
+** [https://github.com/flibitijibibo/FACT FACT] is an implementation of XAudio, including XACT, zlib-licensed
 
 === NWN2 ===
 * Menus
