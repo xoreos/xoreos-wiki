@@ -342,8 +342,7 @@ This is a long rambly list of things left to do in xoreos and xoreos-tools. Anyb
 
 === KotOR/KotOR2 ===
 * Menus
-** Basic structure is already there, just missing most of the specific widgets stuff
-** Semi-hardcoded, with GFF files (hierachical data, similar to XML in spirit) describing the setup. The xoreos-tools repository has a tool for converting GFF files into XML for easy reading.
+** Many are already there
 * Dialogues
 ** DLG files, similar to NWN
 ** Some extensions, like camera setup
@@ -352,10 +351,7 @@ This is a long rambly list of things left to do in xoreos and xoreos-tools. Anyb
 *** Passing parameters to scripts
 *** Call several scripts, combine with AND/OR for branching
 * Animations
-** Should be similar to NWN
-** No player character shown
-*** Needs character creator menus
-*** Loading of character files in class Creature
+** Mostly working now
 * Minigames
 ** Swoop racing
 ** Pazaak
