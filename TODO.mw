@@ -181,7 +181,7 @@ This is a long rambly list of things left to do in xoreos and xoreos-tools. Anyb
 
 === CMake ===
 * Current doesn't set the git version to "+unk" when git isn't found
-* make install?
+* make install/uninstall?
 * make doxygen?
 
 === Autotools ===
