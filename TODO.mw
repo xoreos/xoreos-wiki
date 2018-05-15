@@ -212,7 +212,6 @@ This is a long rambly list of things left to do in xoreos and xoreos-tools. Anyb
 === MDL supermodels and animations ===
 * Mostly working in NWN thanks to jbowtie's work
 * Might need some cleanup
-* Animation scale is off in a lot of cases. Mostly visible in the talking and yawning animations in non-human characters
 * Models should smoothly change between different animations
 * The animation system probably needs to be a bit more complex, to allow for "overlaying" different animations onto each other. For example, for speaking while holding an object and keeping the head focused on the PC character.
 
