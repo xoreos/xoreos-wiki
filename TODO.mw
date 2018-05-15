@@ -269,6 +269,7 @@ This is a long rambly list of things left to do in xoreos and xoreos-tools. Anyb
 ** It still needs to handle different memory layouts, though
 * Likewise, our Huffman class could probably be tuned a lot
 * Pull in fft/rdft/dct/mdct optimizations from FFmpeg?
+* I experimented with that in a private branch and it didn't do anything for Bink performance
 
 == Sound ==
 
