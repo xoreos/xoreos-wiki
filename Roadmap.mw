@@ -14,7 +14,7 @@ Numbers in square brackets represent the order in which we believe these feature
 * Scripting
 ** Triggers (activation by PC position) [1]
 ** Implement missing functions
-** Anything required to pass through the first room on Endar Spire [6]
+*** Anything required to pass through the first room on Endar Spire [6]
 * Conversations/cutscenes
 ** Character animation [2]
 ** Camera setup [3]
