@@ -1,0 +1,37 @@
+== KotOR / KotOR 2 ==
+
+Number one priority is to implement core gameplay of the original games, i.e., exploration, conversations/cutscenes, combat and GUI, which implies implementation of resource management, graphics, scripting, RPG and sound systems. Then goes the extra stuff, e.g., minigames, auxiliary menus, graphics improvements, networking, etc. Below is a rough list of features required to achieve feature parity with the original games and surpass them.
+
+Numbers in square brackets represent the order in which we believe these features should be implemented.
+
+* General
+** Inventory mechanics (containers and characters) [4]
+** Character equipment (item slots, changeable models w/ attachables) [5]
+** Pathfinding [7]
+** Party members (switch between, follower behavior) [8]
+** Doors (interaction, collision detection) [9]
+** Module to module transitions
+* Scripting
+** Triggers (activation by PC position) [1]
+** Implement missing functions
+** Anything required to pass through the first room on Endar Spire [6]
+* Conversations/cutscenes
+** Character animation [2]
+** Camera setup [3]
+** Activation distance
+** Continuous flow when there are no selectable replies
+* Combat
+** Turn based game mode, action queue
+** Action execution (closing in, animation)
+** DnD based hit chance and damage calculations
+** Death + body bags
+* Savegames
+** Loading all known state
+*** PC gender, class, head, skin type, orientation, etc.
+*** Script variables
+* Savegame creation
+* Graphics
+** Shader based skeletal animation
+* Minigames
+** Swoop racing
+** Pazaak
