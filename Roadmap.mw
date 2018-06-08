@@ -7,15 +7,15 @@ Numbers in square brackets represent the order in which we believe these feature
 * General
 ** Inventory mechanics (containers and characters) [1]
 ** Character equipment (item slots, changeable models w/ attachables) [2]
-** Pathfinding [4]
-** Party members (switch between, follower behavior) [5]
+** Pathfinding
+** Party members (switch between, follower behavior)
 * Scripting
 ** Implement missing functions
 *** Anything required to pass through the first room on Endar Spire [3]
 * Conversations/cutscenes
-** Scripted characters animations
+** Scripted characters animations [4]
+** Camera setup [5]
 ** Activation distance
-** Camera setup
 ** Alien and droid voice over in KotOR 2
 ** Continuous flow when there are no selectable replies
 * Combat
