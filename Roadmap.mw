@@ -5,22 +5,19 @@ Number one priority is to implement core gameplay of the original games, i.e., e
 Numbers in square brackets represent the order in which we believe these features should be implemented.
 
 * General
-** Doors (interaction, collision detection) [3]
-** Inventory mechanics (containers and characters) [4]
-** Character equipment (item slots, changeable models w/ attachables) [5]
-** Pathfinding [7]
-** Party members (switch between, follower behavior) [8]
+** Pathfinding [1]
+** Inventory mechanics (containers and characters) [2]
+** Character equipment (item slots, changeable models w/ attachables) [3]
+** Party members (switch between, follower behavior) [4]
 * Scripting
 ** Implement missing functions
-*** Anything required to pass through the first room on Endar Spire [6]
+*** Anything required to pass through the first room on Endar Spire [5]
 * Conversations/cutscenes
 ** Character animation
-*** Speaker facing PC [1]
-*** Generic talk animations [2]
 *** Scripted animations
 ** Activation distance
 ** Camera setup
-** Fix missing alien and droid voice over in KotOR 2
+** Alien and droid voice over in KotOR 2
 ** Continuous flow when there are no selectable replies
 * Combat
 ** Turn based game mode, action queue
