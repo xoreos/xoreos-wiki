@@ -5,13 +5,13 @@ Number one priority is to implement core gameplay of the original games, i.e., e
 Numbers in square brackets represent the order in which we believe these features should be implemented.
 
 * General
-** Pathfinding [1]
-** Inventory mechanics (containers and characters) [2]
-** Character equipment (item slots, changeable models w/ attachables) [3]
-** Party members (switch between, follower behavior) [4]
+** Inventory mechanics (containers and characters) [1]
+** Character equipment (item slots, changeable models w/ attachables) [2]
+** Pathfinding [4]
+** Party members (switch between, follower behavior) [5]
 * Scripting
 ** Implement missing functions
-*** Anything required to pass through the first room on Endar Spire [5]
+*** Anything required to pass through the first room on Endar Spire [3]
 * Conversations/cutscenes
 ** Scripted characters animations
 ** Activation distance
