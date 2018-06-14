@@ -71,13 +71,17 @@ This is a long rambly list of things left to do in xoreos and xoreos-tools. Anyb
 * Our console code needs to take that into account
 
 === Fuzzing ===
-* Run our file readers, image decoders, etc. through a fuzzer, like [http://lcamtuf.coredump.cx/afl/ afl] (american fuzzy lop)
-* Fix any cases where it crashes
-* The xoreos-tools might be a good starting point for singular, standalone testing
-** For image decoders, a slightly modified xoreostex2tga tool might work
-* File formats already fuzzed:
+* Set up fuzzing targets for everything for [https://llvm.org/docs/LibFuzzer.html libFuzzer]
+** File readers, image decoders, etc.
+* Can be integrated with [http://lcamtuf.coredump.cx/afl/ afl] (american fuzzy lop): https://github.com/llvm-mirror/compiler-rt/blob/master/lib/fuzzer/afl/afl_driver.cpp
+* Integrate it with our build system somehow
+** ./configure flag for building with fuzzing instrumentation?
+** Needs to check that the compiler can do that
+** make fuzzers then builds the targets?
+* File formats previously manually fuzzed with afl:
 ** CBGT, CDPTH, DDS, NBFS, NCGR, NCLR, SBM, TGA, TPC, TXB
 ** 2DA, KEY/BIF, ERF, GFF3, GFF4, GDA, TLK, NSBTX, RIM, SMALL, SSF
+* Continuous fuzzing via [https://github.com/google/oss-fuzz OSS-Fuzz] (currently only taking "important" projects)
 
 === Script decompiler ===
 * It might be quite useful to have a NWScript decompiler in xoreos-tools
