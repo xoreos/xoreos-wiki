@@ -390,6 +390,7 @@ This is a long rambly list of things left to do in xoreos and xoreos-tools. Anyb
 * Proper evaluation of creature model parts (equipped items)
 * Player character
 ** Reading of PC files in creature
+* Walkmeshes. CromFr wrote a specs document here: https://gist.github.com/CromFr/104bac52dc9191099d9d9e3dbd2c4975
 
 === Sonic Chronicles ===
 * Allow using the contents from an extracted NDS file?
