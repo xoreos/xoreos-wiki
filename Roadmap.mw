@@ -1,8 +1,10 @@
 == KotOR / KotOR 2 ==
 
-Number one priority is to implement core gameplay of the original games, i.e., exploration, conversations/cutscenes, combat and GUI, which implies implementation of resource management, graphics, scripting, RPG and sound systems. Then goes the extra stuff, e.g., minigames, auxiliary menus, graphics improvements, networking, etc. Below is a rough list of features required to achieve feature parity with the original games and surpass them.
+Number one priority is to implement the core gameplay of the original games, i.e., exploration, conversations/cutscenes, combat and GUI, which implies implementation of resource management, graphics, scripting, RPG and sound systems. Then goes the extra stuff, e.g., minigames, auxiliary menus, graphics improvements, networking, etc. Below is a rough list of features required to achieve feature parity with the original games and areas for improvement.
 
 Numbers in square brackets represent the order in which we believe these features should be implemented.
+
+=== Phase 1 ===
 
 * General
 ** Inventory mechanics (containers and characters) [1]
