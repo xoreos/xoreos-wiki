@@ -11,12 +11,12 @@ Text in square brackets represents feature priority and who it is assigned to.
 ** Party management
 
 * Scripting
-** Implement missing functions [4:seedhartha]
+** Implement missing functions [1:seedhartha]
 
 * Conversations/cutscenes
-** Camera setup [1:seedhartha]
-** Scripted animations [2:seedhartha]
-** Continuous flow [3:seedhartha]
+** Camera setup [2:seedhartha]
+** Scripted animations [3:seedhartha]
+** Continuous flow [4:seedhartha]
 ** Activation distance
 
 * Combat
