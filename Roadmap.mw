@@ -7,27 +7,15 @@ Numbers in square brackets represent the order in which we believe these feature
 === Phase 1 - Necessities ===
 
 * General
-** Inventory mechanics (containers and characters)
-** Character equipment (item slots, changeable models w/ attachables)
 ** Pathfinding
 ** Party members (switch between, follower behavior)
 
-* GUI
-** Character generation
-** Save/load
-** In-game
-*** Equip
-*** Inventory
-*** Level up
-*** Party selection
-
 * Scripting
 ** Implement missing functions
-*** Anything required to pass through the first room on Endar Spire [3]
 
 * Conversations/cutscenes
-** Scripted characters animations [4]
-** Camera setup [5]
+** Scripted characters animations
+** Camera setup
 ** Activation distance
 ** Alien and droid voice over in KotOR 2
 ** Continuous flow when there are no selectable replies
@@ -38,14 +26,14 @@ Numbers in square brackets represent the order in which we believe these feature
 ** DnD based hit chance and damage calculations
 ** Death + body bags
 
-* Savegames
-** Loading all known state
-*** PC gender, class, head, skin type, orientation, etc.
-*** Script variables
-
-* Savegame creation
-* Graphics
-** Shader based skeletal animation
+* GUI
+** Character generation
+** Save/load
+** In-game
+*** Equip
+*** Inventory
+*** Level up
+*** Party selection
 
 === Phase 2 - Auxiliary  ===
 
@@ -69,3 +57,6 @@ Numbers in square brackets represent the order in which we believe these feature
 * Minigames
 ** Swoop racing
 ** Pazaak
+
+* Graphics
+** Shader based skeletal animation
