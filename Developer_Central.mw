@@ -69,6 +69,20 @@ For people starting out with reverse engineering, here are a few useful resource
 * [http://wiki.xentax.com/index.php?title=Game_File_Format_Central XentaxWiki] focuses on game file formats. They too have a [http://wiki.xentax.com/index.php?title=DGTEFF guide page]
 * For audio and video formats, there's [http://wiki.multimedia.cx/ MultimediaWiki], which is associated with the ffmpeg and libav projects
 
+== Modding communities ==
+
+A lot of information about the file formats can be gleamed from the modding communities:
+
+* [https://neverwintervault.org/ The Neverwinter Vault] for Neverwinter Nights and Neverwinter Nights 2
+* [http://nwn2.wikia.com/wiki/Main_Page NWN2 wiki] for Neverwinter Nights 2
+* [https://deadlystream.com/ Deadly Stream] for Knights of the Old Republic and Knights of the Old Republic II
+* [http://jadeempire-modding.wikia.com/wiki/Jade_Empire_Modding_Wiki Jade Empire Modding wiki] for Jade Empire
+* The [http://www.datoolset.net/wiki/Main_Page Dragon Age Toolset wiki] for Dragon Age: Origins and Dragon Age II
+* The [http://witcher.wikia.com/wiki/Category:File_Formats Witcher wiki] for The Witcher
+* [http://sonicretro.org/ Sonic Retro] for Sonic Chronicles
+* [https://www.nexusmods.com/ Nexus Mods]
+* [https://nwnlexicon.com/index.php?title=Main_Page NWN Lexicon]
+
 == To do list ==
 
 Our [[TODO|Main TODO list]] contains a rambly, non-exhaustive collection of things left to do.
