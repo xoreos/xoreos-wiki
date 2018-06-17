@@ -385,6 +385,8 @@ This is a long rambly list of things left to do in xoreos and xoreos-tools. Anyb
 ** [https://github.com/SkywingvL/nwn2dev-public nwn2-dev] contains some code working with Granny data
 *** Call into the original Granny DLL to convert between binary and ASCII Granny data, though
 ** [https://github.com/berenm/xoreos-tools/tree/granny berenm started some Granny RE]
+** Based on berenm's RE efforts, Arbos has written a tool to convert to/from MDB+GR2: https://github.com/Arbos/nwn2mdk
+*** Probably a good starting point for integrating NWN2 animations into xoreos
 * Facial animations (FaceFX)
 * Trees (SpeedTree)
 * Proper evaluation of creature model parts (equipped items)
