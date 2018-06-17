@@ -11,12 +11,12 @@ Numbers in square brackets represent the order in which we believe these feature
 ** Party management
 
 * Scripting
-** Implement missing functions [4]
+** Implement missing functions [4|seedhartha]
 
 * Conversations/cutscenes
-** Camera setup [1]
-** Scripted animations [2]
-** Continuous flow [3]
+** Camera setup [1|seedhartha]
+** Scripted animations [2|seedhartha]
+** Continuous flow [3|seedhartha]
 ** Activation distance
 
 * Combat
