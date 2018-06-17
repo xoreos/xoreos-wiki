@@ -8,23 +8,21 @@ Numbers in square brackets represent the order in which we believe these feature
 
 * General
 ** Pathfinding
-** Party members (switch between, follower behavior)
+** Party management
 
 * Scripting
-** Implement missing functions
+** Implement missing functions [4]
 
 * Conversations/cutscenes
-** Scripted characters animations
-** Camera setup
+** Camera setup [1]
+** Scripted animations [2]
+** Continuous flow [3]
 ** Activation distance
-** Alien and droid voice over in KotOR 2
-** Continuous flow when there are no selectable replies
 
 * Combat
-** Turn based game mode, action queue
-** Action execution (closing in, animation)
-** DnD based hit chance and damage calculations
-** Death + body bags
+** Turn based action queue
+** Normal attacks
+** Death, body bags
 
 * GUI
 ** Character generation
@@ -36,6 +34,17 @@ Numbers in square brackets represent the order in which we believe these feature
 *** Party selection
 
 === Phase 2 - Auxiliary  ===
+
+* General
+** Stores
+
+* Conversations/cutscenes
+** Alien/droid voice over in KotOR 2
+
+* Combat
+** Force Powers
+** Grenades
+** Mines
 
 * GUI
 ** In-game
