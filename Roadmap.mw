@@ -4,34 +4,68 @@ Number one priority is to implement core gameplay of the original games, i.e., e
 
 Numbers in square brackets represent the order in which we believe these features should be implemented.
 
-=== Phase 1 ===
+=== Phase 1 - Necessities ===
 
 * General
-** Inventory mechanics (containers and characters) [1]
-** Character equipment (item slots, changeable models w/ attachables) [2]
+** Inventory mechanics (containers and characters)
+** Character equipment (item slots, changeable models w/ attachables)
 ** Pathfinding
 ** Party members (switch between, follower behavior)
+
+* GUI
+** Character generation
+** Save/load
+** In-game
+*** Equip
+*** Inventory
+*** Level up
+*** Party selection
+
 * Scripting
 ** Implement missing functions
 *** Anything required to pass through the first room on Endar Spire [3]
+
 * Conversations/cutscenes
 ** Scripted characters animations [4]
 ** Camera setup [5]
 ** Activation distance
 ** Alien and droid voice over in KotOR 2
 ** Continuous flow when there are no selectable replies
+
 * Combat
 ** Turn based game mode, action queue
 ** Action execution (closing in, animation)
 ** DnD based hit chance and damage calculations
 ** Death + body bags
+
 * Savegames
 ** Loading all known state
 *** PC gender, class, head, skin type, orientation, etc.
 *** Script variables
+
 * Savegame creation
 * Graphics
 ** Shader based skeletal animation
+
+=== Phase 2 - Auxiliary  ===
+
+* GUI
+** In-game
+*** Character sheet
+*** Abilities
+*** Messages
+*** Quests
+*** Map
+
+=== Phase 3 - Miscellaneous ===
+
+* GUI
+** Main menu
+*** Movies
+*** Options
+** In-game
+*** Options
+
 * Minigames
 ** Swoop racing
 ** Pazaak
