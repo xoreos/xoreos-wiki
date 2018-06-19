@@ -106,6 +106,7 @@ Windows users not using MSYS2 will have to visit each website manually and downl
 * Download ftp://xmlsoft.org/libxml2/libxml2-2.9.8.tar.gz, extract and build the library by following instructions in win32/Readme.txt
 * Download and install precompiled Boost libraries from https://sourceforge.net/projects/boost/files/boost-binaries/1.67.0/
 * Download and extract https://www.libsdl.org/release/SDL2-devel-2.0.8-VC.zip
+* Download https://download.savannah.gnu.org/releases/freetype/ft291.zip and build the library using CMake
 
 === A note on OpenAL ===
 
