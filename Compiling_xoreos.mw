@@ -98,11 +98,11 @@ On Windows, if you're using MSYS2, you can install these dependencies for 64-bit
 
 Windows users not using MSYS2 will have to visit each website manually and download a precompiled version, or, if not available, download the source and compile the library themselves.
 
-Step-by-step guide to installing dependencies for Visual Studio 2017 users on Windows:
+===  Guide for Visual Studio 2017 users ===
 
-# Download iconv implementation from [https://github.com/win-iconv/win-iconv win-iconv] and build it using CMake
-
-  mkdir build && cd build && cmake .. -G "Visual Studio 15 2017 x64"
+* iconv: download source from [https://github.com/win-iconv/win-iconv], build using CMake
+* zlib: download [https://zlib.net/zlib1211.zip], extract and build using CMake
+* liblzma: download [https://tukaani.org/xz/xz-5.2.4.tar.gz], extract and build using solution file in windows/vs2017
 
 === A note on OpenAL ===
 
