@@ -98,6 +98,10 @@ On Windows, if you're using MSYS2, you can install these dependencies for 64-bit
 
 Windows users not using MSYS2 will have to visit each website manually and download a precompiled version, or, if not available, download the source and compile the library themselves.
 
+Step-by-step guide to installing dependencies for Visual Studio users:
+
+# Download and build [https://github.com/win-iconv/win-iconv win-iconv] using CMake
+
 === A note on OpenAL ===
 
 On Mac OS X, we're using Apple's OpenAL implementation, so OpenAL does not need to be installed separately there.
