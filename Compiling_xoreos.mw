@@ -103,7 +103,7 @@ Windows users not using MSYS2 will have to visit each website manually and downl
 * Download source from https://github.com/win-iconv/win-iconv and build the library using CMake
 * Download https://zlib.net/zlib1211.zip, extract and build the library using CMake
 * Download https://tukaani.org/xz/xz-5.2.4.tar.gz, extract and build the library using solution file in windows/vs2017
-* Download ftp://xmlsoft.org/libxml2/libxml2-2.9.8.tar.gz, extract and build the library using instructions in win32/Readme.txt
+* Download ftp://xmlsoft.org/libxml2/libxml2-2.9.8.tar.gz, extract and build the library by following instructions in win32/Readme.txt
 
 === A note on OpenAL ===
 
