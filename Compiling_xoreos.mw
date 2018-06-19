@@ -123,7 +123,7 @@ or, for 64-bit
 
   cmake .. -G "Visual Studio 15 2017 Win64"
 
-Open CMakeCache.txt in your favorite text editor and fill in missing information as needed. Then run cmake again. Project solution files should be created at this point.
+Open CMakeCache.txt in your favorite text editor and fill in missing information as needed. Then run cmake again. Project's solution file should be created at this point.
 
 === A note on OpenAL ===
 
