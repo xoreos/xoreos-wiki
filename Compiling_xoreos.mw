@@ -115,13 +115,15 @@ Windows users not using MSYS2 will have to visit each website manually and downl
 * Download https://downloads.xvid.com/downloads/xvidcore-1.3.5.zip, extract and build the library using the solution file in build/win32 (requires NASM to be installed and present in PATH)
 * Build xoreos using CMake
 
-To build a project using CMake, create a folder named build in a root directory of a project and from there invoke
+To build a project using CMake, create a folder named '''build''' in a root directory of a project and from there invoke
 
   cmake .. -G "Visual Studio 15 2017"
 
 or, for 64-bit
 
   cmake .. -G "Visual Studio 15 2017 Win64"
+
+Open CMakeCache.txt in your favorite text editor and fill in missing information as needed. Then run cmake again. Project solution files should be created at this point.
 
 === A note on OpenAL ===
 
