@@ -107,6 +107,7 @@ Windows users not using MSYS2 will have to visit each website manually and downl
 * Download and install precompiled Boost libraries from https://sourceforge.net/projects/boost/files/boost-binaries/1.67.0/
 * Download and extract https://www.libsdl.org/release/SDL2-devel-2.0.8-VC.zip
 * Download https://download.savannah.gnu.org/releases/freetype/ft291.zip and build the library using CMake
+* Download and extract http://kcat.strangesoft.net/openal-binaries/openal-soft-1.18.2-bin.zip
 
 === A note on OpenAL ===
 
