@@ -119,7 +119,7 @@ To build a project using CMake, create a folder named build in a root directory 
 
   cmake .. -G "Visual Studio 15 2017"
 
-or for 64-bit
+or, for 64-bit
 
   cmake .. -G "Visual Studio 15 2017 Win64"
 
