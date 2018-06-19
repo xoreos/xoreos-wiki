@@ -98,9 +98,9 @@ On Windows, if you're using MSYS2, you can install these dependencies for 64-bit
 
 Windows users not using MSYS2 will have to visit each website manually and download a precompiled version, or, if not available, download the source and compile the library themselves.
 
-Step-by-step guide to installing dependencies for Visual Studio users:
+Step-by-step guide to installing dependencies for Visual Studio users on Windows:
 
-# Download and build [https://github.com/win-iconv/win-iconv win-iconv] using CMake
+# Download iconv implementation from [https://github.com/win-iconv/win-iconv win-iconv] and build it with CMake
 
 === A note on OpenAL ===
 
