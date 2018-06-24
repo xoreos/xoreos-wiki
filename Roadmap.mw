@@ -9,15 +9,15 @@ Text in square brackets represents feature priority and who it is assigned to.
 * General
 ** Object selection [?:Nostritius]
 ** Pathfinding [?:Supermanu]
-** Party management
+** Party management [2:seedhartha]
 
 * Scripting
-** Implement missing functions [1:seedhartha]
+** Implement missing functions
 
 * Conversations/cutscenes
-** Camera setup [2:seedhartha]
-** Scripted animations [3:seedhartha]
-** Continuous flow [4:seedhartha]
+** Camera setup [1:seedhartha]
+** Scripted animations
+** Continuous flow
 ** Activation distance
 
 * Combat
