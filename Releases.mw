@@ -1,0 +1,95 @@
+__TOC__
+
+==git tag and version numbers==
+
+In general, a full xoreos release consists of two tags in each of the xoreos, xoreos-tools and phaethon repositories. On tag is the actual release, which looks like "v0.0.4". The other is used to calculate the number of commits since the release for git builds and looks like "desc/0.0.4".
+
+Both tags point to the same release announcement commit. The release tag will have release notes, source and pre-compiled binary packages for Linux, macOS and Windows attached on GitHub. The downloads page on the xoreos website will also point to the same binary packages.
+
+The three main repositories (xoreos, xoreos-tools and phaethon) have a linked release schedule, each advancing to the same version number on release. All other repositories are "floating" and are not versioned.
+
+==Code names==
+
+Each release has an (inofficial) code name, like "Aribeth" for the first release 0.0.2. These names won't appear in the code itself. They're only used on the website and for promotional concerns.
+
+The current plans for code names is to use character names found in the games xoreos targets. Each release advances both the letter of the alphabet that name starts with, and the game the character is found (in game release order). Each of those wrap around at the end.
+
+The games were released in this order:
+
+{| class="wikitable"
+! style="text-align:left;"| Year
+! style="text-align:left;"| Game
+|-
+|2002 || Neverwinter Nights
+|-
+|2003 || Knights of the Old Republic
+|-
+|2004 || Knights of the Old Republic II
+|-
+|2005 || Jade Empire
+|-
+|2006 || Neverwinter Nights 2
+|-
+|2007 || The Witcher
+|-
+|2008 || Sonic Chronicles
+|-
+|2009 || Dragon Age: Origins
+|-
+|2011 || Dragon Age II
+|}
+
+The past releases were this:
+
+{| class="wikitable"
+! style="text-align:left;"| Version
+! style="text-align:left;"| Code name
+! style="text-align:left;"| Game
+|-
+|0.0.2 || Aribeth || Neverwinter Nights
+|-
+|0.0.3 || Bastila || Knights of the Old Republic
+|-
+|0.0.4 || Chodo || Knights of the Old Republic II
+|}
+
+Continuing, the next releases would be:
+
+{| class="wikitable"
+! style="text-align:left;"| Version
+! style="text-align:left;"| Code name
+! style="text-align:left;"| Game
+|-
+|0.0.5  || Dawn Star? || Jade Empire
+|-
+|0.0.6  || Elanee? || Neverwinter Nights 2
+|-
+|0.0.7  || Foltest? || The Witcher
+|-
+|0.0.8  || General Raxos? Green Hill Zone? || Sonic Chronicles
+|-
+|0.0.9  || Herren? || Dragon Age: Origins
+|-
+|0.0.10 || Isabela? || Dragon Age II
+|}
+
+==Release notes==
+
+The release notes summarize the changes found in the ChangeLog file, so that they're more easily digested. The same summary can be found in the NEWS.md file.
+
+Additionally, the release notes on GitHub will also contain links to Arch Linux's AUR, Linux distribution build files in the repository and similar. There will also be a list describing which pre-compiled binary packages are available and their SHA-256 checksums.
+
+==Downloads==
+
+Several pre-compiled binary packages will be available on the GitHub release notes and the website downloads page. These are created by [[User:DrMcCoy]] using cross-compilers running on Linux.
+
+The current set-up, to be first used for the upcoming 0.0.5 release, consists of
+
+* A Debian Jessie chroot with gcc 4.9 (full C++11 support), to compile xoreos and xoreos-tools for Linux, 32-bit and 64-bit
+* A Debian Stretch chroot with gcc 6.3 (full C++14 support), to compile Phaethon for Linux, 32-bit and 64-bit
+* OS X Cross, with clang 6.0.0 (full C++17 support), targeting macOS >= 10.9, 64-bit only
+* Mingw-w64 with gcc 7.3 (full C++17 support), targeting Windows, 32-bit and 64-bit
+
+==Website post and press releases==
+
+Each release will also follow a news post on the xoreos website. That news post will be submitted to GamingOnLinux and several subreddits. Submitting the news to other gaming- or Linux-related news sites might be an option, but that hasn't been fruitful in the past.
