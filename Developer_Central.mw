@@ -60,6 +60,10 @@ All xoreos developers are advised to run these unit tests themselves while writi
 
 When writing new common classes, or adding functionality to existing ones, also writing new unit tests checking the new functionality is hugely appreciated.
 
+== Releases ==
+
+A short overview on how xoreos releases work can be found on the [[Releases]] page.
+
 == Reverse engineering help ==
 
 For people starting out with reverse engineering, here are a few useful resources:
