@@ -1,6 +1,6 @@
 This is a long rambly list of things left to do in xoreos and xoreos-tools. Anybody is welcome to tackle any of these tasks, but please also read our [[Developer_Central|general contributor overview]], including our [[Code_Formatting_Conventions|Code Formatting Conventions]], [[Commit_Guidelines|Commit Guidelines]] and [https://github.com/xoreos/xoreos/blob/master/CODE_OF_CONDUCT.md Code of Conduct]. If you plan to do any of these tasks, please also [[Contact_us|contact us]] beforehand, so we can better coordinate multiple people interested in doing the same task, and discuss how to best solve the problem. Thanks. :)
 
-('''See also:''' the Kanban-like "Projects" boards on GitHub: https://github.com/orgs/xoreos/projects, but they're not public and no way to make public at the moment. Boo.)
+('''See also:''' the Kanban-like "Projects" boards on GitHub: https://github.com/orgs/xoreos/projects)
 
 == Documentation ==
 
@@ -117,13 +117,9 @@ This is a long rambly list of things left to do in xoreos and xoreos-tools. Anyb
 *** And all whitespace before "foo=bar" into a "prefix" variable
 ** Maybe even always add BOM and \r when writing a new config file on Windows?
 
-=== Windows-specific / Wine-specific ===
-* When running my mingw32 cross-compiled xoreos EXE in Wine, the menu button texts are partially cut off
-** Z-fighting issue?
-** Does that also occur on a real Windows?
-
 === GUI ===
 * xoreos could use a global GUI to start games from
+** https://github.com/ocornut/imgui?
 * Should probably be similar to ScummVM's GUI, at least in effect
 * Should read the config file, list all targets
 ** Press a "Play" button to play the game
@@ -160,12 +156,9 @@ This is a long rambly list of things left to do in xoreos and xoreos-tools. Anyb
 === Unit tests ===
 * More unit tests
 
-=== Resource Explorer ===
-* A portable, user-friendly graphical resource explorer could be useful
-* [https://github.com/xoreos/phaethon Phaethon] is a start
-** It can look into game archives, show textures and play sounds
-** It uses [https://www.wxwidgets.org/ wxWidgets] to do the GUI
-** Or possibly rewriting it to use [https://www.qt.io/ Qt] is better?
+=== Phaethon ===
+* More readers
+* Writers?
 
 === Model converters ===
 * Document the model formats
@@ -185,7 +178,6 @@ This is a long rambly list of things left to do in xoreos and xoreos-tools. Anyb
 
 === CMake ===
 * Current doesn't set the git version to "+unk" when git isn't found
-* make install/uninstall?
 * make doxygen?
 
 === Autotools ===
@@ -251,7 +243,7 @@ This is a long rambly list of things left to do in xoreos and xoreos-tools. Anyb
 
 === XMV/WMV ===
 * Used in Xbox versions of KotOR/KotOR2
-* Our WMV decoder (for XMV videos used in Xbox versions) is missing P-frames and J-frame
+* Our WMV decoder (for XMV videos used in Xbox versions) is missing P-frames and J-frames
 ** Code exists in ffmpeg, but is connected to the MPEG-4 family mess
 
 === Actimagine VX ===
