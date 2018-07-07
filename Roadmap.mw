@@ -10,6 +10,7 @@ Text in square brackets represents feature priority and who it is assigned to.
 ** Object selection [?:Nostritius]
 ** Pathfinding [?:Supermanu]
 ** Party management
+** Action queues [1:seedhartha]
 
 * Scripting
 ** Implement missing functions
@@ -21,7 +22,7 @@ Text in square brackets represents feature priority and who it is assigned to.
 ** Activation distance
 
 * Combat
-** Turn based action queue
+** Turn based gameplay
 ** Normal attacks
 ** Death, body bags
 
