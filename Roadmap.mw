@@ -9,8 +9,7 @@ Text in square brackets represents feature priority and who it is assigned to.
 * General
 ** Object selection [?:Nostritius]
 ** Pathfinding [?:Supermanu]
-** Collision detection for creatures
-** Party management
+** Party management [1:seedhartha]
 ** Implement missing creature actions
 
 * Scripting
