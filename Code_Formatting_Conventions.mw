@@ -11,9 +11,13 @@ In the following examples tabs are replaced by spaces for visual consistency wit
 
 == C++ Standard ==
 
-We mainly follow the C++03 standard, but we also use C99-style known-width integer type. See src/common/types.h for details.
+Among the three main repositories, xoreos, xoreos-tools and Phaethon, we're following three different versions of the C++ standard.
 
-Apart from that, we like to keep the standard as low as possible, for compatibility reasons. If there's a compelling reason, you can of course use C++11 features. But please do so only if you absolutely have to; if the rest of the codebase does something the old-fashioned way, it's best to keep doing it that way. For example, don't introduce auto variables just for the sake of an iterator for-loop.
+* xoreos itself follows the oldest standard for now, C++03
+* xoreos-tools follows the C++11 standard
+* Phaethon follows the C++14 standard, due to the reliance on the relaxed constexpr rules in [https://woboq.com/blog/verdigris-qt-without-moc.html Verdigris]
+
+With xoreos-tools, we're currently in a C++11 trial period. If everything goes well, we're opening xoreos for C++11 as well.
 
 == Hugging braces ==
 
