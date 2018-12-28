@@ -1,0 +1,397 @@
+This is the binary version of the XACT SoundBank (XSB), version 11, as used by Jade Empire on the original Xbox. The Windows PC version of Jade Empire uses an ASCII variant, which contains the same information.
+
+Conceptually, it's very similar to later XSB versions that are used by Microsoft's XNA toolset.
+
+On the top-level, a SoundBank consists of cues and sounds. A sound is a collection of tracks, which each contain a list of events and a list of wave variations, while a cue consists of a list of references to sounds.
+
+A structural example:
+
+* Sounds
+** Sound 0
+*** Track 0
+**** Event list
+***** PLAY
+***** LOOP
+***** VOLUME
+***** PITCH
+**** Wave variations
+***** Sound 23 out of WaveBank "foobar"
+***** Sound 24 out of WaveBank "foobar"
+***** Sound 12 out of WaveBank "quux"
+** Sound 1
+*** Track 0
+**** Event list
+***** PLAY
+**** Wave variations
+***** Sound 24 out of WaveBank "foobar"
+*** Track 1
+**** Event list
+***** PLAY
+**** Wave variations
+***** Sound 25 out of WaveBank "foobar"
+* Cues
+** Cue 0
+*** Cue variations
+**** Sound 0
+**** Sound 1
+** Cue 1
+*** Cue variations
+**** Sound 0
+** Cue 2
+*** Cue variations
+**** Sound 1
+
+Both the cue variation and the wave variation can be selected using different methods. For example, they could be played in order, or randomly. Or they could be explicitly selected by game.
+
+== Structures ==
+
+All numerical values are little-endian.
+
+=== Header ===
+
+{| class="wikitable"
+! Offset
+! Size
+! Description
+|-
+|0x00 || 4 || FourCC, "SDBK"
+|-
+|0x04 || 2 || Version, 11 (0B 00)
+|-
+|0x06 || 2 || CRC
+|-
+|0x08 || 4 || Offset to WaveBank array
+|-
+|0x0C || 4 || Offset to ?
+|-
+|0x10 || 4 || Offset to 3D parameters array
+|-
+|0x14 || 4 || Offset to ?
+|-
+|0x18 || 2 || XSB flags
+|-
+|0x1A || 2 || Number of ?
+|-
+|0x1C || 2 || Number of sounds (soundCount)
+|-
+|0x1E || 2 || Number of cues (cueCount)
+|-
+|0x20 || 2 || Number of ?
+|-
+|0x22 || 2 || Number of WaveBanks
+|-
+|0x24 || 4 || ?
+|-
+|0x28 || 16 || SoundBank name
+|-
+|0x38 || cueCount * 20 || Cue entries
+|-
+|0x38 + cueCount * 20 || soundCount * 20 || Sound entries
+|}
+
+
+=== WaveBank entry ===
+
+{| class="wikitable"
+! Offset
+! Size
+! Description
+|-
+| 0x00 || 16 || WaveBank file name (without extension)
+|}
+
+
+=== Cue entry ===
+
+{| class="wikitable"
+! Offset
+! Size
+! Description
+|-
+| 0x00 || 2 || Flags
+|-
+| 0x02 || 2 || Sound index, if the cue has only one variation. 0xFFFF otherwise
+|-
+| 0x04 || 4 || Offset to name. 0xFFFFFFFF if the cue has no name. Should be ignored if XSB_FLAG_NO_CUE_NAMES is set
+|-
+| 0x08 || 4 || Offset to variations. 0xFFFFFFFF if the sound has no variations
+|-
+| 0x0C || 4 || ?
+|-
+| 0x10 || 4 || ?
+|}
+
+
+=== Sound entry ===
+
+{| class="wikitable"
+! Offset
+! Size
+! Description
+|-
+| 0x00 || 4 || Offset to non-trivial entry, or 2 bytes of wave index and 2 bytes of wavebank index
+|-
+| 0x04 || 2 || Volume
+|-
+| 0x06 || 2 || Pitch
+|-
+| 0x08 || 1 || Number of tracks
+|-
+| 0x09 || 1 || Layer
+|-
+| 0x0A || 1 || Category
+|-
+| 0x0B || 1 || Flags
+|-
+| 0x0C || 2 || Index into the 3D parameters array
+|-
+| 0x0E || 1 || Priority
+|-
+| 0x0F || 1 || 3D volume
+|-
+| 0x10 || 2 || EQ?
+|-
+| 0x12 || 2 || EQ?
+|}
+
+
+=== Simple sound track (one track, one event (PLAY), multiple wave variations) ===
+
+{| class="wikitable"
+! Offset
+! Size
+! Description
+|-
+| 0x00 || 4 ||
+* 13 bits: Number of variations (variationCount)
+* 4 bits: Variation selection method
+* 13 bits: Current variation
+* 2 bits: Flags
+|-
+| 0x04 || variationCount * 4 || Variation entry (2 bytes of wave index and 2 bytes of wavebank index)
+|}
+
+
+=== Complex sound tracks (multiple tracks or more than just a simple PLAY event) ===
+
+{| class="wikitable"
+! Offset
+! Size
+! Description
+|-
+| 0x00 || 1 || Number of events
+|-
+| 0x01 || 3 || Offset to event list
+|}
+
+
+=== Variation table ===
+
+{| class="wikitable"
+! Offset
+! Size
+! Description
+|-
+| 0x00 || 4 ||
+* 13 bits: Number of variations (variationCount)
+* 4 bits: Variation selection method
+* 13 bits: Current variation
+* 2 bits: Flags
+|-
+| 0x04 || variationCount * 8 || Variation entry
+|}
+
+
+=== Event list entry ===
+
+{| class="wikitable"
+! Offset
+! Size
+! Description
+|-
+| 0x00 || 1 || Event type
+|-
+| 0x01 || 3 || ?
+|-
+| 0x04 || 1 || Parameter size in bytes
+|-
+| 0x05 || 1 || Flags
+|-
+| 0x06 || 2 || ?
+|-
+| .... || || Parameters
+|}
+
+
+=== Event list entry for a PLAY or PLAY_COMPLEX event ===
+
+{| class="wikitable"
+! Offset
+! Size
+! Description
+|-
+| 0x00 || 1 || Event type (= 0x00 or 0x01)
+|-
+| 0x01 || 3 || ?
+|-
+| 0x04 || 1 || Parameter size in bytes (= 0x04 or 0x10)
+|-
+| 0x05 || 1 || Flags
+|-
+| 0x06 || 2 || ?
+|-
+| 0x08 || 4 || If XSB_PLAY_EVENT_FLAG_COMPLEX in Flags is set, this is an offset to a wave variation list (see "Simple sound track" above). Otherwise, this is 2 bytes of a sound index followed by 2 bytes of bank index.
+|}
+
+
+=== Variation entry ===
+
+{| class="wikitable"
+! Offset
+! Size
+! Description
+|-
+| 0x00 || 2 || Sound index
+|-
+| 0x02 || 2 || ?
+|-
+| 0x04 || 2 || Weight minimum
+|-
+| 0x06 || 2 || Weight maximum
+|}
+
+
+=== 3D parameters entry ===
+
+{| class="wikitable"
+! Offset
+! Size
+! Description
+|-
+| 0x00 || 2 || Inside cone angle
+|-
+| 0x02 || 2 || Outside cone angle
+|-
+| 0x04 || 2 || Cone outside volume
+|-
+| 0x06 || 2 || ?
+|-
+| 0x08 || 4 || minimum distance
+|-
+| 0x0C || 4 || maximum distance
+|-
+| 0x10 || 4 || Distance factor
+|-
+| 0x14 || 4 || Rolloff factor
+|-
+| 0x18 || 4 || Doppler factor
+|-
+| 0x1C || 1 || Mode
+|-
+| 0x1D || 4 || ?
+|-
+| 0x20 || 4 || ?
+|-
+| 0x24 || 4 || ?
+|}
+
+
+== Flags ==
+
+=== XSB flags ===
+
+{| class="wikitable"
+! Name
+! Value
+! Description
+|-
+| XSB_FLAG_NO_CUE_NAMES || 0x0001 || If set, cues in the XSB file have no human-readable name
+|}
+
+=== Cue flags ===
+
+{| class="wikitable"
+! Name
+! Value
+! Description
+|-
+| XSB_CUE_FLAG_INTERACTIVE || 0x0008 || If set, the cue is interactive
+|}
+
+=== Sound flags ===
+
+{| class="wikitable"
+! Name
+! Value
+! Description
+|-
+| XSB_SOUND_FLAG_3D      ||   0x01 || If set, the sound has 3D parameters
+|-
+| XSB_SOUND_FLAG_TRIVIAL ||   0x08 || If set, the sound only has one track, one event (PLAY) and one wave variation
+|-
+| XSB_SOUND_FLAG_SIMPLE  ||   0x10 || If set, the sound only has one track, one event (PLAY), but multiple wave variations
+|}
+
+
+=== PLAY event flags ===
+
+{| class="wikitable"
+! Name
+! Value
+! Description
+|-
+| XSB_PLAY_EVENT_FLAG_COMPLEX       ||   0x04 || Complex wave variations definition
+|}
+
+
+== Enums ==
+
+=== Event types ===
+
+{| class="wikitable"
+! Name
+! Value
+! Description
+|-
+| XSB_EVENT_TYPE_PLAY               ||   0x00 || Play a wave, from start to finish
+|-
+| XSB_EVENT_TYPE_PLAY_COMPLEX       ||   0x01 || Play a wave, with parameters
+|-
+| XSB_EVENT_TYPE_STOP               ||   0x03 || Stop playing
+|-
+| XSB_EVENT_TYPE_PITCH              ||   0x04 || Set the pitch
+|-
+| XSB_EVENT_TYPE_VOLUME             ||   0x05 || Set the volume
+|-
+| XSB_EVENT_TYPE_LOWPASS            ||   0x07 || Low-pass filter
+|-
+| XSB_EVENT_TYPE_LFO_PITCH          ||   0x08 || Low-frequency oscillator on the pitch
+|-
+| XSB_EVENT_TYPE_LFO_MULTI          ||   0x09 || Low-frequency oscillator on the pitch and amplitude
+|-
+| XSB_EVENT_TYPE_ENVELOPE_AMPLITUDE ||   0x0A || DAHDSR envelope on the amplitude
+|-
+| XSB_EVENT_TYPE_ENVELOPE_PITCH     ||   0x0B || DAHDSR envelope on the pitch
+|-
+| XSB_EVENT_TYPE_LOOP               ||   0x0C || Loop a wave
+|-
+| XSB_EVENT_TYPE_MARKER             ||   0x0E || Marker
+|-
+| XSB_EVENT_TYPE_DISABLED           ||   0x0F || A disabled event
+|-
+| XSB_EVENT_TYPE_MIXBINS            ||   0x10 || Set a separate volume for each channel
+|-
+| XSB_EVENT_TYPE_ENVIRONMENT_REVERB ||   0x11 || Environmental reverb
+|-
+| XSB_EVENT_TYPE_MIXBINSPAN         ||   0x12 || Set channel volumes according to a listener orientation
+|}
+
+=== Variation selection methods ===
+
+{| class="wikitable"
+! Name
+! Value
+! Description
+|-
+| XSB_VARIATION_SELECT_PARAMETER    ||   0x03 || Parameter-controlled
+|}
