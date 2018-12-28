@@ -299,13 +299,15 @@ The skin header contains bone information to animate the model.
 [https://gist.github.com/farmboy0/87d9d6b88613ccd899b8 model description (WIP)]
 
 == Audio ==
-Audio files and properties are described via text files that describe
-XACT wave banks and sound banks.
+
+Audio files and properties are described via XACT wave banks and sound banks.
 
 Wave bank are simple lists of sound files that are referenced by their position in the list.
 
 Sound banks describe sounds and sound cues. Sounds contain references to wave bank entries as well as their play properties, while sound cues
 are used to group different sounds together with information about how to choose between them when playing a sound cue.
+
+In the Xbox version, the wave banks and sound banks are in their original binary format (XWB and [https://wiki.xoreos.org/index.php?title=Binary_XACT_SoundBank XSB]). In the Windows PC version, they are stored in an ASCII format, as described below.
 
 '''Sound bank files are organized like this:'''
 
