@@ -4,7 +4,7 @@ Conceptually, it's very similar to later XSB versions that are used by Microsoft
 
 On the top-level, a SoundBank consists of cues and sounds. A sound is a collection of tracks, which each contain a list of events and a list of wave variations, while a cue consists of a list of references to sounds.
 
-A structural example:
+== A structural example ==
 
 * Sounds
 ** Sound 0
@@ -15,20 +15,20 @@ A structural example:
 ***** VOLUME
 ***** PITCH
 **** Wave variations
-***** Sound 23 out of WaveBank "foobar"
-***** Sound 24 out of WaveBank "foobar"
-***** Sound 12 out of WaveBank "quux"
+***** Sound 23 out of WaveBank &quot;foobar&quot;
+***** Sound 24 out of WaveBank &quot;foobar&quot;
+***** Sound 12 out of WaveBank &quot;quux&quot;
 ** Sound 1
 *** Track 0
 **** Event list
 ***** PLAY
 **** Wave variations
-***** Sound 24 out of WaveBank "foobar"
+***** Sound 24 out of WaveBank &quot;foobar&quot;
 *** Track 1
 **** Event list
 ***** PLAY
 **** Wave variations
-***** Sound 25 out of WaveBank "foobar"
+***** Sound 25 out of WaveBank &quot;foobar&quot;
 * Cues
 ** Cue 0
 *** Cue variations
@@ -51,347 +51,1405 @@ All numerical values are little-endian.
 
 {| class="wikitable"
 ! Offset
-! Size
+!align="right"| Size
 ! Description
 |-
-|0x00 || 4 || FourCC, "SDBK"
+| 0x00
+|align="right"| 4
+| FourCC, &quot;SDBK&quot;
 |-
-|0x04 || 2 || Version, 11 (0B 00)
+| 0x04
+|align="right"| 2
+| Version, 11 (0B 00)
 |-
-|0x06 || 2 || CRC
+| 0x06
+|align="right"| 2
+| CRC
 |-
-|0x08 || 4 || Offset to WaveBank array
+| 0x08
+|align="right"| 4
+| Offset to WaveBank array
 |-
-|0x0C || 4 || Offset to ?
+| 0x0C
+|align="right"| 4
+| Offset to ?
 |-
-|0x10 || 4 || Offset to 3D parameters array
+| 0x10
+|align="right"| 4
+| Offset to 3D parameters array
 |-
-|0x14 || 4 || Offset to ?
+| 0x14
+|align="right"| 4
+| Offset to ?
 |-
-|0x18 || 2 || XSB flags
+| 0x18
+|align="right"| 2
+| XSB flags
 |-
-|0x1A || 2 || Number of ?
+| 0x1A
+|align="right"| 2
+| Number of ?
 |-
-|0x1C || 2 || Number of sounds (soundCount)
+| 0x1C
+|align="right"| 2
+| Number of sounds (soundCount)
 |-
-|0x1E || 2 || Number of cues (cueCount)
+| 0x1E
+|align="right"| 2
+| Number of cues (cueCount)
 |-
-|0x20 || 2 || Number of ?
+| 0x20
+|align="right"| 2
+| Number of ?
 |-
-|0x22 || 2 || Number of WaveBanks
+| 0x22
+|align="right"| 2
+| Number of WaveBanks
 |-
-|0x24 || 4 || ?
+| 0x24
+|align="right"| 4
+| ?
 |-
-|0x28 || 16 || SoundBank name
+| 0x28
+|align="right"| 16
+| SoundBank name
 |-
-|0x38 || cueCount * 20 || Cue entries
+| 0x38
+|align="right"| cueCount * 20
+| Cue entries
 |-
-|0x38 + cueCount * 20 || soundCount * 20 || Sound entries
+| 0x38 + cueCount * 20
+|align="right"| soundCount * 20
+| Sound entries
 |}
-
 
 === WaveBank entry ===
 
 {| class="wikitable"
 ! Offset
-! Size
+!align="right"| Size
 ! Description
 |-
-| 0x00 || 16 || WaveBank file name (without extension)
+| 0x00
+|align="right"| 16
+| WaveBank file name (without extension)
 |}
-
 
 === Cue entry ===
 
 {| class="wikitable"
-! Offset
-! Size
-! Description
+!width="10%"| Offset
+!align="right" width="5%"| Size
+!width="85%"| Description
 |-
-| 0x00 || 2 || Flags
+| 0x00
+|align="right"| 2
+| Flags
 |-
-| 0x02 || 2 || Sound index, if the cue has only one variation. 0xFFFF otherwise
+| 0x02
+|align="right"| 2
+| Sound index, if the cue has only one variation. 0xFFFF otherwise
 |-
-| 0x04 || 4 || Offset to name. 0xFFFFFFFF if the cue has no name. Should be ignored if XSB_FLAG_NO_CUE_NAMES is set
+| 0x04
+|align="right"| 4
+| Offset to name. 0xFFFFFFFF if the cue has no name. Should be ignored if XSB_FLAG_NO_CUE_NAMES is set
 |-
-| 0x08 || 4 || Offset to variations. 0xFFFFFFFF if the sound has no variations
+| 0x08
+|align="right"| 4
+| Offset to cue variations. 0xFFFFFFFF if the cue has no variations
 |-
-| 0x0C || 4 || ?
+| 0x0C
+|align="right"| 4
+| ?
 |-
-| 0x10 || 4 || ?
+| 0x10
+|align="right"| 4
+| ?
 |}
-
 
 === Sound entry ===
 
 {| class="wikitable"
-! Offset
-! Size
-! Description
+!width="10%"| Offset
+!align="right" width="5%"| Size
+!width="85%"| Description
 |-
-| 0x00 || 4 || Offset to non-trivial entry, or 2 bytes of wave index and 2 bytes of wavebank index
+| 0x00
+|align="right"| 4
+| Offset to non-trivial entry, or 2 bytes of wave index and 2 bytes of wavebank index
 |-
-| 0x04 || 2 || Volume
+| 0x04
+|align="right"| 2
+| Volume
 |-
-| 0x06 || 2 || Pitch
+| 0x06
+|align="right"| 2
+| Pitch
 |-
-| 0x08 || 1 || Number of tracks
+| 0x08
+|align="right"| 1
+| Number of tracks
 |-
-| 0x09 || 1 || Layer
+| 0x09
+|align="right"| 1
+| Layer
 |-
-| 0x0A || 1 || Category
+| 0x0A
+|align="right"| 1
+| Category
 |-
-| 0x0B || 1 || Flags
+| 0x0B
+|align="right"| 1
+| Flags
 |-
-| 0x0C || 2 || Index into the 3D parameters array
+| 0x0C
+|align="right"| 2
+| Index into the 3D parameters array
 |-
-| 0x0E || 1 || Priority
+| 0x0E
+|align="right"| 1
+| Priority
 |-
-| 0x0F || 1 || 3D volume
+| 0x0F
+|align="right"| 1
+| 3D volume
 |-
-| 0x10 || 2 || EQ?
+| 0x10
+|align="right"| 2
+| EQ?
 |-
-| 0x12 || 2 || EQ?
+| 0x12
+|align="right"| 2
+| EQ?
 |}
 
+=== Simple sound track ===
 
-=== Simple sound track (one track, one event (PLAY), multiple wave variations) ===
+One track, one event (PLAY), multiple wave variations.
 
 {| class="wikitable"
-! Offset
-! Size
-! Description
+!width="10%"| Offset
+!align="right" width="20%"| Size
+!width="80%"| Description
 |-
-| 0x00 || 4 ||
+| 0x00
+|align="right"| 4 ||
 * 13 bits: Number of variations (variationCount)
 * 4 bits: Variation selection method
 * 13 bits: Current variation
 * 2 bits: Flags
 |-
-| 0x04 || variationCount * 4 || Variation entry (2 bytes of wave index and 2 bytes of wavebank index)
+| 0x04
+|align="right"| variationCount * 4
+| Variation entry (2 bytes of wave index and 2 bytes of wavebank index)
 |}
 
+=== Complex sound tracks ===
 
-=== Complex sound tracks (multiple tracks or more than just a simple PLAY event) ===
+Multiple tracks or more than just a simple PLAY even.
 
 {| class="wikitable"
 ! Offset
-! Size
+!align="right"| Size
 ! Description
 |-
-| 0x00 || 1 || Number of events
+| 0x00
+|align="right"| 1
+| Number of events
 |-
-| 0x01 || 3 || Offset to event list
+| 0x01
+|align="right"| 3
+| Offset to event list
 |}
-
 
 === Variation table ===
 
 {| class="wikitable"
 ! Offset
-! Size
+!align="right"| Size
 ! Description
 |-
-| 0x00 || 4 ||
+| 0x00
+|align="right"| 4 ||
 * 13 bits: Number of variations (variationCount)
 * 4 bits: Variation selection method
 * 13 bits: Current variation
 * 2 bits: Flags
 |-
-| 0x04 || variationCount * 8 || Variation entry
+| 0x04
+|align="right"| variationCount * 8
+| Variation entry
 |}
-
 
 === Event list entry ===
 
 {| class="wikitable"
 ! Offset
-! Size
+!align="right"| Size
 ! Description
 |-
-| 0x00 || 1 || Event type
+| 0x00
+|align="right"| 1
+| Event type
 |-
-| 0x01 || 3 || ?
+| 0x01
+|align="right"| 3
+| Timestamp in milliseconds
 |-
-| 0x04 || 1 || Parameter size in bytes
+| 0x04
+|align="right"| 1
+| Parameter size in bytes
 |-
-| 0x05 || 1 || Flags
+| 0x05
+|align="right"| 1
+| Flags
 |-
-| 0x06 || 2 || ?
+| 0x06
+|align="right"| 2
+| ?
 |-
-| .... || || Parameters
+| ....
+|align="right"|
+
+| Parameters
 |}
 
-
-=== Event list entry for a PLAY or PLAY_COMPLEX event ===
+==== Event list entry for a PLAY event ====
 
 {| class="wikitable"
 ! Offset
-! Size
+!align="right"| Size
 ! Description
 |-
-| 0x00 || 1 || Event type (= 0x00 or 0x01)
+| 0x00
+|align="right"| 1
+| Event type (= 0x00)
 |-
-| 0x01 || 3 || ?
+| 0x01
+|align="right"| 3
+| Timestamp in milliseconds
 |-
-| 0x04 || 1 || Parameter size in bytes (= 0x04 or 0x10)
+| 0x04
+|align="right"| 1
+| Parameter size in bytes (= 0x04)
 |-
-| 0x05 || 1 || Flags
+| 0x05
+|align="right"| 1
+| Flags
 |-
-| 0x06 || 2 || ?
+| 0x06
+|align="right"| 2
+| ?
 |-
-| 0x08 || 4 || If XSB_PLAY_EVENT_FLAG_COMPLEX in Flags is set, this is an offset to a wave variation list (see "Simple sound track" above). Otherwise, this is 2 bytes of a sound index followed by 2 bytes of bank index.
+| 0x08
+|align="right"| 4
+| If XSB_PLAY_EVENT_FLAG_COMPLEX in Flags is set, this is an offset to a wave variation list (see &quot;Simple sound track&quot; above). Otherwise, this is 2 bytes of a sound index followed by 2 bytes of bank index
 |}
 
+==== Event list entry for a PLAY_COMPLEX event ====
+
+{| class="wikitable"
+!width="10%"| Offset
+!align="right" width="5%"| Size
+!width="85%"| Description
+|-
+| 0x00
+|align="right"| 1
+| Event type (= 0x01)
+|-
+| 0x01
+|align="right"| 3
+| Timestamp in milliseconds
+|-
+| 0x04
+|align="right"| 1
+| Parameter size in bytes (= 0x10)
+|-
+| 0x05
+|align="right"| 1
+| Flags
+|-
+| 0x06
+|align="right"| 2
+| ?
+|-
+| 0x08
+|align="right"| 4
+| If XSB_PLAY_EVENT_FLAG_COMPLEX in Flags is set, this is an offset to a wave variation list (see &quot;Simple sound track&quot; above). Otherwise, this is 2 bytes of a sound index followed by 2 bytes of bank index
+|-
+| 0x0C
+|align="right"| 2
+| pitch variation, lower bound
+|-
+| 0x0E
+|align="right"| 2
+| pitch variation, upper bound
+|-
+| 0x10
+|align="right"| 2
+| Volume variation, lower bound
+|-
+| 0x12
+|align="right"| 2
+| Volume variation, upper bound
+|-
+| 0x14
+|align="right"| 2
+| Maximum variable sound delay in milliseconds
+|-
+| 0x16
+|align="right"| 2
+| (Part of the?) Decay time parameter of the Environmental Reverb event (?!?)
+|}
+
+==== Event list entry for a PITCH event ====
+
+{| class="wikitable"
+! Offset
+!align="right"| Size
+! Description
+|-
+| 0x00
+|align="right"| 1
+| Event type (= 0x04)
+|-
+| 0x01
+|align="right"| 3
+| Timestamp in milliseconds
+|-
+| 0x04
+|align="right"| 1
+| Parameter size in bytes (= 0x08)
+|-
+| 0x05
+|align="right"| 1
+| Flags
+|-
+| 0x06
+|align="right"| 2
+| Number of fade steps
+|-
+| 0x08
+|align="right"| 2
+| pitch, lower bound or starting value
+|-
+| 0x0A
+|align="right"| 2
+| pitch, upper bound or starting value
+|-
+| 0x0C
+|align="right"| 1
+| ?
+|-
+| 0x0D
+|align="right"| 3
+| Fade duration in milliseconds
+|}
+
+==== Event list entry for a VOLUME event ====
+
+{| class="wikitable"
+! Offset
+!align="right"| Size
+! Description
+|-
+| 0x00
+|align="right"| 1
+| Event type (= 0x05)
+|-
+| 0x01
+|align="right"| 3
+| Timestamp in milliseconds
+|-
+| 0x04
+|align="right"| 1
+| Parameter size in bytes (= 0x08)
+|-
+| 0x05
+|align="right"| 1
+| Flags
+|-
+| 0x06
+|align="right"| 2
+| Number of fade steps
+|-
+| 0x08
+|align="right"| 2
+| volume, lower bound or starting value
+|-
+| 0x0A
+|align="right"| 2
+| volume, upper bound or starting value
+|-
+| 0x0C
+|align="right"| 1
+| ?
+|-
+| 0x0D
+|align="right"| 3
+| Fade duration in milliseconds
+|}
+
+==== Event list entry for a LOWPASS event ====
+
+{| class="wikitable"
+! Offset
+!align="right"| Size
+! Description
+|-
+| 0x00
+|align="right"| 1
+| Event type (= 0x07)
+|-
+| 0x01
+|align="right"| 3
+| Timestamp in milliseconds
+|-
+| 0x04
+|align="right"| 1
+| Parameter size in bytes (= 0x0C)
+|-
+| 0x05
+|align="right"| 1
+| Flags
+|-
+| 0x06
+|align="right"| 2
+| Sweep step count
+|-
+| 0x08
+|align="right"| 2
+| Cut-off frequency start
+|-
+| 0x0A
+|align="right"| 2
+| Cut-off frequency end
+|-
+| 0x0C
+|align="right"| 1
+| ?
+|-
+| 0x0D
+|align="right"| 3
+| Sweep duration
+|-
+| 0x10
+|align="right"| 2
+| Resonance start
+|-
+| 0x12
+|align="right"| 2
+| Resonance end
+|}
+
+==== Event list entry for a LFO_PITCH event ====
+
+{| class="wikitable"
+! Offset
+!align="right"| Size
+! Description
+|-
+| 0x00
+|align="right"| 1
+| Event type (= 0x08)
+|-
+| 0x01
+|align="right"| 3
+| Timestamp in milliseconds
+|-
+| 0x04
+|align="right"| 1
+| Parameter size in bytes (= 0x04)
+|-
+| 0x05
+|align="right"| 1
+| Flags
+|-
+| 0x06
+|align="right"| 2
+| ?
+|-
+| 0x08
+|align="right"| 1
+| ?
+|-
+| 0x09
+|align="right"| 1
+| ?
+|-
+| 0x0A
+|align="right"| 1
+| Delta
+|-
+| 0x0B
+|align="right"| 1
+| Pitch modulation
+|}
+
+==== Event list entry for a LFO_MULTI event ====
+
+{| class="wikitable"
+! Offset
+!align="right"| Size
+! Description
+|-
+| 0x00
+|align="right"| 1
+| Event type (= 0x09)
+|-
+| 0x01
+|align="right"| 3
+| Timestamp in milliseconds
+|-
+| 0x04
+|align="right"| 1
+| Parameter size in bytes (= 0x08)
+|-
+| 0x05
+|align="right"| 1
+| Flags
+|-
+| 0x06
+|align="right"| 2
+| ?
+|-
+| 0x08
+|align="right"| 1
+| ?
+|-
+| 0x09
+|align="right"| 1
+| ?
+|-
+| 0x0A
+|align="right"| 1
+| Delta
+|-
+| 0x0B
+|align="right"| 1
+| Pitch modulation
+|-
+| 0x0C
+|align="right"| 1
+| Filter modulation
+|-
+| 0x0D
+|align="right"| 1
+| Amplitude modulation
+|-
+| 0x0E
+|align="right"| 1
+| ?
+|-
+| 0x0F
+|align="right"| 1
+| ?
+|}
+
+==== Event list entry for a ENVELOPE_AMPLITUDE event ====
+
+{| class="wikitable"
+! Offset
+!align="right"| Size
+! Description
+|-
+| 0x00
+|align="right"| 1
+| Event type (= 0x0A)
+|-
+| 0x01
+|align="right"| 3
+| Timestamp in milliseconds
+|-
+| 0x04
+|align="right"| 1
+| Parameter size in bytes (= 0x0C)
+|-
+| 0x05
+|align="right"| 1
+| Flags
+|-
+| 0x06
+|align="right"| 2
+| ?
+|-
+| 0x08
+|align="right"| 2
+| Delay in seconds
+|-
+| 0x0A
+|align="right"| 2
+| Attack in seconds
+|-
+| 0x0C
+|align="right"| 2
+| Hold in seconds
+|-
+| 0x0E
+|align="right"| 2
+| Decay in seconds
+|-
+| 0x10
+|align="right"| 2
+| Release in seconds
+|-
+| 0x12
+|align="right"| 1
+| Sustain power
+|-
+| 0x13
+|align="right"| 1
+| ?
+|}
+
+==== Event list entry for a ENVELOPE_PITCH event ====
+
+{| class="wikitable"
+! Offset
+!align="right"| Size
+! Description
+|-
+| 0x00
+|align="right"| 1
+| Event type (= 0x0B)
+|-
+| 0x01
+|align="right"| 3
+| Timestamp in milliseconds
+|-
+| 0x04
+|align="right"| 1
+| Parameter size in bytes (= 0x10)
+|-
+| 0x05
+|align="right"| 1
+| Flags
+|-
+| 0x06
+|align="right"| 2
+| ?
+|-
+| 0x08
+|align="right"| 2
+| Delay in seconds
+|-
+| 0x0A
+|align="right"| 2
+| Attack in seconds
+|-
+| 0x0C
+|align="right"| 2
+| Hold in seconds
+|-
+| 0x0E
+|align="right"| 2
+| Decay in seconds
+|-
+| 0x10
+|align="right"| 2
+| Release in seconds
+|-
+| 0x12
+|align="right"| 1
+| Sustain power
+|-
+| 0x13
+|align="right"| 1
+| ?
+|-
+| 0x14
+|align="right"| 1
+| ?
+|-
+| 0x15
+|align="right"| 1
+| ?
+|-
+| 0x16
+|align="right"| 1
+| Pitch scale
+|-
+| 0x17
+|align="right"| 1
+| Filter cut-off
+|}
+
+==== Event list entry for a LOOP event ====
+
+{| class="wikitable"
+! Offset
+!align="right"| Size
+! Description
+|-
+| 0x00
+|align="right"| 1
+| Event type (= 0x0C)
+|-
+| 0x01
+|align="right"| 3
+| Timestamp in milliseconds
+|-
+| 0x04
+|align="right"| 1
+| Parameter size in bytes (= 0x00)
+|-
+| 0x05
+|align="right"| 1
+| Flags
+|-
+| 0x06
+|align="right"| 2
+| Number of loops. 0xFFFF for looping indefinitely
+|}
+
+==== Event list entry for a MARKER event ====
+
+{| class="wikitable"
+! Offset
+!align="right"| Size
+! Description
+|-
+| 0x00
+|align="right"| 1
+| Event type (= 0x0E)
+|-
+| 0x01
+|align="right"| 3
+| Timestamp in milliseconds
+|-
+| 0x04
+|align="right"| 1
+| Parameter size in bytes (= 0x00)
+|-
+| 0x05
+|align="right"| 1
+| Flags
+|-
+| 0x06
+|align="right"| 2
+| Marker occurrences
+|-
+| 0x08
+|align="right"| 4
+| Marker value
+|-
+| 0x0C
+|align="right"| 1
+| ?
+|-
+| 0x0D
+|align="right"| 3
+| Repeat duration in milliseconds
+|}
+
+==== Event list entry for a MIXBINS event ====
+
+{| class="wikitable"
+! Offset
+!align="right"| Size
+! Description
+|-
+| 0x00
+|align="right"| 1
+| Event type (= 0x10)
+|-
+| 0x01
+|align="right"| 3
+| Timestamp in milliseconds
+|-
+| 0x04
+|align="right"| 1
+| Parameter size in bytes (= 0x20)
+|-
+| 0x05
+|align="right"| 1
+| Flags
+|-
+| 0x06
+|align="right"| 2
+| ?
+|-
+| 0x08
+|align="right"| 1
+| Channel index 0
+|-
+| 0x09
+|align="right"| 1
+| ?
+|-
+| 0x0A
+|align="right"| 2
+| Channel volume 0
+|-
+| 0x0C
+|align="right"| 1
+| Channel index 1
+|-
+| 0x0D
+|align="right"| 1
+| ?
+|-
+| 0x0E
+|align="right"| 2
+| Channel volume 1
+|-
+| 0x10
+|align="right"| 1
+| Channel index 2
+|-
+| 0x11
+|align="right"| 1
+| ?
+|-
+| 0x12
+|align="right"| 2
+| Channel volume 2
+|-
+| 0x14
+|align="right"| 1
+| Channel index 3
+|-
+| 0x15
+|align="right"| 1
+| ?
+|-
+| 0x16
+|align="right"| 2
+| Channel volume 3
+|-
+| 0x18
+|align="right"| 1
+| Channel index 4
+|-
+| 0x19
+|align="right"| 1
+| ?
+|-
+| 0x1A
+|align="right"| 2
+| Channel volume 4
+|-
+| 0x1C
+|align="right"| 1
+| Channel index 5
+|-
+| 0x1D
+|align="right"| 1
+| ?
+|-
+| 0x1E
+|align="right"| 2
+| Channel volume 5
+|-
+| 0x20
+|align="right"| 1
+| Channel index 6
+|-
+| 0x21
+|align="right"| 1
+| ?
+|-
+| 0x22
+|align="right"| 2
+| Channel volume 6
+|-
+| 0x24
+|align="right"| 1
+| Channel index 7
+|-
+| 0x25
+|align="right"| 1
+| ?
+|-
+| 0x26
+|align="right"| 2
+| Channel volume 7
+|}
+
+==== Event list entry for an ENVIRONMENT_REVERB event ====
+
+{| class="wikitable"
+! Offset
+!align="right"| Size
+! Description
+|-
+| 0x00
+|align="right"| 1
+| Event type (= 0x11)
+|-
+| 0x01
+|align="right"| 3
+| Timestamp in milliseconds
+|-
+| 0x04
+|align="right"| 1
+| Parameter size in bytes (= 0x30)
+|-
+| 0x05
+|align="right"| 1
+| Flags
+|-
+| 0x06
+|align="right"| 2
+| ?
+|-
+| 0x08
+|align="right"| 4
+| Room effect attenuation
+|-
+| 0x0C
+|align="right"| 4
+| High-frequency room effect attenuation
+|-
+| 0x10
+|align="right"| 4
+| Roll-off factor for the room effect
+|-
+| 0x14
+|align="right"| 4
+| Decay time
+|-
+| 0x18
+|align="right"| 4
+| High-frequency to low-frequency decay time ratio
+|-
+| 0x1C
+|align="right"| 4
+| (Early) Reflection attenuation
+|-
+| 0x20
+|align="right"| 4
+| (Early) Reflection delay
+|-
+| 0x24
+|align="right"| 4
+| (Late) Reverb attenuation
+|-
+| 0x28
+|align="right"| 4
+| (Late) Reverb delay
+|-
+| 0x2C
+|align="right"| 4
+| Diffusion, echo density in (late) reverb decay
+|-
+| 0x30
+|align="right"| 4
+| Density, modal density in (late) reverb decay
+|-
+| 0x34
+|align="right"| 4
+| Reference high frequency
+|}
+
+==== Event list entry for a MIXBINSPAN event ====
+
+{| class="wikitable"
+!width="10%"| Offset
+!align="right" width="5%"| Size
+!width="85%"| Description
+|-
+| 0x00
+|align="right"| 1
+| Event type (= 0x10)
+|-
+| 0x01
+|align="right"| 3
+| Timestamp in milliseconds
+|-
+| 0x04
+|align="right"| 1
+| Parameter size in bytes (= 0x14)
+|-
+| 0x05
+|align="right"| 1
+| Flags
+|-
+| 0x06
+|align="right"| 2
+| ?
+|-
+| 0x08
+|align="right"| 1
+| Speaker configuration (0: 5-channels, 1: 4-channels)
+|-
+| 0x09
+|align="right"| 3
+| 00000 A BBBBBBBBB CCCCCCCCC (A = 3D, B = end angle, C = start angle)
+|-
+| 0x0C
+|align="right"| 1
+| Channel index 0
+|-
+| 0x0D
+|align="right"| 1
+| ?
+|-
+| 0x0E
+|align="right"| 2
+| Channel volume 0
+|-
+| 0x10
+|align="right"| 1
+| Channel index 1
+|-
+| 0x11
+|align="right"| 1
+| ?
+|-
+| 0x12
+|align="right"| 2
+| Channel volume 1
+|-
+| 0x14
+|align="right"| 1
+| Channel index 2
+|-
+| 0x15
+|align="right"| 1
+| ?
+|-
+| 0x16
+|align="right"| 2
+| Channel volume 2
+|-
+| 0x18
+|align="right"| 1
+| Channel index 3
+|-
+| 0x19
+|align="right"| 1
+| ?
+|-
+| 0x1A
+|align="right"| 2
+| Channel volume 3
+|}
 
 === Variation entry ===
 
 {| class="wikitable"
 ! Offset
-! Size
+!align="right"| Size
 ! Description
 |-
-| 0x00 || 2 || Sound index
+| 0x00
+|align="right"| 2
+| Sound index
 |-
-| 0x02 || 2 || ?
+| 0x02
+|align="right"| 2
+| ?
 |-
-| 0x04 || 2 || Weight minimum
+| 0x04
+|align="right"| 2
+| Weight minimum
 |-
-| 0x06 || 2 || Weight maximum
+| 0x06
+|align="right"| 2
+| Weight maximum
 |}
-
 
 === 3D parameters entry ===
 
 {| class="wikitable"
 ! Offset
-! Size
+!align="right"| Size
 ! Description
 |-
-| 0x00 || 2 || Inside cone angle
+| 0x00
+|align="right"| 2
+| Inside cone angle
 |-
-| 0x02 || 2 || Outside cone angle
+| 0x02
+|align="right"| 2
+| Outside cone angle
 |-
-| 0x04 || 2 || Cone outside volume
+| 0x04
+|align="right"| 2
+| Cone outside volume
 |-
-| 0x06 || 2 || ?
+| 0x06
+|align="right"| 2
+| ?
 |-
-| 0x08 || 4 || minimum distance
+| 0x08
+|align="right"| 4
+| minimum distance
 |-
-| 0x0C || 4 || maximum distance
+| 0x0C
+|align="right"| 4
+| maximum distance
 |-
-| 0x10 || 4 || Distance factor
+| 0x10
+|align="right"| 4
+| Distance factor
 |-
-| 0x14 || 4 || Rolloff factor
+| 0x14
+|align="right"| 4
+| Rolloff factor
 |-
-| 0x18 || 4 || Doppler factor
+| 0x18
+|align="right"| 4
+| Doppler factor
 |-
-| 0x1C || 1 || Mode
+| 0x1C
+|align="right"| 1
+| Mode
 |-
-| 0x1D || 4 || ?
+| 0x1D
+|align="right"| 4
+| ?
 |-
-| 0x20 || 4 || ?
+| 0x20
+|align="right"| 4
+| ?
 |-
-| 0x24 || 4 || ?
+| 0x24
+|align="right"| 4
+| ?
 |}
-
 
 == Flags ==
 
 === XSB flags ===
 
 {| class="wikitable"
-! Name
-! Value
-! Description
+!width="30%"| Name
+!align="right" width="5%"| Value
+!width="65%"| Description
 |-
-| XSB_FLAG_NO_CUE_NAMES || 0x0001 || If set, cues in the XSB file have no human-readable name
+| XSB_FLAG_NO_CUE_NAMES
+|align="right"| 0x0001
+| If set, cues in the XSB file have no human-readable name
 |}
 
 === Cue flags ===
 
 {| class="wikitable"
 ! Name
-! Value
+!align="right"| Value
 ! Description
 |-
-| XSB_CUE_FLAG_INTERACTIVE || 0x0008 || If set, the cue is interactive
+| XSB_CUE_FLAG_INTERACTIVE
+|align="right"| 0x0008
+| If set, the cue is interactive
 |}
 
 === Sound flags ===
 
 {| class="wikitable"
-! Name
-! Value
-! Description
+!width="30%"| Name
+!align="right" width="5%"| Value
+!width="65%"| Description
 |-
-| XSB_SOUND_FLAG_3D      ||   0x01 || If set, the sound has 3D parameters
+| XSB_SOUND_FLAG_3D
+|align="right"| 0x01
+| If set, the sound has 3D parameters
 |-
-| XSB_SOUND_FLAG_TRIVIAL ||   0x08 || If set, the sound only has one track, one event (PLAY) and one wave variation
+| XSB_SOUND_FLAG_GAINBOOST
+|align="right"| 0x02
+| If set, the sound has a gain boost of 6dB applied
 |-
-| XSB_SOUND_FLAG_SIMPLE  ||   0x10 || If set, the sound only has one track, one event (PLAY), but multiple wave variations
+| XSB_SOUND_FLAG_EQ
+|align="right"| 0x04
+| If set, the sound has parametric EQ enabled
+|-
+| XSB_SOUND_FLAG_TRIVIAL
+|align="right"| 0x08
+| If set, the sound only has one track, one event (PLAY) and one wave variation
+|-
+| XSB_SOUND_FLAG_SIMPLE
+|align="right"| 0x10
+| If set, the sound only has one track, one event (PLAY), but multiple wave variations
 |}
-
 
 === PLAY event flags ===
 
 {| class="wikitable"
 ! Name
-! Value
+!align="right"| Value
 ! Description
 |-
-| XSB_PLAY_EVENT_FLAG_COMPLEX       ||   0x04 || Complex wave variations definition
+| XSB_PLAY_EVENT_FLAG_COMPLEX
+|align="right"| 0x04
+| Complex wave variations definition
 |}
 
+=== PITCH event flags ===
+
+{| class="wikitable"
+! Name
+!align="right"| Value
+! Description
+|-
+| XSB_PITCH_EVENT_FLAG_VARIATION
+|align="right"| 0x04
+| Enable variation
+|-
+| XSB_PITCH_EVENT_FLAG_RELATIVE
+|align="right"| 0x10
+| Use relative values
+|-
+| XSB_PITCH_EVENT_FLAG_FADE
+|align="right"| 0x20
+| Enable fade
+|}
+
+=== VOLUME event flags ===
+
+{| class="wikitable"
+! Name
+!align="right"| Value
+! Description
+|-
+| XSB_VOLUME_EVENT_FLAG_VARIATION
+|align="right"| 0x04
+| Enable variation
+|-
+| XSB_VOLUME_EVENT_FLAG_RELATIVE
+|align="right"| 0x10
+| Use relative values
+|-
+| XSB_VOLUME_EVENT_FLAG_FADE
+|align="right"| 0x20
+| Enable fade
+|}
+
+=== LOWPASS event flags ===
+
+{| class="wikitable"
+! Name
+!align="right"| Value
+! Description
+|-
+| XSB_LOWPASS_EVENT_FLAG_RANDOM
+|align="right"| 0x04
+| Random values
+|-
+| XSB_LOWPASS_EVENT_FLAG_RELATIVE
+|align="right"| 0x10
+| Use relative values
+|-
+| XSB_LOWPASS_EVENT_FLAG_SWEEP
+|align="right"| 0x20
+| Sweep cut-off frequencies
+|}
+
+=== MARKER event flags ===
+
+{| class="wikitable"
+! Name
+!align="right"| Value
+! Description
+|-
+| XSB_MARKER_EVENT_FLAG_REPEAT
+|align="right"| 0x20
+| Repeat marker
+|}
 
 == Enums ==
 
 === Event types ===
 
 {| class="wikitable"
-! Name
-! Value
-! Description
+!width="30%"| Name
+!align="right" width="5%"| Value
+!width="65%"| Description
 |-
-| XSB_EVENT_TYPE_PLAY               ||   0x00 || Play a wave, from start to finish
+| XSB_EVENT_TYPE_PLAY
+|align="right"| 0x00
+| Play a wave, from start to finish
 |-
-| XSB_EVENT_TYPE_PLAY_COMPLEX       ||   0x01 || Play a wave, with parameters
+| XSB_EVENT_TYPE_PLAY_COMPLEX
+|align="right"| 0x01
+| Play a wave, with parameters
 |-
-| XSB_EVENT_TYPE_STOP               ||   0x03 || Stop playing
+| XSB_EVENT_TYPE_STOP
+|align="right"| 0x03
+| Stop playing
 |-
-| XSB_EVENT_TYPE_PITCH              ||   0x04 || Set the pitch
+| XSB_EVENT_TYPE_PITCH
+|align="right"| 0x04
+| Set the pitch
 |-
-| XSB_EVENT_TYPE_VOLUME             ||   0x05 || Set the volume
+| XSB_EVENT_TYPE_VOLUME
+|align="right"| 0x05
+| Set the volume
 |-
-| XSB_EVENT_TYPE_LOWPASS            ||   0x07 || Low-pass filter
+| XSB_EVENT_TYPE_LOWPASS
+|align="right"| 0x07
+| Low-pass filter
 |-
-| XSB_EVENT_TYPE_LFO_PITCH          ||   0x08 || Low-frequency oscillator on the pitch
+| XSB_EVENT_TYPE_LFO_PITCH
+|align="right"| 0x08
+| Low-frequency oscillator on the pitch
 |-
-| XSB_EVENT_TYPE_LFO_MULTI          ||   0x09 || Low-frequency oscillator on the pitch and amplitude
+| XSB_EVENT_TYPE_LFO_MULTI
+|align="right"| 0x09
+| Low-frequency oscillator on the pitch and amplitude
 |-
-| XSB_EVENT_TYPE_ENVELOPE_AMPLITUDE ||   0x0A || DAHDSR envelope on the amplitude
+| XSB_EVENT_TYPE_ENVELOPE_AMPLITUDE
+|align="right"| 0x0A
+| DAHDSR envelope on the amplitude
 |-
-| XSB_EVENT_TYPE_ENVELOPE_PITCH     ||   0x0B || DAHDSR envelope on the pitch
+| XSB_EVENT_TYPE_ENVELOPE_PITCH
+|align="right"| 0x0B
+| DAHDSR envelope on the pitch
 |-
-| XSB_EVENT_TYPE_LOOP               ||   0x0C || Loop a wave
+| XSB_EVENT_TYPE_LOOP
+|align="right"| 0x0C
+| Loop a wave
 |-
-| XSB_EVENT_TYPE_MARKER             ||   0x0E || Marker
+| XSB_EVENT_TYPE_MARKER
+|align="right"| 0x0E
+| Marker
 |-
-| XSB_EVENT_TYPE_DISABLED           ||   0x0F || A disabled event
+| XSB_EVENT_TYPE_DISABLED
+|align="right"| 0x0F
+| A disabled event
 |-
-| XSB_EVENT_TYPE_MIXBINS            ||   0x10 || Set a separate volume for each channel
+| XSB_EVENT_TYPE_MIXBINS
+|align="right"| 0x10
+| Set a separate volume for each channel
 |-
-| XSB_EVENT_TYPE_ENVIRONMENT_REVERB ||   0x11 || Environmental reverb
+| XSB_EVENT_TYPE_ENVIRONMENT_REVERB
+|align="right"| 0x11
+| Environmental reverb
 |-
-| XSB_EVENT_TYPE_MIXBINSPAN         ||   0x12 || Set channel volumes according to a listener orientation
+| XSB_EVENT_TYPE_MIXBINSPAN
+|align="right"| 0x12
+| Set channel volumes according to a listener orientation
 |}
 
 === Variation selection methods ===
 
 {| class="wikitable"
-! Name
-! Value
-! Description
+!width="30%"| Name
+!align="right" width="5%"| Value
+!width="65%"| Description
 |-
-| XSB_VARIATION_SELECT_PARAMETER    ||   0x03 || Parameter-controlled
+| XSB_VARIATION_SELECT_RANDOM_NOREPEATS
+|align="right"| 0x00
+| Random, but no immediate repeats
+|-
+| XSB_VARIATION_SELECT_ORDERED
+|align="right"| 0x01
+| One after the other, in order
+|-
+| XSB_VARIATION_SELECT_SHUFFLE
+|align="right"| 0x02
+| Random, no repeats at all
+|-
+| XSB_VARIATION_SELECT_PARAMETER
+|align="right"| 0x03
+| Game-controlled
+|-
+| XSB_VARIATION_SELECT_RANDOM
+|align="right"| 0x04
+| Completely random
+|-
+| XSB_VARIATION_SELECT_ORDERED_FROMRANDOM
+|align="right"| 0x05
+| Start with a random entry, then in order
 |}
