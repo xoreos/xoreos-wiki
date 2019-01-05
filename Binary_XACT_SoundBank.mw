@@ -186,7 +186,7 @@ Offset to cue variations: 0xFFFFFFFF if the cue has no variations
 |-
 | 0x04
 |align="right"| 2
-| Volume
+| Volume and LFE volume (see below)
 |-
 | 0x06
 |align="right"| 2
@@ -218,18 +218,28 @@ Offset to cue variations: 0xFFFFFFFF if the cue has no variations
 |-
 | 0x0F
 |align="right"| 1
-| 3D volume
+| I3DL2 volume in 2.56th dB
 |-
 | 0x10
 |align="right"| 2
-| EQ?
+| Parametric EQ gain in 8192th dB
 |-
 | 0x12
 |align="right"| 2
-| EQ?
+| EQ Q and EQ frequency (see below)
 |}
 
 Offset or indices: Offset to non-trivial entry, or 2 bytes of wave index and 2 bytes of wavebank index.
+
+Volume and LFE volume: AAAAAAABBBBBBBBB
+
+* A, 7 bits: LFE volume. VolumeLFE = -A * 0.5
+* B, 9 bits: volume: Volume = -B * 0.16
+
+EQ Q and EQ frequency: AAAAAAAAAAAAABBB
+
+* A, 13 bits: EQ frequency
+* B, 3 bits: EQ Q coefficient. Q = 1 / 2^B
 
 === Simple sound track (one track, one event (PLAY), multiple wave variations) ===
 
