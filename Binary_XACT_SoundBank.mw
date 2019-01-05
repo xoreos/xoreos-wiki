@@ -405,11 +405,11 @@ Offset or indices: If XSB_PLAY_EVENT_FLAG_COMPLEX in Flags is set, this is an of
 |-
 | 0x0C
 |align="right"| 2
-| pitch variation, lower bound
+| Pitch variation, lower bound
 |-
 | 0x0E
 |align="right"| 2
-| pitch variation, upper bound
+| Pitch variation, upper bound
 |-
 | 0x10
 |align="right"| 2
@@ -459,11 +459,11 @@ Offset or indices: If XSB_PLAY_EVENT_FLAG_COMPLEX in Flags is set, this is an of
 |-
 | 0x08
 |align="right"| 2
-| pitch, lower bound or starting value
+| Pitch, lower bound or starting value
 |-
 | 0x0A
 |align="right"| 2
-| pitch, upper bound or starting value
+| Pitch, upper bound or starting value
 |-
 | 0x0C
 |align="right"| 1
@@ -503,11 +503,11 @@ Offset or indices: If XSB_PLAY_EVENT_FLAG_COMPLEX in Flags is set, this is an of
 |-
 | 0x08
 |align="right"| 2
-| volume, lower bound or starting value
+| Volume, lower bound or starting value
 |-
 | 0x0A
 |align="right"| 2
-| volume, upper bound or starting value
+| Volume, upper bound or starting value
 |-
 | 0x0C
 |align="right"| 1
@@ -1213,11 +1213,11 @@ Angle and flags: 00000ABBBBBBBBBCCCCCCCCC
 |-
 | 0x08
 |align="right"| 4
-| minimum distance
+| Minimum distance
 |-
 | 0x0C
 |align="right"| 4
-| maximum distance
+| Maximum distance
 |-
 | 0x10
 |align="right"| 4
