@@ -72,7 +72,7 @@ All numerical values are little-endian.
 |-
 | 0x0C
 |align="right"| 4
-| Offset to ?
+| Offset to crossfade parameters array
 |-
 | 0x10
 |align="right"| 4
@@ -159,12 +159,16 @@ All numerical values are little-endian.
 | Offset to cue variations (see below)
 |-
 | 0x0C
-|align="right"| 4
+|align="right"| 2
+| Index into the crossfade parameters array
+|-
+| 0x0E
+|align="right"| 2
 | ?
 |-
 | 0x10
 |align="right"| 4
-| ?
+| Interactive transitions (see below)
 |}
 
 Sound index: 0xFFFF if the cue has only one variations.
@@ -172,6 +176,11 @@ Sound index: 0xFFFF if the cue has only one variations.
 Offset to name: 0xFFFFFFFF if the cue has no name. Should be ignored if XSB_FLAG_NO_CUE_NAMES is set.
 
 Offset to cue variations: 0xFFFFFFFF if the cue has no variations
+
+Interactive transitions: AAAAAAAAAAAAAAAAAAAAAAAABBBBB???
+
+* A, 24 bits: Offset to the interactive transition definitions
+* B, 5 bits: Trigger variable
 
 === Sound entry ===
 
@@ -241,7 +250,9 @@ EQ Q and EQ frequency: AAAAAAAAAAAAABBB
 * A, 13 bits: EQ frequency
 * B, 3 bits: EQ Q coefficient. Q = 1 / 2^B
 
-=== Simple sound track (one track, one event (PLAY), multiple wave variations) ===
+=== Simple sound track ===
+
+One track, one PLAY event, multiple wave variations.
 
 {| class="wikitable"
 ! Offset
@@ -266,7 +277,9 @@ Variation parameters: AABBBBBBBBBBBBBCCCCDDDDDDDDDDDDD
 
 Variation entry: 2 bytes of wave index and 2 bytes of wavebank index.
 
-=== Complex sound tracks (multiple tracks or more than just a simple PLAY event) ===
+=== Complex sound tracks ===
+
+Multiple tracks or more than just a simple PLAY event.
 
 {| class="wikitable"
 ! Offset
@@ -363,7 +376,7 @@ Variation parameters: AABBBBBBBBBBBBBCCCCDDDDDDDDDDDDD
 |-
 | 0x06
 |align="right"| 2
-| ?
+| Loop count
 |-
 | 0x08
 |align="right"| 4
@@ -397,7 +410,7 @@ Offset or indices: If XSB_PLAY_EVENT_FLAG_COMPLEX in Flags is set, this is an of
 |-
 | 0x06
 |align="right"| 2
-| ?
+| Loop count
 |-
 | 0x08
 |align="right"| 4
@@ -1248,6 +1261,131 @@ Angle and flags: 00000ABBBBBBBBBCCCCCCCCC
 | ?
 |}
 
+=== Crossfade parameters entry ===
+
+{| class="wikitable"
+! Offset
+!align="right"| Size
+! Description
+|-
+| 0x00
+|align="right"| 4
+| Fade-in time in 10^-7 seconds
+|-
+| 0x04
+|align="right"| 2
+| Initial volume
+|-
+| 0x06
+|align="right"| 1
+| Type (see below)
+|-
+| 0x07
+|align="right"| 1
+| Fade-in step count
+|-
+| 0x08
+|align="right"| 4
+| Fade-out time in 10^-7 seconds
+|-
+| 0x0C
+|align="right"| 2
+| Final volume
+|-
+| 0x0E
+|align="right"| 1
+| Type (see below)
+|-
+| 0x0F
+|align="right"| 1
+| Fade-out step count
+|}
+
+Type: AAAA????
+
+* A, 4 bits: 0 for disabled, 1 for linear, 2 for logarithmic
+
+=== Interactive transitions array ===
+
+{| class="wikitable"
+! Offset
+!align="right"| Size
+! Description
+|-
+| 0x00
+|align="right"| 4
+| Number of transitions (transitionCount)
+|-
+| 0x04
+|align="right"| transitionCount * 24
+| Transition entry
+|}
+
+In general, there's one transition per sound combination (excluding the cases where to and from are the same), plus one set for silence to each sound, plus one set for each sound to silence.
+
+I.e. for N sounds, there's N^2 - N + 2N, or N^2 + N in shorter, transitions.
+
+The order is as follows:
+
+* Silence -&gt; N_0
+* Silence -&gt; N_1
+* Silence -&gt; N_2
+* ...
+* N_0 -&gt; Silence
+* N_0 -&gt; N_1
+* N_0 -&gt; N_2
+* ...
+* N_1 -&gt; Silence
+* N_1 -&gt; N_0
+* N_1 -&gt; N_2
+* ...
+
+=== Interactive transition entry ===
+
+{| class="wikitable"
+! Offset
+!align="right"| Size
+! Description
+|-
+| 0x00
+|align="right"| 2
+| Flags (see below)
+|-
+| 0x02
+|align="right"| 2
+| Transitional sound index
+|-
+| 0x04
+|align="right"| 2
+| Source fade-out duration in milliseconds
+|-
+| 0x06
+|align="right"| 2
+| Destination fade-in duration in milliseconds
+|-
+| 0x08
+|align="right"| 4
+| Source marker, low
+|-
+| 0x0C
+|align="right"| 4
+| Source marker, high
+|-
+| 0x10
+|align="right"| 4
+| Destination marker, low
+|-
+| 0x14
+|align="right"| 4
+| Destination marker, high
+|}
+
+Flags: 00000AAAABBBCCCC
+
+* A, 4 bits: Transition source
+* B, 3 bits: Transition effect
+* C, 4 bits: Transition destination
+
 == Flags ==
 
 === XSB flags ===
@@ -1268,6 +1406,18 @@ Angle and flags: 00000ABBBBBBBBBCCCCCCCCC
 ! Name
 !align="right"| Value
 ! Description
+|-
+| XSB_CUE_FLAG_SEQUENTIAL
+|align="right"| 0x0001
+| If set, cue for sequential playback
+|-
+| XSB_CUE_FLAG_CROSSFADE
+|align="right"| 0x0002
+| If set, enable crossfade
+|-
+| XSB_CUE_FLAG_STOPONSTARVE
+|align="right"| 0x0004
+| If set, stop on starvation
 |-
 | XSB_CUE_FLAG_INTERACTIVE
 |align="right"| 0x0008
@@ -1300,18 +1450,26 @@ Angle and flags: 00000ABBBBBBBBBCCCCCCCCC
 | XSB_SOUND_FLAG_SIMPLE
 |align="right"| 0x10
 | Simple sound: one track, one PLAY event, multiple wave variations
+|-
+| XSB_SOUND_FLAG_LINGER
+|align="right"| 0x20
+| If set, the sound should linger in an interactive cue
 |}
 
 === PLAY event flags ===
 
 {| class="wikitable"
-! Name
-!align="right"| Value
-! Description
+!width="41%"| Name
+!align="right" width="10%"| Value
+!width="48%"| Description
 |-
 | XSB_PLAY_EVENT_FLAG_COMPLEX
 |align="right"| 0x04
 | Complex wave variations definition
+|-
+| XSB_PLAY_EVENT_FLAG_LOOPVARIATION
+|align="right"| 0x40
+| Select new wave variation on each loop
 |}
 
 === PITCH event flags ===
@@ -1490,4 +1648,92 @@ Angle and flags: 00000ABBBBBBBBBCCCCCCCCC
 | XSB_VARIATION_SELECT_ORDERED_FROMRANDOM
 |align="right"| 0x05
 | Start with a random entry, then in order
+|}
+
+=== Transition source ===
+
+{| class="wikitable"
+!width="41%"| Name
+!align="right" width="9%"| Value
+!width="48%"| Description
+|-
+| XSB_TRANSITION_SOURCE_IMMEDIATE
+|align="right"| 0x00
+| Immediately
+|-
+| XSB_TRANSITION_SOURCE_MARKER
+|align="right"| 0x01
+| From a marker with a given range
+|-
+| XSB_TRANSITION_SOURCE_RANDOM_MARKER
+|align="right"| 0x02
+| From a random marker within a given range
+|-
+| XSB_TRANSITION_SOURCE_END_LOOP
+|align="right"| 0x04
+| End of loop
+|-
+| XSB_TRANSITION_SOURCE_END_SOUND
+|align="right"| 0x08
+| End of sound
+|}
+
+=== Transition destination ===
+
+{| class="wikitable"
+!width="45%"| Name
+!align="right" width="9%"| Value
+!width="45%"| Description
+|-
+| XSB_TRANSITION_DESTINATION_BEGINNING
+|align="right"| 0x00
+| To the beginning
+|-
+| XSB_TRANSITION_DESTINATION_ALIGNED_TIME
+|align="right"| 0x01
+| To the same time
+|-
+| XSB_TRANSITION_DESTINATION_ALIGNED_MARKER
+|align="right"| 0x02
+| To the same marker
+|-
+| XSB_TRANSITION_DESTINATION_MARKER
+|align="right"| 0x04
+| To a marker with a given range
+|-
+| XSB_TRANSITION_DESTINATION_RANDOM_MARKER
+|align="right"| 0x08
+| To a random marker within a given range
+|}
+
+=== Transition effect ===
+
+{| class="wikitable"
+!width="45%"| Name
+!align="right" width="9%"| Value
+!width="45%"| Description
+|-
+| XSB_TRANSITION_EFFECT_NONE
+|align="right"| 0x00
+| No effect
+|-
+| XSB_TRANSITION_EFFECT_CROSSFADE
+|align="right"| 0x01
+| Crossfade
+|-
+| XSB_TRANSITION_EFFECT_SOUND
+|align="right"| 0x02
+| Use a transitional sound
+|-
+| XSB_TRANSITION_EFFECT_SOUND_FADE_TO
+|align="right"| 0x03
+| Fade into a transitional sound
+|-
+| XSB_TRANSITION_EFFECT_SOUND_FADE_FROM
+|align="right"| 0x06
+| Fade from a transitional sound
+|-
+| XSB_TRANSITION_EFFECT_SOUND_FADE_TOFROM
+|align="right"| 0x07
+| Fade into and from a transitional sound
 |}
