@@ -1382,9 +1382,9 @@ The order is as follows:
 
 Flags: 00000AAAABBBCCCC
 
-* A, 4 bits: Transition source
+* A, 4 bits: Transition destination
 * B, 3 bits: Transition effect
-* C, 4 bits: Transition destination
+* C, 4 bits: Transition source
 
 == Flags ==
 
