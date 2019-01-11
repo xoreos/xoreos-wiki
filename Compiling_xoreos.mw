@@ -3,7 +3,7 @@ __TOC__
 
 ==Compiler and build system==
 
-xoreos is written in C++, so a C++ compiler, like [https://gcc.gnu.org/ GCC] or [http://clang.llvm.org/ clang] is required. xoreos follows the C++03 standard. It has two build systems: [https://en.wikipedia.org/wiki/GNU_build_system Autotools] ([https://www.gnu.org/software/autoconf/ Autoconf], [https://www.gnu.org/software/automake/ Automake] and [https://www.gnu.org/software/libtool/ Libtool]) and [https://en.wikipedia.org/wiki/CMake CMake]. Use whichever you feel more comfortable with.
+xoreos is written in C++, so a C++ compiler, like [https://gcc.gnu.org/ GCC] or [http://clang.llvm.org/ clang] is required. xoreos follows the C++11 standard. It has two build systems: [https://en.wikipedia.org/wiki/GNU_build_system Autotools] ([https://www.gnu.org/software/autoconf/ Autoconf], [https://www.gnu.org/software/automake/ Automake] and [https://www.gnu.org/software/libtool/ Libtool]) and [https://en.wikipedia.org/wiki/CMake CMake]. Use whichever you feel more comfortable with.
 
 ===GNU/Linux===
 
