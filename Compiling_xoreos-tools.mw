@@ -73,9 +73,9 @@ On Windows, if you're using MSYS2, you can install these dependencies for 64-bit
 
 Windows users not using MSYS2 will have to visit each website manually and download a precompiled version, or, if not available, download the source and compile the library themselves.
 
-==Compiling xoreos==
+==Compiling xoreos-tools==
 
-Make you have your compiler, build system and libraries installed correctly. Then open a terminal and change into the directory of your sources.
+Make sure you have your compiler, build system and libraries installed correctly. Then open a terminal and change into the directory of your sources.
 
 ===autotools===
 
