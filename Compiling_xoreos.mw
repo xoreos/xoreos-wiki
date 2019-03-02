@@ -99,7 +99,7 @@ On Windows, if you're using MSYS2, you can install these dependencies for 64-bit
      mingw-w64-x86_64-libvorbis  mingw-w64-x86_64-faad2 mingw-w64-x86_64-xvidcore \
      mingw-w64-x86_64-libvpx
 
-Windows users not using MSYS2 will have to visit each website manually and download a precompiled version, or, if not available, download the source and compile the library themselves.
+Windows users not using MSYS2 will have to visit each website manually and download a precompiled version, or, if not available, download the source and compile the library themselves. Alternatively, vcpkg can be used to install most of these libraries.
 
 === A note on OpenAL ===
 
