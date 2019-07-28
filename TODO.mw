@@ -339,6 +339,26 @@ This is a long rambly list of things left to do in xoreos and xoreos-tools. Anyb
 === KotOR/KotOR2 ===
 * Menus
 ** Many are already there
+** Updating for loading screen loading bar
+
+[[File:Loadingbar_upd.png|none|thumb]]
+
+** Button highlights
+
+[[File:Btn_hl.png|none|thumb|KoTOR (left) xoreos (right)]]
+
+** Class selection
+*** Smokey background effect
+*** Lighting on the character model
+*** Scaling when hovering over different classes
+*** Not hovered:
+
+[[File:Class_hl_inactive.png|none|thumb|KoTOR (left) xoreos (right)]]
+
+*** Hovered
+
+[[File:Class_hl_active.png|none|thumb|KoTOR (left) xoreos (right)]]
+
 * Dialogues
 ** DLG files, similar to NWN
 ** Some extensions, like camera setup
