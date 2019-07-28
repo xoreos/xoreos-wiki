@@ -351,11 +351,11 @@ This is a long rambly list of things left to do in xoreos and xoreos-tools. Anyb
 *** Smokey background effect
 *** Lighting on the character model
 *** Scaling when hovering over different classes
-*** Not hovered:
+Not hovered:
 
 [[File:Class_hl_inactive.png|none|thumb|KoTOR (left) xoreos (right)]]
 
-*** Hovered
+Hovered:
 
 [[File:Class_hl_active.png|none|thumb|KoTOR (left) xoreos (right)]]
 
