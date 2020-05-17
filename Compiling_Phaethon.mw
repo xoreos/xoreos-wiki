@@ -38,25 +38,20 @@ Phaethon uses the following libraries to function:
 * [https://en.wikipedia.org/wiki/Iconv iconv]
 * [http://www.zlib.net/ zlib] (>= 1.2.3.4)
 * [http://tukaani.org/xz/ liblzma] (>= 5.0.5)
-* [http://www.xmlsoft.org/ libxml2] (>= 2.8.0)
 * [http://www.boost.org/ Boost] (>= 1.53.0)
 ** Boost.Utility
 ** Boost.StringAlgo
 ** Boost.System
 ** Boost.Filesystem
-** Boost.Regex
 ** Boost.Unordered
 ** Boost.Hash
 ** Boost.Date_Time
 ** Boost.Chrono
 ** Boost.Function
-** Boost.Bind
 ** Boost.Uuid
 ** Boost.Smart_Ptr
 ** Boost.ScopeExit
-** Boost.Atomic
 ** Boost.Locale
-** Boost.Thread
 * [https://www.qt.io/ Qt] (>= 5.7.1)
 ** Qt5Core
 ** Qt5Gui
@@ -69,26 +64,26 @@ Phaethon uses the following libraries to function:
 
 On Debian-based GNU/Linux distribution (including Ubuntu), you should be able to install these libraries and their development packages with
 
- sudo apt-get install zlib1g-dev liblzma-dev libxml2-dev libboost-all-dev \
+ sudo apt-get install zlib1g-dev liblzma-dev libboost-all-dev \
      libopenal-dev libmad0-dev libogg-dev libvorbis-dev  \
      qtbase5-dev, libqt5gui5, libqt5widgets5
 
 On Arch Linux, you can install these dependencies with
 
- sudo pacman -S zlib xz libxml2 boost boost-libs openal libmad libogg \
+ sudo pacman -S zlib xz boost boost-libs openal libmad libogg \
      libvorbis qt5-base
 
 Other GNU/Linux distributions should work similarily.
 
 On Windows, if you're using MSYS2, you can install these dependencies for 32-bit with
 
-  pacman -S mingw-w64-i686-zlib mingw-w64-i686-xz mingw-w64-i686-libxml2 \
+  pacman -S mingw-w64-i686-zlib mingw-w64-i686-xz \
      mingw-w64-i686-boost mingw-w64-i686-openal mingw-w64-i686-libmad \
      mingw-w64-i686-libogg mingw-w64-i686-libvorbis mingw-w64-i686-qt-creator
 
 On Windows, if you're using MSYS2, you can install these dependencies for 64-bit with
 
-  pacman -S mingw-w64-x86_64-zlib mingw-w64-x86_64-xz mingw-w64-x86_64-libxml2 \
+  pacman -S mingw-w64-x86_64-zlib mingw-w64-x86_64-xz \
      mingw-w64-x86_64-boost mingw-w64-x86_64-openal mingw-w64-x86_64-libmad \
      mingw-w64-x86_64-libogg mingw-w64-x86_64-libvorbis mingw-w64-x86_64-qt-creator
 
