@@ -48,16 +48,13 @@ xoreos uses the following libraries to function:
 ** Boost.StringAlgo
 ** Boost.System
 ** Boost.Filesystem
-** Boost.Regex
 ** Boost.Unordered
 ** Boost.Hash
 ** Boost.Date_Time
 ** Boost.Function
-** Boost.Bind
 ** Boost.Uuid
 ** Boost.Smart_Ptr
 ** Boost.ScopeExit
-** Boost.Atomic
 ** Boost.Locale
 * [https://en.wikipedia.org/wiki/OpenGL OpenGL] (>= 2.1)
 * [https://www.libsdl.org/ SDL2] (>= 2.0.0)
