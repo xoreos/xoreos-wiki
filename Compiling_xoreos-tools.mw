@@ -44,8 +44,6 @@ xoreos-tools uses the following libraries to function:
 ** Boost.StringAlgo
 ** Boost.System
 ** Boost.Filesystem
-** Boost.Hash
-** Boost.Function
 ** Boost.Uuid
 ** Boost.Smart_Ptr
 ** Boost.ScopeExit
