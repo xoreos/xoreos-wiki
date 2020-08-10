@@ -54,7 +54,7 @@ xoreos uses the following libraries to function:
 ** Boost.ScopeExit
 ** Boost.Locale
 * [https://en.wikipedia.org/wiki/OpenGL OpenGL] (>= 2.1)
-* [https://www.libsdl.org/ SDL2] (>= 2.0.0)
+* [https://www.libsdl.org/ SDL2] (>= 2.0.4)
 * [http://www.freetype.org/ FreeType 2] (>= 2.4.0 (libtool number >= 11.0.5))
 * [https://en.wikipedia.org/wiki/OpenAL OpenAL] (>= 1.12) ('''See below''')
 * [http://www.underbit.com/products/mad/ MAD] (>= 0.15.1b)
