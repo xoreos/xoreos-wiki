@@ -106,6 +106,16 @@ Type
 
 The binaries can then be found in the bin subdirectory.
 
+This builds xoreos-tools without any optimizations, so you might want to use
+
+ <nowiki>cmake -DCMAKE_BUILD_TYPE=Release . && make</nowiki>
+
+(optimized, no debug information) or
+
+ <nowiki>cmake -DCMAKE_BUILD_TYPE=RelWithDebInfo . && make</nowiki>
+
+(optimized, with debug information) instead.
+
 Please read [http://www.cmake.org/runningcmake/ Running CMake] on the CMake website for in-depth information on invoking CMake.
 
 ==Unit tests==
