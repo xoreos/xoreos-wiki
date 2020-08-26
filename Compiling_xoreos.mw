@@ -143,6 +143,16 @@ Type
 
 The binary can be found in the bin subdirectory, called "xoreos" or, on Windows, "xoreos.exe".
 
+This builds xoreos without any optimizations, so you might want to use
+
+ <nowiki>cmake -DCMAKE_BUILD_TYPE=Release . && make</nowiki>
+
+(optimized, no debug information) or
+
+ <nowiki>cmake -DCMAKE_BUILD_TYPE=RelWithDebInfo . && make</nowiki>
+
+(optimized, with debug information) instead.
+
 Please read [http://www.cmake.org/runningcmake/ Running CMake] on the CMake website for in-depth information on invoking CMake.
 
 Optional, non-conventional cmake flags:
