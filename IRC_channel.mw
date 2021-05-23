@@ -1,5 +1,5 @@
-For all kinds of live discussions we use [irc://freenode.net/xoreos #xoreos] @ [http://freenode.net/ freenode.net] IRC channel. All xoreos developers get an operator status there, so if you have some questions, talk to them. There are several notes about usage of this medium:
+For all kinds of live discussions we use [irc://irc.libera.chat/xoreos #xoreos] @ [https://libera.chat/ Libera IRC] channel. All xoreos developers get an operator status there, so if you have some questions, talk to them. There are several notes about usage of this medium:
 
 * IRC is not the best place for informing everyone about some important development conclusions. I.e. when you discussed something and came up with a solution, it's best to e-mail results to [[Mailing lists#xoreos-devel|xoreos-devel]]. That is, don't expect everyone to know that you uttered something at #xoreos.
-* All developers who want to get operator status should register with '''''NickServ'''''. Assistance with registration is provided [http://freenode.net/faq.shtml#nicksetup here].
-* Most people on FreeNode have so-called anti-spam feature turned on. That is, you will not be able to PM them unless you registered with '''''NickServ'''''
+* All developers who want to get operator status should register with '''''NickServ'''''. Assistance with registration is provided [https://libera.chat/guides/registration here].
+* Most people on Libera have so-called anti-spam feature turned on. That is, you will not be able to PM them unless you registered with '''''NickServ'''''
