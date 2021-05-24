@@ -1,0 +1,19 @@
+The #xoreos IRC channel is migrating to the Libera Chat IRC network.
+
+== Creating an account ==
+Add the Libera Chat network at <code>irc.libera.chat</code> to your IRC client. Read https://libera.chat/guides/connect for details.
+
+You will need to register your nick name with NickServ again. Details at https://libera.chat/guides/registration.
+
+After creating your account, it is recommended to do the following to provide greater security of your account:
+
+<code>/msg nickserv set enforce on</code>
+
+It is also recommended that once you create your account you also make an edit to your [[Special:MyPage|user page]] confirming that you are the owner of the account on Libera Chat (to avoid impersonation attempts).
+
+=== Cloaks ===
+If you're a contributor to xoreos, you're eligble for a xoreos/ cloak, which will hide your IP address on IRC and show your affiliation. After you've registered with NickServ, talk to DrMcCoy, either on #xoreos or using a privmsg.
+
+=== Differences from Freenode ===
+
+Libera Chat has a more modern [[:w:Transport Layer Security|TLS]] stack than Freenode; most importantly older versions of TLS (specifically 1.0 and 1.1) are not supported on Libera Chat, so you might need to update your IRC client if you regularly connect with TLS enabled.
